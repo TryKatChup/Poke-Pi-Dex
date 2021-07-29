@@ -1,30 +1,35 @@
 <div align="center">
-  
-   # Pokémon CV Revival   
+
+# Pokémon CV Revival
+
 </div>
 
 <div align="center">
 
-[![Ask Me Anything!][ask-me-anything-shield]][ask-me-anything-url]
-[![Open In Collab][open-collab-shield]][open-collab-url]
 [![made-with-python][made-with-phyton-shield]][made-with-phyton-url]
 [![made-with-Markdown][made-with-markdown-shield]][made-with-markdown-url]
 [![Open Source Love png1][open-source-shield]][open-source-url]
 [![GPLv3 license][license-shield]][license-url]
-[![Raspberry Pi][raspberry-shield]][raspberry-url]<!--[![TensorFlow][tensorflow-shield]][tensorflow-url]
-aggiungiamo anche openCV? -->
+[![Raspberry Pi][raspberry-shield]][raspberry-url]
+[![TensorFlow][tensorflow-shield]][tensorflow-url]
+[![Open CV][opencv-shield]][opencv-url]
+[![nVIDIA][nvidia-shield]][nvidia-url]
 <br/>
+[![Open In Collab][open-collab-shield]][open-collab-url]
 [![Downloads][downloads-shield]][downloads-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 </div>
 
 Our computer vision related project for nostalgic poke weebs (Sistemi digitali, Unibo).
 
 <!-- potremmo mettere i contatti alla fine del documento, in un header specifico (tipo "Contacts"), mentre al posto di linkedin potremmo mettere un link ad una pagina github.io che magari facciamo una volta finito il progetto, con qualche immagine di presentazione e relativa spiegazione -->
+
+### Contacts
+* [TryKatChup](https://www.linkedin.com/in/karina-chichifoi/?locale=en_US)
+* [Mikyll](https://www.linkedin.com/in/michele-righi/?locale=en_US)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -40,10 +45,14 @@ Our computer vision related project for nostalgic poke weebs (Sistemi digitali, 
 [open-source-url]: https://github.com/ellerbrock/open-source-badges/
 [license-shield]: https://img.shields.io/badge/License-GPLv3-blue.svg
 [license-url]: http://perso.crans.org/besson/LICENSE.html
+[nvidia-shield]: https://img.shields.io/badge/nVIDIA-%2376B900.svg?logo=nVIDIA&logoColor=white
+[nvidia-url]: https://www.nvidia.com/
 [raspberry-shield]: https://img.shields.io/badge/-RaspberryPi-C51A4A?&logo=Raspberry-Pi
 [raspberry-url]: https://www.raspberrypi.org/
 [tensorflow-shield]: https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?logo=TensorFlow&logoColor=white
 [tensorflow-url]: https://www.tensorflow.org/
+[opencv-shield]: https://img.shields.io/badge/opencv-%23white.svg?logo=opencv&logoColor=white
+[opencv-url]: https://opencv.org/
 
 [downloads-shield]: https://img.shields.io/github/downloads/TryKatChup/pokemon-cv-revival/total
 [downloads-url]: https://github.com/TryKatChup/pokemon-cv-revival/releases/latest
@@ -56,4 +65,4 @@ Our computer vision related project for nostalgic poke weebs (Sistemi digitali, 
 [issues-shield]: https://img.shields.io/github/issues/TryKatChup/pokemon-cv-revival
 [issues-url]: https://github.com/mikyll/TryKatChup/pokemon-cv-revival/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?logo=linkedin&colorB=0077B5
-[linkedin-url]: https://www.linkedin.com/in/michele-righi/?locale=it_IT
+[linkedin-url]: https://www.linkedin.com/in/michele-righi/?locale=en_US
