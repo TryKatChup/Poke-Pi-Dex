@@ -25,8 +25,8 @@
 
 Our computer vision related project for nostalgic poke weebs (Sistemi digitali, Unibo).
 
-Dataset pokèmon: https://www.kaggle.com/thedagger/pokemon-generation-one
-Archivio immagini carte: https://drive.google.com/file/d/1CIx33WVaqEXLqLt95nRtRskgmTTTMPpn/view
+- Dataset pokèmon: https://www.kaggle.com/thedagger/pokemon-generation-one
+- Archivio immagini carte: https://drive.google.com/file/d/1CIx33WVaqEXLqLt95nRtRskgmTTTMPpn/view
 
 ### Contacts
 * [TryKatChup](https://www.linkedin.com/in/karina-chichifoi/?locale=en_US)
