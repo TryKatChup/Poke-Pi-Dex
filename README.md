@@ -11,7 +11,8 @@
 [![made-with-Markdown][made-with-markdown-shield]][made-with-markdown-url]
 [![Open Source Love png1][open-source-shield]][open-source-url]
 [![GPLv3 license][license-shield]][license-url]
-[![Raspberry Pi][raspberry-shield]][raspberry-url]
+[![Raspberry Pi][raspberry-shield]][raspberry-url]<!--[![TensorFlow][tensorflow-shield]][tensorflow-url]
+aggiungiamo anche openCV? -->
 <br/>
 [![Downloads][downloads-shield]][downloads-url]
 [![Contributors][contributors-shield]][contributors-url]
@@ -31,7 +32,7 @@ Our computer vision related project for nostalgic poke weebs (Sistemi digitali, 
 [ask-me-anything-url]: https://github.com/TryKatChup/pokemon-cv-revival/issues
 [open-collab-shield]: https://colab.research.google.com/assets/colab-badge.svg
 [open-collab-url]: https://github.com/TryKatChup/pokemon-cv-revival/issues
-[made-with-phyton-shield]: https://img.shields.io/badge/Made%20with-Python-1f425f.svg
+[made-with-phyton-shield]: https://img.shields.io/badge/Made%20with-Python-14354C.svg
 [made-with-phyton-url]: https://www.python.org/
 [made-with-markdown-shield]: https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg
 [made-with-markdown-url]: http://commonmark.org
@@ -41,6 +42,8 @@ Our computer vision related project for nostalgic poke weebs (Sistemi digitali, 
 [license-url]: http://perso.crans.org/besson/LICENSE.html
 [raspberry-shield]: https://img.shields.io/badge/-RaspberryPi-C51A4A?&logo=Raspberry-Pi
 [raspberry-url]: https://www.raspberrypi.org/
+[tensorflow-shield]: https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?logo=TensorFlow&logoColor=white
+[tensorflow-url]: https://www.tensorflow.org/
 
 [downloads-shield]: https://img.shields.io/github/downloads/TryKatChup/pokemon-cv-revival/total
 [downloads-url]: https://github.com/TryKatChup/pokemon-cv-revival/releases/latest
