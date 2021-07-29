@@ -25,7 +25,8 @@
 
 Our computer vision related project for nostalgic poke weebs (Sistemi digitali, Unibo).
 
-<!-- potremmo mettere i contatti alla fine del documento, in un header specifico (tipo "Contacts"), mentre al posto di linkedin potremmo mettere un link ad una pagina github.io che magari facciamo una volta finito il progetto, con qualche immagine di presentazione e relativa spiegazione -->
+Dataset pokèmon: https://www.kaggle.com/thedagger/pokemon-generation-one
+Archivio immagini carte: https://drive.google.com/file/d/1CIx33WVaqEXLqLt95nRtRskgmTTTMPpn/view
 
 ### Contacts
 * [TryKatChup](https://www.linkedin.com/in/karina-chichifoi/?locale=en_US)
