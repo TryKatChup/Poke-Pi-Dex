@@ -11,6 +11,7 @@
 [![Open Source Love png1][open-source-shield]][open-source-url]
 [![GPLv3 license][license-shield]][license-url]
 [![Raspberry Pi][raspberry-shield]][raspberry-url]
+[![Keras][keras-shield]][keras-url]
 [![TensorFlow][tensorflow-shield]][tensorflow-url]
 [![Open CV][opencv-shield]][opencv-url]
 [![nVIDIA][nvidia-shield]][nvidia-url]
@@ -24,6 +25,14 @@
 </div>
 
 Our computer vision related project for nostalgic poke weebs (Sistemi digitali, Unibo).
+
+### Ideas
+- Pokèmon image identification (from the image on the card)
+- stats reading (+ calculus on the best combo (?))
+- Fake, rare and printing errors recognition
+- 3D model animation (associated with the recognized card)
+
+### Resources
 
 - Dataset pokèmon: https://www.kaggle.com/thedagger/pokemon-generation-one
 - Archivio immagini carte: https://drive.google.com/file/d/1CIx33WVaqEXLqLt95nRtRskgmTTTMPpn/view
@@ -46,14 +55,16 @@ Our computer vision related project for nostalgic poke weebs (Sistemi digitali, 
 [open-source-url]: https://github.com/ellerbrock/open-source-badges/
 [license-shield]: https://img.shields.io/badge/License-GPLv3-blue.svg
 [license-url]: http://perso.crans.org/besson/LICENSE.html
-[nvidia-shield]: https://img.shields.io/badge/nVIDIA-%2376B900.svg?logo=nVIDIA&logoColor=white
-[nvidia-url]: https://www.nvidia.com/
 [raspberry-shield]: https://img.shields.io/badge/-RaspberryPi-C51A4A?&logo=Raspberry-Pi
 [raspberry-url]: https://www.raspberrypi.org/
+[keras-shield]: https://img.shields.io/badge/Keras-%23D00000.svg?logo=Keras&logoColor=white
+[keras-url]: https://keras.io/
 [tensorflow-shield]: https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?logo=TensorFlow&logoColor=white
 [tensorflow-url]: https://www.tensorflow.org/
 [opencv-shield]: https://img.shields.io/badge/opencv-%23white.svg?logo=opencv&logoColor=white
 [opencv-url]: https://opencv.org/
+[nvidia-shield]: https://img.shields.io/badge/nVIDIA-%2376B900.svg?logo=nVIDIA&logoColor=white
+[nvidia-url]: https://www.nvidia.com/
 
 [downloads-shield]: https://img.shields.io/github/downloads/TryKatChup/pokemon-cv-revival/total
 [downloads-url]: https://github.com/TryKatChup/pokemon-cv-revival/releases/latest
