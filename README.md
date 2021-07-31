@@ -32,10 +32,23 @@ Our computer vision related project for nostalgic poke weebs (Sistemi digitali, 
 - Fake, rare and printing errors recognition
 - 3D model animation (associated with the recognized card)
 
+### TO-DO list
+1. Find the best cards dataset available (even with only one generation)
+2. Angle straighten (upright set) and card recognition (see resources for examples)
+3. Card stats reading
+4. Fake card recognition
+5. 3d models output of the card
+
 ### Resources
 
-- Dataset pokèmon: https://www.kaggle.com/thedagger/pokemon-generation-one
-- Archivio immagini carte: https://drive.google.com/file/d/1CIx33WVaqEXLqLt95nRtRskgmTTTMPpn/view
+- Dataset pokèmon:
+  - https://www.kaggle.com/thedagger/pokemon-generation-one
+  - 
+- pokèmon cards images archive: https://drive.google.com/file/d/1CIx33WVaqEXLqLt95nRtRskgmTTTMPpn/view
+- Magic cards recognition: https://github.com/YenTheFirst/card_scan
+- Pokèmon card text reading: https://stackoverflow.com/questions/62116719/read-text-on-card
+- Poker playing cards recognition (on Raspberry pi3 + picamera): https://github.com/EdjeElectronics/OpenCV-Playing-Card-Detector
+- Augmented reality: https://bitesofcode.wordpress.com/2017/09/12/augmented-reality-with-python-and-opencv-part-1/ & https://github.com/juangallostra/augmented-reality
 
 ### Contacts
 * [TryKatChup](https://www.linkedin.com/in/karina-chichifoi/?locale=en_US)
