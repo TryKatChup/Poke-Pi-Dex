@@ -50,6 +50,24 @@ Our computer vision related project for nostalgic poke weebs (Sistemi digitali, 
 - Poker playing cards recognition (on Raspberry pi3 + picamera): https://github.com/EdjeElectronics/OpenCV-Playing-Card-Detector
 - Augmented reality: https://bitesofcode.wordpress.com/2017/09/12/augmented-reality-with-python-and-opencv-part-1/ & https://github.com/juangallostra/augmented-reality
 
+### Step 1: Testing picamera + openCV
+
+#### Raspberry
+
+On raspberry install the following packages:
+
+```
+sudo apt python3-pip
+pip3 install opencv-python zmq imagezmq numpy imutils
+```
+#### Step 2: Receiving the images
+On personal computer compile openCV and cry:
+
+https://docs.opencv.org/4.5.2/d7/d9f/tutorial_linux_install.html
+
+Execute the following script:
+<script-name>
+
 ### Contacts
 * [TryKatChup](https://www.linkedin.com/in/karina-chichifoi/?locale=en_US)
 * [Mikyll](https://www.linkedin.com/in/michele-righi/?locale=en_US)
