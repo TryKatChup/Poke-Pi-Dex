@@ -49,7 +49,7 @@ Our computer vision related project for nostalgic poke weebs (Sistemi digitali, 
 - Pokèmon card text reading: https://stackoverflow.com/questions/62116719/read-text-on-card
 - Poker playing cards recognition (on Raspberry pi3 + picamera): https://github.com/EdjeElectronics/OpenCV-Playing-Card-Detector
 - Augmented reality: https://bitesofcode.wordpress.com/2017/09/12/augmented-reality-with-python-and-opencv-part-1/ & https://github.com/juangallostra/augmented-reality
-- Detection Models: https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md (ssd_mobilenet are the best for devices with low computational power, i.e. raspberry)
+- Detection Models: https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md (ssd_mobilenet are the best for devices with low computational power, e.g. raspberry)
 
 ### Step 1: Testing picamera + openCV
 
