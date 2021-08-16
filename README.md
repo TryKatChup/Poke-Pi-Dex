@@ -61,13 +61,40 @@ On raspberry install the following packages:
 sudo apt python3-pip
 pip3 install opencv-python zmq imagezmq numpy imutils
 ```
+
+Execute `./stream/SistemiDigitali/video_capture.py`
 #### Step 2: Receiving the images
-On personal computer compile openCV and cry:
+The following packages must be installed:
 
-https://docs.opencv.org/4.5.2/d7/d9f/tutorial_linux_install.html
+**Compiled from scratch**
+- python-opencv
 
-Execute the following script:
-<script-name>
+**pacman/apt**
+- cuda
+- gcc-10
+
+**with pip inside a conda environment**
+```
+conda activate cv
+export READTHEDOCS=True
+pip3 install zmq imagezmq imutils picamera
+```
+
+**with conda**
+`conda install -c conda-forge libgcc-ng=11.1.0 libstdcxx-ng=11.1.0`
+
+##### Arch-based distro
+Install OpenCV and all the dependencies as described here https://gist.github.com/nihil21/f2ea6b6f092469ecd0bfb910301c62a2.
+After that, install what is missing:
+```
+conda activate cv
+export READTHEDOCS=True
+pip3 install zmq imagezmq imutils picamera
+```
+
+Execute the following script (on pc):
+`python3 python3 ./stream/SistemiDigitali/stream_receiver.py -ip <ip_raspberry>`
+
 
 ### Contacts
 * [TryKatChup](https://www.linkedin.com/in/karina-chichifoi/?locale=en_US)
