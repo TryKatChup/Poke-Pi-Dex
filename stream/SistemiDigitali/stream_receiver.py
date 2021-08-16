@@ -1,4 +1,4 @@
-from stereo_camera.network_agent import ImageSender
+from stereo_camera.network_agent import ImageReceiver
 import cv2
 import zmq
 import sys
