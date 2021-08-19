@@ -101,12 +101,12 @@ Some notes:
 - Loading folders of images in Tensorflow: https://stackoverflow.com/a/52417770.
 - From a list of images paths, with the special function `map`, convert a image path into an image.
 
-**example1.jpg**
+![](./images/example1.jpg)
 
 - The function`map_fn(path, label)` return the image uploaded and its label from a image path and its label.
 - `dataset.map(map_fn)` loads an image path in a lazy way (in this way the RAM won't be saturated).
 
-**example2.jpg**
+![](./images/example2.jpg)
 - A dataset is created from a string list, which represents every image path.
 - The list is converted to a string tensor.
 - A dataset object is created from this tensor:
