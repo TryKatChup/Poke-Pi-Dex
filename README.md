@@ -26,20 +26,20 @@
 
 Our computer vision related project for nostalgic poke weebs (Sistemi digitali, Unibo).
 
-### Ideas
+## Ideas
 - Pokèmon image identification (from the image on the card)
 - stats reading (+ calculus on the best combo (?))
 - Fake, rare and printing errors recognition
 - 3D model animation (associated with the recognized card)
 
-### TO-DO list
+## TO-DO list
 1. Find the best cards dataset available (even with only one generation)
 2. Angle straighten (upright set) and card recognition (see resources for examples)
 3. Card stats reading
 4. Fake card recognition
 5. 3d models output of the card
 
-### Resources
+## Resources
 
 - Dataset pokèmon:
   - https://www.kaggle.com/thedagger/pokemon-generation-one
@@ -51,9 +51,9 @@ Our computer vision related project for nostalgic poke weebs (Sistemi digitali, 
 - Augmented reality: https://bitesofcode.wordpress.com/2017/09/12/augmented-reality-with-python-and-opencv-part-1/ & https://github.com/juangallostra/augmented-reality
 - Detection Models: https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md (ssd_mobilenet are the best for devices with low computational power, e.g. raspberry)
 
-### Step 1: Testing picamera + openCV
+## Step 1: Testing picamera + openCV
 
-#### Raspberry
+### Raspberry
 
 On raspberry install the following packages:
 
@@ -63,7 +63,7 @@ pip3 install opencv-python zmq imagezmq numpy imutils
 ```
 
 Execute `./stream/SistemiDigitali/video_capture.py`
-#### Step 2: Receiving the images
+### Step 2: Receiving the images
 The following packages must be installed:
 
 **Compiled from scratch**
@@ -83,7 +83,7 @@ pip3 install zmq imagezmq imutils picamera
 **with conda**
 `conda install -c conda-forge libgcc-ng=11.1.0 libstdcxx-ng=11.1.0`
 
-##### Arch-based distro
+#### Arch-based distro
 Install OpenCV and all the dependencies as described here https://gist.github.com/nihil21/f2ea6b6f092469ecd0bfb910301c62a2.
 After that, install what is missing:
 ```
@@ -93,10 +93,26 @@ pip3 install zmq imagezmq imutils picamera
 ```
 
 Execute the following script (on pc):
-`python3 python3 ./stream/SistemiDigitali/stream_receiver.py -ip <ip_raspberry>`
+`python3 ./stream/SistemiDigitali/stream_receiver.py -ip <ip_raspberry>`
 
+### Step 3: Training
+Some notes:
+- `tf.data.Dataset` API.
+- Loading folders of images in Tensorflow: https://stackoverflow.com/a/52417770.
+- From a list of images paths, with the special function `map`, convert a image path into an image.
 
-### Contacts
+**example1.jpg**
+
+- The function`map_fn(path, label)` return the image uploaded and its label from a image path and its label.
+- `dataset.map(map_fn)` loads an image path in a lazy way (in this way the RAM won't be saturated).
+
+**example2.jpg**
+- A dataset is created from a string list, which represents every image path.
+- The list is converted to a string tensor.
+- A dataset object is created from this tensor:
+`dataset = tf.data.Dataset.from_tensor_slices((image_paths, labels))`
+
+## Contacts
 * [TryKatChup](https://www.linkedin.com/in/karina-chichifoi/?locale=en_US)
 * [Mikyll](https://www.linkedin.com/in/michele-righi/?locale=en_US)
 
