@@ -63,7 +63,7 @@ pip3 install opencv-python zmq imagezmq numpy imutils
 ```
 
 Execute `./stream/SistemiDigitali/video_capture.py`
-### Step 2: Receiving the images
+## Step 2: Receiving the images
 The following packages must be installed:
 
 **Compiled from scratch**
@@ -95,7 +95,7 @@ pip3 install zmq imagezmq imutils picamera
 Execute the following script (on pc):
 `python3 ./stream/SistemiDigitali/stream_receiver.py -ip <ip_raspberry>`
 
-### Step 3: Training
+## Step 3: Training
 Some notes:
 - `tf.data.Dataset` API.
 - Loading folders of images in Tensorflow: https://stackoverflow.com/a/52417770.
