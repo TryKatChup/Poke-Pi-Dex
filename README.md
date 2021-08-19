@@ -101,7 +101,7 @@ Some notes:
 - Loading folders of images in Tensorflow: https://stackoverflow.com/a/52417770.
 - From a list of images paths, with the special function `map`, convert a image path into an image.
 
-![](./images/example1.jpg)
+![](./images/example.jpg)
 
 - The function`map_fn(path, label)` return the image uploaded and its label from a image path and its label.
 - `dataset.map(map_fn)` loads an image path in a lazy way (in this way the RAM won't be saturated).
