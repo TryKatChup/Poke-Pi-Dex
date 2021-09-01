@@ -39,6 +39,12 @@ Our computer vision related project for nostalgic poke weebs (Sistemi digitali, 
 4. Fake card recognition
 5. 3d models output of the card
 
+## Tools
+- [PyCharm](https://www.jetbrains.com/pycharm/)
+- [Anaconda](https://www.anaconda.com/)
+- [Sketchup browser](https://app.sketchup.com/)
+<!-- - ssh(?) -->
+
 ## Resources
 
 - Dataset pokèmon:
