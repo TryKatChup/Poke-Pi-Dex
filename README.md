@@ -32,6 +32,9 @@ Our computer vision related project for nostalgic poke weebs (Sistemi digitali, 
 - Fake, rare and printing errors recognition
 - 3D model animation (associated with the recognized card)
 
+## GUI Prototype
+![GUI prototype Squirtle example](https://github.com/TryKatChup/pokemon-cv-revival/blob/main/gui/gui_example_squirtle.png)
+
 ## TO-DO list
 1. Find the best cards dataset available (even with only one generation)
 2. Angle straighten (upright set) and card recognition (see resources for examples)
