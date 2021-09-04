@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -18,9 +18,9 @@
    <children>
       <Pane prefHeight="500.0" prefWidth="400.0" style="-fx-border-color: black;">
          <children>
-            <ImageView fitHeight="400.0" fitWidth="300.0" layoutX="50.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="450.0" fitWidth="350.0" layoutX="31.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@DetectionExample.png" />
+                  <Image url="@DetectionExampleSquirtle.png" />
                </image>
             </ImageView>
          </children>
@@ -32,14 +32,32 @@
                   <Image url="@ThumbnailSquirtle.png" />
                </image>
             </ImageView>
-            <HBox alignment="CENTER" layoutX="25.0" layoutY="164.0" prefHeight="30.0" prefWidth="350.0" style="-fx-background-color: light grey;">
+            <HBox alignment="CENTER_LEFT" layoutX="39.0" layoutY="125.0" prefHeight="38.0" prefWidth="86.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="40.0" text="Cry:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="buttonCry" mnemonicParsing="false" style="-fx-background-color: #909497;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icon-sound.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="25.0" layoutY="164.0" prefHeight="30.0" prefWidth="350.0" spacing="5.0" style="-fx-background-color: light grey;">
                <children>
                   <Label prefHeight="25.0" prefWidth="60.0" text="Name:">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Squirtle">
+                  <Text fx:id="textName" strokeType="OUTSIDE" strokeWidth="0.0" text="Squirtle">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -53,7 +71,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="007">
+                  <Text fx:id="textNumber" strokeType="OUTSIDE" strokeWidth="0.0" text="007">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -64,7 +82,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Water">
+                  <Text fx:id="textType" strokeType="OUTSIDE" strokeWidth="0.0" text="Water">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -80,115 +98,151 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds." textAlignment="JUSTIFY" />
+                        <Text fx:id="textDescription" strokeType="OUTSIDE" strokeWidth="0.0" text="Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds." textAlignment="JUSTIFY" />
                      </children>
                   </TextFlow>
                </children>
             </HBox>
-            <VBox layoutX="27.0" layoutY="306.0" prefHeight="180.0" prefWidth="350.0">
+            <VBox layoutX="27.0" layoutY="306.0" prefHeight="187.0" prefWidth="370.0" spacing="5.0">
                <children>
                   <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="350.0" style="-fx-background-color: light grey;">
                      <children>
-                        <Label prefHeight="25.0" prefWidth="80.0" text="HP:">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <TextField prefHeight="26.0" prefWidth="40.0" style="-fx-background-color: gray;" text="44">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </TextField>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="15.0" stroke="BLACK" strokeType="INSIDE" width="44.0" />
+                        <HBox prefHeight="27.0" prefWidth="110.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="75.0" text="HP:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Text fx:id="textStatHP" strokeType="OUTSIDE" strokeWidth="0.0" text="44">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <Rectangle fx:id="barHP" arcHeight="5.0" arcWidth="5.0" fill="RED" height="15.0" stroke="BLACK" strokeType="INSIDE" width="44.0" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="350.0" style="-fx-background-color: light grey;">
                      <children>
-                        <Label prefHeight="25.0" prefWidth="80.0" text="Attack:">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <TextField prefHeight="26.0" prefWidth="40.0" style="-fx-background-color: gray;" text="48">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </TextField>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="15.0" stroke="BLACK" strokeType="INSIDE" width="48.0" />
+                        <HBox prefHeight="28.0" prefWidth="110.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="75.0" text="Attack:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Text fx:id="textStatAttack" strokeType="OUTSIDE" strokeWidth="0.0" text="48">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <Rectangle fx:id="barAttack" arcHeight="5.0" arcWidth="5.0" fill="RED" height="15.0" stroke="BLACK" strokeType="INSIDE" width="48.0" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="350.0" style="-fx-background-color: light grey;">
                      <children>
-                        <Label prefHeight="25.0" prefWidth="80.0" text="Defense:">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <TextField prefHeight="26.0" prefWidth="40.0" style="-fx-background-color: gray;" text="65">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </TextField>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff4c00" height="15.0" stroke="BLACK" strokeType="INSIDE" width="65.0" />
+                        <HBox prefHeight="28.0" prefWidth="110.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="75.0" text="Defense:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Text fx:id="textStatDefense" strokeType="OUTSIDE" strokeWidth="0.0" text="65">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <Rectangle fx:id="barDefense" arcHeight="5.0" arcWidth="5.0" fill="#ff4c00" height="15.0" stroke="BLACK" strokeType="INSIDE" width="65.0" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="350.0" style="-fx-background-color: light grey;">
                      <children>
-                        <Label prefHeight="25.0" prefWidth="80.0" text="Sp. Atk:">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <TextField prefHeight="26.0" prefWidth="40.0" style="-fx-background-color: gray;" text="50">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </TextField>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="15.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+                        <HBox prefHeight="28.0" prefWidth="110.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="75.0" text="Sp. Atk:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Text fx:id="textStatSpAtk" strokeType="OUTSIDE" strokeWidth="0.0" text="50">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <Rectangle fx:id="barSpAtk" arcHeight="5.0" arcWidth="5.0" fill="RED" height="15.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="350.0" style="-fx-background-color: light grey;">
                      <children>
-                        <Label prefHeight="25.0" prefWidth="80.0" text="Sp. Def:">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <TextField prefHeight="26.0" prefWidth="40.0" style="-fx-background-color: gray;" text="64">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </TextField>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff4c00" height="15.0" stroke="BLACK" strokeType="INSIDE" width="64.0" />
+                        <HBox prefHeight="28.0" prefWidth="110.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="75.0" text="Sp. Def:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Text fx:id="textStatSpDef" strokeType="OUTSIDE" strokeWidth="0.0" text="64">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <Rectangle fx:id="barSpDef" arcHeight="5.0" arcWidth="5.0" fill="#ff4c00" height="15.0" stroke="BLACK" strokeType="INSIDE" width="64.0" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="350.0" style="-fx-background-color: light grey;">
                      <children>
-                        <Label prefHeight="25.0" prefWidth="80.0" text="Speed:">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <TextField prefHeight="26.0" prefWidth="40.0" style="-fx-background-color: gray;" text="43">
-                           <font>
-                              <Font name="System Bold" size="12.0" />
-                           </font>
-                        </TextField>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="15.0" stroke="BLACK" strokeType="INSIDE" width="43.0" />
+                        <HBox prefHeight="28.0" prefWidth="110.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="75.0" text="Speed:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Text fx:id="textStatSpeed" strokeType="OUTSIDE" strokeWidth="0.0" text="43">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <Rectangle fx:id="barSpeed" arcHeight="5.0" arcWidth="5.0" fill="RED" height="15.0" stroke="BLACK" strokeType="INSIDE" width="43.0" />
                      </children>
                   </HBox>
                </children>
             </VBox>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="315.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@icon-sound.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="275.0" layoutY="140.0" prefHeight="25.0" prefWidth="40.0" text="Cry:">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
+            <VBox layoutX="339.0" layoutY="14.0" prefHeight="80.0" prefWidth="34.0" spacing="5.0">
+               <children>
+                  <Button fx:id="buttonSettings" mnemonicParsing="false" prefHeight="38.0" prefWidth="46.0" style="-fx-background-color: #909497;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icon-settings.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="buttonInfo" mnemonicParsing="false" prefHeight="38.0" prefWidth="46.0" style="-fx-background-color: #909497;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icon-info.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
          </children>
       </Pane>
    </children>
