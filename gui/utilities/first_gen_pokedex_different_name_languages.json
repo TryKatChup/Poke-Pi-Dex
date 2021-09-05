@@ -1,14 +1,15 @@
 [{
     "id": 1,
-    "name": "Bulbasaur",
+    "name": {
+      "english": "Bulbasaur",
+      "japanese": "フシギダネ",
+      "chinese": "妙蛙种子",
+      "french": "Bulbizarre"
+    },
     "type": [
       "Grass",
       "Poison"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 2
-	},
     "stats": {
       "HP": 45,
       "Attack": 49,
@@ -21,15 +22,16 @@
   },
   {
     "id": 2,
-    "name": "Ivysaur",
+    "name": {
+      "english": "Ivysaur",
+      "japanese": "フシギソウ",
+      "chinese": "妙蛙草",
+      "french": "Herbizarre"
+    },
     "type": [
       "Grass",
       "Poison"
     ],
-	"evolutions": {
-		"from": 1,
-		"to": 3
-	},
     "stats": {
       "HP": 60,
       "Attack": 62,
@@ -42,15 +44,16 @@
   },
   {
     "id": 3,
-    "name": "Venusaur",
+    "name": {
+      "english": "Venusaur",
+      "japanese": "フシギバナ",
+      "chinese": "妙蛙花",
+      "french": "Florizarre"
+    },
     "type": [
       "Grass",
       "Poison"
     ],
-	"evolutions": {
-		"from": 2,
-		"to": null
-	},
     "stats": {
       "HP": 80,
       "Attack": 82,
@@ -63,14 +66,15 @@
   },
   {
     "id": 4,
-    "name": "Charmander",
+    "name": {
+      "english": "Charmander",
+      "japanese": "ヒトカゲ",
+      "chinese": "小火龙",
+      "french": "Salamèche"
+    },
     "type": [
       "Fire"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 5
-	},
     "stats": {
       "HP": 39,
       "Attack": 52,
@@ -83,14 +87,15 @@
   },
   {
     "id": 5,
-    "name": "Charmeleon",
+    "name": {
+      "english": "Charmeleon",
+      "japanese": "リザード",
+      "chinese": "火恐龙",
+      "french": "Reptincel"
+    },
     "type": [
       "Fire"
     ],
-	"evolutions": {
-		"from": 4,
-		"to": 6
-	},
     "stats": {
       "HP": 58,
       "Attack": 64,
@@ -103,15 +108,16 @@
   },
   {
     "id": 6,
-    "name": "Charizard",
+    "name": {
+      "english": "Charizard",
+      "japanese": "リザードン",
+      "chinese": "喷火龙",
+      "french": "Dracaufeu"
+    },
     "type": [
       "Fire",
       "Flying"
     ],
-	"evolutions": {
-		"from": 5,
-		"to": null
-	},
     "stats": {
       "HP": 78,
       "Attack": 84,
@@ -124,14 +130,15 @@
   },
   {
     "id": 7,
-    "name": "Squirtle",
+    "name": {
+      "english": "Squirtle",
+      "japanese": "ゼニガメ",
+      "chinese": "杰尼龟",
+      "french": "Carapuce"
+    },
     "type": [
       "Water"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 8
-	},
     "stats": {
       "HP": 44,
       "Attack": 48,
@@ -144,14 +151,15 @@
   },
   {
     "id": 8,
-    "name": "Wartortle",
+    "name": {
+      "english": "Wartortle",
+      "japanese": "カメール",
+      "chinese": "卡咪龟",
+      "french": "Carabaffe"
+    },
     "type": [
       "Water"
     ],
-	"evolutions": {
-		"from": 7,
-		"to": 9
-	},
     "stats": {
       "HP": 59,
       "Attack": 63,
@@ -164,14 +172,15 @@
   },
   {
     "id": 9,
-    "name": "Blastoise",
+    "name": {
+      "english": "Blastoise",
+      "japanese": "カメックス",
+      "chinese": "水箭龟",
+      "french": "Tortank"
+    },
     "type": [
       "Water"
     ],
-	"evolutions": {
-		"from": 8,
-		"to": null
-	},
     "stats": {
       "HP": 79,
       "Attack": 83,
@@ -184,14 +193,15 @@
   },
   {
     "id": 10,
-    "name": "Caterpie",
+    "name": {
+      "english": "Caterpie",
+      "japanese": "キャタピー",
+      "chinese": "绿毛虫",
+      "french": "Chenipan"
+    },
     "type": [
       "Bug"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 11
-	},
     "stats": {
       "HP": 45,
       "Attack": 30,
@@ -204,14 +214,15 @@
   },
   {
     "id": 11,
-    "name": "Metapod",
+    "name": {
+      "english": "Metapod",
+      "japanese": "トランセル",
+      "chinese": "铁甲蛹",
+      "french": "Chrysacier"
+    },
     "type": [
       "Bug"
     ],
-	"evolutions": {
-		"from": 10,
-		"to": 12
-	},
     "stats": {
       "HP": 50,
       "Attack": 20,
@@ -224,15 +235,16 @@
   },
   {
     "id": 12,
-    "name": "Butterfree",
+    "name": {
+      "english": "Butterfree",
+      "japanese": "バタフリー",
+      "chinese": "巴大蝶",
+      "french": "Papilusion"
+    },
     "type": [
       "Bug",
       "Flying"
     ],
-	"evolutions": {
-		"from": 11,
-		"to": null
-	},
     "stats": {
       "HP": 60,
       "Attack": 45,
@@ -245,15 +257,16 @@
   },
   {
     "id": 13,
-    "name": "Weedle",
+    "name": {
+      "english": "Weedle",
+      "japanese": "ビードル",
+      "chinese": "独角虫",
+      "french": "Aspicot"
+    },
     "type": [
       "Bug",
       "Poison"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 14
-	},
     "stats": {
       "HP": 40,
       "Attack": 35,
@@ -266,15 +279,16 @@
   },
   {
     "id": 14,
-    "name": "Kakuna",
+    "name": {
+      "english": "Kakuna",
+      "japanese": "コクーン",
+      "chinese": "铁壳蛹",
+      "french": "Coconfort"
+    },
     "type": [
       "Bug",
       "Poison"
     ],
-	"evolutions": {
-		"from": 13,
-		"to": 15
-	},
     "stats": {
       "HP": 45,
       "Attack": 25,
@@ -287,15 +301,16 @@
   },
   {
     "id": 15,
-    "name": "Beedrill",
+    "name": {
+      "english": "Beedrill",
+      "japanese": "スピアー",
+      "chinese": "大针蜂",
+      "french": "Dardargnan"
+    },
     "type": [
       "Bug",
       "Poison"
     ],
-	"evolutions": {
-		"from": 14,
-		"to": null
-	},
     "stats": {
       "HP": 65,
       "Attack": 90,
@@ -308,15 +323,16 @@
   },
   {
     "id": 16,
-    "name": "Pidgey",
+    "name": {
+      "english": "Pidgey",
+      "japanese": "ポッポ",
+      "chinese": "波波",
+      "french": "Roucool"
+    },
     "type": [
       "Normal",
       "Flying"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 17
-	},
     "stats": {
       "HP": 40,
       "Attack": 45,
@@ -329,15 +345,16 @@
   },
   {
     "id": 17,
-    "name": "Pidgeotto",
+    "name": {
+      "english": "Pidgeotto",
+      "japanese": "ピジョン",
+      "chinese": "比比鸟",
+      "french": "Roucoups"
+    },
     "type": [
       "Normal",
       "Flying"
     ],
-	"evolutions": {
-		"from": 16,
-		"to": 18
-	},
     "stats": {
       "HP": 63,
       "Attack": 60,
@@ -350,15 +367,16 @@
   },
   {
     "id": 18,
-    "name": "Pidgeot",
+    "name": {
+      "english": "Pidgeot",
+      "japanese": "ピジョット",
+      "chinese": "大比鸟",
+      "french": "Roucarnage"
+    },
     "type": [
       "Normal",
       "Flying"
     ],
-	"evolutions": {
-		"from": 17,
-		"to": null
-	},
     "stats": {
       "HP": 83,
       "Attack": 80,
@@ -371,14 +389,15 @@
   },
   {
     "id": 19,
-    "name": "Rattata",
+    "name": {
+      "english": "Rattata",
+      "japanese": "コラッタ",
+      "chinese": "小拉达",
+      "french": "Rattata"
+    },
     "type": [
       "Normal"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 20
-	},
     "stats": {
       "HP": 30,
       "Attack": 56,
@@ -391,14 +410,15 @@
   },
   {
     "id": 20,
-    "name": "Raticate",
+    "name": {
+      "english": "Raticate",
+      "japanese": "ラッタ",
+      "chinese": "拉达",
+      "french": "Rattatac"
+    },
     "type": [
       "Normal"
     ],
-	"evolutions": {
-		"from": 19,
-		"to": null
-	},
     "stats": {
       "HP": 55,
       "Attack": 81,
@@ -411,15 +431,16 @@
   },
   {
     "id": 21,
-    "name": "Spearow",
+    "name": {
+      "english": "Spearow",
+      "japanese": "オニスズメ",
+      "chinese": "烈雀",
+      "french": "Piafabec"
+    },
     "type": [
       "Normal",
       "Flying"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 22
-	},
     "stats": {
       "HP": 40,
       "Attack": 60,
@@ -432,15 +453,16 @@
   },
   {
     "id": 22,
-    "name": "Fearow",
+    "name": {
+      "english": "Fearow",
+      "japanese": "オニドリル",
+      "chinese": "大嘴雀",
+      "french": "Rapasdepic"
+    },
     "type": [
       "Normal",
       "Flying"
     ],
-	"evolutions": {
-		"from": 21,
-		"to": null
-	},
     "stats": {
       "HP": 65,
       "Attack": 90,
@@ -453,14 +475,15 @@
   },
   {
     "id": 23,
-    "name": "Ekans",
+    "name": {
+      "english": "Ekans",
+      "japanese": "アーボ",
+      "chinese": "阿柏蛇",
+      "french": "Abo"
+    },
     "type": [
       "Poison"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 24
-	},
     "stats": {
       "HP": 35,
       "Attack": 60,
@@ -473,14 +496,15 @@
   },
   {
     "id": 24,
-    "name": "Arbok",
+    "name": {
+      "english": "Arbok",
+      "japanese": "アーボック",
+      "chinese": "阿柏怪",
+      "french": "Arbok"
+    },
     "type": [
       "Poison"
     ],
-	"evolutions": {
-		"from": 23,
-		"to": null
-	},
     "stats": {
       "HP": 60,
       "Attack": 95,
@@ -493,14 +517,15 @@
   },
   {
     "id": 25,
-    "name": "Pikachu",
+    "name": {
+      "english": "Pikachu",
+      "japanese": "ピカチュウ",
+      "chinese": "皮卡丘",
+      "french": "Pikachu"
+    },
     "type": [
       "Electric"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 26
-	},
     "stats": {
       "HP": 35,
       "Attack": 55,
@@ -513,14 +538,15 @@
   },
   {
     "id": 26,
-    "name": "Raichu",
+    "name": {
+      "english": "Raichu",
+      "japanese": "ライチュウ",
+      "chinese": "雷丘",
+      "french": "Raichu"
+    },
     "type": [
       "Electric"
     ],
-	"evolutions": {
-		"from": 25,
-		"to": null
-	},
     "stats": {
       "HP": 60,
       "Attack": 90,
@@ -533,14 +559,15 @@
   },
   {
     "id": 27,
-    "name": "Sandshrew",
+    "name": {
+      "english": "Sandshrew",
+      "japanese": "サンド",
+      "chinese": "穿山鼠",
+      "french": "Sabelette"
+    },
     "type": [
       "Ground"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 28
-	},
     "stats": {
       "HP": 50,
       "Attack": 75,
@@ -553,14 +580,15 @@
   },
   {
     "id": 28,
-    "name": "Sandslash",
+    "name": {
+      "english": "Sandslash",
+      "japanese": "サンドパン",
+      "chinese": "穿山王",
+      "french": "Sablaireau"
+    },
     "type": [
       "Ground"
     ],
-	"evolutions": {
-		"from": 27,
-		"to": null
-	},
     "stats": {
       "HP": 75,
       "Attack": 100,
@@ -573,14 +601,15 @@
   },
   {
     "id": 29,
-    "name": "Nidoran-f",
+    "name": {
+      "english": "Nidoran♀",
+      "japanese": "ニドラン♀",
+      "chinese": "尼多兰",
+      "french": "Nidoran♀"
+    },
     "type": [
       "Poison"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 30
-	},
     "stats": {
       "HP": 55,
       "Attack": 47,
@@ -593,14 +622,15 @@
   },
   {
     "id": 30,
-    "name": "Nidorina",
+    "name": {
+      "english": "Nidorina",
+      "japanese": "ニドリーナ",
+      "chinese": "尼多娜",
+      "french": "Nidorina"
+    },
     "type": [
       "Poison"
     ],
-	"evolutions": {
-		"from": 29,
-		"to": 31
-	},
     "stats": {
       "HP": 70,
       "Attack": 62,
@@ -613,15 +643,16 @@
   },
   {
     "id": 31,
-    "name": "Nidoqueen",
+    "name": {
+      "english": "Nidoqueen",
+      "japanese": "ニドクイン",
+      "chinese": "尼多后",
+      "french": "Nidoqueen"
+    },
     "type": [
       "Poison",
       "Ground"
     ],
-	"evolutions": {
-		"from": 30,
-		"to": null
-	},
     "stats": {
       "HP": 90,
       "Attack": 92,
@@ -634,14 +665,15 @@
   },
   {
     "id": 32,
-    "name": "Nidoran-m",
+    "name": {
+      "english": "Nidoran♂",
+      "japanese": "ニドラン♂",
+      "chinese": "尼多朗",
+      "french": "Nidoran♂"
+    },
     "type": [
       "Poison"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 33
-	},
     "stats": {
       "HP": 46,
       "Attack": 57,
@@ -654,14 +686,15 @@
   },
   {
     "id": 33,
-    "name": "Nidorino",
+    "name": {
+      "english": "Nidorino",
+      "japanese": "ニドリーノ",
+      "chinese": "尼多力诺",
+      "french": "Nidorino"
+    },
     "type": [
       "Poison"
     ],
-	"evolutions": {
-		"from": 32,
-		"to": 34
-	},
     "stats": {
       "HP": 61,
       "Attack": 72,
@@ -674,15 +707,16 @@
   },
   {
     "id": 34,
-    "name": "Nidoking",
+    "name": {
+      "english": "Nidoking",
+      "japanese": "ニドキング",
+      "chinese": "尼多王",
+      "french": "Nidoking"
+    },
     "type": [
       "Poison",
       "Ground"
     ],
-	"evolutions": {
-		"from": 33,
-		"to": null
-	},
     "stats": {
       "HP": 81,
       "Attack": 102,
@@ -695,14 +729,15 @@
   },
   {
     "id": 35,
-    "name": "Clefairy",
+    "name": {
+      "english": "Clefairy",
+      "japanese": "ピッピ",
+      "chinese": "皮皮",
+      "french": "Mélofée"
+    },
     "type": [
       "Fairy"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 36
-	},
     "stats": {
       "HP": 70,
       "Attack": 45,
@@ -715,14 +750,15 @@
   },
   {
     "id": 36,
-    "name": "Clefable",
+    "name": {
+      "english": "Clefable",
+      "japanese": "ピクシー",
+      "chinese": "皮可西",
+      "french": "Mélodelfe"
+    },
     "type": [
       "Fairy"
     ],
-	"evolutions": {
-		"from": 35,
-		"to": null
-	},
     "stats": {
       "HP": 95,
       "Attack": 70,
@@ -735,14 +771,15 @@
   },
   {
     "id": 37,
-    "name": "Vulpix",
+    "name": {
+      "english": "Vulpix",
+      "japanese": "ロコン",
+      "chinese": "六尾",
+      "french": "Goupix"
+    },
     "type": [
       "Fire"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 38
-	},
     "stats": {
       "HP": 38,
       "Attack": 41,
@@ -755,14 +792,15 @@
   },
   {
     "id": 38,
-    "name": "Ninetales",
+    "name": {
+      "english": "Ninetales",
+      "japanese": "キュウコン",
+      "chinese": "九尾",
+      "french": "Feunard"
+    },
     "type": [
       "Fire"
     ],
-	"evolutions": {
-		"from": 37,
-		"to": null
-	},
     "stats": {
       "HP": 73,
       "Attack": 76,
@@ -775,15 +813,16 @@
   },
   {
     "id": 39,
-    "name": "Jigglypuff",
+    "name": {
+      "english": "Jigglypuff",
+      "japanese": "プリン",
+      "chinese": "胖丁",
+      "french": "Rondoudou"
+    },
     "type": [
       "Normal",
       "Fairy"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 40
-	},
     "stats": {
       "HP": 115,
       "Attack": 45,
@@ -796,15 +835,16 @@
   },
   {
     "id": 40,
-    "name": "Wigglytuff",
+    "name": {
+      "english": "Wigglytuff",
+      "japanese": "プクリン",
+      "chinese": "胖可丁",
+      "french": "Grodoudou"
+    },
     "type": [
       "Normal",
       "Fairy"
     ],
-	"evolutions": {
-		"from": 39,
-		"to": null
-	},
     "stats": {
       "HP": 140,
       "Attack": 70,
@@ -817,15 +857,16 @@
   },
   {
     "id": 41,
-    "name": "Zubat",
+    "name": {
+      "english": "Zubat",
+      "japanese": "ズバット",
+      "chinese": "超音蝠",
+      "french": "Nosferapti"
+    },
     "type": [
       "Poison",
       "Flying"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 42
-	},
     "stats": {
       "HP": 40,
       "Attack": 45,
@@ -838,15 +879,16 @@
   },
   {
     "id": 42,
-    "name": "Golbat",
+    "name": {
+      "english": "Golbat",
+      "japanese": "ゴルバット",
+      "chinese": "大嘴蝠",
+      "french": "Nosferalto"
+    },
     "type": [
       "Poison",
       "Flying"
     ],
-	"evolutions": {
-		"from": 41,
-		"to": null
-	},
     "stats": {
       "HP": 75,
       "Attack": 80,
@@ -859,15 +901,16 @@
   },
   {
     "id": 43,
-    "name": "Oddish",
+    "name": {
+      "english": "Oddish",
+      "japanese": "ナゾノクサ",
+      "chinese": "走路草",
+      "french": "Mystherbe"
+    },
     "type": [
       "Grass",
       "Poison"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 44
-	},
     "stats": {
       "HP": 45,
       "Attack": 50,
@@ -880,15 +923,16 @@
   },
   {
     "id": 44,
-    "name": "Gloom",
+    "name": {
+      "english": "Gloom",
+      "japanese": "クサイハナ",
+      "chinese": "臭臭花",
+      "french": "Ortide"
+    },
     "type": [
       "Grass",
       "Poison"
     ],
-	"evolutions": {
-		"from": 43,
-		"to": 45
-	},
     "stats": {
       "HP": 60,
       "Attack": 65,
@@ -901,15 +945,16 @@
   },
   {
     "id": 45,
-    "name": "Vileplume",
+    "name": {
+      "english": "Vileplume",
+      "japanese": "ラフレシア",
+      "chinese": "霸王花",
+      "french": "Rafflesia"
+    },
     "type": [
       "Grass",
       "Poison"
     ],
-	"evolutions": {
-		"from": 44,
-		"to": null
-	},
     "stats": {
       "HP": 75,
       "Attack": 80,
@@ -922,15 +967,16 @@
   },
   {
     "id": 46,
-    "name": "Paras",
+    "name": {
+      "english": "Paras",
+      "japanese": "パラス",
+      "chinese": "派拉斯",
+      "french": "Paras"
+    },
     "type": [
       "Bug",
       "Grass"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 47
-	},
     "stats": {
       "HP": 35,
       "Attack": 70,
@@ -943,15 +989,16 @@
   },
   {
     "id": 47,
-    "name": "Parasect",
+    "name": {
+      "english": "Parasect",
+      "japanese": "パラセクト",
+      "chinese": "派拉斯特",
+      "french": "Parasect"
+    },
     "type": [
       "Bug",
       "Grass"
     ],
-	"evolutions": {
-		"from": 46,
-		"to": null
-	},
     "stats": {
       "HP": 60,
       "Attack": 95,
@@ -964,15 +1011,16 @@
   },
   {
     "id": 48,
-    "name": "Venonat",
+    "name": {
+      "english": "Venonat",
+      "japanese": "コンパン",
+      "chinese": "毛球",
+      "french": "Mimitoss"
+    },
     "type": [
       "Bug",
       "Poison"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 49
-	},
     "stats": {
       "HP": 60,
       "Attack": 55,
@@ -985,15 +1033,16 @@
   },
   {
     "id": 49,
-    "name": "Venomoth",
+    "name": {
+      "english": "Venomoth",
+      "japanese": "モルフォン",
+      "chinese": "摩鲁蛾",
+      "french": "Aéromite"
+    },
     "type": [
       "Bug",
       "Poison"
     ],
-	"evolutions": {
-		"from": 48,
-		"to": null
-	},
     "stats": {
       "HP": 70,
       "Attack": 65,
@@ -1006,14 +1055,15 @@
   },
   {
     "id": 50,
-    "name": "Diglett",
+    "name": {
+      "english": "Diglett",
+      "japanese": "ディグダ",
+      "chinese": "地鼠",
+      "french": "Taupiqueur"
+    },
     "type": [
       "Ground"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 51
-	},
     "stats": {
       "HP": 10,
       "Attack": 55,
@@ -1026,14 +1076,15 @@
   },
   {
     "id": 51,
-    "name": "Dugtrio",
+    "name": {
+      "english": "Dugtrio",
+      "japanese": "ダグトリオ",
+      "chinese": "三地鼠",
+      "french": "Triopikeur"
+    },
     "type": [
       "Ground"
     ],
-	"evolutions": {
-		"from": 50,
-		"to": null
-	},
     "stats": {
       "HP": 35,
       "Attack": 100,
@@ -1046,14 +1097,15 @@
   },
   {
     "id": 52,
-    "name": "Meowth",
+    "name": {
+      "english": "Meowth",
+      "japanese": "ニャース",
+      "chinese": "喵喵",
+      "french": "Miaouss"
+    },
     "type": [
       "Normal"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 53
-	},
     "stats": {
       "HP": 40,
       "Attack": 45,
@@ -1066,14 +1118,15 @@
   },
   {
     "id": 53,
-    "name": "Persian",
+    "name": {
+      "english": "Persian",
+      "japanese": "ペルシアン",
+      "chinese": "猫老大",
+      "french": "Persian"
+    },
     "type": [
       "Normal"
     ],
-	"evolutions": {
-		"from": 52,
-		"to": null
-	},
     "stats": {
       "HP": 65,
       "Attack": 70,
@@ -1086,14 +1139,15 @@
   },
   {
     "id": 54,
-    "name": "Psyduck",
+    "name": {
+      "english": "Psyduck",
+      "japanese": "コダック",
+      "chinese": "可达鸭",
+      "french": "Psykokwak"
+    },
     "type": [
       "Water"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 55
-	},
     "stats": {
       "HP": 50,
       "Attack": 52,
@@ -1106,14 +1160,15 @@
   },
   {
     "id": 55,
-    "name": "Golduck",
+    "name": {
+      "english": "Golduck",
+      "japanese": "ゴルダック",
+      "chinese": "哥达鸭",
+      "french": "Akwakwak"
+    },
     "type": [
       "Water"
     ],
-	"evolutions": {
-		"from": 54,
-		"to": null
-	},
     "stats": {
       "HP": 80,
       "Attack": 82,
@@ -1126,14 +1181,15 @@
   },
   {
     "id": 56,
-    "name": "Mankey",
+    "name": {
+      "english": "Mankey",
+      "japanese": "マンキー",
+      "chinese": "猴怪",
+      "french": "Férosinge"
+    },
     "type": [
       "Fighting"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 57
-	},
     "stats": {
       "HP": 40,
       "Attack": 80,
@@ -1146,14 +1202,15 @@
   },
   {
     "id": 57,
-    "name": "Primeape",
+    "name": {
+      "english": "Primeape",
+      "japanese": "オコリザル",
+      "chinese": "火暴猴",
+      "french": "Colossinge"
+    },
     "type": [
       "Fighting"
     ],
-	"evolutions": {
-		"from": 56,
-		"to": null
-	},
     "stats": {
       "HP": 65,
       "Attack": 105,
@@ -1166,14 +1223,15 @@
   },
   {
     "id": 58,
-    "name": "Growlithe",
+    "name": {
+      "english": "Growlithe",
+      "japanese": "ガーディ",
+      "chinese": "卡蒂狗",
+      "french": "Caninos"
+    },
     "type": [
       "Fire"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 59
-	},
     "stats": {
       "HP": 55,
       "Attack": 70,
@@ -1186,14 +1244,15 @@
   },
   {
     "id": 59,
-    "name": "Arcanine",
+    "name": {
+      "english": "Arcanine",
+      "japanese": "ウインディ",
+      "chinese": "风速狗",
+      "french": "Arcanin"
+    },
     "type": [
       "Fire"
     ],
-	"evolutions": {
-		"from": 58,
-		"to": null
-	},
     "stats": {
       "HP": 90,
       "Attack": 110,
@@ -1206,14 +1265,15 @@
   },
   {
     "id": 60,
-    "name": "Poliwag",
+    "name": {
+      "english": "Poliwag",
+      "japanese": "ニョロモ",
+      "chinese": "蚊香蝌蚪",
+      "french": "Ptitard"
+    },
     "type": [
       "Water"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 61
-	},
     "stats": {
       "HP": 40,
       "Attack": 50,
@@ -1226,14 +1286,15 @@
   },
   {
     "id": 61,
-    "name": "Poliwhirl",
+    "name": {
+      "english": "Poliwhirl",
+      "japanese": "ニョロゾ",
+      "chinese": "蚊香君",
+      "french": "Têtarte"
+    },
     "type": [
       "Water"
     ],
-	"evolutions": {
-		"from": 60,
-		"to": 62
-	},
     "stats": {
       "HP": 65,
       "Attack": 65,
@@ -1246,15 +1307,16 @@
   },
   {
     "id": 62,
-    "name": "Poliwrath",
+    "name": {
+      "english": "Poliwrath",
+      "japanese": "ニョロボン",
+      "chinese": "蚊香泳士",
+      "french": "Tartard"
+    },
     "type": [
       "Water",
       "Fighting"
     ],
-	"evolutions": {
-		"from": 61,
-		"to": null
-	},
     "stats": {
       "HP": 90,
       "Attack": 95,
@@ -1267,14 +1329,15 @@
   },
   {
     "id": 63,
-    "name": "Abra",
+    "name": {
+      "english": "Abra",
+      "japanese": "ケーシィ",
+      "chinese": "凯西",
+      "french": "Abra"
+    },
     "type": [
       "Psychic"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 64
-	},
     "stats": {
       "HP": 25,
       "Attack": 20,
@@ -1287,14 +1350,15 @@
   },
   {
     "id": 64,
-    "name": "Kadabra",
+    "name": {
+      "english": "Kadabra",
+      "japanese": "ユンゲラー",
+      "chinese": "勇基拉",
+      "french": "Kadabra"
+    },
     "type": [
       "Psychic"
     ],
-	"evolutions": {
-		"from": 63,
-		"to": 65
-	},
     "stats": {
       "HP": 40,
       "Attack": 35,
@@ -1307,14 +1371,15 @@
   },
   {
     "id": 65,
-    "name": "Alakazam",
+    "name": {
+      "english": "Alakazam",
+      "japanese": "フーディン",
+      "chinese": "胡地",
+      "french": "Alakazam"
+    },
     "type": [
       "Psychic"
     ],
-	"evolutions": {
-		"from": 64,
-		"to": null
-	},
     "stats": {
       "HP": 55,
       "Attack": 50,
@@ -1327,14 +1392,15 @@
   },
   {
     "id": 66,
-    "name": "Machop",
+    "name": {
+      "english": "Machop",
+      "japanese": "ワンリキー",
+      "chinese": "腕力",
+      "french": "Machoc"
+    },
     "type": [
       "Fighting"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 67
-	},
     "stats": {
       "HP": 70,
       "Attack": 80,
@@ -1347,14 +1413,15 @@
   },
   {
     "id": 67,
-    "name": "Machoke",
+    "name": {
+      "english": "Machoke",
+      "japanese": "ゴーリキー",
+      "chinese": "豪力",
+      "french": "Machopeur"
+    },
     "type": [
       "Fighting"
     ],
-	"evolutions": {
-		"from": 66,
-		"to": 68
-	},
     "stats": {
       "HP": 80,
       "Attack": 100,
@@ -1367,14 +1434,15 @@
   },
   {
     "id": 68,
-    "name": "Machamp",
+    "name": {
+      "english": "Machamp",
+      "japanese": "カイリキー",
+      "chinese": "怪力",
+      "french": "Mackogneur"
+    },
     "type": [
       "Fighting"
     ],
-	"evolutions": {
-		"from": 67,
-		"to": null
-	},
     "stats": {
       "HP": 90,
       "Attack": 130,
@@ -1387,15 +1455,16 @@
   },
   {
     "id": 69,
-    "name": "Bellsprout",
+    "name": {
+      "english": "Bellsprout",
+      "japanese": "マダツボミ",
+      "chinese": "喇叭芽",
+      "french": "Chétiflor"
+    },
     "type": [
       "Grass",
       "Poison"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 70
-	},
     "stats": {
       "HP": 50,
       "Attack": 75,
@@ -1408,15 +1477,16 @@
   },
   {
     "id": 70,
-    "name": "Weepinbell",
+    "name": {
+      "english": "Weepinbell",
+      "japanese": "ウツドン",
+      "chinese": "口呆花",
+      "french": "Boustiflor"
+    },
     "type": [
       "Grass",
       "Poison"
     ],
-	"evolutions": {
-		"from": 69,
-		"to": 71
-	},
     "stats": {
       "HP": 65,
       "Attack": 90,
@@ -1429,15 +1499,16 @@
   },
   {
     "id": 71,
-    "name": "Victreebel",
+    "name": {
+      "english": "Victreebel",
+      "japanese": "ウツボット",
+      "chinese": "大食花",
+      "french": "Empiflor"
+    },
     "type": [
       "Grass",
       "Poison"
     ],
-	"evolutions": {
-		"from": 70,
-		"to": null
-	},
     "stats": {
       "HP": 80,
       "Attack": 105,
@@ -1450,15 +1521,16 @@
   },
   {
     "id": 72,
-    "name": "Tentacool",
+    "name": {
+      "english": "Tentacool",
+      "japanese": "メノクラゲ",
+      "chinese": "玛瑙水母",
+      "french": "Tentacool"
+    },
     "type": [
       "Water",
       "Poison"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 73
-	},
     "stats": {
       "HP": 40,
       "Attack": 40,
@@ -1471,15 +1543,16 @@
   },
   {
     "id": 73,
-    "name": "Tentacruel",
+    "name": {
+      "english": "Tentacruel",
+      "japanese": "ドククラゲ",
+      "chinese": "毒刺水母",
+      "french": "Tentacruel"
+    },
     "type": [
       "Water",
       "Poison"
     ],
-	"evolutions": {
-		"from": 72,
-		"to": null
-	},
     "stats": {
       "HP": 80,
       "Attack": 70,
@@ -1492,15 +1565,16 @@
   },
   {
     "id": 74,
-    "name": "Geodude",
+    "name": {
+      "english": "Geodude",
+      "japanese": "イシツブテ",
+      "chinese": "小拳石",
+      "french": "Racaillou"
+    },
     "type": [
       "Rock",
       "Ground"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 75
-	},
     "stats": {
       "HP": 40,
       "Attack": 80,
@@ -1513,15 +1587,16 @@
   },
   {
     "id": 75,
-    "name": "Graveler",
+    "name": {
+      "english": "Graveler",
+      "japanese": "ゴローン",
+      "chinese": "隆隆石",
+      "french": "Gravalanch"
+    },
     "type": [
       "Rock",
       "Ground"
     ],
-	"evolutions": {
-		"from": 74,
-		"to": 76
-	},
     "stats": {
       "HP": 55,
       "Attack": 95,
@@ -1534,15 +1609,16 @@
   },
   {
     "id": 76,
-    "name": "Golem",
+    "name": {
+      "english": "Golem",
+      "japanese": "ゴローニャ",
+      "chinese": "隆隆岩",
+      "french": "Grolem"
+    },
     "type": [
       "Rock",
       "Ground"
     ],
-	"evolutions": {
-		"from": 75,
-		"to": null
-	},
     "stats": {
       "HP": 80,
       "Attack": 120,
@@ -1555,14 +1631,15 @@
   },
   {
     "id": 77,
-    "name": "Ponyta",
+    "name": {
+      "english": "Ponyta",
+      "japanese": "ポニータ",
+      "chinese": "小火马",
+      "french": "Ponyta"
+    },
     "type": [
       "Fire"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 78
-	},
     "stats": {
       "HP": 50,
       "Attack": 85,
@@ -1575,14 +1652,15 @@
   },
   {
     "id": 78,
-    "name": "Rapidash",
+    "name": {
+      "english": "Rapidash",
+      "japanese": "ギャロップ",
+      "chinese": "烈焰马",
+      "french": "Galopa"
+    },
     "type": [
       "Fire"
     ],
-	"evolutions": {
-		"from": 77,
-		"to": null
-	},
     "stats": {
       "HP": 65,
       "Attack": 100,
@@ -1595,15 +1673,16 @@
   },
   {
     "id": 79,
-    "name": "Slowpoke",
+    "name": {
+      "english": "Slowpoke",
+      "japanese": "ヤドン",
+      "chinese": "呆呆兽",
+      "french": "Ramoloss"
+    },
     "type": [
       "Water",
       "Psychic"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 80
-	},
     "stats": {
       "HP": 90,
       "Attack": 65,
@@ -1616,15 +1695,16 @@
   },
   {
     "id": 80,
-    "name": "Slowbro",
+    "name": {
+      "english": "Slowbro",
+      "japanese": "ヤドラン",
+      "chinese": "呆壳兽",
+      "french": "Flagadoss"
+    },
     "type": [
       "Water",
       "Psychic"
     ],
-	"evolutions": {
-		"from": 79,
-		"to": null
-	},
     "stats": {
       "HP": 95,
       "Attack": 75,
@@ -1637,15 +1717,16 @@
   },
   {
     "id": 81,
-    "name": "Magnemite",
+    "name": {
+      "english": "Magnemite",
+      "japanese": "コイル",
+      "chinese": "小磁怪",
+      "french": "Magnéti"
+    },
     "type": [
       "Electric",
       "Steel"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 82
-	},
     "stats": {
       "HP": 25,
       "Attack": 35,
@@ -1658,15 +1739,16 @@
   },
   {
     "id": 82,
-    "name": "Magneton",
+    "name": {
+      "english": "Magneton",
+      "japanese": "レアコイル",
+      "chinese": "三合一磁怪",
+      "french": "Magnéton"
+    },
     "type": [
       "Electric",
       "Steel"
     ],
-	"evolutions": {
-		"from": 81,
-		"to": null
-	},
     "stats": {
       "HP": 50,
       "Attack": 60,
@@ -1679,15 +1761,16 @@
   },
   {
     "id": 83,
-    "name": "Farfetch'd",
+    "name": {
+      "english": "Farfetch'd",
+      "japanese": "カモネギ",
+      "chinese": "大葱鸭",
+      "french": "Canarticho"
+    },
     "type": [
       "Normal",
       "Flying"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 52,
       "Attack": 90,
@@ -1700,15 +1783,16 @@
   },
   {
     "id": 84,
-    "name": "Doduo",
+    "name": {
+      "english": "Doduo",
+      "japanese": "ドードー",
+      "chinese": "嘟嘟",
+      "french": "Doduo"
+    },
     "type": [
       "Normal",
       "Flying"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 85
-	},
     "stats": {
       "HP": 35,
       "Attack": 85,
@@ -1721,15 +1805,16 @@
   },
   {
     "id": 85,
-    "name": "Dodrio",
+    "name": {
+      "english": "Dodrio",
+      "japanese": "ドードリオ",
+      "chinese": "嘟嘟利",
+      "french": "Dodrio"
+    },
     "type": [
       "Normal",
       "Flying"
     ],
-	"evolutions": {
-		"from": 86,
-		"to": null
-	},
     "stats": {
       "HP": 60,
       "Attack": 110,
@@ -1742,14 +1827,15 @@
   },
   {
     "id": 86,
-    "name": "Seel",
+    "name": {
+      "english": "Seel",
+      "japanese": "パウワウ",
+      "chinese": "小海狮",
+      "french": "Otaria"
+    },
     "type": [
       "Water"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 87
-	},
     "stats": {
       "HP": 65,
       "Attack": 45,
@@ -1762,15 +1848,16 @@
   },
   {
     "id": 87,
-    "name": "Dewgong",
+    "name": {
+      "english": "Dewgong",
+      "japanese": "ジュゴン",
+      "chinese": "白海狮",
+      "french": "Lamantine"
+    },
     "type": [
       "Water",
       "Ice"
     ],
-	"evolutions": {
-		"from": 86,
-		"to": null
-	},
     "stats": {
       "HP": 90,
       "Attack": 70,
@@ -1783,14 +1870,15 @@
   },
   {
     "id": 88,
-    "name": "Grimer",
+    "name": {
+      "english": "Grimer",
+      "japanese": "ベトベター",
+      "chinese": "臭泥",
+      "french": "Tadmorv"
+    },
     "type": [
       "Poison"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 89
-	},
     "stats": {
       "HP": 80,
       "Attack": 80,
@@ -1803,14 +1891,15 @@
   },
   {
     "id": 89,
-    "name": "Muk",
+    "name": {
+      "english": "Muk",
+      "japanese": "ベトベトン",
+      "chinese": "臭臭泥",
+      "french": "Grotadmorv"
+    },
     "type": [
       "Poison"
     ],
-	"evolutions": {
-		"from": 88,
-		"to": null
-	},
     "stats": {
       "HP": 105,
       "Attack": 105,
@@ -1823,14 +1912,15 @@
   },
   {
     "id": 90,
-    "name": "Shellder",
+    "name": {
+      "english": "Shellder",
+      "japanese": "シェルダー",
+      "chinese": "大舌贝",
+      "french": "Kokiyas"
+    },
     "type": [
       "Water"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 91
-	},
     "stats": {
       "HP": 30,
       "Attack": 65,
@@ -1843,15 +1933,16 @@
   },
   {
     "id": 91,
-    "name": "Cloyster",
+    "name": {
+      "english": "Cloyster",
+      "japanese": "パルシェン",
+      "chinese": "刺甲贝",
+      "french": "Crustabri"
+    },
     "type": [
       "Water",
       "Ice"
     ],
-	"evolutions": {
-		"from": 90,
-		"to": null
-	},
     "stats": {
       "HP": 50,
       "Attack": 95,
@@ -1864,15 +1955,16 @@
   },
   {
     "id": 92,
-    "name": "Gastly",
+    "name": {
+      "english": "Gastly",
+      "japanese": "ゴース",
+      "chinese": "鬼斯",
+      "french": "Fantominus"
+    },
     "type": [
       "Ghost",
       "Poison"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 93
-	},
     "stats": {
       "HP": 30,
       "Attack": 35,
@@ -1885,15 +1977,16 @@
   },
   {
     "id": 93,
-    "name": "Haunter",
+    "name": {
+      "english": "Haunter",
+      "japanese": "ゴースト",
+      "chinese": "鬼斯通",
+      "french": "Spectrum"
+    },
     "type": [
       "Ghost",
       "Poison"
     ],
-	"evolutions": {
-		"from": 92,
-		"to": 94
-	},
     "stats": {
       "HP": 45,
       "Attack": 50,
@@ -1906,15 +1999,16 @@
   },
   {
     "id": 94,
-    "name": "Gengar",
+    "name": {
+      "english": "Gengar",
+      "japanese": "ゲンガー",
+      "chinese": "耿鬼",
+      "french": "Ectoplasma"
+    },
     "type": [
       "Ghost",
       "Poison"
     ],
-	"evolutions": {
-		"from": 93,
-		"to": null
-	},
     "stats": {
       "HP": 60,
       "Attack": 65,
@@ -1927,15 +2021,16 @@
   },
   {
     "id": 95,
-    "name": "Onix",
+    "name": {
+      "english": "Onix",
+      "japanese": "イワーク",
+      "chinese": "大岩蛇",
+      "french": "Onix"
+    },
     "type": [
       "Rock",
       "Ground"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 35,
       "Attack": 45,
@@ -1948,14 +2043,15 @@
   },
   {
     "id": 96,
-    "name": "Drowzee",
+    "name": {
+      "english": "Drowzee",
+      "japanese": "スリープ",
+      "chinese": "催眠貘",
+      "french": "Soporifik"
+    },
     "type": [
       "Psychic"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 97
-	},
     "stats": {
       "HP": 60,
       "Attack": 48,
@@ -1968,14 +2064,15 @@
   },
   {
     "id": 97,
-    "name": "Hypno",
+    "name": {
+      "english": "Hypno",
+      "japanese": "スリーパー",
+      "chinese": "引梦貘人",
+      "french": "Hypnomade"
+    },
     "type": [
       "Psychic"
     ],
-	"evolutions": {
-		"from": 96,
-		"to": null
-	},
     "stats": {
       "HP": 85,
       "Attack": 73,
@@ -1988,14 +2085,15 @@
   },
   {
     "id": 98,
-    "name": "Krabby",
+    "name": {
+      "english": "Krabby",
+      "japanese": "クラブ",
+      "chinese": "大钳蟹",
+      "french": "Krabby"
+    },
     "type": [
       "Water"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 99
-	},
     "stats": {
       "HP": 30,
       "Attack": 105,
@@ -2008,14 +2106,15 @@
   },
   {
     "id": 99,
-    "name": "Kingler",
+    "name": {
+      "english": "Kingler",
+      "japanese": "キングラー",
+      "chinese": "巨钳蟹",
+      "french": "Krabboss"
+    },
     "type": [
       "Water"
     ],
-	"evolutions": {
-		"from": 98,
-		"to": null
-	},
     "stats": {
       "HP": 55,
       "Attack": 130,
@@ -2028,14 +2127,15 @@
   },
   {
     "id": 100,
-    "name": "Voltorb",
+    "name": {
+      "english": "Voltorb",
+      "japanese": "ビリリダマ",
+      "chinese": "霹雳电球",
+      "french": "Voltorbe"
+    },
     "type": [
       "Electric"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 101
-	},
     "stats": {
       "HP": 40,
       "Attack": 30,
@@ -2048,14 +2148,15 @@
   },
   {
     "id": 101,
-    "name": "Electrode",
+    "name": {
+      "english": "Electrode",
+      "japanese": "マルマイン",
+      "chinese": "顽皮雷弹",
+      "french": "Électrode"
+    },
     "type": [
       "Electric"
     ],
-	"evolutions": {
-		"from": 100,
-		"to": null
-	},
     "stats": {
       "HP": 60,
       "Attack": 50,
@@ -2068,15 +2169,16 @@
   },
   {
     "id": 102,
-    "name": "Exeggcute",
+    "name": {
+      "english": "Exeggcute",
+      "japanese": "タマタマ",
+      "chinese": "蛋蛋",
+      "french": "Noeunoeuf"
+    },
     "type": [
       "Grass",
       "Psychic"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 103
-	},
     "stats": {
       "HP": 60,
       "Attack": 40,
@@ -2089,15 +2191,16 @@
   },
   {
     "id": 103,
-    "name": "Exeggutor",
+    "name": {
+      "english": "Exeggutor",
+      "japanese": "ナッシー",
+      "chinese": "椰蛋树",
+      "french": "Noadkoko"
+    },
     "type": [
       "Grass",
       "Psychic"
     ],
-	"evolutions": {
-		"from": 102,
-		"to": null
-	},
     "stats": {
       "HP": 95,
       "Attack": 95,
@@ -2110,14 +2213,15 @@
   },
   {
     "id": 104,
-    "name": "Cubone",
+    "name": {
+      "english": "Cubone",
+      "japanese": "カラカラ",
+      "chinese": "卡拉卡拉",
+      "french": "Osselait"
+    },
     "type": [
       "Ground"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 105
-	},
     "stats": {
       "HP": 50,
       "Attack": 50,
@@ -2130,14 +2234,15 @@
   },
   {
     "id": 105,
-    "name": "Marowak",
+    "name": {
+      "english": "Marowak",
+      "japanese": "ガラガラ",
+      "chinese": "嘎啦嘎啦",
+      "french": "Ossatueur"
+    },
     "type": [
       "Ground"
     ],
-	"evolutions": {
-		"from": 104,
-		"to": null
-	},
     "stats": {
       "HP": 60,
       "Attack": 80,
@@ -2150,14 +2255,15 @@
   },
   {
     "id": 106,
-    "name": "Hitmonlee",
+    "name": {
+      "english": "Hitmonlee",
+      "japanese": "サワムラー",
+      "chinese": "飞腿郎",
+      "french": "Kicklee"
+    },
     "type": [
       "Fighting"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 50,
       "Attack": 120,
@@ -2170,14 +2276,15 @@
   },
   {
     "id": 107,
-    "name": "Hitmonchan",
+    "name": {
+      "english": "Hitmonchan",
+      "japanese": "エビワラー",
+      "chinese": "快拳郎",
+      "french": "Tygnon"
+    },
     "type": [
       "Fighting"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 50,
       "Attack": 105,
@@ -2190,14 +2297,15 @@
   },
   {
     "id": 108,
-    "name": "Lickitung",
+    "name": {
+      "english": "Lickitung",
+      "japanese": "ベロリンガ",
+      "chinese": "大舌头",
+      "french": "Excelangue"
+    },
     "type": [
       "Normal"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 90,
       "Attack": 55,
@@ -2210,14 +2318,15 @@
   },
   {
     "id": 109,
-    "name": "Koffing",
+    "name": {
+      "english": "Koffing",
+      "japanese": "ドガース",
+      "chinese": "瓦斯弹",
+      "french": "Smogo"
+    },
     "type": [
       "Poison"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 110
-	},
     "stats": {
       "HP": 40,
       "Attack": 65,
@@ -2230,14 +2339,15 @@
   },
   {
     "id": 110,
-    "name": "Weezing",
+    "name": {
+      "english": "Weezing",
+      "japanese": "マタドガス",
+      "chinese": "双弹瓦斯",
+      "french": "Smogogo"
+    },
     "type": [
       "Poison"
     ],
-	"evolutions": {
-		"from": 109,
-		"to": null
-	},
     "stats": {
       "HP": 65,
       "Attack": 90,
@@ -2250,15 +2360,16 @@
   },
   {
     "id": 111,
-    "name": "Rhyhorn",
+    "name": {
+      "english": "Rhyhorn",
+      "japanese": "サイホーン",
+      "chinese": "独角犀牛",
+      "french": "Rhinocorne"
+    },
     "type": [
       "Ground",
       "Rock"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 112
-	},
     "stats": {
       "HP": 80,
       "Attack": 85,
@@ -2271,15 +2382,16 @@
   },
   {
     "id": 112,
-    "name": "Rhydon",
+    "name": {
+      "english": "Rhydon",
+      "japanese": "サイドン",
+      "chinese": "钻角犀兽",
+      "french": "Rhinoféros"
+    },
     "type": [
       "Ground",
       "Rock"
     ],
-	"evolutions": {
-		"from": 111,
-		"to": null
-	},
     "stats": {
       "HP": 105,
       "Attack": 130,
@@ -2292,14 +2404,15 @@
   },
   {
     "id": 113,
-    "name": "Chansey",
+    "name": {
+      "english": "Chansey",
+      "japanese": "ラッキー",
+      "chinese": "吉利蛋",
+      "french": "Leveinard"
+    },
     "type": [
       "Normal"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 250,
       "Attack": 5,
@@ -2312,14 +2425,15 @@
   },
   {
     "id": 114,
-    "name": "Tangela",
+    "name": {
+      "english": "Tangela",
+      "japanese": "モンジャラ",
+      "chinese": "蔓藤怪",
+      "french": "Saquedeneu"
+    },
     "type": [
       "Grass"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 65,
       "Attack": 55,
@@ -2332,14 +2446,15 @@
   },
   {
     "id": 115,
-    "name": "Kangaskhan",
+    "name": {
+      "english": "Kangaskhan",
+      "japanese": "ガルーラ",
+      "chinese": "袋兽",
+      "french": "Kangourex"
+    },
     "type": [
       "Normal"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 105,
       "Attack": 95,
@@ -2352,14 +2467,15 @@
   },
   {
     "id": 116,
-    "name": "Horsea",
+    "name": {
+      "english": "Horsea",
+      "japanese": "タッツー",
+      "chinese": "墨海马",
+      "french": "Hypotrempe"
+    },
     "type": [
       "Water"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 117
-	},
     "stats": {
       "HP": 30,
       "Attack": 40,
@@ -2372,14 +2488,15 @@
   },
   {
     "id": 117,
-    "name": "Seadra",
+    "name": {
+      "english": "Seadra",
+      "japanese": "シードラ",
+      "chinese": "海刺龙",
+      "french": "Hypocéan"
+    },
     "type": [
       "Water"
     ],
-	"evolutions": {
-		"from": 116,
-		"to": null
-	},
     "stats": {
       "HP": 55,
       "Attack": 65,
@@ -2392,14 +2509,15 @@
   },
   {
     "id": 118,
-    "name": "Goldeen",
+    "name": {
+      "english": "Goldeen",
+      "japanese": "トサキント",
+      "chinese": "角金鱼",
+      "french": "Poissirène"
+    },
     "type": [
       "Water"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 119
-	},
     "stats": {
       "HP": 45,
       "Attack": 67,
@@ -2412,14 +2530,15 @@
   },
   {
     "id": 119,
-    "name": "Seaking",
+    "name": {
+      "english": "Seaking",
+      "japanese": "アズマオウ",
+      "chinese": "金鱼王",
+      "french": "Poissoroy"
+    },
     "type": [
       "Water"
     ],
-	"evolutions": {
-		"from": 118,
-		"to": null
-	},
     "stats": {
       "HP": 80,
       "Attack": 92,
@@ -2432,14 +2551,15 @@
   },
   {
     "id": 120,
-    "name": "Staryu",
+    "name": {
+      "english": "Staryu",
+      "japanese": "ヒトデマン",
+      "chinese": "海星星",
+      "french": "Stari"
+    },
     "type": [
       "Water"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 121
-	},
     "stats": {
       "HP": 30,
       "Attack": 45,
@@ -2452,15 +2572,16 @@
   },
   {
     "id": 121,
-    "name": "Starmie",
+    "name": {
+      "english": "Starmie",
+      "japanese": "スターミー",
+      "chinese": "宝石海星",
+      "french": "Staross"
+    },
     "type": [
       "Water",
       "Psychic"
     ],
-	"evolutions": {
-		"from": 120,
-		"to": null
-	},
     "stats": {
       "HP": 60,
       "Attack": 75,
@@ -2473,15 +2594,16 @@
   },
   {
     "id": 122,
-    "name": "Mr. Mime",
+    "name": {
+      "english": "Mr. Mime",
+      "japanese": "バリヤード",
+      "chinese": "魔墙人偶",
+      "french": "M. Mime"
+    },
     "type": [
       "Psychic",
       "Fairy"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 40,
       "Attack": 45,
@@ -2494,15 +2616,16 @@
   },
   {
     "id": 123,
-    "name": "Scyther",
+    "name": {
+      "english": "Scyther",
+      "japanese": "ストライク",
+      "chinese": "飞天螳螂",
+      "french": "Insécateur"
+    },
     "type": [
       "Bug",
       "Flying"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 70,
       "Attack": 110,
@@ -2515,15 +2638,16 @@
   },
   {
     "id": 124,
-    "name": "Jynx",
+    "name": {
+      "english": "Jynx",
+      "japanese": "ルージュラ",
+      "chinese": "迷唇姐",
+      "french": "Lippoutou"
+    },
     "type": [
       "Ice",
       "Psychic"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 65,
       "Attack": 50,
@@ -2536,14 +2660,15 @@
   },
   {
     "id": 125,
-    "name": "Electabuzz",
+    "name": {
+      "english": "Electabuzz",
+      "japanese": "エレブー",
+      "chinese": "电击兽",
+      "french": "Élektek"
+    },
     "type": [
       "Electric"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 65,
       "Attack": 83,
@@ -2556,14 +2681,15 @@
   },
   {
     "id": 126,
-    "name": "Magmar",
+    "name": {
+      "english": "Magmar",
+      "japanese": "ブーバー",
+      "chinese": "鸭嘴火兽",
+      "french": "Magmar"
+    },
     "type": [
       "Fire"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 65,
       "Attack": 95,
@@ -2576,14 +2702,15 @@
   },
   {
     "id": 127,
-    "name": "Pinsir",
+    "name": {
+      "english": "Pinsir",
+      "japanese": "カイロス",
+      "chinese": "凯罗斯",
+      "french": "Scarabrute"
+    },
     "type": [
       "Bug"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 65,
       "Attack": 125,
@@ -2596,14 +2723,15 @@
   },
   {
     "id": 128,
-    "name": "Tauros",
+    "name": {
+      "english": "Tauros",
+      "japanese": "ケンタロス",
+      "chinese": "肯泰罗",
+      "french": "Tauros"
+    },
     "type": [
       "Normal"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 75,
       "Attack": 100,
@@ -2616,14 +2744,15 @@
   },
   {
     "id": 129,
-    "name": "Magikarp",
+    "name": {
+      "english": "Magikarp",
+      "japanese": "コイキング",
+      "chinese": "鲤鱼王",
+      "french": "Magicarpe"
+    },
     "type": [
       "Water"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 130
-	},
     "stats": {
       "HP": 20,
       "Attack": 10,
@@ -2636,15 +2765,16 @@
   },
   {
     "id": 130,
-    "name": "Gyarados",
+    "name": {
+      "english": "Gyarados",
+      "japanese": "ギャラドス",
+      "chinese": "暴鲤龙",
+      "french": "Léviator"
+    },
     "type": [
       "Water",
       "Flying"
     ],
-	"evolutions": {
-		"from": 129,
-		"to": null
-	},
     "stats": {
       "HP": 95,
       "Attack": 125,
@@ -2657,15 +2787,16 @@
   },
   {
     "id": 131,
-    "name": "Lapras",
+    "name": {
+      "english": "Lapras",
+      "japanese": "ラプラス",
+      "chinese": "拉普拉斯",
+      "french": "Lokhlass"
+    },
     "type": [
       "Water",
       "Ice"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 130,
       "Attack": 85,
@@ -2678,14 +2809,15 @@
   },
   {
     "id": 132,
-    "name": "Ditto",
+    "name": {
+      "english": "Ditto",
+      "japanese": "メタモン",
+      "chinese": "百变怪",
+      "french": "Métamorph"
+    },
     "type": [
       "Normal"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 48,
       "Attack": 48,
@@ -2698,14 +2830,15 @@
   },
   {
     "id": 133,
-    "name": "Eevee",
+    "name": {
+      "english": "Eevee",
+      "japanese": "イーブイ",
+      "chinese": "伊布",
+      "french": "Évoli"
+    },
     "type": [
       "Normal"
     ],
-	"evolutions": {
-		"from": null,
-		"to": [ 134, 135, 136 ]
-	},
     "stats": {
       "HP": 55,
       "Attack": 55,
@@ -2718,14 +2851,15 @@
   },
   {
     "id": 134,
-    "name": "Vaporeon",
+    "name": {
+      "english": "Vaporeon",
+      "japanese": "シャワーズ",
+      "chinese": "水伊布",
+      "french": "Aquali"
+    },
     "type": [
       "Water"
     ],
-	"evolutions": {
-		"from": 133,
-		"to": null
-	},
     "stats": {
       "HP": 130,
       "Attack": 65,
@@ -2738,14 +2872,15 @@
   },
   {
     "id": 135,
-    "name": "Jolteon",
+    "name": {
+      "english": "Jolteon",
+      "japanese": "サンダース",
+      "chinese": "雷伊布",
+      "french": "Voltali"
+    },
     "type": [
       "Electric"
     ],
-	"evolutions": {
-		"from": 133,
-		"to": null
-	},
     "stats": {
       "HP": 65,
       "Attack": 65,
@@ -2758,14 +2893,15 @@
   },
   {
     "id": 136,
-    "name": "Flareon",
+    "name": {
+      "english": "Flareon",
+      "japanese": "ブースター",
+      "chinese": "火伊布",
+      "french": "Pyroli"
+    },
     "type": [
       "Fire"
     ],
-	"evolutions": {
-		"from": 133,
-		"to": null
-	},
     "stats": {
       "HP": 65,
       "Attack": 130,
@@ -2778,14 +2914,15 @@
   },
   {
     "id": 137,
-    "name": "Porygon",
+    "name": {
+      "english": "Porygon",
+      "japanese": "ポリゴン",
+      "chinese": "多边兽",
+      "french": "Porygon"
+    },
     "type": [
       "Normal"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 65,
       "Attack": 60,
@@ -2798,15 +2935,16 @@
   },
   {
     "id": 138,
-    "name": "Omanyte",
+    "name": {
+      "english": "Omanyte",
+      "japanese": "オムナイト",
+      "chinese": "菊石兽",
+      "french": "Amonita"
+    },
     "type": [
       "Rock",
       "Water"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 139
-	},
     "stats": {
       "HP": 35,
       "Attack": 40,
@@ -2819,15 +2957,16 @@
   },
   {
     "id": 139,
-    "name": "Omastar",
+    "name": {
+      "english": "Omastar",
+      "japanese": "オムスター",
+      "chinese": "多刺菊石兽",
+      "french": "Amonistar"
+    },
     "type": [
       "Rock",
       "Water"
     ],
-	"evolutions": {
-		"from": 138,
-		"to": null
-	},
     "stats": {
       "HP": 70,
       "Attack": 60,
@@ -2840,15 +2979,16 @@
   },
   {
     "id": 140,
-    "name": "Kabuto",
+    "name": {
+      "english": "Kabuto",
+      "japanese": "カブト",
+      "chinese": "化石盔",
+      "french": "Kabuto"
+    },
     "type": [
       "Rock",
       "Water"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 141
-	},
     "stats": {
       "HP": 30,
       "Attack": 80,
@@ -2861,15 +3001,16 @@
   },
   {
     "id": 141,
-    "name": "Kabutops",
+    "name": {
+      "english": "Kabutops",
+      "japanese": "カブトプス",
+      "chinese": "镰刀盔",
+      "french": "Kabutops"
+    },
     "type": [
       "Rock",
       "Water"
     ],
-	"evolutions": {
-		"from": 140,
-		"to": null
-	},
     "stats": {
       "HP": 60,
       "Attack": 115,
@@ -2882,15 +3023,16 @@
   },
   {
     "id": 142,
-    "name": "Aerodactyl",
+    "name": {
+      "english": "Aerodactyl",
+      "japanese": "プテラ",
+      "chinese": "化石翼龙",
+      "french": "Ptéra"
+    },
     "type": [
       "Rock",
       "Flying"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 80,
       "Attack": 105,
@@ -2903,14 +3045,15 @@
   },
   {
     "id": 143,
-    "name": "Snorlax",
+    "name": {
+      "english": "Snorlax",
+      "japanese": "カビゴン",
+      "chinese": "卡比兽",
+      "french": "Ronflex"
+    },
     "type": [
       "Normal"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 160,
       "Attack": 110,
@@ -2923,15 +3066,16 @@
   },
   {
     "id": 144,
-    "name": "Articuno",
+    "name": {
+      "english": "Articuno",
+      "japanese": "フリーザー",
+      "chinese": "急冻鸟",
+      "french": "Artikodin"
+    },
     "type": [
       "Ice",
       "Flying"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 90,
       "Attack": 85,
@@ -2944,15 +3088,16 @@
   },
   {
     "id": 145,
-    "name": "Zapdos",
+    "name": {
+      "english": "Zapdos",
+      "japanese": "サンダー",
+      "chinese": "闪电鸟",
+      "french": "Électhor"
+    },
     "type": [
       "Electric",
       "Flying"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 90,
       "Attack": 90,
@@ -2965,15 +3110,16 @@
   },
   {
     "id": 146,
-    "name": "Moltres",
+    "name": {
+      "english": "Moltres",
+      "japanese": "ファイヤー",
+      "chinese": "火焰鸟",
+      "french": "Sulfura"
+    },
     "type": [
       "Fire",
       "Flying"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 90,
       "Attack": 100,
@@ -2986,14 +3132,15 @@
   },
   {
     "id": 147,
-    "name": "Dratini",
+    "name": {
+      "english": "Dratini",
+      "japanese": "ミニリュウ",
+      "chinese": "迷你龙",
+      "french": "Minidraco"
+    },
     "type": [
       "Dragon"
     ],
-	"evolutions": {
-		"from": null,
-		"to": 148
-	},
     "stats": {
       "HP": 41,
       "Attack": 64,
@@ -3006,14 +3153,15 @@
   },
   {
     "id": 148,
-    "name": "Dragonair",
+    "name": {
+      "english": "Dragonair",
+      "japanese": "ハクリュー",
+      "chinese": "哈克龙",
+      "french": "Draco"
+    },
     "type": [
       "Dragon"
     ],
-	"evolutions": {
-		"from": 147,
-		"to": 149
-	},
     "stats": {
       "HP": 61,
       "Attack": 84,
@@ -3026,15 +3174,16 @@
   },
   {
     "id": 149,
-    "name": "Dragonite",
+    "name": {
+      "english": "Dragonite",
+      "japanese": "カイリュー",
+      "chinese": "快龙",
+      "french": "Dracolosse"
+    },
     "type": [
       "Dragon",
       "Flying"
     ],
-	"evolutions": {
-		"from": 148,
-		"to": null
-	},
     "stats": {
       "HP": 91,
       "Attack": 134,
@@ -3047,14 +3196,15 @@
   },
   {
     "id": 150,
-    "name": "Mewtwo",
+    "name": {
+      "english": "Mewtwo",
+      "japanese": "ミュウツー",
+      "chinese": "超梦",
+      "french": "Mewtwo"
+    },
     "type": [
       "Psychic"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 106,
       "Attack": 110,
@@ -3067,14 +3217,15 @@
   },
   {
     "id": 151,
-    "name": "Mew",
+    "name": {
+      "english": "Mew",
+      "japanese": "ミュウ",
+      "chinese": "梦幻",
+      "french": "Mew"
+    },
     "type": [
       "Psychic"
     ],
-	"evolutions": {
-		"from": null,
-		"to": null
-	},
     "stats": {
       "HP": 100,
       "Attack": 100,
