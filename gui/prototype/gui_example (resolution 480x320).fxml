@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="480.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="320.0" prefWidth="240.0" style="-fx-border-color: black;">
+         <children>
+            <ImageView fitHeight="300.0" fitWidth="250.0" layoutX="8.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@DetectionExampleSquirtle.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="240.0" prefHeight="320.0" prefWidth="240.0" style="-fx-border-color: black;">
+         <children>
+            <ImageView fx:id="imageViewIMG" fitHeight="80.0" fitWidth="80.0" layoutX="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ThumbnailSquirtle.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER_LEFT" layoutX="7.0" layoutY="42.0" prefHeight="38.0" prefWidth="70.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="30.0" text="Cry:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="buttonCry" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: #909497;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icon-sound.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutY="107.0" prefHeight="20.0" prefWidth="240.0" spacing="5.0" style="-fx-background-color: light grey;">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="27.0" text="N°:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="textNumber" strokeType="OUTSIDE" strokeWidth="0.0" text="007">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Label prefHeight="26.0" prefWidth="42.0" text="Type:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="textType" strokeType="OUTSIDE" strokeWidth="0.0" text="Water">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="8.0" layoutY="127.0" prefHeight="80.0" prefWidth="225.0" style="-fx-background-color: light grey;">
+               <children>
+                  <TextFlow prefHeight="80.0" prefWidth="350.0" textAlignment="JUSTIFY">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="70.0" text="Description:" />
+                        <Text fx:id="textDescription" strokeType="OUTSIDE" strokeWidth="0.0" text="Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds." textAlignment="JUSTIFY" wrappingWidth="226.265625">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Text>
+                     </children>
+                  </TextFlow>
+               </children>
+            </HBox>
+            <VBox layoutX="194.0" layoutY="9.0" prefHeight="60.0" prefWidth="36.0" spacing="5.0">
+               <children>
+                  <Button fx:id="buttonSettings" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: #909497;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icon-settings.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="buttonInfo" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: #909497;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icon-info.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" layoutY="80.0" prefHeight="20.0" prefWidth="240.0" spacing="5.0" style="-fx-background-color: light grey;">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="70.0" text="Name:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="textName" strokeType="OUTSIDE" strokeWidth="0.0" text="Squirtle">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <VBox layoutX="240.0" layoutY="212.0" prefHeight="106.0" prefWidth="240.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="15.0" prefWidth="370.0" style="-fx-background-color: light grey;">
+               <children>
+                  <HBox prefHeight="20.0" prefWidth="70.0">
+                     <children>
+                        <Label prefHeight="12.0" prefWidth="50.0" text="HP:" />
+                        <Text fx:id="textStatHP" strokeType="OUTSIDE" strokeWidth="0.0" text="44">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <Rectangle fx:id="barHP" arcHeight="5.0" arcWidth="5.0" fill="RED" height="12.0" stroke="BLACK" strokeType="INSIDE" width="22.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="15.0" prefWidth="370.0" style="-fx-background-color: light grey;">
+               <children>
+                  <HBox prefHeight="28.0" prefWidth="70.0">
+                     <children>
+                        <Label prefHeight="12.0" prefWidth="50.0" text="Attack:" />
+                        <Text fx:id="textStatAttack" strokeType="OUTSIDE" strokeWidth="0.0" text="48">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <Rectangle fx:id="barAttack" arcHeight="5.0" arcWidth="5.0" fill="RED" height="12.0" stroke="BLACK" strokeType="INSIDE" width="24.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="15.0" prefWidth="370.0" style="-fx-background-color: light grey;">
+               <children>
+                  <HBox prefHeight="28.0" prefWidth="70.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="50.0" text="Defense:" />
+                        <Text fx:id="textStatDefense" strokeType="OUTSIDE" strokeWidth="0.0" text="65">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <Rectangle fx:id="barDefense" arcHeight="5.0" arcWidth="5.0" fill="#ff4c00" height="12.0" stroke="BLACK" strokeType="INSIDE" width="33.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="15.0" prefWidth="370.0" style="-fx-background-color: light grey;">
+               <children>
+                  <HBox prefHeight="28.0" prefWidth="70.0">
+                     <children>
+                        <Label prefHeight="12.0" prefWidth="50.0" text="Sp. Atk:" />
+                        <Text fx:id="textStatSpAtk" strokeType="OUTSIDE" strokeWidth="0.0" text="50">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <Rectangle fx:id="barSpAtk" arcHeight="5.0" arcWidth="5.0" fill="RED" height="12.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="15.0" prefWidth="370.0" style="-fx-background-color: light grey;">
+               <children>
+                  <HBox prefHeight="28.0" prefWidth="70.0">
+                     <children>
+                        <Label prefHeight="12.0" prefWidth="50.0" text="Sp. Def:" />
+                        <Text fx:id="textStatSpDef" strokeType="OUTSIDE" strokeWidth="0.0" text="64">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <Rectangle fx:id="barSpDef" arcHeight="5.0" arcWidth="5.0" fill="#ff4c00" height="12.0" stroke="BLACK" strokeType="INSIDE" width="32.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="15.0" prefWidth="370.0" style="-fx-background-color: light grey;">
+               <children>
+                  <HBox prefHeight="28.0" prefWidth="70.0">
+                     <children>
+                        <Label prefHeight="12.0" prefWidth="50.0" text="Speed:" />
+                        <Text fx:id="textStatSpeed" strokeType="OUTSIDE" strokeWidth="0.0" text="43">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <Rectangle fx:id="barSpeed" arcHeight="5.0" arcWidth="5.0" fill="RED" height="12.0" stroke="BLACK" strokeType="INSIDE" width="22.0" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -27,12 +27,12 @@
       </Pane>
       <Pane layoutX="400.0" prefHeight="500.0" prefWidth="400.0" style="-fx-border-color: black;">
          <children>
-            <ImageView fx:id="imageViewIMG" fitHeight="150.0" fitWidth="150.0" layoutX="125.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imageViewIMG" fitHeight="120.0" fitWidth="120.0" layoutX="142.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@ThumbnailSquirtle.png" />
                </image>
             </ImageView>
-            <HBox alignment="CENTER_LEFT" layoutX="39.0" layoutY="125.0" prefHeight="38.0" prefWidth="86.0" spacing="5.0">
+            <HBox alignment="CENTER_LEFT" layoutX="27.0" layoutY="96.0" prefHeight="38.0" prefWidth="86.0" spacing="5.0">
                <children>
                   <Label prefHeight="25.0" prefWidth="40.0" text="Cry:">
                      <font>
@@ -50,21 +50,21 @@
                   </Button>
                </children>
             </HBox>
-            <HBox alignment="CENTER" layoutX="25.0" layoutY="164.0" prefHeight="30.0" prefWidth="350.0" spacing="5.0" style="-fx-background-color: light grey;">
+            <HBox alignment="CENTER" layoutX="25.0" layoutY="134.0" prefHeight="30.0" prefWidth="350.0" spacing="5.0" style="-fx-background-color: light grey;">
                <children>
-                  <Label prefHeight="25.0" prefWidth="60.0" text="Name:">
+                  <Label prefHeight="32.0" prefWidth="70.0" text="Name:">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="22.0" />
                      </font>
                   </Label>
                   <Text fx:id="textName" strokeType="OUTSIDE" strokeWidth="0.0" text="Squirtle">
                      <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font name="System Bold" size="22.0" />
                      </font>
                   </Text>
                </children>
             </HBox>
-            <HBox alignment="CENTER" layoutX="25.0" layoutY="194.0" prefHeight="30.0" prefWidth="350.0" spacing="5.0" style="-fx-background-color: light grey;">
+            <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="166.0" prefHeight="30.0" prefWidth="350.0" spacing="5.0" style="-fx-background-color: light grey;">
                <children>
                   <Label prefHeight="25.0" prefWidth="30.0" text="N°:">
                      <font>
@@ -76,20 +76,20 @@
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Text>
-                  <Separator orientation="VERTICAL" prefHeight="40.0" prefWidth="20.0" visible="false" />
+                  <Separator orientation="VERTICAL" prefHeight="30.0" prefWidth="80.0" visible="false" />
                   <Label prefHeight="25.0" prefWidth="50.0" text="Type:">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Text fx:id="textType" strokeType="OUTSIDE" strokeWidth="0.0" text="Water">
+                  <Text fx:id="textType" strokeType="OUTSIDE" strokeWidth="0.0" text="Electric, Psychic">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Text>
                </children>
             </HBox>
-            <HBox layoutX="27.0" layoutY="224.0" prefHeight="80.0" prefWidth="350.0" style="-fx-background-color: light grey;">
+            <HBox layoutX="27.0" layoutY="196.0" prefHeight="105.0" prefWidth="350.0" style="-fx-background-color: light grey;">
                <children>
                   <TextFlow prefHeight="80.0" prefWidth="350.0" textAlignment="JUSTIFY">
                      <children>
@@ -98,7 +98,11 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Text fx:id="textDescription" strokeType="OUTSIDE" strokeWidth="0.0" text="Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds." textAlignment="JUSTIFY" />
+                        <Text fx:id="textDescription" strokeType="OUTSIDE" strokeWidth="0.0" text="Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds." textAlignment="JUSTIFY">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
                      </children>
                   </TextFlow>
                </children>
