@@ -14,31 +14,40 @@ class PokemonRepository:
                 self.pokemon[pkmn["id"]] = Pokemon(pkmn["id"], pkmn["name"], pkmn["type"], pkmn["evolutions"], pkmn["stats"], pkmn["description"])
                 #print(self.pokemon[pkmn["id"]].to_string())  # test
 
-            # we have to loop again since usually the "to" evolution of a pokèmon is later on the
+            # TEST: we have to loop again since usually the "to" evolution of a pokèmon is later on the
             # pokèdex so it isn't known yet in the previous cycle
-            for pkmn in self.pokemon.values():
-                evo = ""
-                if pkmn.evolutions["from"] is not None:
-                    evo += "from: " + self.pokemon[pkmn.evolutions["from"]].name
-                if pkmn.evolutions["to"] is not None:
-                    if len(evo) > 0:
-                        evo += ", "
-                    # since Eevee can have multiple evolutions, we want to show them all
-                    if type(pkmn.evolutions["to"]) is int:
-                        evo += "to: " + self.pokemon[pkmn.evolutions["to"]].name
-                    elif type(pkmn.evolutions["to"]) is list:
-                        evo += "to: "
-                        for i in range(len(pkmn.evolutions["to"])):
-                            evo += self.pokemon[pkmn.evolutions["to"][i]].name
-                            if i+1 != len(pkmn.evolutions["to"]):
-                                evo += ", "
-                print(pkmn.to_string_evo(evo))
+            #for pkmn in self.pokemon.values():
+            #    print(pkmn.to_string_evo(self.get_evolutions(pkmn)))
         except OSError:
             print("Cannot open file " + filename)
 
+    def get_pokemon(self, num):
+        return self.pokemon.get(num)
 
-PokemonRepository("utilities/first_gen_pokedex.json")
+    def get_evolutions(self, pkmn):
+        result = ""
+        if pkmn.evolutions["from"] is not None:
+            result += "from: " + self.pokemon[pkmn.evolutions["from"]].name
+        if pkmn.evolutions["to"] is not None:
+            if len(result) > 0:
+                result += ", "
+            # since pokèmon like Eevee can have multiple evolutions, we want to show them all
+            if type(pkmn.evolutions["to"]) is int:
+                result += "to: " + self.pokemon[pkmn.evolutions["to"]].name
+            elif type(pkmn.evolutions["to"]) is list:
+                result += "to: "
+                for i in range(len(pkmn.evolutions["to"])):
+                    result += self.pokemon[pkmn.evolutions["to"][i]].name
+                    if i + 1 != len(pkmn.evolutions["to"]):
+                        result += ", "
+        return result
 
+
+pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
+
+# example: get pokèmon by pokèdex id (Squirtle == 7) and print the information
+squirtle = pokemon_repo.get_pokemon(7)
+print(squirtle.to_string_evo(pokemon_repo.get_evolutions(squirtle)))
 
 '''
 NB: conversion from JSON obj to python obj
