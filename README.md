@@ -33,7 +33,7 @@ Our computer vision related project for nostalgic poke weebs (Sistemi digitali, 
 - 3D model animation (associated with the recognized card)
 
 ## GUI Prototype
-![GUI prototype Squirtle example](https://github.com/TryKatChup/pokemon-cv-revival/blob/main/gui/gui_example_squirtle.png)
+![GUI prototype Squirtle example](https://github.com/TryKatChup/pokemon-cv-revival/blob/main/gui/prototype/gui_example_squirtle.png)
 
 ## TO-DO list
 1. Find the best cards dataset available (even with only one generation)
