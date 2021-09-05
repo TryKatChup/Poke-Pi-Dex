@@ -9,20 +9,19 @@ class PokemonRepository:
             data = json.load(f)
 
             self.pokemon = {}
+            self.thumbnails = {}
 
             for pkmn in data:
                 self.pokemon[pkmn["id"]] = Pokemon(pkmn["id"], pkmn["name"], pkmn["type"], pkmn["evolutions"], pkmn["stats"], pkmn["description"])
-                #print(self.pokemon[pkmn["id"]].to_string())  # test
+                # print(self.pokemon[pkmn["id"]].to_string())  # test
+                # load image?
 
             # TEST: we have to loop again since usually the "to" evolution of a pokèmon is later on the
             # pokèdex so it isn't known yet in the previous cycle
-            #for pkmn in self.pokemon.values():
-            #    print(pkmn.to_string_evo(self.get_evolutions(pkmn)))
+            # for pkmn in self.pokemon.values():
+            #     print(pkmn.to_string_evo(self.get_evolutions(pkmn)))
         except OSError:
             print("Cannot open file " + filename)
-
-    def get_pokemon(self, num):
-        return self.pokemon.get(num)
 
     def get_evolutions(self, pkmn):
         result = ""
@@ -46,7 +45,7 @@ class PokemonRepository:
 pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
 
 # example: get pokèmon by pokèdex id (Squirtle == 7) and print the information
-squirtle = pokemon_repo.get_pokemon(7)
+squirtle = pokemon_repo.pokemon[7]
 print(squirtle.to_string_evo(pokemon_repo.get_evolutions(squirtle)))
 
 '''
