@@ -461,7 +461,7 @@
   },
   {
     "id": 29,
-    "name": "Nidoran♀",
+    "name": "Nidoran-f",
     "type": [
       "Poison"
     ],
@@ -510,7 +510,7 @@
   },
   {
     "id": 32,
-    "name": "Nidoran♂",
+    "name": "Nidoran-m",
     "type": [
       "Poison"
     ],
