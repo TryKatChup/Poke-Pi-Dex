@@ -42,11 +42,23 @@ class PokemonRepository:
         return result
 
 
-pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
+'''pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
+
+while True:
+    try:
+        pkmn_id = int(input("Pokemon ID: "))
+        if pkmn_id < 1 or pkmn_id > 151:
+            print("ID must be an integer between 1 and 151 inclusive")
+            continue
+        pkmn = pokemon_repo.pokemon[pkmn_id]
+        print(pkmn.to_string_evo(pokemon_repo.get_evolutions(pkmn)))
+    except ValueError:
+        print("ID must be an integer between 1 and 151 inclusive")'''
+
 
 # example: get pokèmon by pokèdex id (Squirtle == 7) and print the information
-squirtle = pokemon_repo.pokemon[7]
-print(squirtle.to_string_evo(pokemon_repo.get_evolutions(squirtle)))
+# squirtle = pokemon_repo.pokemon[7]
+# print(squirtle.to_string_evo(pokemon_repo.get_evolutions(squirtle)))
 
 '''
 NB: conversion from JSON obj to python obj
