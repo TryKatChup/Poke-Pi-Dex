@@ -96,7 +96,7 @@ class App:
         self.entry_attack = tk.Entry(master=self.frame_attack, width=3, textvariable=self.entry_attack_text)
         self.entry_attack.config(state="readonly")
         self.canvas_attack = tk.Canvas(master=self.frame_attack, width=160, height=18, bg="yellow")
-        self.canvas_attack.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
+        self.rect_attack = self.canvas_attack.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
         self.label_attack.pack(side=tk.LEFT)
         self.entry_attack.pack(side=tk.LEFT)
         self.canvas_attack.pack(side=tk.LEFT)
@@ -108,7 +108,7 @@ class App:
         self.entry_defense = tk.Entry(master=self.frame_defense, width=3, textvariable=self.entry_defense_text)
         self.entry_defense.config(state="readonly")
         self.canvas_defense = tk.Canvas(master=self.frame_defense, width=160, height=18, bg="yellow")
-        self.canvas_defense.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
+        self.rect_defense = self.canvas_defense.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
         self.label_defense.pack(side=tk.LEFT)
         self.entry_defense.pack(side=tk.LEFT)
         self.canvas_defense.pack(side=tk.LEFT)
@@ -120,7 +120,7 @@ class App:
         self.entry_sp_atk = tk.Entry(master=self.frame_sp_atk, width=3, textvariable=self.entry_sp_atk_text)
         self.entry_sp_atk.config(state="readonly")
         self.canvas_sp_atk = tk.Canvas(master=self.frame_sp_atk, width=160, height=18, bg="yellow")
-        self.canvas_sp_atk.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
+        self.rect_sp_atk = self.canvas_sp_atk.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
         self.label_sp_atk.pack(side=tk.LEFT)
         self.entry_sp_atk.pack(side=tk.LEFT)
         self.canvas_sp_atk.pack(side=tk.LEFT)
@@ -132,7 +132,7 @@ class App:
         self.entry_sp_def = tk.Entry(master=self.frame_sp_def, width=3, textvariable=self.entry_sp_def_text)
         self.entry_sp_def.config(state="readonly")
         self.canvas_sp_def = tk.Canvas(master=self.frame_sp_def, width=160, height=18, bg="yellow")
-        self.canvas_sp_def.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
+        self.rect_sp_def = self.canvas_sp_def.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
         self.label_sp_def.pack(side=tk.LEFT)
         self.entry_sp_def.pack(side=tk.LEFT)
         self.canvas_sp_def.pack(side=tk.LEFT)
@@ -144,7 +144,7 @@ class App:
         self.entry_speed = tk.Entry(master=self.frame_speed, width=3, textvariable=self.entry_speed_text)
         self.entry_speed.config(state="readonly")
         self.canvas_speed = tk.Canvas(master=self.frame_speed, width=160, height=18, bg="yellow")
-        self.canvas_speed.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
+        self.rect_speed = self.canvas_speed.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
         self.label_speed.pack(side=tk.LEFT)
         self.entry_speed.pack(side=tk.LEFT)
         self.canvas_speed.pack(side=tk.LEFT)
@@ -207,16 +207,22 @@ class App:
         print("load stats")
         self.entry_hp_text.set(pkmn.stats["HP"])
         self.canvas_hp.coords(self.rect_hp, self.x1, self.y1, int(pkmn.stats["HP"]) / 2, self.y2)
+        self.canvas_hp.itemconfig(self.rect_hp, fill=self.get_color(int(pkmn.stats["HP"])))
         self.entry_attack_text.set(pkmn.stats["Attack"])
         self.canvas_attack.coords(self.rect_hp, self.x1, self.y1, int(pkmn.stats["Attack"]) / 2, self.y2)
+        self.canvas_attack.itemconfig(self.rect_attack, fill=self.get_color(int(pkmn.stats["Attack"])))
         self.entry_defense_text.set(pkmn.stats["Defense"])
         self.canvas_defense.coords(self.rect_hp, self.x1, self.y1, int(pkmn.stats["Defense"]) / 2, self.y2)
+        self.canvas_defense.itemconfig(self.rect_defense, fill=self.get_color(int(pkmn.stats["Defense"])))
         self.entry_sp_atk_text.set(pkmn.stats["Sp. Attack"])
         self.canvas_sp_atk.coords(self.rect_hp, self.x1, self.y1, int(pkmn.stats["Sp. Attack"]) / 2, self.y2)
+        self.canvas_sp_atk.itemconfig(self.rect_sp_atk, fill=self.get_color(int(pkmn.stats["Sp. Attack"])))
         self.entry_sp_def_text.set(pkmn.stats["Sp. Defense"])
         self.canvas_sp_def.coords(self.rect_hp, self.x1, self.y1, int(pkmn.stats["Sp. Defense"]) / 2, self.y2)
+        self.canvas_sp_def.itemconfig(self.rect_sp_def, fill=self.get_color(int(pkmn.stats["Sp. Defense"])))
         self.entry_speed_text.set(pkmn.stats["Speed"])
         self.canvas_speed.coords(self.rect_hp, self.x1, self.y1, int(pkmn.stats["Speed"]) / 2, self.y2)
+        self.canvas_speed.itemconfig(self.rect_speed, fill=self.get_color(int(pkmn.stats["Speed"])))
 
     # update evolutions
     '''def load_evolutions(self, pkmn):
@@ -232,6 +238,25 @@ class App:
     # update cry
     def load_cry(self, pkmn):
         print("load cry")
+
+    # get RGB color from stat
+    def get_color(self, stat):
+        if 0 <= stat < 25:
+            return "#ff0000"
+        if 25 <= stat < 50:
+            return "#ff5500"
+        if 50 <= stat < 75:
+            return "#ffaa00"
+        if 75 <= stat < 100:
+            return "#ffff00"
+        if 100 <= stat < 125:
+            return "#7fff00"
+        if 125 <= stat < 150:
+            return "#00ff00"
+        if 150 <= stat < 200:
+            return "#00ff80"
+        return "#00ffff"
+
 
 
 app = App(tk.Tk(), "pokedex")
