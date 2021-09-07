@@ -244,10 +244,15 @@ class App:
 
     # update evolutions
     def load_evolutions(self, pkmn):
-        path_image = "utilities/sprites/" + str(pkmn.evolutions["from"]) + ".png"
-        print(path_image)
-        image = ImageTk.PhotoImage(Image.open(path_image).resize((25, 25), Image.ANTIALIAS))
-        self.label_evo_from.configure(image=image)
+        # from
+        if pkmn.evolutions["from"] is not None:
+            path_image = "utilities/sprites/" + str(pkmn.evolutions["from"]) + ".png"
+        else:
+            path_image = "utilities/sprites/0.png"
+        self.image_evo_from = ImageTk.PhotoImage(Image.open(path_image).resize((40, 40), Image.ANTIALIAS))
+        self.label_evo_from.configure(image=self.image_evo_from)
+        # to (NB: Eevee has 3 evolutions)
+        # if pkmn.evolutions["to"] is not None:
 
     '''def load_evolutions(self, pkmn):
         self.entry_evolutions_from_text.set("")
