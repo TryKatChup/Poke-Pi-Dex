@@ -18,6 +18,17 @@ class App:
 
         self.frame_top = tk.Frame(master=self.frame_right, width=240)
         self.frame_top.pack(side=tk.TOP)
+
+        # Top-right
+        self.frame_top_right = tk.Frame(master=self.frame_top)
+        self.frame_top_right.pack(side=tk.RIGHT, anchor="n")
+
+        # Evolution (to)
+        image = Image.open("utilities/sprites/2.png").resize((40, 40), Image.ANTIALIAS)
+        self.image_evo_to = ImageTk.PhotoImage(image)
+        self.label_evo_to = tk.Label(master=self.frame_top_right, image=self.image_evo_to, width=40, height=40)
+        self.label_evo_to.pack(side=tk.TOP, anchor="w")
+        
         # Image
         image = Image.open("utilities/thumbnails/0.png").resize((65, 65), Image.ANTIALIAS)
         self.thumbnail = ImageTk.PhotoImage(image)
@@ -38,15 +49,6 @@ class App:
         self.button_cry = tk.Button(master=self.frame_top_left, image=self.image_button_cry)
         self.label_cry.pack(side=tk.LEFT)
         self.button_cry.pack(side=tk.LEFT)
-
-        # Top-right
-        self.frame_top_right = tk.Frame(master=self.frame_top)
-        self.frame_top_right.pack(side=tk.RIGHT, anchor="n")
-
-        image = Image.open("utilities/sprites/2.png").resize((40, 40), Image.ANTIALIAS)
-        self.image_evo_to = ImageTk.PhotoImage(image)
-        self.label_evo_to = tk.Label(master=self.frame_top_right, image=self.image_evo_to, width=40, height=40)
-        self.label_evo_to.pack(side=tk.TOP, anchor="w")
 
         # Settings & About (?)
 
