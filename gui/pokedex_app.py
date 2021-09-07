@@ -21,14 +21,14 @@ class App:
         # Image
         image = Image.open("utilities/thumbnails/0.png").resize((65, 65), Image.ANTIALIAS)
         self.thumbnail = ImageTk.PhotoImage(image)
-        self.label_image = tk.Label(master=self.frame_top, image=self.thumbnail, width=65, height=65)
-        self.label_image.pack(side=tk.RIGHT, fill=tk.BOTH)
+        self.label_thumb = tk.Label(master=self.frame_top, image=self.thumbnail, width=65, height=65)
+        self.label_thumb.pack(side=tk.RIGHT, fill=tk.BOTH)
 
         # evolution (from)
         image = Image.open("utilities/sprites/1.png").resize((40, 40), Image.ANTIALIAS)
         self.image_evo_from = ImageTk.PhotoImage(image)
-        self.label_image = tk.Label(master=self.frame_top, image=self.image_evo_from, width=40, height=40)
-        self.label_image.pack(side=tk.LEFT, fill=tk.BOTH)
+        self.label_evo_from = tk.Label(master=self.frame_top, image=self.image_evo_from, width=40, height=40)
+        self.label_evo_from.pack(side=tk.LEFT, fill=tk.BOTH)
         # Cry
         self.label_cry = tk.Label(master=self.frame_top, text="Cry")
         self.label_cry.pack(side=tk.LEFT)
@@ -194,7 +194,7 @@ class App:
         path_image = "utilities/thumbnails/" + str(pkmn.num) + ".png"
         image = Image.open(path_image).resize((50, 50), Image.ANTIALIAS)
         self.thumbnail = ImageTk.PhotoImage(image)
-        self.label_image.configure(image=self.thumbnail)
+        self.label_thumb.configure(image=self.thumbnail)
 
     # update name
     def load_name(self, pkmn):
