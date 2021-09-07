@@ -22,13 +22,12 @@ class App:
         # Top-right
         self.frame_top_right = tk.Frame(master=self.frame_top)
         self.frame_top_right.pack(side=tk.RIGHT, anchor="n")
-
         # Evolution (to)
-        image = Image.open("utilities/sprites/2.png").resize((40, 40), Image.ANTIALIAS)
+        image = Image.open("utilities/sprites/0.png").resize((40, 40), Image.ANTIALIAS)
         self.image_evo_to = ImageTk.PhotoImage(image)
         self.label_evo_to = tk.Label(master=self.frame_top_right, image=self.image_evo_to, width=40, height=40)
         self.label_evo_to.pack(side=tk.TOP, anchor="w")
-        
+
         # Image
         image = Image.open("utilities/thumbnails/0.png").resize((65, 65), Image.ANTIALIAS)
         self.thumbnail = ImageTk.PhotoImage(image)
@@ -265,6 +264,21 @@ class App:
         self.image_evo_from = ImageTk.PhotoImage(Image.open(path_image).resize((40, 40), Image.ANTIALIAS))
         self.label_evo_from.configure(image=self.image_evo_from)
         # to (NB: Eevee has 3 evolutions)
+        if pkmn.evolutions["to"] is not None:
+            if type(pkmn.evolutions["to"]) is int:
+                path_image = "utilities/sprites/" + str(pkmn.evolutions["to"]) + ".png"
+            elif type(pkmn.evolutions["to"]) is list:
+                '''for i in range(len(pkmn.evolutions["to"])):
+                    '''
+                # temporary solution (we need to add 2 more evolution sprites)
+                path_image = "utilities/sprites/" + str(pkmn.evolutions["to"][0]) + ".png"
+                self.image_evo_to = ImageTk.PhotoImage(Image.open(path_image).resize((40, 40), Image.ANTIALIAS))
+                self.label_evo_to.configure(image=self.image_evo_to)
+                return
+        else:
+            path_image = "utilities/sprites/0.png"
+        self.image_evo_to = ImageTk.PhotoImage(Image.open(path_image).resize((40, 40), Image.ANTIALIAS))
+        self.label_evo_to.configure(image=self.image_evo_to)
         # if pkmn.evolutions["to"] is not None:
 
     '''def load_evolutions(self, pkmn):
