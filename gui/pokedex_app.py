@@ -192,7 +192,7 @@ class App:
             self.load_types(pokemon)
             self.load_description(pokemon)
             self.load_stats(pokemon)
-            #self.load_evolutions(pokemon)
+            self.load_evolutions(pokemon)
             self.load_cry(pokemon)
 
     # update image
@@ -243,6 +243,12 @@ class App:
         self.canvas_speed.itemconfig(self.rect_speed, fill=self.get_color(int(pkmn.stats["Speed"])))
 
     # update evolutions
+    def load_evolutions(self, pkmn):
+        path_image = "utilities/sprites/" + str(pkmn.evolutions["from"]) + ".png"
+        print(path_image)
+        image = ImageTk.PhotoImage(Image.open(path_image).resize((25, 25), Image.ANTIALIAS))
+        self.label_evo_from.configure(image=image)
+
     '''def load_evolutions(self, pkmn):
         self.entry_evolutions_from_text.set("")
         self.entry_evolutions_to_text.set("")
@@ -256,6 +262,10 @@ class App:
     # update cry
     def load_cry(self, pkmn):
         print("load cry")
+
+    def play_cry(self):
+        # takes the ID from the box and if it's OK (check) plays the cry ID.ogg
+        print("play cry")
 
     # get RGB color from stat
     def get_color(self, stat):
