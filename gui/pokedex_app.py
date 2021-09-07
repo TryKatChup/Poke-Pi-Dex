@@ -24,20 +24,31 @@ class App:
         self.label_thumb = tk.Label(master=self.frame_top, image=self.thumbnail, width=65, height=65)
         self.label_thumb.pack(side=tk.RIGHT, anchor="n", fill=tk.BOTH)
 
-        # evolution (from)
+        # Top-left
+        self.frame_top_left = tk.Frame(master=self.frame_top)
+        self.frame_top_left.pack(side=tk.BOTTOM, anchor="w")
+        # Evolution (from)
         image = Image.open("utilities/sprites/1.png").resize((40, 40), Image.ANTIALIAS)
         self.image_evo_from = ImageTk.PhotoImage(image)
-
-        # Cry
-        self.frame_cry = tk.Frame(master=self.frame_top)
-        self.frame_cry.pack(side=tk.BOTTOM, anchor="w")
-        self.label_evo_from = tk.Label(master=self.frame_cry, image=self.image_evo_from, width=40, height=40)
+        self.label_evo_from = tk.Label(master=self.frame_top_left, image=self.image_evo_from, width=40, height=40)
         self.label_evo_from.pack(side=tk.TOP, anchor="e")
-        self.label_cry = tk.Label(master=self.frame_cry, text="Cry:")
+        # Cry
+        self.label_cry = tk.Label(master=self.frame_top_left, text="Cry:")
         self.image_button_cry = ImageTk.PhotoImage(Image.open("utilities/icons/icon-sound.png").resize((20, 20), Image.ANTIALIAS))
-        self.button_cry = tk.Button(master=self.frame_cry, image=self.image_button_cry)
+        self.button_cry = tk.Button(master=self.frame_top_left, image=self.image_button_cry)
         self.label_cry.pack(side=tk.LEFT)
         self.button_cry.pack(side=tk.LEFT)
+
+        # Top-right
+        self.frame_top_right = tk.Frame(master=self.frame_top)
+        self.frame_top_right.pack(side=tk.RIGHT, anchor="n")
+
+        image = Image.open("utilities/sprites/2.png").resize((40, 40), Image.ANTIALIAS)
+        self.image_evo_to = ImageTk.PhotoImage(image)
+        self.label_evo_to = tk.Label(master=self.frame_top_right, image=self.image_evo_to, width=40, height=40)
+        self.label_evo_to.pack(side=tk.TOP, anchor="w")
+
+        # Settings & About (?)
 
         # Name
         self.frame_name = tk.Frame(master=self.frame_right)
