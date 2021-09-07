@@ -22,16 +22,22 @@ class App:
         image = Image.open("utilities/thumbnails/0.png").resize((65, 65), Image.ANTIALIAS)
         self.thumbnail = ImageTk.PhotoImage(image)
         self.label_thumb = tk.Label(master=self.frame_top, image=self.thumbnail, width=65, height=65)
-        self.label_thumb.pack(side=tk.RIGHT, fill=tk.BOTH)
+        self.label_thumb.pack(side=tk.RIGHT, anchor="n", fill=tk.BOTH)
 
         # evolution (from)
         image = Image.open("utilities/sprites/1.png").resize((40, 40), Image.ANTIALIAS)
         self.image_evo_from = ImageTk.PhotoImage(image)
-        self.label_evo_from = tk.Label(master=self.frame_top, image=self.image_evo_from, width=40, height=40)
-        self.label_evo_from.pack(side=tk.LEFT, fill=tk.BOTH)
+
         # Cry
-        self.label_cry = tk.Label(master=self.frame_top, text="Cry")
+        self.frame_cry = tk.Frame(master=self.frame_top)
+        self.frame_cry.pack(side=tk.BOTTOM, anchor="w")
+        self.label_evo_from = tk.Label(master=self.frame_cry, image=self.image_evo_from, width=40, height=40)
+        self.label_evo_from.pack(side=tk.TOP, anchor="e")
+        self.label_cry = tk.Label(master=self.frame_cry, text="Cry:")
+        self.image_button_cry = ImageTk.PhotoImage(Image.open("utilities/icons/icon-sound.png").resize((20, 20), Image.ANTIALIAS))
+        self.button_cry = tk.Button(master=self.frame_cry, image=self.image_button_cry)
         self.label_cry.pack(side=tk.LEFT)
+        self.button_cry.pack(side=tk.LEFT)
 
         # Name
         self.frame_name = tk.Frame(master=self.frame_right)
@@ -174,7 +180,7 @@ class App:
         try:
             pkmn_id = int(pkmn_id)
         except ValueError:
-            print("The id must be an integer between 1 and 151 inclusive")
+            print("The ID must be an integer between 1 and 151 inclusive")
             return
         if 1 <= pkmn_id <= 151:
             print("Loading pokemon with id: " + str(pkmn_id))
