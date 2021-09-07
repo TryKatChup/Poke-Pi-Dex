@@ -16,11 +16,22 @@ class App:
         self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
         self.frame_right.pack_propagate(0)  # set the frame so that its children cannot control its size
 
-        image = Image.open("utilities/thumbnails/0.png").resize((100, 100), Image.ANTIALIAS)
+        self.frame_top = tk.Frame(master=self.frame_right, width=240)
+        self.frame_top.pack(side=tk.TOP)
+        # Image
+        image = Image.open("utilities/thumbnails/0.png").resize((65, 65), Image.ANTIALIAS)
         self.thumbnail = ImageTk.PhotoImage(image)
-        self.label_image = tk.Label(master=self.frame_right, image=self.thumbnail, width=65, height=65)
-        self.label_image.pack(side=tk.TOP, fill=tk.BOTH)
+        self.label_image = tk.Label(master=self.frame_top, image=self.thumbnail, width=65, height=65)
+        self.label_image.pack(side=tk.RIGHT, fill=tk.BOTH)
 
+        # evolution (from)
+        image = Image.open("utilities/sprites/1.png").resize((40, 40), Image.ANTIALIAS)
+        self.image_evo_from = ImageTk.PhotoImage(image)
+        self.label_image = tk.Label(master=self.frame_top, image=self.image_evo_from, width=40, height=40)
+        self.label_image.pack(side=tk.LEFT, fill=tk.BOTH)
+        # Cry
+        self.label_cry = tk.Label(master=self.frame_top, text="Cry")
+        self.label_cry.pack(side=tk.LEFT)
 
         # Name
         self.frame_name = tk.Frame(master=self.frame_right)
@@ -49,7 +60,8 @@ class App:
         self.label_types.pack(side=tk.LEFT)
         self.entry_types.pack(side=tk.LEFT)
 
-        '''self.frame_evolutions = tk.Frame()
+        '''# evolutions test (sostituire con immagini)
+        self.frame_evolutions = tk.Frame()
         self.frame_evolutions.pack()
         self.label_evolutions = tk.Label(master=self.frame_evolutions, text="Evolutions: ")
         self.label_evolutions_from = tk.Label(master=self.frame_evolutions, text="From: ")
