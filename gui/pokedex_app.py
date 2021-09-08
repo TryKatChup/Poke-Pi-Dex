@@ -1,6 +1,7 @@
 import tkinter as tk
 from PIL import ImageTk, Image
 from pokemon_repository import PokemonRepository
+import playsound as ps
 
 class App:
     def __init__(self, window, window_title):
@@ -38,14 +39,14 @@ class App:
         self.frame_top_left = tk.Frame(master=self.frame_top)
         self.frame_top_left.pack(side=tk.BOTTOM, anchor="w")
         # Evolution (from)
-        image = Image.open("utilities/sprites/1.png").resize((40, 40), Image.ANTIALIAS)
+        image = Image.open("utilities/sprites/0.png").resize((40, 40), Image.ANTIALIAS)
         self.image_evo_from = ImageTk.PhotoImage(image)
         self.label_evo_from = tk.Label(master=self.frame_top_left, image=self.image_evo_from, width=40, height=40)
         self.label_evo_from.pack(side=tk.TOP, anchor="e")
         # Cry
         self.label_cry = tk.Label(master=self.frame_top_left, text="Cry:")
         self.image_button_cry = ImageTk.PhotoImage(Image.open("utilities/icons/icon-sound.png").resize((20, 20), Image.ANTIALIAS))
-        self.button_cry = tk.Button(master=self.frame_top_left, image=self.image_button_cry)
+        self.button_cry = tk.Button(master=self.frame_top_left, image=self.image_button_cry, command=lambda: self.play_cry(self.entry_id.get()))
         self.label_cry.pack(side=tk.LEFT)
         self.button_cry.pack(side=tk.LEFT)
 
@@ -113,7 +114,7 @@ class App:
         self.entry_hp_text = tk.StringVar()
         self.entry_hp = tk.Entry(master=self.frame_hp, width=3, textvariable=self.entry_hp_text)
         self.entry_hp.config(state="readonly")
-        self.canvas_hp = tk.Canvas(master=self.frame_hp, width=160, height=18, bg="yellow")
+        self.canvas_hp = tk.Canvas(master=self.frame_hp, width=160, height=18)  # bg="yellow" test
         self.rect_hp = self.canvas_hp.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")  # x1, y1, x2, y2
         self.label_hp.pack(side=tk.LEFT)
         self.entry_hp.pack(side=tk.LEFT)
@@ -125,7 +126,7 @@ class App:
         self.entry_attack_text = tk.StringVar()
         self.entry_attack = tk.Entry(master=self.frame_attack, width=3, textvariable=self.entry_attack_text)
         self.entry_attack.config(state="readonly")
-        self.canvas_attack = tk.Canvas(master=self.frame_attack, width=160, height=18, bg="yellow")
+        self.canvas_attack = tk.Canvas(master=self.frame_attack, width=160, height=18)
         self.rect_attack = self.canvas_attack.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
         self.label_attack.pack(side=tk.LEFT)
         self.entry_attack.pack(side=tk.LEFT)
@@ -137,7 +138,7 @@ class App:
         self.entry_defense_text = tk.StringVar()
         self.entry_defense = tk.Entry(master=self.frame_defense, width=3, textvariable=self.entry_defense_text)
         self.entry_defense.config(state="readonly")
-        self.canvas_defense = tk.Canvas(master=self.frame_defense, width=160, height=18, bg="yellow")
+        self.canvas_defense = tk.Canvas(master=self.frame_defense, width=160, height=18)
         self.rect_defense = self.canvas_defense.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
         self.label_defense.pack(side=tk.LEFT)
         self.entry_defense.pack(side=tk.LEFT)
@@ -149,7 +150,7 @@ class App:
         self.entry_sp_atk_text = tk.StringVar()
         self.entry_sp_atk = tk.Entry(master=self.frame_sp_atk, width=3, textvariable=self.entry_sp_atk_text)
         self.entry_sp_atk.config(state="readonly")
-        self.canvas_sp_atk = tk.Canvas(master=self.frame_sp_atk, width=160, height=18, bg="yellow")
+        self.canvas_sp_atk = tk.Canvas(master=self.frame_sp_atk, width=160, height=18)
         self.rect_sp_atk = self.canvas_sp_atk.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
         self.label_sp_atk.pack(side=tk.LEFT)
         self.entry_sp_atk.pack(side=tk.LEFT)
@@ -161,7 +162,7 @@ class App:
         self.entry_sp_def_text = tk.StringVar()
         self.entry_sp_def = tk.Entry(master=self.frame_sp_def, width=3, textvariable=self.entry_sp_def_text)
         self.entry_sp_def.config(state="readonly")
-        self.canvas_sp_def = tk.Canvas(master=self.frame_sp_def, width=160, height=18, bg="yellow")
+        self.canvas_sp_def = tk.Canvas(master=self.frame_sp_def, width=160, height=18)
         self.rect_sp_def = self.canvas_sp_def.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
         self.label_sp_def.pack(side=tk.LEFT)
         self.entry_sp_def.pack(side=tk.LEFT)
@@ -173,7 +174,7 @@ class App:
         self.entry_speed_text = tk.StringVar()
         self.entry_speed = tk.Entry(master=self.frame_speed, width=3, textvariable=self.entry_speed_text)
         self.entry_speed.config(state="readonly")
-        self.canvas_speed = tk.Canvas(master=self.frame_speed, width=160, height=18, bg="yellow")
+        self.canvas_speed = tk.Canvas(master=self.frame_speed, width=160, height=18)
         self.rect_speed = self.canvas_speed.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
         self.label_speed.pack(side=tk.LEFT)
         self.entry_speed.pack(side=tk.LEFT)
@@ -205,7 +206,6 @@ class App:
             self.load_description(pokemon)
             self.load_stats(pokemon)
             self.load_evolutions(pokemon)
-            self.load_cry(pokemon)
 
     # update image
     def load_image(self, pkmn):
@@ -291,13 +291,16 @@ class App:
         if evo_to is not None:
             self.entry_evolutions_to_text.set(self.pokemon_repo.pokemon[evo_to].name)'''
 
-    # update cry
-    def load_cry(self, pkmn):
-        print("load cry")
-
-    def play_cry(self):
-        # takes the ID from the box and if it's OK (check) plays the cry ID.ogg
-        print("play cry")
+    # play cry
+    def play_cry(self, pkmn_id):
+        try:
+            pkmn_id = int(pkmn_id)
+        except ValueError:
+            print("The ID must be an integer between 1 and 151 inclusive")
+            return
+        if 1 <= pkmn_id <= 151:
+            print("play cry")
+            ps.playsound("utilities/cries/" + str(pkmn_id) + ".mp3")
 
     # get RGB color from stat
     def get_color(self, stat):
@@ -316,7 +319,6 @@ class App:
         if 150 <= stat < 200:
             return "#00ff80"
         return "#00ffff"
-
 
 
 app = App(tk.Tk(), "pokedex")
