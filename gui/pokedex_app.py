@@ -11,7 +11,7 @@ class App:
         self.window = window
         self.window.title(window_title)
         self.window.geometry("480x320")
-        self.pokemon_repo = PokemonRepository("utilities/first_gen_pokedex_no_accents.json")
+        self.pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
 
         self.frame_left = tk.Frame(width=240, height=320, background="lime")
         self.frame_left.pack(side=tk.LEFT, fill=None, expand=False)
@@ -228,6 +228,7 @@ class App:
 
     # update description
     def load_description(self, pkmn):
+        print(pkmn.description)
         self.text_description.config(state="normal")
         self.text_description.delete('1.0', tk.END)
         self.text_description.insert('1.0', pkmn.description)

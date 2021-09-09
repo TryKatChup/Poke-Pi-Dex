@@ -5,7 +5,7 @@ from pokemon import Pokemon
 class PokemonRepository:
     def __init__(self, filename):
         try:
-            f = open(filename, "r")
+            f = open(filename, "r", encoding="utf-8")
             data = json.load(f)
 
             self.pokemon = {}
