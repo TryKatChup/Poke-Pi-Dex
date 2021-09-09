@@ -3,6 +3,8 @@ from PIL import ImageTk, Image
 from pokemon_repository import PokemonRepository
 import playsound as ps
 
+background = "grey"
+
 class App:
     def __init__(self, window, window_title):
         self.window = window
@@ -13,30 +15,30 @@ class App:
         self.frame_left = tk.Frame(width=240, height=320, background="lime")
         self.frame_left.pack(side=tk.LEFT, fill=None, expand=False)
         self.frame_left.pack_propagate(0)
-        self.frame_right = tk.Frame(width=240, height=320, background="blue")
+        self.frame_right = tk.Frame(width=240, height=320, bg=background)
         self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
         self.frame_right.pack_propagate(0)  # set the frame so that its children cannot control its size
 
-        self.frame_top = tk.Frame(master=self.frame_right, width=240)
+        self.frame_top = tk.Frame(master=self.frame_right, width=240, bg=background)
         self.frame_top.pack(side=tk.TOP)
 
         # Top-right
-        self.frame_top_right = tk.Frame(master=self.frame_top)
+        self.frame_top_right = tk.Frame(master=self.frame_top, bg=background)
         self.frame_top_right.pack(side=tk.RIGHT, anchor="n")
         # Evolution (to)
         image = Image.open("utilities/sprites/0.png").resize((40, 40), Image.ANTIALIAS)
         self.image_evo_to = ImageTk.PhotoImage(image)
-        self.label_evo_to = tk.Label(master=self.frame_top_right, image=self.image_evo_to, width=40, height=40)
+        self.label_evo_to = tk.Label(master=self.frame_top_right, image=self.image_evo_to, width=40, height=40, bg=background)
         self.label_evo_to.pack(side=tk.TOP, anchor="w")
 
         # Image
         image = Image.open("utilities/thumbnails/0.png").resize((65, 65), Image.ANTIALIAS)
         self.thumbnail = ImageTk.PhotoImage(image)
-        self.label_thumb = tk.Label(master=self.frame_top, image=self.thumbnail, width=65, height=65)
+        self.label_thumb = tk.Label(master=self.frame_top, image=self.thumbnail, width=65, height=65, bg=background)
         self.label_thumb.pack(side=tk.RIGHT, anchor="n", fill=tk.BOTH)
 
         # Top-left
-        self.frame_top_left = tk.Frame(master=self.frame_top)
+        self.frame_top_left = tk.Frame(master=self.frame_top, bg=background)
         self.frame_top_left.pack(side=tk.BOTTOM, anchor="w")
         # Evolution (from)
         image = Image.open("utilities/sprites/0.png").resize((40, 40), Image.ANTIALIAS)
@@ -96,10 +98,8 @@ class App:
         self.label_evolutions_to.pack(side=tk.RIGHT)'''
 
         # description
-        #self.label_description = tk.Label(master=self.frame_right, text="Description: ")
         self.text_description = tk.Text(master=self.frame_right, height=4)
-        self.text_description.config(state="disabled")
-        #self.label_description.pack()
+        self.text_description.config(font=("Helvetica", 9, "normal"), state="disabled")
         self.text_description.pack()
 
         # Stats
