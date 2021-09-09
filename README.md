@@ -26,6 +26,11 @@
 
 Our computer vision related project for nostalgic poke weebs (Sistemi digitali, Unibo).
 
+## Demo
+
+See our demo on YouTube! https://www.youtube.com/watch?v=6A07DGlRxg4
+
+
 ## Ideas
 - Pokèmon image identification (from the image on the card)
 - stats reading (+ calculus on the best combo (?))
