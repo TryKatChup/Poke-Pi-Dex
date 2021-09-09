@@ -11,7 +11,7 @@ class App:
         self.window = window
         self.window.title(window_title)
         self.window.geometry("480x320")
-        self.pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
+        self.pokemon_repo = PokemonRepository("utilities/first_gen_pokedex_no_accents.json")
 
         self.frame_left = tk.Frame(width=240, height=320, background="lime")
         self.frame_left.pack(side=tk.LEFT, fill=None, expand=False)
@@ -70,7 +70,7 @@ class App:
         self.frame_id_types.pack()
         self.label_id = tk.Label(master=self.frame_id_types, text="ID: ", bg=background)
         self.entry_id = tk.Entry(master=self.frame_id_types, width=3, bg=background)
-        self.button_id = tk.Button(master=self.frame_id_types, text="Search", bg=background, command=lambda: self.load_pokemon(self.entry_id.get()))
+        self.button_id = tk.Button(master=self.frame_id_types, text="Search", bg=background, activebackground=background, command=lambda: self.load_pokemon(self.entry_id.get()))
         self.label_id.pack(side=tk.LEFT)
         self.entry_id.pack(side=tk.LEFT)
         self.button_id.pack(side=tk.LEFT)
