@@ -4,6 +4,7 @@ from pokemon_repository import PokemonRepository
 import playsound as ps
 
 background = "grey"
+# tkinter utility: https://www.tcl.tk/man/tcl/TkCmd/entry.html#M9
 
 class App:
     def __init__(self, window, window_title):
@@ -48,7 +49,7 @@ class App:
         # Cry
         self.label_cry = tk.Label(master=self.frame_top_left, text="Cry:", bg=background)
         self.image_button_cry = ImageTk.PhotoImage(Image.open("utilities/icons/icon-sound.png").resize((20, 20), Image.ANTIALIAS))
-        self.button_cry = tk.Button(master=self.frame_top_left, image=self.image_button_cry, bg=background, command=lambda: self.play_cry(self.entry_id.get()))
+        self.button_cry = tk.Button(master=self.frame_top_left, image=self.image_button_cry, bg=background, activebackground=background, command=lambda: self.play_cry(self.entry_id.get()))
         self.label_cry.pack(side=tk.LEFT)
         self.button_cry.pack(side=tk.LEFT)
 
@@ -60,24 +61,24 @@ class App:
         self.label_name = tk.Label(master=self.frame_name, text="Name: ", bg=background)
         self.entry_name_text = tk.StringVar()
         self.entry_name = tk.Entry(master=self.frame_name, width=11, bg=background, textvariable=self.entry_name_text)
-        #self.entry_name.config(state="readonly")
+        self.entry_name.config(readonlybackground=background, state="readonly")
         self.label_name.pack(side=tk.LEFT)
         self.entry_name.pack(side=tk.LEFT)
 
         # ID and Type(s)
         self.frame_id_types = tk.Frame(master=self.frame_right, bg=background)
         self.frame_id_types.pack()
-        self.label_id = tk.Label(master=self.frame_id_types, text="ID: ")
-        self.entry_id = tk.Entry(master=self.frame_id_types, width=3)
-        self.button_id = tk.Button(master=self.frame_id_types, text="Search", command=lambda: self.load_pokemon(self.entry_id.get()))
+        self.label_id = tk.Label(master=self.frame_id_types, text="ID: ", bg=background)
+        self.entry_id = tk.Entry(master=self.frame_id_types, width=3, bg=background)
+        self.button_id = tk.Button(master=self.frame_id_types, text="Search", bg=background, command=lambda: self.load_pokemon(self.entry_id.get()))
         self.label_id.pack(side=tk.LEFT)
         self.entry_id.pack(side=tk.LEFT)
         self.button_id.pack(side=tk.LEFT)
 
-        self.label_types = tk.Label(master=self.frame_id_types, text="Type(s): ")
+        self.label_types = tk.Label(master=self.frame_id_types, text="Type(s): ", bg=background)
         self.entry_types_text = tk.StringVar()
         self.entry_types = tk.Entry(master=self.frame_id_types, textvariable=self.entry_types_text, width=18)
-        self.entry_types.config(state="readonly")
+        self.entry_types.config(readonlybackground=background, state="readonly")
         self.label_types.pack(side=tk.LEFT)
         self.entry_types.pack(side=tk.LEFT)
 
@@ -98,7 +99,7 @@ class App:
         self.label_evolutions_to.pack(side=tk.RIGHT)'''
 
         # description
-        self.text_description = tk.Text(master=self.frame_right, height=4)
+        self.text_description = tk.Text(master=self.frame_right, height=4, bg=background)
         self.text_description.config(font=("Helvetica", 9, "normal"), state="disabled")
         self.text_description.pack()
 
@@ -108,73 +109,73 @@ class App:
         self.x2 = 50
         self.y2 = 16
         # HP
-        self.frame_hp = tk.Frame(master=self.frame_right, width=240)
+        self.frame_hp = tk.Frame(master=self.frame_right, width=240, bg=background)
         self.frame_hp.pack()
-        self.label_hp = tk.Label(master=self.frame_hp, width=7, text="HP:", anchor=tk.W)
+        self.label_hp = tk.Label(master=self.frame_hp, width=7, text="HP:", anchor=tk.W, bg=background)
         self.entry_hp_text = tk.StringVar()
         self.entry_hp = tk.Entry(master=self.frame_hp, width=3, textvariable=self.entry_hp_text)
-        self.entry_hp.config(state="readonly")
-        self.canvas_hp = tk.Canvas(master=self.frame_hp, width=160, height=18)  # bg="yellow" test
+        self.entry_hp.config(readonlybackground=background, state="readonly")
+        self.canvas_hp = tk.Canvas(master=self.frame_hp, width=160, height=18, bg=background, highlightthickness=0)  # highlightthickness=0 to remove the white borders
         self.rect_hp = self.canvas_hp.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")  # x1, y1, x2, y2
         self.label_hp.pack(side=tk.LEFT)
         self.entry_hp.pack(side=tk.LEFT)
         self.canvas_hp.pack(side=tk.LEFT)
         # Attack
-        self.frame_attack = tk.Frame(master=self.frame_right, width=240)
+        self.frame_attack = tk.Frame(master=self.frame_right, width=240, bg=background)
         self.frame_attack.pack()
-        self.label_attack = tk.Label(master=self.frame_attack, width=7, text="Attack:", anchor=tk.W)  # anchor=tk.W to justify the text
+        self.label_attack = tk.Label(master=self.frame_attack, width=7, text="Attack:", anchor=tk.W, bg=background)  # anchor=tk.W to justify the text
         self.entry_attack_text = tk.StringVar()
         self.entry_attack = tk.Entry(master=self.frame_attack, width=3, textvariable=self.entry_attack_text)
-        self.entry_attack.config(state="readonly")
-        self.canvas_attack = tk.Canvas(master=self.frame_attack, width=160, height=18)
+        self.entry_attack.config(readonlybackground=background, state="readonly")
+        self.canvas_attack = tk.Canvas(master=self.frame_attack, width=160, height=18, bg=background, highlightthickness=0)
         self.rect_attack = self.canvas_attack.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
         self.label_attack.pack(side=tk.LEFT)
         self.entry_attack.pack(side=tk.LEFT)
         self.canvas_attack.pack(side=tk.LEFT)
         # Defense
-        self.frame_defense = tk.Frame(master=self.frame_right, width=240)
+        self.frame_defense = tk.Frame(master=self.frame_right, width=240, bg=background)
         self.frame_defense.pack()
-        self.label_defense = tk.Label(master=self.frame_defense, width=7, text="Defense:", anchor=tk.W)
+        self.label_defense = tk.Label(master=self.frame_defense, width=7, text="Defense:", anchor=tk.W, bg=background)
         self.entry_defense_text = tk.StringVar()
         self.entry_defense = tk.Entry(master=self.frame_defense, width=3, textvariable=self.entry_defense_text)
-        self.entry_defense.config(state="readonly")
-        self.canvas_defense = tk.Canvas(master=self.frame_defense, width=160, height=18)
+        self.entry_defense.config(readonlybackground=background, state="readonly")
+        self.canvas_defense = tk.Canvas(master=self.frame_defense, width=160, height=18, bg=background, highlightthickness=0)
         self.rect_defense = self.canvas_defense.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
         self.label_defense.pack(side=tk.LEFT)
         self.entry_defense.pack(side=tk.LEFT)
         self.canvas_defense.pack(side=tk.LEFT)
         # Sp. Atk
-        self.frame_sp_atk = tk.Frame(master=self.frame_right, width=240)
+        self.frame_sp_atk = tk.Frame(master=self.frame_right, width=240, bg=background)
         self.frame_sp_atk.pack()
-        self.label_sp_atk = tk.Label(master=self.frame_sp_atk, width=7, text="Sp. Atk:", anchor=tk.W)
+        self.label_sp_atk = tk.Label(master=self.frame_sp_atk, width=7, text="Sp. Atk:", anchor=tk.W, bg=background)
         self.entry_sp_atk_text = tk.StringVar()
         self.entry_sp_atk = tk.Entry(master=self.frame_sp_atk, width=3, textvariable=self.entry_sp_atk_text)
-        self.entry_sp_atk.config(state="readonly")
-        self.canvas_sp_atk = tk.Canvas(master=self.frame_sp_atk, width=160, height=18)
+        self.entry_sp_atk.config(readonlybackground=background, state="readonly")
+        self.canvas_sp_atk = tk.Canvas(master=self.frame_sp_atk, width=160, height=18, bg=background, highlightthickness=0)
         self.rect_sp_atk = self.canvas_sp_atk.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
         self.label_sp_atk.pack(side=tk.LEFT)
         self.entry_sp_atk.pack(side=tk.LEFT)
         self.canvas_sp_atk.pack(side=tk.LEFT)
         # Sp. Def
-        self.frame_sp_def = tk.Frame(master=self.frame_right, width=240)
+        self.frame_sp_def = tk.Frame(master=self.frame_right, width=240, bg=background)
         self.frame_sp_def.pack()
-        self.label_sp_def = tk.Label(master=self.frame_sp_def, width=7, text="Sp. Def:", anchor=tk.W)
+        self.label_sp_def = tk.Label(master=self.frame_sp_def, width=7, text="Sp. Def:", anchor=tk.W, bg=background)
         self.entry_sp_def_text = tk.StringVar()
         self.entry_sp_def = tk.Entry(master=self.frame_sp_def, width=3, textvariable=self.entry_sp_def_text)
-        self.entry_sp_def.config(state="readonly")
-        self.canvas_sp_def = tk.Canvas(master=self.frame_sp_def, width=160, height=18)
+        self.entry_sp_def.config(readonlybackground=background, state="readonly")
+        self.canvas_sp_def = tk.Canvas(master=self.frame_sp_def, width=160, height=18, bg=background, highlightthickness=0)
         self.rect_sp_def = self.canvas_sp_def.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
         self.label_sp_def.pack(side=tk.LEFT)
         self.entry_sp_def.pack(side=tk.LEFT)
         self.canvas_sp_def.pack(side=tk.LEFT)
         # Speed
-        self.frame_speed = tk.Frame(master=self.frame_right, width=240)
+        self.frame_speed = tk.Frame(master=self.frame_right, width=240, bg=background)
         self.frame_speed.pack()
-        self.label_speed = tk.Label(master=self.frame_speed, width=7, text="Speed:", anchor=tk.W)
+        self.label_speed = tk.Label(master=self.frame_speed, width=7, text="Speed:", anchor=tk.W, bg=background)
         self.entry_speed_text = tk.StringVar()
         self.entry_speed = tk.Entry(master=self.frame_speed, width=3, textvariable=self.entry_speed_text)
-        self.entry_speed.config(state="readonly")
-        self.canvas_speed = tk.Canvas(master=self.frame_speed, width=160, height=18)
+        self.entry_speed.config(readonlybackground=background, state="readonly")
+        self.canvas_speed = tk.Canvas(master=self.frame_speed, width=160, height=18, bg=background, highlightthickness=0)
         self.rect_speed = self.canvas_speed.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
         self.label_speed.pack(side=tk.LEFT)
         self.entry_speed.pack(side=tk.LEFT)
