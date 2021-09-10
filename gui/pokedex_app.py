@@ -4,6 +4,10 @@ from pokemon_repository import PokemonRepository
 import playsound as ps
 
 background = "grey"
+icons_path = "utilities/icons/"
+thumbnails_path = "utilities/thumbnails/"
+sprites_path = "utilities/sprites/"
+cries_path = "utilities/cries/"
 # tkinter utility: https://www.tcl.tk/man/tcl/TkCmd/entry.html#M9
 
 class App:
@@ -11,6 +15,8 @@ class App:
         self.window = window
         self.window.title(window_title)
         self.window.geometry("480x320")
+        image = ImageTk.PhotoImage(file=icons_path + "icon-pokeball.png")
+        self.window.tk.call('wm', 'iconphoto', self.window._w, image)
         self.pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
 
         self.frame_left = tk.Frame(width=240, height=320, background="lime")
@@ -27,13 +33,13 @@ class App:
         self.frame_top_right = tk.Frame(master=self.frame_top, bg=background)
         self.frame_top_right.pack(side=tk.RIGHT, anchor="n")
         # Evolution (to)
-        image = Image.open("utilities/sprites/0.png").resize((40, 40), Image.ANTIALIAS)
+        image = Image.open(sprites_path + "0.png").resize((40, 40), Image.ANTIALIAS)
         self.image_evo_to = ImageTk.PhotoImage(image)
         self.label_evo_to = tk.Label(master=self.frame_top_right, image=self.image_evo_to, width=40, height=40, bg=background)
         self.label_evo_to.pack(side=tk.TOP, anchor="w")
 
         # Image
-        image = Image.open("utilities/thumbnails/0.png").resize((65, 65), Image.ANTIALIAS)
+        image = Image.open(thumbnails_path + "0.png").resize((65, 65), Image.ANTIALIAS)
         self.thumbnail = ImageTk.PhotoImage(image)
         self.label_thumb = tk.Label(master=self.frame_top, image=self.thumbnail, width=65, height=65, bg=background)
         self.label_thumb.pack(side=tk.RIGHT, anchor="n", fill=tk.BOTH)
@@ -42,13 +48,13 @@ class App:
         self.frame_top_left = tk.Frame(master=self.frame_top, bg=background)
         self.frame_top_left.pack(side=tk.BOTTOM, anchor="w")
         # Evolution (from)
-        image = Image.open("utilities/sprites/0.png").resize((40, 40), Image.ANTIALIAS)
+        image = Image.open(sprites_path + "0.png").resize((40, 40), Image.ANTIALIAS)
         self.image_evo_from = ImageTk.PhotoImage(image)
         self.label_evo_from = tk.Label(master=self.frame_top_left, image=self.image_evo_from, width=40, height=40, bg=background)
         self.label_evo_from.pack(side=tk.TOP, anchor="e")
         # Cry
         self.label_cry = tk.Label(master=self.frame_top_left, text="Cry:", bg=background)
-        self.image_button_cry = ImageTk.PhotoImage(Image.open("utilities/icons/icon-sound.png").resize((20, 20), Image.ANTIALIAS))
+        self.image_button_cry = ImageTk.PhotoImage(Image.open(icons_path + "icon-sound.png").resize((20, 20), Image.ANTIALIAS))
         self.button_cry = tk.Button(master=self.frame_top_left, image=self.image_button_cry, bg=background, activebackground=background, command=lambda: self.play_cry(self.entry_id.get()))
         self.label_cry.pack(side=tk.LEFT)
         self.button_cry.pack(side=tk.LEFT)
@@ -210,7 +216,7 @@ class App:
 
     # update image
     def load_image(self, pkmn):
-        path_image = "utilities/thumbnails/" + str(pkmn.num) + ".png"
+        path_image = thumbnails_path + str(pkmn.num) + ".png"
         image = Image.open(path_image).resize((50, 50), Image.ANTIALIAS)
         self.thumbnail = ImageTk.PhotoImage(image)
         self.label_thumb.configure(image=self.thumbnail)
@@ -260,26 +266,26 @@ class App:
     def load_evolutions(self, pkmn):
         # from
         if pkmn.evolutions["from"] is not None:
-            path_image = "utilities/sprites/" + str(pkmn.evolutions["from"]) + ".png"
+            path_image = sprites_path + str(pkmn.evolutions["from"]) + ".png"
         else:
-            path_image = "utilities/sprites/0.png"
+            path_image = sprites_path + "0.png"
         self.image_evo_from = ImageTk.PhotoImage(Image.open(path_image).resize((40, 40), Image.ANTIALIAS))
         self.label_evo_from.configure(image=self.image_evo_from)
         # to (NB: Eevee has 3 evolutions)
         if pkmn.evolutions["to"] is not None:
             if type(pkmn.evolutions["to"]) is int:
-                path_image = "utilities/sprites/" + str(pkmn.evolutions["to"]) + ".png"
+                path_image = sprites_path + str(pkmn.evolutions["to"]) + ".png"
             elif type(pkmn.evolutions["to"]) is list:
                 # add button to scroll evolutions
                 '''for i in range(len(pkmn.evolutions["to"])):
                     '''
                 # temporary solution (we need to add 2 more evolution sprites)
-                path_image = "utilities/sprites/" + str(pkmn.evolutions["to"][0]) + ".png"
+                path_image = sprites_path + str(pkmn.evolutions["to"][0]) + ".png"
                 self.image_evo_to = ImageTk.PhotoImage(Image.open(path_image).resize((40, 40), Image.ANTIALIAS))
                 self.label_evo_to.configure(image=self.image_evo_to)
                 return
         else:
-            path_image = "utilities/sprites/0.png"
+            path_image = sprites_path + "0.png"
         self.image_evo_to = ImageTk.PhotoImage(Image.open(path_image).resize((40, 40), Image.ANTIALIAS))
         self.label_evo_to.configure(image=self.image_evo_to)
         # if pkmn.evolutions["to"] is not None:
@@ -303,7 +309,7 @@ class App:
             return
         if 1 <= pkmn_id <= 151:
             print("play cry")
-            ps.playsound("utilities/cries/" + str(pkmn_id) + ".mp3")
+            ps.playsound(cries_path + str(pkmn_id) + ".mp3")
 
     # get RGB color from stat
     def get_color(self, stat):
