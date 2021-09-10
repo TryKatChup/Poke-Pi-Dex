@@ -2,6 +2,9 @@ import tkinter as tk
 from PIL import ImageTk, Image
 from pokemon_repository import PokemonRepository
 import playsound as ps
+from pokemon import Pokemon
+
+# tkinter utility: https://www.tcl.tk/man/tcl/TkCmd/entry.html#M9
 
 background = "grey"
 icons_path = "utilities/icons/"
@@ -9,7 +12,6 @@ thumbnails_path = "utilities/thumbnails/"
 sprites_path = "utilities/sprites/"
 cries_path = "utilities/cries/"
 sprite_size = (40, 40)
-# tkinter utility: https://www.tcl.tk/man/tcl/TkCmd/entry.html#M9
 
 class App:
     def __init__(self, window, window_title):
@@ -19,6 +21,9 @@ class App:
         image = ImageTk.PhotoImage(file=icons_path + "icon-pokeball.png")
         self.window.tk.call('wm', 'iconphoto', self.window._w, image)
         self.pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
+
+        self.loaded_pokemon = Pokemon(0, "", "", {}, {}, "")
+        self.evo_to_i = 0  # index of the multiple evolutions list
 
         self.frame_left = tk.Frame(width=240, height=320, background="lime")
         self.frame_left.pack(side=tk.LEFT, fill=None, expand=False)
@@ -38,16 +43,15 @@ class App:
         self.image_evo_to = ImageTk.PhotoImage(image)
         self.label_evo_to = tk.Label(master=self.frame_top_right, image=self.image_evo_to, width=40, height=40, bg=background)
         self.label_evo_to.pack(side=tk.TOP, anchor=tk.W)
-        # Buttons (multiple "to" evolutions)
+        # Buttons (for multiple "to" evolutions)
         self.image_button_evo_prev = ImageTk.PhotoImage(Image.open(icons_path + "icon-evo-to-prev.png").resize((10, 10), Image.ANTIALIAS))
-        self.button_evo_to_prev = tk.Button(master=self.frame_top_right, image=self.image_button_evo_prev, bg=background, command=lambda: self.prev_evo_to(self.entry_id.get()))
+        self.button_evo_to_prev = tk.Button(master=self.frame_top_right, image=self.image_button_evo_prev, bg=background, command=lambda: self.prev_evo_to())
         self.button_evo_to_prev.config(state=tk.DISABLED)
         self.image_button_evo_next = ImageTk.PhotoImage(Image.open(icons_path + "icon-evo-to-next.png").resize((10, 10), Image.ANTIALIAS))
-        self.button_evo_to_next = tk.Button(master=self.frame_top_right, image=self.image_button_evo_next, bg=background, command=lambda: self.next_evo_to(self.entry_id.get()))
+        self.button_evo_to_next = tk.Button(master=self.frame_top_right, image=self.image_button_evo_next, bg=background, command=lambda: self.next_evo_to())
         self.button_evo_to_next.config(state=tk.DISABLED)
         self.button_evo_to_prev.pack(side=tk.LEFT, anchor=tk.N)
         self.button_evo_to_next.pack(side=tk.LEFT, anchor=tk.N)
-        self.evo_i = 0  # index of the multiple evolutions list
 
         # Image
         image = Image.open(thumbnails_path + "0.png").resize((65, 65), Image.ANTIALIAS)
@@ -66,7 +70,7 @@ class App:
         # Cry
         self.label_cry = tk.Label(master=self.frame_top_left, text="Cry:", bg=background)
         self.image_button_cry = ImageTk.PhotoImage(Image.open(icons_path + "icon-sound.png").resize((20, 20), Image.ANTIALIAS))
-        self.button_cry = tk.Button(master=self.frame_top_left, image=self.image_button_cry, bg=background, activebackground=background, command=lambda: self.play_cry(self.entry_id.get()))
+        self.button_cry = tk.Button(master=self.frame_top_left, image=self.image_button_cry, bg=background, activebackground=background, command=lambda: self.play_cry())
         self.label_cry.pack(side=tk.LEFT)
         self.button_cry.pack(side=tk.LEFT)
 
@@ -99,28 +103,12 @@ class App:
         self.label_types.pack(side=tk.LEFT)
         self.entry_types.pack(side=tk.LEFT)
 
-        '''# evolutions test (sostituire con immagini)
-        self.frame_evolutions = tk.Frame()
-        self.frame_evolutions.pack()
-        self.label_evolutions = tk.Label(master=self.frame_evolutions, text="Evolutions: ")
-        self.label_evolutions_from = tk.Label(master=self.frame_evolutions, text="From: ")
-        self.entry_evolutions_from_text = tk.StringVar()
-        self.entry_evolutions_from = tk.Entry(master=self.frame_evolutions, textvariable=self.entry_evolutions_from_text)
-        self.label_evolutions_to = tk.Label(master=self.frame_evolutions, text=" To: ")
-        self.entry_evolutions_to_text = tk.StringVar()
-        self.entry_evolutions_to = tk.Entry(master=self.frame_evolutions, textvariable=self.entry_evolutions_to_text)
-        self.label_evolutions.pack()
-        self.label_evolutions_from.pack(side=tk.LEFT)
-        self.entry_evolutions_from.pack(side=tk.LEFT)
-        self.entry_evolutions_to.pack(side=tk.RIGHT)
-        self.label_evolutions_to.pack(side=tk.RIGHT)'''
-
         # description
         self.text_description = tk.Text(master=self.frame_right, height=4, bg=background, bd=0, highlightthickness=0)
         self.text_description.config(font=("Helvetica", 9, "normal"), state="disabled")
         self.text_description.pack()
 
-        # Stats
+        # Stats coordinates
         self.x1 = 2
         self.y1 = 4
         self.x2 = 50
@@ -214,85 +202,100 @@ class App:
             print("The ID must be an integer between 1 and 151 inclusive")
             return
         if 1 <= pkmn_id <= 151:
-            print("Loading pokemon with id: " + str(pkmn_id))
-            pokemon = self.pokemon_repo.pokemon[pkmn_id]
+            print("Loaded pokemon with id: " + str(pkmn_id))
+            self.loaded_pokemon = self.pokemon_repo.pokemon[pkmn_id]
 
-            self.load_image(pokemon)
-            self.load_name(pokemon)
+            self.load_image()
+            self.load_name()
             # set ID
-            self.load_types(pokemon)
-            self.load_description(pokemon)
-            self.load_stats(pokemon)
-            self.load_evolutions(pokemon)
+            self.load_types()
+            self.load_description()
+            self.load_stats()
+            self.load_evolutions()
+        else:
+            print("The ID must be an integer between 1 and 151 inclusive")
 
     # update image
-    def load_image(self, pkmn):
-        path_image = thumbnails_path + str(pkmn.num) + ".png"
+    def load_image(self):
+        path_image = thumbnails_path + str(self.loaded_pokemon.num) + ".png"
         image = Image.open(path_image).resize((50, 50), Image.ANTIALIAS)
         self.thumbnail = ImageTk.PhotoImage(image)
         self.label_thumb.configure(image=self.thumbnail)
 
     # update name
-    def load_name(self, pkmn):
-        self.entry_name_text.set(pkmn.name)
+    def load_name(self):
+        print("Name: " + self.loaded_pokemon.name)
+        self.entry_name_text.set(self.loaded_pokemon.name)
 
     # update type(s)
-    def load_types(self, pkmn):
-        types = pkmn.types[0]
-        if len(pkmn.types) == 2:
-            types += ", " + pkmn.types[1]
+    def load_types(self):
+        types = self.loaded_pokemon.types[0]
+        if len(self.loaded_pokemon.types) == 2:
+            types += ", " + self.loaded_pokemon.types[1]
         self.entry_types_text.set(types)
+        print("Type(s): " + types)
 
     # update description
-    def load_description(self, pkmn):
-        print(pkmn.description)
+    def load_description(self):
+        print("Description: " + self.loaded_pokemon.description)
         self.text_description.config(state="normal")
         self.text_description.delete('1.0', tk.END)
-        self.text_description.insert('1.0', pkmn.description)
+        self.text_description.insert('1.0', self.loaded_pokemon.description)
         self.text_description.config(state="disabled")
 
     # update stats
-    def load_stats(self, pkmn):
-        print("load stats")
-        self.entry_hp_text.set(pkmn.stats["HP"])
-        self.canvas_hp.coords(self.rect_hp, self.x1, self.y1, int(pkmn.stats["HP"]) / 2, self.y2)
-        self.canvas_hp.itemconfig(self.rect_hp, fill=self.get_color(int(pkmn.stats["HP"])))
-        self.entry_attack_text.set(pkmn.stats["Attack"])
-        self.canvas_attack.coords(self.rect_hp, self.x1, self.y1, int(pkmn.stats["Attack"]) / 2, self.y2)
-        self.canvas_attack.itemconfig(self.rect_attack, fill=self.get_color(int(pkmn.stats["Attack"])))
-        self.entry_defense_text.set(pkmn.stats["Defense"])
-        self.canvas_defense.coords(self.rect_hp, self.x1, self.y1, int(pkmn.stats["Defense"]) / 2, self.y2)
-        self.canvas_defense.itemconfig(self.rect_defense, fill=self.get_color(int(pkmn.stats["Defense"])))
-        self.entry_sp_atk_text.set(pkmn.stats["Sp. Attack"])
-        self.canvas_sp_atk.coords(self.rect_hp, self.x1, self.y1, int(pkmn.stats["Sp. Attack"]) / 2, self.y2)
-        self.canvas_sp_atk.itemconfig(self.rect_sp_atk, fill=self.get_color(int(pkmn.stats["Sp. Attack"])))
-        self.entry_sp_def_text.set(pkmn.stats["Sp. Defense"])
-        self.canvas_sp_def.coords(self.rect_hp, self.x1, self.y1, int(pkmn.stats["Sp. Defense"]) / 2, self.y2)
-        self.canvas_sp_def.itemconfig(self.rect_sp_def, fill=self.get_color(int(pkmn.stats["Sp. Defense"])))
-        self.entry_speed_text.set(pkmn.stats["Speed"])
-        self.canvas_speed.coords(self.rect_hp, self.x1, self.y1, int(pkmn.stats["Speed"]) / 2, self.y2)
-        self.canvas_speed.itemconfig(self.rect_speed, fill=self.get_color(int(pkmn.stats["Speed"])))
+    def load_stats(self):
+        print("Stats:")
+        s_hp = self.loaded_pokemon.stats["HP"]
+        self.entry_hp_text.set(s_hp)
+        self.canvas_hp.coords(self.rect_hp, self.x1, self.y1, s_hp / 2, self.y2)
+        self.canvas_hp.itemconfig(self.rect_hp, fill=self.get_color(s_hp))
+        s_atk = self.loaded_pokemon.stats["Attack"]
+        self.entry_attack_text.set(s_atk)
+        self.canvas_attack.coords(self.rect_hp, self.x1, self.y1, s_atk / 2, self.y2)
+        self.canvas_attack.itemconfig(self.rect_attack, fill=self.get_color(s_atk))
+        s_def = self.loaded_pokemon.stats["Defense"]
+        self.entry_defense_text.set(s_def)
+        self.canvas_defense.coords(self.rect_hp, self.x1, self.y1, s_def / 2, self.y2)
+        self.canvas_defense.itemconfig(self.rect_defense, fill=self.get_color(s_def))
+        s_sp_atk = self.loaded_pokemon.stats["Sp. Attack"]
+        self.entry_sp_atk_text.set(s_sp_atk)
+        self.canvas_sp_atk.coords(self.rect_hp, self.x1, self.y1, s_sp_atk / 2, self.y2)
+        self.canvas_sp_atk.itemconfig(self.rect_sp_atk, fill=self.get_color(s_sp_atk))
+        s_sp_def = self.loaded_pokemon.stats["Sp. Defense"]
+        self.entry_sp_def_text.set(s_sp_def)
+        self.canvas_sp_def.coords(self.rect_hp, self.x1, self.y1, s_sp_def / 2, self.y2)
+        self.canvas_sp_def.itemconfig(self.rect_sp_def, fill=self.get_color(s_sp_def))
+        s_speed = self.loaded_pokemon.stats["Speed"]
+        self.entry_speed_text.set(s_speed)
+        self.canvas_speed.coords(self.rect_hp, self.x1, self.y1, s_speed / 2, self.y2)
+        self.canvas_speed.itemconfig(self.rect_speed, fill=self.get_color(s_speed))
+        print("HP:\t\t\t" + str(s_hp) + "\nAttack:\t\t" + str(s_atk) + "\nDefense:\t" + str(s_def) + "\nSp. Atk:\t" +
+              str(s_sp_atk) + "\nSp. Def:\t" + str(s_sp_def) + "\nSpeed:\t\t" + str(s_speed))
 
     # update evolutions
-    def load_evolutions(self, pkmn):
+    def load_evolutions(self):
         # from
-        if pkmn.evolutions["from"] is not None:
-            path_image = sprites_path + str(pkmn.evolutions["from"]) + ".png"
+        evo_from = self.loaded_pokemon.evolutions["from"]
+        if evo_from is not None:
+            path_image = sprites_path + str(evo_from) + ".png"
         else:
             path_image = sprites_path + "0.png"
         self.image_evo_from = ImageTk.PhotoImage(Image.open(path_image).resize((40, 40), Image.ANTIALIAS))
         self.label_evo_from.configure(image=self.image_evo_from)
-        # to (NB: Eevee has 3 evolutions)
+
+        # to
+        evo_to = self.loaded_pokemon.evolutions["to"]
         self.button_evo_to_prev.config(state=tk.DISABLED)
         self.button_evo_to_next.config(state=tk.DISABLED)
-        if pkmn.evolutions["to"] is not None:
-            if type(pkmn.evolutions["to"]) is int:
-                path_image = sprites_path + str(pkmn.evolutions["to"]) + ".png"
-            elif type(pkmn.evolutions["to"]) is list:
+        if evo_to is not None:
+            if type(evo_to) is int:
+                path_image = sprites_path + str(evo_to) + ".png"
+            elif type(evo_to) is list:  # NB: some pokemon (Eevee) has more than a single evolution
                 # add button to scroll evolutions
                 self.button_evo_to_next.config(state=tk.NORMAL)
-                self.evo_i = 0
-                path_image = sprites_path + str(pkmn.evolutions["to"][0]) + ".png"
+                self.evo_to_i = 0
+                path_image = sprites_path + str(evo_to[0]) + ".png"
                 self.image_evo_to = ImageTk.PhotoImage(Image.open(path_image).resize((40, 40), Image.ANTIALIAS))
                 self.label_evo_to.configure(image=self.image_evo_to)
                 return
@@ -300,47 +303,36 @@ class App:
             path_image = sprites_path + "0.png"
         self.image_evo_to = ImageTk.PhotoImage(Image.open(path_image).resize((40, 40), Image.ANTIALIAS))
         self.label_evo_to.configure(image=self.image_evo_to)
-        # if pkmn.evolutions["to"] is not None:
 
-    def prev_evo_to(self, pkmn_id):
-        print("prev evo to")
-        self.evo_i -= 1
-        self.image_evo_to = ImageTk.PhotoImage(Image.open(sprites_path + str(self.pokemon_repo.pokemon[int(pkmn_id)].evolutions["to"][self.evo_i]) + ".png").resize((40, 40), Image.ANTIALIAS))
+    # load previous "to" evolution
+    def prev_evo_to(self):
+        self.evo_to_i -= 1
+        evo_to = self.pokemon_repo.pokemon[self.loaded_pokemon.num].evolutions["to"]
+        print("Show previous evolution: " + str(evo_to[self.evo_to_i]))
+        self.image_evo_to = ImageTk.PhotoImage(Image.open(sprites_path + str(evo_to[self.evo_to_i]) + ".png").resize((40, 40), Image.ANTIALIAS))
         self.label_evo_to.configure(image=self.image_evo_to)
         self.button_evo_to_next.config(state=tk.NORMAL)
-        if self.evo_i == 0:
+        if self.evo_to_i == 0:
             self.button_evo_to_prev.config(state=tk.DISABLED)
 
-    def next_evo_to(self, pkmn_id):
-        print("next evo to")
-        self.evo_i += 1
-        self.image_evo_to = ImageTk.PhotoImage(Image.open(sprites_path + str(self.pokemon_repo.pokemon[int(pkmn_id)].evolutions["to"][self.evo_i]) + ".png").resize((40, 40), Image.ANTIALIAS))
+    # load next "to" evolution
+    def next_evo_to(self):
+        self.evo_to_i += 1
+        evo_to = self.pokemon_repo.pokemon[self.loaded_pokemon.num].evolutions["to"]
+        print("Show next evolution: " + str(evo_to[self.evo_to_i]))
+        self.image_evo_to = ImageTk.PhotoImage(Image.open(sprites_path + str(evo_to[self.evo_to_i]) + ".png").resize((40, 40), Image.ANTIALIAS))
         self.label_evo_to.configure(image=self.image_evo_to)
         self.button_evo_to_prev.config(state=tk.NORMAL)
-        if self.evo_i + 1 == len(self.pokemon_repo.pokemon[int(pkmn_id)].evolutions["to"]):
+        if self.evo_to_i + 1 == len(evo_to):
             self.button_evo_to_next.config(state=tk.DISABLED)
 
-
-    '''def load_evolutions(self, pkmn):
-        self.entry_evolutions_from_text.set("")
-        self.entry_evolutions_to_text.set("")
-        evo_from = pkmn.evolutions["from"]
-        if evo_from is not None:
-            self.entry_evolutions_from_text.set(self.pokemon_repo.pokemon[evo_from].name)
-        evo_to = pkmn.evolutions["to"]
-        if evo_to is not None:
-            self.entry_evolutions_to_text.set(self.pokemon_repo.pokemon[evo_to].name)'''
-
     # play cry
-    def play_cry(self, pkmn_id):
-        try:
-            pkmn_id = int(pkmn_id)
-        except ValueError:
-            print("The ID must be an integer between 1 and 151 inclusive")
-            return
-        if 1 <= pkmn_id <= 151:
-            print("play cry")
-            ps.playsound(cries_path + str(pkmn_id) + ".mp3")
+    def play_cry(self):
+        if 1 <= self.loaded_pokemon.num <= 151:
+            print("Play cry #" + str(self.loaded_pokemon.num))
+            ps.playsound(cries_path + str(self.loaded_pokemon.num) + ".mp3")
+        else:
+            print("No pokemon has been loaded")
 
     # get RGB color from stat
     def get_color(self, stat):
