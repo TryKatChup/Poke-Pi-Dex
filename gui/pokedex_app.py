@@ -270,6 +270,7 @@ class App:
             if type(pkmn.evolutions["to"]) is int:
                 path_image = "utilities/sprites/" + str(pkmn.evolutions["to"]) + ".png"
             elif type(pkmn.evolutions["to"]) is list:
+                # add button to scroll evolutions
                 '''for i in range(len(pkmn.evolutions["to"])):
                     '''
                 # temporary solution (we need to add 2 more evolution sprites)
