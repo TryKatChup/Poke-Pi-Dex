@@ -367,11 +367,20 @@ class App:
         self.button_close = tk.Button(master=self.frame_settings, image=self.image_button_close, bg=background, command=lambda: self.close_settings())
         self.button_close.pack(side=tk.TOP, anchor=tk.E)
 
-        self.frame_volume = tk.Frame(master=self.frame_settings)
+        self.frame_volume = tk.Frame(master=self.frame_settings, bg=background)
+        self.frame_volume.pack(side=tk.TOP, pady=50)
 
         self.label_volume = tk.Label(master=self.frame_volume, text="Volume: ", bg=background)
-        self.scale_volume = tk.Scale(master=self.frame_settings, from_=0, to=100)
-        self.scale_volume.pack
+        self.label_volume.pack(side=tk.LEFT)
+        self.scale_volume = tk.Scale(master=self.frame_volume, from_=0, to=100, tickinterval= 100, orient=tk.HORIZONTAL, bg=background, bd=0, highlightthickness=0)
+        self.scale_volume.pack(side=tk.LEFT)
+
+        self.label_fake2 = tk.Label(master=self.frame_settings, text="", bg=background, fg=background)
+        self.label_fake2.pack(side=tk.LEFT, padx=20)
+        self.button_save_settings = tk.Button(master=self.frame_settings, text="Save", bg=background, width=6)
+        self.button_save_settings.pack(side=tk.LEFT, anchor=tk.N, padx=5)
+        self.button_cancel_settings = tk.Button(master=self.frame_settings, text="Cancel", bg=background)
+        self.button_cancel_settings.pack(side=tk.LEFT, anchor=tk.N, padx=5)
 
         # Show info
     def show_info(self):
