@@ -36,23 +36,21 @@ class App:
         self.frame_top = tk.Frame(master=self.frame_right, width=240, bg=background)
         self.frame_top.pack(side=tk.TOP)
 
-        # Settings & About
-        self.frame_fake = tk.Frame(master=self.frame_top, bg=background)
-        self.frame_fake.pack(side=tk.LEFT, anchor=tk.N)
+        # Settings & Info
         # Fake button to space on the left
-        self.button_fake = tk.Button(master=self.frame_fake, text=" ", bg=background, fg=background, bd=0, highlightthickness=0)
-        self.button_fake.pack(side=tk.TOP)
-        # Settings frame
-        self.frame_settings = tk.Frame(master=self.frame_top, bg=background)
-        self.frame_settings.pack(side=tk.RIGHT, anchor=tk.N)
+        self.button_fake = tk.Button(master=self.frame_top, text=" ", bg=background, fg=background, bd=0, highlightthickness=0)
+        self.button_fake.pack(side=tk.LEFT, anchor=tk.N)
+        # Settings & info frame
+        self.frame_settings_info = tk.Frame(master=self.frame_top, bg=background)
+        self.frame_settings_info.pack(side=tk.RIGHT, anchor=tk.N)
         # Fake label to space between images and settings/info buttons
-        self.label_fake = tk.Label(master=self.frame_settings, text="  ", bg=background)
+        self.label_fake = tk.Label(master=self.frame_settings_info, text="  ", bg=background)
         self.label_fake.pack(side=tk.LEFT)
         self.image_button_settings = ImageTk.PhotoImage(Image.open(icons_path + "icon-settings.png").resize((25, 25), Image.ANTIALIAS))
-        self.button_settings = tk.Button(master=self.frame_settings, image=self.image_button_settings, bg=background)
+        self.button_settings = tk.Button(master=self.frame_settings_info, image=self.image_button_settings, bg=background, command=lambda: self.show_settings())
         self.button_settings.pack(side=tk.TOP, anchor=tk.E)
         self.image_button_info = ImageTk.PhotoImage(Image.open(icons_path + "icon-info.png").resize((25, 25), Image.ANTIALIAS))
-        self.button_info = tk.Button(master=self.frame_settings, image=self.image_button_info, bg=background)
+        self.button_info = tk.Button(master=self.frame_settings_info, image=self.image_button_info, bg=background, command=lambda: self.show_info())
         self.button_info.pack(side=tk.TOP, anchor=tk.E)
 
         # Top (right)
@@ -353,6 +351,54 @@ class App:
             ps.playsound(cries_path + str(self.loaded_pokemon.num) + ".mp3")
         else:
             print("No pokemon has been loaded")
+
+    # Show settings
+    def show_settings(self):
+        print("Settings")
+        self.frame_right.pack_forget()
+
+        # Meglio costruirlo in init e visualizzarlo poi
+        # build settings frame
+        self.frame_settings = tk.Frame(width=240, height=320, bg=background)
+        self.frame_settings.pack(side=tk.RIGHT, fill=None, expand=False)
+        self.frame_settings.pack_propagate(0)
+
+        self.image_button_close = ImageTk.PhotoImage(Image.open(icons_path + "icon-close.png").resize((25, 25), Image.ANTIALIAS))
+        self.button_close = tk.Button(master=self.frame_settings, image=self.image_button_close, bg=background, bd=0, highlightthickness=0, command=lambda: self.close_settings())
+        self.button_close.pack(side=tk.TOP, anchor=tk.E)
+
+        self.text_info = tk.Text(master=self.frame_settings, height=4, bg="blue", bd=0, highlightthickness=0)
+        self.text_info.pack(side=tk.TOP, anchor=tk.E)
+        self.text_info.insert('1.0', "App megafiga by Kary & Miky")
+
+        # Show info
+    def show_info(self):
+        print("Info")
+        self.frame_right.pack_forget()
+
+        # Meglio costruirlo in init e visualizzarlo poi
+        # build settings frame
+        self.frame_info = tk.Frame(width=240, height=320, bg=background)
+        self.frame_info.pack(side=tk.RIGHT, fill=None, expand=False)
+        self.frame_info.pack_propagate(0)
+
+        self.image_button_close = ImageTk.PhotoImage(Image.open(icons_path + "icon-close.png").resize((25, 25), Image.ANTIALIAS))
+        self.button_close = tk.Button(master=self.frame_info, image=self.image_button_close, bg=background, command=lambda: self.close_info())
+        self.button_close.pack(side=tk.TOP, anchor=tk.E)
+
+    def close_settings(self):
+        print("Close settings")
+        self.frame_settings.pack_forget()
+
+        self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
+        self.frame_right.pack_propagate(0)
+
+    def close_info(self):
+        print("Close info")
+        self.frame_info.pack_forget()
+
+        self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
+        self.frame_right.pack_propagate(0)
 
     # get RGB color from stat
     def get_color(self, stat):
