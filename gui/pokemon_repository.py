@@ -16,8 +16,8 @@ class PokemonRepository:
                 # print(self.pokemon[pkmn["id"]].to_string())  # test
                 # load image?
 
-            # TEST: we have to loop again since usually the "to" evolution of a pokèmon is later on the
-            # pokèdex so it isn't known yet in the previous cycle
+            # TEST: if we want to get info about the "to" evolution, we have to loop again since that pokemon is later
+            # on the pokèdex and we hadn't loaded it yet, in the cycle
             # for pkmn in self.pokemon.values():
             #     print(pkmn.to_string_evo(self.get_evolutions(pkmn)))
         except OSError:
