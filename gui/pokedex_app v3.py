@@ -364,12 +364,14 @@ class App:
         self.frame_settings.pack_propagate(0)
 
         self.image_button_close = ImageTk.PhotoImage(Image.open(icons_path + "icon-close.png").resize((25, 25), Image.ANTIALIAS))
-        self.button_close = tk.Button(master=self.frame_settings, image=self.image_button_close, bg=background, bd=0, highlightthickness=0, command=lambda: self.close_settings())
+        self.button_close = tk.Button(master=self.frame_settings, image=self.image_button_close, bg=background, command=lambda: self.close_settings())
         self.button_close.pack(side=tk.TOP, anchor=tk.E)
 
-        self.text_info = tk.Text(master=self.frame_settings, height=4, bg="blue", bd=0, highlightthickness=0)
-        self.text_info.pack(side=tk.TOP, anchor=tk.E)
-        self.text_info.insert('1.0', "App megafiga by Kary & Miky")
+        self.frame_volume = tk.Frame(master=self.frame_settings)
+
+        self.label_volume = tk.Label(master=self.frame_volume, text="Volume: ", bg=background)
+        self.scale_volume = tk.Scale(master=self.frame_settings, from_=0, to=100)
+        self.scale_volume.pack
 
         # Show info
     def show_info(self):
@@ -385,6 +387,12 @@ class App:
         self.image_button_close = ImageTk.PhotoImage(Image.open(icons_path + "icon-close.png").resize((25, 25), Image.ANTIALIAS))
         self.button_close = tk.Button(master=self.frame_info, image=self.image_button_close, bg=background, command=lambda: self.close_info())
         self.button_close.pack(side=tk.TOP, anchor=tk.E)
+
+        self.text_info = tk.Text(master=self.frame_info, height=4, bg="#6a6a6a", bd=0, highlightthickness=0)
+        self.text_info.tag_configure('tag-center', justify='center')
+        self.text_info.pack(side=tk.TOP, padx=10, pady=10)
+        self.text_info.insert('end', "App megafiga by Miky & Kary\n", 'tag-center')
+        self.text_info.insert('end', "Developed with ...", 'tag-center')
 
     def close_settings(self):
         print("Close settings")
