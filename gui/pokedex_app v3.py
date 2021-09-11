@@ -30,7 +30,6 @@ class App:
         self.frame_left.pack(side=tk.LEFT, fill=None, expand=False)
         self.frame_left.pack_propagate(0)
         self.frame_right = tk.Frame(width=240, height=320, bg=background)
-        self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
         self.frame_right.pack_propagate(0)  # set the frame so that its children cannot control its size
 
         self.frame_top = tk.Frame(master=self.frame_right, width=240, bg=background)
@@ -204,7 +203,41 @@ class App:
         self.entry_speed.pack(side=tk.LEFT)
         self.canvas_speed.pack(side=tk.LEFT)
 
+        # Settings
+        self.frame_settings = tk.Frame(width=240, height=320, bg=background)
+        self.frame_settings.pack_propagate(0)
+        self.image_button_close_settings = ImageTk.PhotoImage(Image.open(icons_path + "icon-close.png").resize((25, 25), Image.ANTIALIAS))
+        self.button_close = tk.Button(master=self.frame_settings, image=self.image_button_close_settings, bg=background, command=lambda: self.close_settings())
+        self.button_close.pack(side=tk.TOP, anchor=tk.E)
+        # Volume
+        self.frame_volume = tk.Frame(master=self.frame_settings, bg=background)
+        self.frame_volume.pack(side=tk.TOP, pady=50)
+        self.label_volume = tk.Label(master=self.frame_volume, text="Volume: ", bg=background)
+        self.label_volume.pack(side=tk.LEFT)
+        self.scale_volume = tk.Scale(master=self.frame_volume, from_=0, to=100, tickinterval=100, orient=tk.HORIZONTAL, bg=background, bd=0, highlightthickness=0)
+        self.scale_volume.pack(side=tk.LEFT)
+        # Save/Cancel buttons
+        self.label_fake2 = tk.Label(master=self.frame_settings, text="", bg=background, fg=background)
+        self.label_fake2.pack(side=tk.LEFT, padx=20)
+        self.button_save_settings = tk.Button(master=self.frame_settings, text="Save", bg=background, width=6)
+        self.button_save_settings.pack(side=tk.LEFT, anchor=tk.N, padx=5)
+        self.button_cancel_settings = tk.Button(master=self.frame_settings, text="Cancel", bg=background)
+        self.button_cancel_settings.pack(side=tk.LEFT, anchor=tk.N, padx=5)
+
+        # Info
+        self.frame_info = tk.Frame(width=240, height=320, bg=background)
+        self.frame_info.pack_propagate(0)
+        self.image_button_close_info = ImageTk.PhotoImage(Image.open(icons_path + "icon-close.png").resize((25, 25), Image.ANTIALIAS))
+        self.button_close = tk.Button(master=self.frame_info, image=self.image_button_close_info, bg=background, command=lambda: self.close_info())
+        self.button_close.pack(side=tk.TOP, anchor=tk.E)
+        self.text_info = tk.Text(master=self.frame_info, height=4, bg="#6a6a6a", bd=0, highlightthickness=0)
+        self.text_info.tag_configure('tag-center', justify='center')
+        self.text_info.pack(side=tk.TOP, padx=10, pady=10)
+        self.text_info.insert('end', "App megafiga by Miky & Kary\n", 'tag-center')
+        self.text_info.insert('end', "Developed with ...", 'tag-center')
+
     def run(self):
+        self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
         # After it is called once, the update method will be automatically called every delay milliseconds
         self.delay = 1
         self.update()
@@ -356,66 +389,25 @@ class App:
     def show_settings(self):
         print("Settings")
         self.frame_right.pack_forget()
-
-        # Meglio costruirlo in init e visualizzarlo poi
-        # build settings frame
-        self.frame_settings = tk.Frame(width=240, height=320, bg=background)
         self.frame_settings.pack(side=tk.RIGHT, fill=None, expand=False)
-        self.frame_settings.pack_propagate(0)
-
-        self.image_button_close = ImageTk.PhotoImage(Image.open(icons_path + "icon-close.png").resize((25, 25), Image.ANTIALIAS))
-        self.button_close = tk.Button(master=self.frame_settings, image=self.image_button_close, bg=background, command=lambda: self.close_settings())
-        self.button_close.pack(side=tk.TOP, anchor=tk.E)
-
-        self.frame_volume = tk.Frame(master=self.frame_settings, bg=background)
-        self.frame_volume.pack(side=tk.TOP, pady=50)
-
-        self.label_volume = tk.Label(master=self.frame_volume, text="Volume: ", bg=background)
-        self.label_volume.pack(side=tk.LEFT)
-        self.scale_volume = tk.Scale(master=self.frame_volume, from_=0, to=100, tickinterval= 100, orient=tk.HORIZONTAL, bg=background, bd=0, highlightthickness=0)
-        self.scale_volume.pack(side=tk.LEFT)
-
-        self.label_fake2 = tk.Label(master=self.frame_settings, text="", bg=background, fg=background)
-        self.label_fake2.pack(side=tk.LEFT, padx=20)
-        self.button_save_settings = tk.Button(master=self.frame_settings, text="Save", bg=background, width=6)
-        self.button_save_settings.pack(side=tk.LEFT, anchor=tk.N, padx=5)
-        self.button_cancel_settings = tk.Button(master=self.frame_settings, text="Cancel", bg=background)
-        self.button_cancel_settings.pack(side=tk.LEFT, anchor=tk.N, padx=5)
 
         # Show info
     def show_info(self):
         print("Info")
         self.frame_right.pack_forget()
-
+        self.frame_info.pack(side=tk.RIGHT, fill=None, expand=False)
         # Meglio costruirlo in init e visualizzarlo poi
         # build settings frame
-        self.frame_info = tk.Frame(width=240, height=320, bg=background)
-        self.frame_info.pack(side=tk.RIGHT, fill=None, expand=False)
-        self.frame_info.pack_propagate(0)
-
-        self.image_button_close = ImageTk.PhotoImage(Image.open(icons_path + "icon-close.png").resize((25, 25), Image.ANTIALIAS))
-        self.button_close = tk.Button(master=self.frame_info, image=self.image_button_close, bg=background, command=lambda: self.close_info())
-        self.button_close.pack(side=tk.TOP, anchor=tk.E)
-
-        self.text_info = tk.Text(master=self.frame_info, height=4, bg="#6a6a6a", bd=0, highlightthickness=0)
-        self.text_info.tag_configure('tag-center', justify='center')
-        self.text_info.pack(side=tk.TOP, padx=10, pady=10)
-        self.text_info.insert('end', "App megafiga by Miky & Kary\n", 'tag-center')
-        self.text_info.insert('end', "Developed with ...", 'tag-center')
 
     def close_settings(self):
         print("Close settings")
         self.frame_settings.pack_forget()
-
         self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
-        self.frame_right.pack_propagate(0)
 
     def close_info(self):
         print("Close info")
         self.frame_info.pack_forget()
-
         self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
-        self.frame_right.pack_propagate(0)
 
     # get RGB color from stat
     def get_color(self, stat):
