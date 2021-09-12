@@ -1,0 +1,8 @@
+1. conda install -c conda-forge pydub
+2. download & install ffmpeg from "https://ffmpeg.org/download.html#build-windows":
+	- More downloading options > Get packages & executable files > Windows > 
+	  > Windows builds from gyan.dev > git > https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z
+	- extract the content and place it where you want (I put it in "C:\Program Files") and renamed to
+	  "FFmpeg"
+3. add it to the PATH variable (New Environment Variable > paste "path\to\FFmpeg\bin"
+4. pip install simpleaudio

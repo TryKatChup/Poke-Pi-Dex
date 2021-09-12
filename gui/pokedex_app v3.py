@@ -1,4 +1,6 @@
 import tkinter as tk
+
+import PIL.ImageOps
 from PIL import ImageTk, Image
 from pokemon_repository import PokemonRepository
 import playsound as ps
@@ -6,6 +8,10 @@ from pokemon import Pokemon
 import cv2
 import video_capture as vc
 import time
+
+from pydub import AudioSegment
+from pydub.playback import play
+
 
 # tkinter utility: https://www.tcl.tk/man/tcl/TkCmd/entry.html#M9
 
@@ -30,6 +36,7 @@ class App:
 
         self.loaded_pokemon = Pokemon(0, "", "", {}, {}, "")
         self.evo_to_i = 0  # index of the multiple evolutions list
+        self.volume = -30  # MIN: -80, MAX: +20
 
         self.frame_left = tk.Frame(width=240, height=320, background="lime")
         self.frame_left.pack_propagate(0)  # set the frame so that its children cannot control its size
@@ -37,7 +44,7 @@ class App:
         self.frame_right.pack_propagate(0)
 
         # Left (video stream)
-        self.canvas_video = tk.Canvas(master=self.frame_left, width=self.video.width, height=self.video.height)
+        self.canvas_video = tk.Canvas(master=self.frame_left, width=self.video.width, height=self.video.height, bg=background, highlightthickness=0)
         self.canvas_video.pack(side=tk.LEFT)
 
         # Right (pokedex info)
@@ -224,13 +231,14 @@ class App:
         self.label_volume = tk.Label(master=self.frame_volume, text="Volume: ", bg=background)
         self.label_volume.pack(side=tk.LEFT)
         self.scale_volume = tk.Scale(master=self.frame_volume, from_=0, to=100, tickinterval=100, orient=tk.HORIZONTAL, bg=background, bd=0, highlightthickness=0)
+        self.scale_volume.set(50)
         self.scale_volume.pack(side=tk.LEFT)
         # Save/Cancel buttons
         self.label_fake2 = tk.Label(master=self.frame_settings, text="", bg=background, fg=background)
         self.label_fake2.pack(side=tk.LEFT, padx=20)
-        self.button_save_settings = tk.Button(master=self.frame_settings, text="Save", bg=background, width=6)
+        self.button_save_settings = tk.Button(master=self.frame_settings, text="Save", bg=background, width=6, command=lambda: self.save_settings())
         self.button_save_settings.pack(side=tk.LEFT, anchor=tk.N, padx=5)
-        self.button_cancel_settings = tk.Button(master=self.frame_settings, text="Cancel", bg=background)
+        self.button_cancel_settings = tk.Button(master=self.frame_settings, text="Cancel", bg=background, command=lambda: self.close_settings())
         self.button_cancel_settings.pack(side=tk.LEFT, anchor=tk.N, padx=5)
 
         # Info
@@ -399,17 +407,20 @@ class App:
         if self.evo_to_i + 1 == len(evo_to):
             self.button_evo_to_next.config(state=tk.DISABLED)
 
-    # play cry
+    # Play cry
     def play_cry(self):
         if 1 <= self.loaded_pokemon.num <= 151:
             print("Play cry #" + str(self.loaded_pokemon.num))
-            ps.playsound(cries_path + str(self.loaded_pokemon.num) + ".mp3")
+            cry = AudioSegment.from_mp3(cries_path + str(self.loaded_pokemon.num) + ".mp3")
+            play(cry + self.volume)
+            #ps.playsound(cries_path + str(self.loaded_pokemon.num) + ".mp3")
         else:
             print("No pokemon has been loaded")
 
     # Show settings
     def show_settings(self):
         print("Settings")
+        self.scale_volume.set(self.volume + 80)
         self.frame_right.pack_forget()
         self.frame_settings.pack(side=tk.RIGHT, fill=None, expand=False)
 
@@ -423,6 +434,12 @@ class App:
 
     def close_settings(self):
         print("Close settings")
+        self.frame_settings.pack_forget()
+        self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
+
+    def save_settings(self):
+        print("Save settings")
+        self.volume = -80 + self.scale_volume.get()
         self.frame_settings.pack_forget()
         self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
 
