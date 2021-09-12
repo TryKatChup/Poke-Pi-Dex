@@ -3,6 +3,8 @@ from PIL import ImageTk, Image
 from pokemon_repository import PokemonRepository
 import playsound as ps
 from pokemon import Pokemon
+import cv2
+import video_capture as vc
 import time
 
 # tkinter utility: https://www.tcl.tk/man/tcl/TkCmd/entry.html#M9
@@ -15,23 +17,30 @@ cries_path = "utilities/cries/"
 sprite_size = (40, 40)
 
 class App:
-    def __init__(self, window, window_title):
+    def __init__(self, window, window_title, video_source=0):  # se non specificato viene preso il primo input
         self.window = window
         self.window.title(window_title)
         self.window.geometry("480x320")
         image = ImageTk.PhotoImage(file=icons_path + "icon-pokeball.png")
-        self.window.tk.call('wm', 'iconphoto', self.window._w, image)
+        self.window.tk.call("wm", "iconphoto", self.window._w, image)
+        self.video_source = video_source
+
         self.pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
+        self.video = vc.MyVideoCapture(self.video_source)
 
         self.loaded_pokemon = Pokemon(0, "", "", {}, {}, "")
         self.evo_to_i = 0  # index of the multiple evolutions list
 
         self.frame_left = tk.Frame(width=240, height=320, background="lime")
-        self.frame_left.pack(side=tk.LEFT, fill=None, expand=False)
-        self.frame_left.pack_propagate(0)
+        self.frame_left.pack_propagate(0)  # set the frame so that its children cannot control its size
         self.frame_right = tk.Frame(width=240, height=320, bg=background)
-        self.frame_right.pack_propagate(0)  # set the frame so that its children cannot control its size
+        self.frame_right.pack_propagate(0)
 
+        # Left (video stream)
+        self.canvas_video = tk.Canvas(master=self.frame_left, width=self.video.width, height=self.video.height)
+        self.canvas_video.pack(side=tk.LEFT)
+
+        # Right (pokedex info)
         self.frame_top = tk.Frame(master=self.frame_right, width=240, bg=background)
         self.frame_top.pack(side=tk.TOP)
 
@@ -237,13 +246,26 @@ class App:
         self.text_info.insert('end', "Developed with ...", 'tag-center')
 
     def run(self):
+        self.frame_left.pack(side=tk.LEFT, fill=None, expand=False)
         self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
         # After it is called once, the update method will be automatically called every delay milliseconds
         self.delay = 1
         self.update()
         self.window.mainloop()
 
+    def snapshot(self):
+        # Get a frame from the video source
+        ret, frame = self.video.get_frame()
+        if ret:
+            cv2.imwrite("frame-" + time.strftime("%d-%m-%Y-%H-%M-%S") + ".jpg", cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
+
     def update(self):
+        ret, frame = self.video.get_frame()
+
+        if ret:
+            self.photo = ImageTk.PhotoImage(image=Image.fromarray(frame).resize((320, 320), Image.ANTIALIAS))
+            self.canvas_video.create_image(-40, 0, image=self.photo, anchor=tk.NW)
+
         self.window.after(self.delay, self.update)
 
     def load_pokemon(self, pkmn_id):
