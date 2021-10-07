@@ -2,3 +2,7 @@ Turn on the raspberry powered by the powerbank:
 1. press the powerbank button for 4/5 seconds to turn it off
 2. connect the powerbank to the raspberry with the type-C port
 3. click the powerbank button to power up and it should complete the boot sequence properly.
+
+
+Connect speaker +/- wires to aux cable:
+https://www.youtube.com/watch?v=dcH-0bNeEVQ
