@@ -6,3 +6,7 @@ Turn on the raspberry powered by the powerbank:
 
 Connect speaker +/- wires to aux cable:
 https://www.youtube.com/watch?v=dcH-0bNeEVQ
+
+
+Increase raspberry audio output volume:
+https://forums.raspberrypi.com/viewtopic.php?t=299080
