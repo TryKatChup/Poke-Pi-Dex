@@ -439,7 +439,7 @@ class App:
 
     def close_settings(self):
         print("Close settings")
-        if self.fullscreen is True:
+        if self.fullscreen.get() is True:
             self.check_fullscreen.select()
         else:
             self.check_fullscreen.deselect()
