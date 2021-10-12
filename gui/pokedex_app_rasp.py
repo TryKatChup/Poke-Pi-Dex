@@ -227,6 +227,7 @@ class App:
         self.frame_fullscreen = tk.Frame(master=self.frame_settings, bg=background)
         self.frame_fullscreen.pack(side=tk.TOP, pady=(50, 0))
         self.check_fullscreen = tk.Checkbutton(master=self.frame_fullscreen, variable=self.fullscreen, onvalue=True, offvalue=False, bg=background, bd=0, highlightthickness=0, fg="black")
+        self.check_fullscreen.select()
         self.check_fullscreen.pack(side=tk.LEFT)
         self.label_fullscreen = tk.Label(master=self.frame_fullscreen, text="Fullscreen", bg=background)
         self.label_fullscreen.pack(side=tk.LEFT)
