@@ -6,7 +6,7 @@ import cv2
 import video_capture as vc
 import time
 # Sound
-import pygame
+#import pygame
 
 # tkinter utility: https://www.tcl.tk/man/tcl/TkCmd/entry.html#M9
 
@@ -30,10 +30,10 @@ class App:
         self.video_source = video_source
         
         # Sound init
-        pygame.mixer.pre_init(44100, 16, 2, 4096)
+        '''pygame.mixer.pre_init(44100, 16, 2, 4096)
         pygame.init()
         pygame.mixer.init()
-
+        '''
         self.pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
         self.video = vc.MyVideoCapture(self.video_source)
 
@@ -60,7 +60,7 @@ class App:
         self.button_fake.pack(side=tk.LEFT, anchor=tk.N)
         # Settings & info frame
         self.frame_settings_info = tk.Frame(master=self.frame_top, bg=background)
-        self.frame_settings_info.pack(side=tk.RIGHT, anchor=tk.N, padx=(45, 0))
+        self.frame_settings_info.pack(side=tk.RIGHT, anchor=tk.N, padx=(16, 0))
         self.image_button_settings = ImageTk.PhotoImage(Image.open(icons_path + "icon-settings.png").resize((25, 25), Image.ANTIALIAS))
         self.button_settings = tk.Button(master=self.frame_settings_info, image=self.image_button_settings, bg=background, command=lambda: self.show_settings())
         self.button_settings.pack(side=tk.TOP, anchor=tk.E)
