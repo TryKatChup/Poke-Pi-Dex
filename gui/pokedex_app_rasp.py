@@ -15,15 +15,16 @@ background_dark = "#6a6a6a"
 icons_path = "utilities/icons/"
 thumbnails_path = "utilities/thumbnails/"
 sprites_path = "utilities/sprites/"
-cries_path = "utilities/cries/"
+cries_path = "utilities/cries (ogg)/"
 sprite_size = (40, 40)
 
 class App:
     def __init__(self, window, window_title, video_source=0):  # se non specificato viene preso il primo input
         self.window = window
         self.window.title(window_title)
-        self.window.attributes("-fullscreen", True)
-        #self.window.geometry("480x320")
+        self.window.geometry("480x320")
+        self.fullscreen = tk.BooleanVar()
+        self.window.attributes("-fullscreen", False)
         image = ImageTk.PhotoImage(file=icons_path + "icon-pokeball.png")
         self.window.tk.call("wm", "iconphoto", self.window._w, image)
         self.video_source = video_source
@@ -32,7 +33,7 @@ class App:
         pygame.mixer.pre_init(44100, 16, 2, 4096)
         pygame.init()
         pygame.mixer.init()
-        
+
         self.pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
         self.video = vc.MyVideoCapture(self.video_source)
 
@@ -54,15 +55,12 @@ class App:
         self.frame_top.pack(side=tk.TOP)
 
         # Settings & Info
-        # Fake button to space on the left
+        # Fake button to space on the left (easter egg -> show blaziken <3)
         self.button_fake = tk.Button(master=self.frame_top, text=" ", bg=background, fg=background, bd=0, highlightthickness=0)
         self.button_fake.pack(side=tk.LEFT, anchor=tk.N)
         # Settings & info frame
         self.frame_settings_info = tk.Frame(master=self.frame_top, bg=background)
-        self.frame_settings_info.pack(side=tk.RIGHT, anchor=tk.N)
-        # Fake label to space between images and settings/info buttons
-        self.label_fake = tk.Label(master=self.frame_settings_info, text="  ", bg=background)
-        self.label_fake.pack(side=tk.LEFT)
+        self.frame_settings_info.pack(side=tk.RIGHT, anchor=tk.N, padx=(45, 0))
         self.image_button_settings = ImageTk.PhotoImage(Image.open(icons_path + "icon-settings.png").resize((25, 25), Image.ANTIALIAS))
         self.button_settings = tk.Button(master=self.frame_settings_info, image=self.image_button_settings, bg=background, command=lambda: self.show_settings())
         self.button_settings.pack(side=tk.TOP, anchor=tk.E)
@@ -108,8 +106,6 @@ class App:
         self.button_cry = tk.Button(master=self.frame_top_left, image=self.image_button_cry, bg=background, activebackground=background, command=lambda: self.play_cry())
         self.label_cry.pack(side=tk.LEFT)
         self.button_cry.pack(side=tk.LEFT)
-
-        # Settings & About (?)
 
         # Name
         self.frame_name = tk.Frame(master=self.frame_right, bg=background)
@@ -227,19 +223,24 @@ class App:
         self.image_button_close_settings = ImageTk.PhotoImage(Image.open(icons_path + "icon-close.png").resize((25, 25), Image.ANTIALIAS))
         self.button_close = tk.Button(master=self.frame_settings, image=self.image_button_close_settings, bg=background, command=lambda: self.close_settings())
         self.button_close.pack(side=tk.TOP, anchor=tk.E)
+        # Toggle Fullscreen
+        self.frame_fullscreen = tk.Frame(master=self.frame_settings, bg=background)
+        self.frame_fullscreen.pack(side=tk.TOP, pady=(50, 0))
+        self.check_fullscreen = tk.Checkbutton(master=self.frame_fullscreen, variable=self.fullscreen, onvalue=True, offvalue=False, bg=background, bd=0, highlightthickness=0, fg="black")
+        self.check_fullscreen.pack(side=tk.LEFT)
+        self.label_fullscreen = tk.Label(master=self.frame_fullscreen, text="Fullscreen", bg=background)
+        self.label_fullscreen.pack(side=tk.LEFT)
         # Volume
         self.frame_volume = tk.Frame(master=self.frame_settings, bg=background)
-        self.frame_volume.pack(side=tk.TOP, pady=50)
+        self.frame_volume.pack(side=tk.TOP)
         self.label_volume = tk.Label(master=self.frame_volume, text="Volume: ", bg=background)
         self.label_volume.pack(side=tk.LEFT)
         self.scale_volume = tk.Scale(master=self.frame_volume, from_=0, to=100, tickinterval=100, orient=tk.HORIZONTAL, bg=background, bd=0, highlightthickness=0)
         self.scale_volume.set(50)
         self.scale_volume.pack(side=tk.LEFT)
         # Save/Cancel buttons
-        self.label_fake2 = tk.Label(master=self.frame_settings, text="", bg=background, fg=background)
-        self.label_fake2.pack(side=tk.LEFT, padx=20)
         self.button_save_settings = tk.Button(master=self.frame_settings, text="Save", bg=background, width=6, command=lambda: self.save_settings())
-        self.button_save_settings.pack(side=tk.LEFT, anchor=tk.N, padx=5)
+        self.button_save_settings.pack(side=tk.LEFT, anchor=tk.N, padx=(50, 5))
         self.button_cancel_settings = tk.Button(master=self.frame_settings, text="Cancel", bg=background, command=lambda: self.close_settings())
         self.button_cancel_settings.pack(side=tk.LEFT, anchor=tk.N, padx=5)
 
@@ -413,7 +414,7 @@ class App:
     def play_cry(self):
         if 1 <= self.loaded_pokemon.num <= 151:
             print("Play cry #" + str(self.loaded_pokemon.num))
-            cry = pygame.mixer.Sound("utilities/cries (ogg)/" + str(self.loaded_pokemon.num) + ".ogg")
+            cry = pygame.mixer.Sound(cries_path + str(self.loaded_pokemon.num) + ".ogg")
             channel = pygame.mixer.find_channel(True)
             channel.set_volume(float(self.volume + 80) / 100)
             channel.play(cry)
@@ -427,7 +428,7 @@ class App:
         self.frame_right.pack_forget()
         self.frame_settings.pack(side=tk.RIGHT, fill=None, expand=False)
 
-        # Show info
+    # Show info
     def show_info(self):
         print("Info")
         self.frame_right.pack_forget()
@@ -437,11 +438,17 @@ class App:
 
     def close_settings(self):
         print("Close settings")
+        if self.fullscreen is True:
+            self.check_fullscreen.select()
+        else:
+            self.check_fullscreen.deselect()
         self.frame_settings.pack_forget()
         self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
 
     def save_settings(self):
         print("Save settings")
+        print(self.fullscreen)
+        self.window.attributes("-fullscreen", self.fullscreen.get())
         self.volume = -80 + self.scale_volume.get()
         self.frame_settings.pack_forget()
         self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
