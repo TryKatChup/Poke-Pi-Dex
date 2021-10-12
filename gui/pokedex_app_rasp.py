@@ -6,7 +6,7 @@ import cv2
 import video_capture as vc
 import time
 # Sound
-import pygame
+#import pygame
 
 # tkinter utility: https://www.tcl.tk/man/tcl/TkCmd/entry.html#M9
 
@@ -23,17 +23,18 @@ class App:
         self.window = window
         self.window.title(window_title)
         self.window.geometry("480x320")
-        self.fullscreen = tk.BooleanVar()
-        self.window.attributes("-fullscreen", True)
+        self.fullscreen = tk.IntVar()
+        self.fullscreen.set(0)
+        self.window.attributes("-fullscreen", self.fullscreen.get())
         image = ImageTk.PhotoImage(file=icons_path + "icon-pokeball.png")
         self.window.tk.call("wm", "iconphoto", self.window._w, image)
         self.video_source = video_source
         
         # Sound init
-        pygame.mixer.pre_init(44100, 16, 2, 4096)
+        '''pygame.mixer.pre_init(44100, 16, 2, 4096)
         pygame.init()
         pygame.mixer.init()
-
+'''
         self.pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
         self.video = vc.MyVideoCapture(self.video_source)
 
@@ -226,8 +227,8 @@ class App:
         # Toggle Fullscreen
         self.frame_fullscreen = tk.Frame(master=self.frame_settings, bg=background)
         self.frame_fullscreen.pack(side=tk.TOP, pady=(50, 0))
-        self.check_fullscreen = tk.Checkbutton(master=self.frame_fullscreen, variable=self.fullscreen, onvalue=True, offvalue=False, bg=background, bd=0, highlightthickness=0, fg="black")
-        self.check_fullscreen.select()
+        self.check_fullscreen = tk.Checkbutton(master=self.frame_fullscreen, variable=self.fullscreen, onvalue=1, offvalue=0, bg=background, bd=0, highlightthickness=0, fg="black")
+        self.check_fullscreen.select() if self.fullscreen.get() is True else self.check_fullscreen.deselect()
         self.check_fullscreen.pack(side=tk.LEFT)
         self.label_fullscreen = tk.Label(master=self.frame_fullscreen, text="Fullscreen", bg=background)
         self.label_fullscreen.pack(side=tk.LEFT)
@@ -439,16 +440,18 @@ class App:
 
     def close_settings(self):
         print("Close settings")
-        if self.fullscreen.get() is True:
+        # sistemare (variabile ausiliaria?)
+        if self.window.attributes("-fullscreen") == 1:
             self.check_fullscreen.select()
+            self.fullscreen.set(True)
         else:
             self.check_fullscreen.deselect()
+            self.fullscreen.set(False)
         self.frame_settings.pack_forget()
         self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
 
     def save_settings(self):
         print("Save settings")
-        print(self.fullscreen)
         self.window.attributes("-fullscreen", self.fullscreen.get())
         self.volume = -80 + self.scale_volume.get()
         self.frame_settings.pack_forget()
