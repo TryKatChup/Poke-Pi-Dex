@@ -6,7 +6,7 @@ import cv2
 import video_capture as vc
 import time
 # Sound
-#import pygame
+import pygame
 
 # tkinter utility: https://www.tcl.tk/man/tcl/TkCmd/entry.html#M9
 
@@ -24,16 +24,16 @@ class App:
         self.window.title(window_title)
         self.window.geometry("480x320")
         self.fullscreen = tk.BooleanVar()
-        self.window.attributes("-fullscreen", False)
+        self.window.attributes("-fullscreen", True)
         image = ImageTk.PhotoImage(file=icons_path + "icon-pokeball.png")
         self.window.tk.call("wm", "iconphoto", self.window._w, image)
         self.video_source = video_source
         
         # Sound init
-        '''pygame.mixer.pre_init(44100, 16, 2, 4096)
+        pygame.mixer.pre_init(44100, 16, 2, 4096)
         pygame.init()
         pygame.mixer.init()
-        '''
+
         self.pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
         self.video = vc.MyVideoCapture(self.video_source)
 
