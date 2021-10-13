@@ -423,7 +423,7 @@ class App:
 
     # Play cry
     def play_cry(self):
-        if 1 <= self.loaded_pokemon.num <= 151 or self.load_pokemon.num == 257:
+        if 1 <= self.loaded_pokemon.num <= 151 or self.loaded_pokemon.num == 257:
             print("Play cry #" + str(self.loaded_pokemon.num))
             self.channel.play(self.cry)
         else:
