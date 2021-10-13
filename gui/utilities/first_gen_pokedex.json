@@ -3084,5 +3084,47 @@
       "Speed": 100
     },
 	"description": "Mew is said to possess the genetic composition of all Pokémon. It is capable of making itself invisible at will, so it entirely avoids notice even if it approaches people."
+  },
+  {
+    "id": 256,
+    "name": "Combusken",
+    "type": [
+      "Fire",
+      "Fighting"
+    ],
+	"evolutions": {
+		"from": 255,
+		"to": 257
+	},
+    "stats": {
+      "HP": 60,
+      "Attack": 85,
+      "Defense": 60,
+      "Sp. Attack": 85,
+      "Sp. Defense": 60,
+      "Speed": 55
+    },
+	"description": "Combusken toughens up its legs and thighs by running through fields and mountains. It lashes out with 10 kicks per second. Its strong fighting instinct compels it to keep up its offensive until the opponent gives up."
+  },
+  {
+    "id": 257,
+    "name": "Blaziken",
+    "type": [
+      "Fire",
+      "Fighting"
+    ],
+	"evolutions": {
+		"from": 256,
+		"to": null
+	},
+    "stats": {
+      "HP": 80,
+      "Attack": 120,
+      "Defense": 70,
+      "Sp. Attack": 110,
+      "Sp. Defense": 70,
+      "Speed": 80
+    },
+	"description": "In battle, Blaziken blows out intense flames from its wrists and attacks foes courageously. The stronger the foe, the more intensely this Pokémon’s wrists burn. Every several years, its old feathers burn off, and new, supple feathers grow back in their place."
   }
 ]
