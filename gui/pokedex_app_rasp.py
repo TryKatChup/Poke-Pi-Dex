@@ -99,11 +99,13 @@ class App:
         # Top-left
         self.frame_top_left = tk.Frame(master=self.frame_top, bg=background)
         self.frame_top_left.pack(side=tk.BOTTOM, anchor=tk.W)
+
         # Evolution (from)
         image = Image.open(sprites_path + "0.png").resize((40, 40), Image.ANTIALIAS)
         self.image_evo_from = ImageTk.PhotoImage(image)
         self.label_evo_from = tk.Label(master=self.frame_top_left, image=self.image_evo_from, width=40, height=40, bg=background)
         self.label_evo_from.pack(side=tk.TOP, anchor=tk.E)
+
         # Cry
         self.label_cry = tk.Label(master=self.frame_top_left, text="Cry:", bg=background)
         self.image_button_cry = ImageTk.PhotoImage(Image.open(icons_path + "icon-sound.png").resize((20, 20), Image.ANTIALIAS))
@@ -116,7 +118,7 @@ class App:
         self.frame_name.pack(side=tk.TOP)
         self.label_name = tk.Label(master=self.frame_name, text="Name: ", bg=background)
         self.entry_name_text = tk.StringVar()
-        self.entry_name = tk.Entry(master=self.frame_name, width=11, bg=background_dark, bd=0, highlightthickness=0, textvariable=self.entry_name_text)
+        self.entry_name = tk.Entry(master=self.frame_name, width=11, textvariable=self.entry_name_text, bg=background_dark, bd=0, highlightthickness=0)
         self.entry_name.config(readonlybackground=background_dark, state="readonly")
         self.label_name.pack(side=tk.LEFT)
         self.entry_name.pack(side=tk.LEFT)
@@ -125,7 +127,8 @@ class App:
         self.frame_id_types = tk.Frame(master=self.frame_right, bg=background)
         self.frame_id_types.pack()
         self.label_id = tk.Label(master=self.frame_id_types, text="ID: ", bg=background)
-        self.entry_id = tk.Entry(master=self.frame_id_types, width=3, bg=background_dark, bd=0, highlightthickness=0)
+        self.entry_id_text = tk.StringVar()
+        self.entry_id = tk.Entry(master=self.frame_id_types, width=3, textvariable=self.entry_id_text, bg=background_dark, bd=0, highlightthickness=0)
         self.button_id = tk.Button(master=self.frame_id_types, text="Search", bg=background, activebackground=background, command=lambda: self.load_pokemon(self.entry_id.get()))
         self.label_id.pack(side=tk.LEFT)
         self.entry_id.pack(side=tk.LEFT)
@@ -296,7 +299,7 @@ class App:
 
             self.load_image()
             self.load_name()
-            # self.load_id() # set ID
+            self.load_id()
             self.load_types()
             self.load_description()
             self.load_stats()
@@ -316,6 +319,11 @@ class App:
     def load_name(self):
         print("Name: " + self.loaded_pokemon.name)
         self.entry_name_text.set(self.loaded_pokemon.name)
+
+    # update ID
+    def load_id(self):
+        print("ID:" + str(self.loaded_pokemon.num))
+        self.entry_id_text.set(str(self.loaded_pokemon.num))
 
     # update type(s)
     def load_types(self):
@@ -397,7 +405,6 @@ class App:
     # update cry
     def load_cry(self):
         self.cry = pygame.mixer.Sound(cries_path + str(self.loaded_pokemon.num) + ".ogg")
-
 
     # show previous "to" evolution (e.g. Eevee multiple evolutions)
     def show_prev_evo_to(self):
