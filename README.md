@@ -39,12 +39,14 @@ See our demo on YouTube! https://www.youtube.com/watch?v=6A07DGlRxg4
 - Easter egg <!-- Hidden button to load Blaziken or other non first gen pokèmon -->
 
 ## Roadmap
-- Fix 3d model (size to fit each component: powerbank, speakers)
-- Implement nerual network and tensorflow object detection
+- App:
+  - GUI: Add description scroll buttons
+  - 3D Model: Fix 3d model (size to fit each component: powerbank, speakers)
+  - Implement nerual network and tensorflow object detection
+  - Add option to stream video to a client address (e.g. computer client)
 - Fix the docs
 - Separate different gui parts in different files/classes(?)
 - Make a video with clips of the building, test and different implementation parts
-- Add option to stream video to a client address (e.g. computer client)
 
 ## GUI Prototype
 ![GUI prototype Squirtle example](https://github.com/TryKatChup/pokemon-cv-revival/blob/main/gui/prototype/gui_example_squirtle.png)
