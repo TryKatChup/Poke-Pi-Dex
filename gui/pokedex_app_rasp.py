@@ -432,7 +432,7 @@ class App:
     # Show settings
     def show_settings(self):
         print("Settings")
-        self.scale_volume.set(self.volume + 80)
+        self.scale_volume.set(self.volume * 100)
         self.frame_right.pack_forget()
         self.frame_settings.pack(side=tk.RIGHT, fill=None, expand=False)
 
@@ -459,7 +459,7 @@ class App:
     def save_settings(self):
         print("Save settings")
         self.window.attributes("-fullscreen", self.fullscreen.get())
-        self.volume = -80 + self.scale_volume.get()
+        self.volume = self.scale_volume.get() / 100
         self.frame_settings.pack_forget()
         self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
 
