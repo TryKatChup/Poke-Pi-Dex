@@ -27,25 +27,26 @@
 Our computer vision related project for nostalgic poke weebs (Sistemi digitali, Unibo).
 
 ## Demo
-
 See our demo on YouTube! https://www.youtube.com/watch?v=6A07DGlRxg4
 
+## Features
+- Pokèmon recognition from video stream (cards, plushies, figures (?))
+- Load pokèmon info, description and stats
+- Play pokèmon cries through speaker
+- Show pokèmon evolution stages
+- Settings (fullscreen toggle, volume picker)
+- Application info
+- Easter egg <!-- Hidden button to load Blaziken or other non first gen pokèmon -->
 
-## Ideas
-- Pokèmon image identification (from the image on the card)
-- stats reading (+ calculus on the best combo (?))
-- Fake, rare and printing errors recognition
-- 3D model animation (associated with the recognized card)
+## Roadmap
+- Fix 3d model (size to fit each component: powerbank, speakers)
+- Implement nerual network and tensorflow object detection
+- Separate different gui parts in different files(?)
+- Add option to stream video to a client address (e.g. computer client)
+- Make a video with clips of the building, test and different implementation parts
 
 ## GUI Prototype
 ![GUI prototype Squirtle example](https://github.com/TryKatChup/pokemon-cv-revival/blob/main/gui/prototype/gui_example_squirtle.png)
-
-## TO-DO list
-1. Find the best cards dataset available (even with only one generation)
-2. Angle straighten (upright set) and card recognition (see resources for examples)
-3. Card stats reading
-4. Fake card recognition
-5. 3d models output of the card
 
 ## Tools
 - [PyCharm](https://www.jetbrains.com/pycharm/)
@@ -54,7 +55,6 @@ See our demo on YouTube! https://www.youtube.com/watch?v=6A07DGlRxg4
 <!-- - ssh(?) -->
 
 ## Resources
-
 - Dataset pokèmon:
   - https://www.kaggle.com/thedagger/pokemon-generation-one
   - 
