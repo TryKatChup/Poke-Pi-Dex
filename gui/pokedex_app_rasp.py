@@ -34,13 +34,16 @@ class App:
         pygame.mixer.pre_init(44100, 16, 2, 4096)
         pygame.init()
         pygame.mixer.init()
-        
+        # Channel init
+        self.volume = 0.5
+        self.channel = pygame.mixer.find_channel(True)
+        self.channel.set_volume(self.volume)
+
         self.pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
         self.video = vc.MyVideoCapture(self.video_source)
 
         self.loaded_pokemon = Pokemon(0, "", "", {}, {}, "")
         self.evo_to_i = 0  # index of the multiple evolutions list
-        self.volume = -30  # MIN: -80, MAX: +20
 
         self.frame_left = tk.Frame(width=240, height=320, background="lime")
         self.frame_left.pack_propagate(0)  # set the frame so that its children cannot control its size
@@ -57,8 +60,8 @@ class App:
 
         # Settings & Info
         # Fake button to space on the left (easter egg -> show blaziken <3)
-        self.button_fake = tk.Button(master=self.frame_top, text=" ", bg=background, fg=background, bd=0, highlightthickness=0)
-        self.button_fake.pack(side=tk.LEFT, anchor=tk.N)
+        self.button_egg = tk.Button(master=self.frame_top, text=" ", bg=background, fg=background, bd=0, highlightthickness=0, command=lambda: self.load_pokemon(257))
+        self.button_egg.pack(side=tk.LEFT, anchor=tk.N)
         # Settings & info frame
         self.frame_settings_info = tk.Frame(master=self.frame_top, bg=background)
         self.frame_settings_info.pack(side=tk.RIGHT, anchor=tk.N, padx=(16, 0))
@@ -79,7 +82,7 @@ class App:
         self.label_evo_to.pack(side=tk.TOP, anchor=tk.W)
         # Buttons (for multiple "to" evolutions)
         self.image_button_evo_prev = ImageTk.PhotoImage(Image.open(icons_path + "icon-evo-to-prev.png").resize((10, 10), Image.ANTIALIAS))
-        self.button_evo_to_prev = tk.Button(master=self.frame_top_right, image=self.image_button_evo_prev, bg=background, command=lambda: self.prev_evo_to())
+        self.button_evo_to_prev = tk.Button(master=self.frame_top_right, image=self.image_button_evo_prev, bg=background, command=lambda: self.show_prev_evo_to())
         self.button_evo_to_prev.config(state=tk.DISABLED)
         self.image_button_evo_next = ImageTk.PhotoImage(Image.open(icons_path + "icon-evo-to-next.png").resize((10, 10), Image.ANTIALIAS))
         self.button_evo_to_next = tk.Button(master=self.frame_top_right, image=self.image_button_evo_next, bg=background, command=lambda: self.next_evo_to())
@@ -287,17 +290,18 @@ class App:
         except ValueError:
             print("The ID must be an integer between 1 and 151 inclusive")
             return
-        if 1 <= pkmn_id <= 151:
+        if 1 <= pkmn_id <= 151 or pkmn_id == 257:
             print("Loaded pokemon with id: " + str(pkmn_id))
             self.loaded_pokemon = self.pokemon_repo.pokemon[pkmn_id]
 
             self.load_image()
             self.load_name()
-            # set ID
+            # self.load_id() # set ID
             self.load_types()
             self.load_description()
             self.load_stats()
             self.load_evolutions()
+            self.load_cry()
         else:
             print("The ID must be an integer between 1 and 151 inclusive")
 
@@ -390,8 +394,13 @@ class App:
         self.image_evo_to = ImageTk.PhotoImage(Image.open(path_image).resize((40, 40), Image.ANTIALIAS))
         self.label_evo_to.configure(image=self.image_evo_to)
 
-    # load previous "to" evolution
-    def prev_evo_to(self):
+    # update cry
+    def load_cry(self):
+        self.cry = pygame.mixer.Sound(cries_path + str(self.loaded_pokemon.num) + ".ogg")
+
+
+    # show previous "to" evolution (e.g. Eevee multiple evolutions)
+    def show_prev_evo_to(self):
         self.evo_to_i -= 1
         evo_to = self.pokemon_repo.pokemon[self.loaded_pokemon.num].evolutions["to"]
         print("Show previous evolution: " + str(evo_to[self.evo_to_i]))
@@ -401,7 +410,7 @@ class App:
         if self.evo_to_i == 0:
             self.button_evo_to_prev.config(state=tk.DISABLED)
 
-    # load next "to" evolution
+    # show next "to" evolution (e.g. Eevee multiple evolutions)
     def next_evo_to(self):
         self.evo_to_i += 1
         evo_to = self.pokemon_repo.pokemon[self.loaded_pokemon.num].evolutions["to"]
@@ -414,12 +423,9 @@ class App:
 
     # Play cry
     def play_cry(self):
-        if 1 <= self.loaded_pokemon.num <= 151:
+        if 1 <= self.loaded_pokemon.num <= 151 or self.load_pokemon.num == 257:
             print("Play cry #" + str(self.loaded_pokemon.num))
-            cry = pygame.mixer.Sound(cries_path + str(self.loaded_pokemon.num) + ".ogg")
-            channel = pygame.mixer.find_channel(True)
-            channel.set_volume(float(self.volume + 80) / 100)
-            channel.play(cry)
+            self.channel.play(self.cry)
         else:
             print("No pokemon has been loaded")
 
