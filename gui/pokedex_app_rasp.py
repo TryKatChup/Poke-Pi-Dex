@@ -231,6 +231,7 @@ class App:
         self.frame_fullscreen = tk.Frame(master=self.frame_settings, bg=background)
         self.frame_fullscreen.pack(side=tk.TOP, pady=(50, 0))
         self.check_fullscreen = tk.Checkbutton(master=self.frame_fullscreen, variable=self.fullscreen, onvalue=1, offvalue=0, bg=background, bd=0, highlightthickness=0, fg="black")
+        print(self.fullscreen.get()) # test
         self.check_fullscreen.select() if self.fullscreen.get() is True else self.check_fullscreen.deselect()
         self.check_fullscreen.pack(side=tk.LEFT)
         self.label_fullscreen = tk.Label(master=self.frame_fullscreen, text="Fullscreen", bg=background)
@@ -441,7 +442,6 @@ class App:
         print("Info")
         self.frame_right.pack_forget()
         self.frame_info.pack(side=tk.RIGHT, fill=None, expand=False)
-        # Meglio costruirlo in init e visualizzarlo poi
         # build settings frame
 
     def close_settings(self):
