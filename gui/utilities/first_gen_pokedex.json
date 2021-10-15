@@ -2704,7 +2704,7 @@
     ],
 	"evolutions": {
 		"from": null,
-		"to": [ 134, 135, 136 ]
+		"to": [ 134, 135, 136, 196, 197, 470, 471 ]
 	},
     "stats": {
       "HP": 55,
@@ -3086,6 +3086,46 @@
 	"description": "Mew is said to possess the genetic composition of all Pokémon. It is capable of making itself invisible at will, so it entirely avoids notice even if it approaches people."
   },
   {
+    "id": 196,
+    "name": "Espeon",
+    "type": [
+      "Psychic"
+    ],
+	"evolutions": {
+		"from": 133,
+		"to": null
+	},
+    "stats": {
+      "HP": 65,
+      "Attack": 65,
+      "Defense": 60,
+      "Sp. Attack": 130,
+      "Sp. Defense": 95,
+      "Speed": 110
+    },
+	"description": "Espeon is extremely loyal to any trainer it considers to be worthy. It is said that this Pokémon developed its precognitive powers to protect its trainer from harm."
+  },
+  {
+    "id": 197,
+    "name": "Umbreon",
+    "type": [
+      "Dark"
+    ],
+	"evolutions": {
+		"from": 133,
+		"to": null
+	},
+    "stats": {
+      "HP": 95,
+      "Attack": 65,
+      "Defense": 110,
+      "Sp. Attack": 60,
+      "Sp. Defense": 130,
+      "Speed": 65
+    },
+	"description": "Umbreon evolved as a result of exposure to the moon’s energy pulses. It hides silently in darkness and waits for its foes to make a move. The rings on its body glow when it leaps to attack."
+  },
+  {
     "id": 256,
     "name": "Combusken",
     "type": [
@@ -3126,5 +3166,45 @@
       "Speed": 80
     },
 	"description": "In battle, Blaziken blows out intense flames from its wrists and attacks foes courageously. The stronger the foe, the more intensely this Pokémon’s wrists burn. Every several years, its old feathers burn off, and new, supple feathers grow back in their place."
+  },
+  {
+    "id": 470,
+    "name": "Leafeon",
+    "type": [
+      "Grass"
+    ],
+	"evolutions": {
+		"from": 133,
+		"to": null
+	},
+    "stats": {
+      "HP": 65,
+      "Attack": 110,
+      "Defense": 130,
+      "Sp. Attack": 60,
+      "Sp. Defense": 65,
+      "Speed": 95
+    },
+	"description": "Leafeon's cellular composition is closer to that of a plant than an animal. It uses photosynthesis to produce its energy supply without eating food. The younger they are, the more they smell like fresh grass. With age, their fragrance takes on the odor of fallen leaves."
+  },
+  {
+    "id": 471,
+    "name": "Glaceon",
+    "type": [
+      "Ice"
+    ],
+	"evolutions": {
+		"from": 133,
+		"to": null
+	},
+    "stats": {
+      "HP": 65,
+      "Attack": 60,
+      "Defense": 110,
+      "Sp. Attack": 130,
+      "Sp. Defense": 95,
+      "Speed": 65
+    },
+	"description": "Glaceon can control its body temperature at will. This enables it to freeze the moisture in the atmosphere, creating flurries of diamond dust. It freezes its fur into icicles, spiky and sharp, and tackles its prey."
   }
 ]
