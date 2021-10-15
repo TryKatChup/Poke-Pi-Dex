@@ -40,7 +40,7 @@ class App:
         self.channel.set_volume(self.volume)
 
         self.pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
-        self.video = vc.MyVideoCapture(self.video_source)
+        self.video = vc.VideoCapture(self.video_source)
 
         self.loaded_pokemon = Pokemon(0, "", "", {}, {}, "")
         self.evo_to_i = 0  # index of the multiple evolutions list

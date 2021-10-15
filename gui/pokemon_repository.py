@@ -9,12 +9,10 @@ class PokemonRepository:
             data = json.load(f)
 
             self.pokemon = {}
-            self.thumbnails = {}
 
             for pkmn in data:
                 self.pokemon[pkmn["id"]] = Pokemon(pkmn["id"], pkmn["name"], pkmn["type"], pkmn["evolutions"], pkmn["stats"], pkmn["description"])
                 # print(self.pokemon[pkmn["id"]].to_string())  # test
-                # load image?
 
             # TEST: if we want to get info about the "to" evolution, we have to loop again since that pokemon is later
             # on the pokèdex and we hadn't loaded it yet, in the cycle
@@ -22,7 +20,8 @@ class PokemonRepository:
             #     print(pkmn.to_string_evo(self.get_evolutions(pkmn)))
         except OSError:
             print("Cannot open file " + filename)
-
+    '''
+    # test
     def get_evolutions(self, pkmn):
         result = ""
         if pkmn.evolutions["from"] is not None:
@@ -40,12 +39,15 @@ class PokemonRepository:
                     if i + 1 != len(pkmn.evolutions["to"]):
                         result += ", "
         return result
+    '''
 
-
-'''pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
+'''
+# Test
+pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
 
 while True:
     try:
+        # example: get pokèmon by pokèdex id (Squirtle == 7) and print the information
         pkmn_id = int(input("Pokemon ID: "))
         if pkmn_id < 1 or pkmn_id > 151:
             print("ID must be an integer between 1 and 151 inclusive")
@@ -53,12 +55,8 @@ while True:
         pkmn = pokemon_repo.pokemon[pkmn_id]
         print(pkmn.to_string_evo(pokemon_repo.get_evolutions(pkmn)))
     except ValueError:
-        print("ID must be an integer between 1 and 151 inclusive")'''
-
-
-# example: get pokèmon by pokèdex id (Squirtle == 7) and print the information
-# squirtle = pokemon_repo.pokemon[7]
-# print(squirtle.to_string_evo(pokemon_repo.get_evolutions(squirtle)))
+        print("ID must be an integer between 1 and 151 inclusive")
+'''
 
 '''
 NB: conversion from JSON obj to python obj

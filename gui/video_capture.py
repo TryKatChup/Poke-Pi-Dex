@@ -1,7 +1,7 @@
 import cv2
-from threading import Thread
 
-class MyVideoCapture:
+
+class VideoCapture:
     def __init__(self, video_source=0):
         # Open the video source
         self.vid = cv2.VideoCapture(video_source)

@@ -9,6 +9,7 @@ class Pokemon:
         self.stats = stats
         self.description = description
 
+    '''
     # utility methods
     def get_types(self):
         result = ""
@@ -43,3 +44,4 @@ class Pokemon:
     def to_string_evo(self, evolutions):
         return "N°: " + str(self.num) + ", name: " + self.name + ", type(s): [" + self.get_types() + "], evolutions: {"\
                + evolutions + "}, stats: {" + self.get_stats() + "}, description: " + self.description
+    '''
