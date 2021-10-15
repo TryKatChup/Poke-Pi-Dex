@@ -294,7 +294,7 @@ class App:
             print("The ID must be an integer between 1 and 151 inclusive")
             return
         if 1 <= pkmn_id <= 151 or pkmn_id == 257:
-            print("Loaded pokemon with id: " + str(pkmn_id))
+            print("POKÈMON LOADED - ID: " + str(pkmn_id))
             self.loaded_pokemon = self.pokemon_repo.pokemon[pkmn_id]
 
             self.load_image()
@@ -431,46 +431,46 @@ class App:
     # Play cry
     def play_cry(self):
         if 1 <= self.loaded_pokemon.num <= 151 or self.loaded_pokemon.num == 257:
-            print("Play cry #" + str(self.loaded_pokemon.num))
+            print("PLAY CRY\nPokèmon #" + str(self.loaded_pokemon.num) + " Volume: " + str(self.channel.get_volume()))
             self.channel.play(self.cry)
         else:
             print("No pokemon has been loaded")
 
     # Show settings
     def show_settings(self):
-        print("Settings")
+        print("SHOW SETTINGS")
         self.scale_volume.set(self.volume * 100)
         self.frame_right.pack_forget()
         self.frame_settings.pack(side=tk.RIGHT, fill=None, expand=False)
 
     # Show info
     def show_info(self):
-        print("Info")
+        print("SHOW INFO")
         self.frame_right.pack_forget()
         self.frame_info.pack(side=tk.RIGHT, fill=None, expand=False)
-        # build settings frame
 
     def close_settings(self):
-        print("Close settings")
-        # sistemare (variabile ausiliaria?)
         if self.window.attributes("-fullscreen") == 1:
             self.check_fullscreen.select()
             self.fullscreen.set(True)
         else:
             self.check_fullscreen.deselect()
             self.fullscreen.set(False)
+        self.channel.set_volume(self.volume)
         self.frame_settings.pack_forget()
         self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
+        print("CLOSE SETTINGS\nFullscreen: " + str(bool(self.fullscreen.get())) + "\nVolume: " + str(self.volume))
 
     def save_settings(self):
-        print("Save settings")
         self.window.attributes("-fullscreen", self.fullscreen.get())
         self.volume = self.scale_volume.get() / 100
+        self.channel.set_volume(self.volume)
         self.frame_settings.pack_forget()
         self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
+        print("SAVE SETTINGS\nFullscreen: " + str(bool(self.fullscreen.get())) + "\nVolume: " + str(self.volume))
 
     def close_info(self):
-        print("Close info")
+        print("CLOSE INFO")
         self.frame_info.pack_forget()
         self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
 
@@ -478,17 +478,17 @@ class App:
     def get_color(self, stat):
         if 0 <= stat < 25:
             return "#ff0000"
-        if 25 <= stat < 50:
+        elif 25 <= stat < 50:
             return "#ff5500"
-        if 50 <= stat < 75:
+        elif 50 <= stat < 75:
             return "#ffaa00"
-        if 75 <= stat < 100:
+        elif 75 <= stat < 100:
             return "#ffff00"
-        if 100 <= stat < 125:
+        elif 100 <= stat < 125:
             return "#7fff00"
-        if 125 <= stat < 150:
+        elif 125 <= stat < 150:
             return "#00ff00"
-        if 150 <= stat < 200:
+        elif 150 <= stat < 200:
             return "#00ff80"
         return "#00ffff"
 
