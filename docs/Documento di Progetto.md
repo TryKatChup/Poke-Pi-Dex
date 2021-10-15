@@ -51,27 +51,45 @@ componenti a disposizione:
 ## Analisi dei Requisiti
 
 ### User Story
-Come utente accendo il dispositivo e faccio partire l'applicazione. Dunque mi aspetto di vedere un'interfaccia grafica che comprende una sezione relativa all'output video di una videocamera, ed una sezione relativa ai dati.
-Quando inquadrerò un Pokémon (che può essere una carta, un peluche o una figure) l'applicazione dev'essere in grado di riconoscerlo e mostrare nella sezione relativa ai dati le informazioni ed i dettagli relativi a tale Pokémon.
+<table>
+	<tr>
+		<td>Come utente accendo il dispositivo ed eseguo l'applicazione (o viene eseguita in automatico all'avvio). Dunque mi aspetto di vedere un'interfaccia grafica che comprende una sezione relativa all'output video di una videocamera, ed una sezione relativa ai dati.
+Quando inquadrerò un Pokémon (che può essere una carta, un peluche o una figure) l'applicazione dev'essere in grado di riconoscerlo e mostrare nella sezione dedicata ai dati le informazioni ed i dettagli relativi a tale Pokémon.</td>
+		<td width="40%"><img src="https://github.com/TryKatChup/pokemon-cv-revival/blob/main/docs/example.png"/></td>
+	</tr>
+</table>
 
 + foto editata con prototipo GUI
 
 ### Test Plan Informale
 Test sull'accuratezza del riconoscimento del Pokémon;
+Test hardware e software dell'audio (con gli speaker)
+NB: spiegare che sono state provate diverse librerie per le quali sono stati riscontrati problemi con le dipendenze e alla fine si è optato per pygame ed il suo modulo "mixer".
 
 ## Analisi del Problema
 
+### Aspetti Fondamentali
+
+### Architettura Logica
+- diagrammi generici
+
+## Test Plan
+Facendo riferimento all'architettura logica del sistema, predisporre dei test che devono essere soddisfatti
+
 ## Progettazione
+- diagrammi nel dettaglio (con tipi delle variabili e nomi effettivi)
 
 ## Testing
-- [] componenti gui
-- [] load dati pokèmon
-- [] stream video
-- [] audio
-- [] riconoscimento (restituzione id giusto, con una certa percentuale di accuratezza)
-
+Completare i test
+- [ ] componenti gui - risposta della gui senza delay, cambio di interfaccia in tempistiche accettabili
+- [ ] load dati pokèmon
+- [ ] stream video
+- [ ] audio
+- [ ] riconoscimento (restituzione id giusto, con una certa percentuale di accuratezza)
 
 ## Deployment
+Preparare virtual env?
+Container docker(?)
 
 ## Manutenzione
-Non necessaria, in quanto l'applicazione una volta fatto il deployment non varia.
+L'ambiente di esecuzione (hardware e software) rimarrà il medesimo e l'applicazione, una volta effettuato il deployment, non verrà modificata né aggiornata. Dunque, salvo bug applicativi trovati a posteriori, o eventuali ottimizzazioni, non è necessario alcun tipo di manutenzione.
