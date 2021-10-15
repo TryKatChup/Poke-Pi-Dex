@@ -1,13 +1,11 @@
 # Documento di Progetto (ITA)
 
-Il prototipo consiste in un piccolo gioco multigiocatore in cui ogni giocatore muove il proprio personaggio
-capsula e può interagire con i vari oggetti di scena. È stato realizzato interamente con i package forniti
-da DOTS.
+L'applicazione consiste in un'emulazione del pokèdex, che permette di riconoscere tipi diversi di pokèmon, fornendo le informazioni relative.
 <br/>
 <p align="center">
-	<a href="https://github.com/mikyll/UnityDOTS-Thesis/blob/main/Documentation/Prototype%20Documentation.md">English</a>
+	<a href="https://github.com/TryKatChup/pokemon-cv-revival/blob/main/docs/Project%20Document.md">English</a>
 	·
-	<a href="https://github.com/mikyll/UnityDOTS-Thesis">Home page</a>
+	<a href="https://github.com/TryKatChup/pokemon-cv-revival/">Home page</a>
 </p>
 
 <!-- TABLE OF CONTENTS -->
@@ -16,9 +14,9 @@ da DOTS.
 	<ol>
 		<li><a href="#abstract">Abstract</a></li>
 		<li><a href="#analisi-dei-requisiti">Analisi dei Requisiti</a>
-            <ul>
-                <li><a href="#user-story">User Story</a></li>
-            </ul>
+			<ul>
+				<li><a href="#user-story">User Story</a></li>
+			</ul>
 		</li>
 		<li><a href="#analisi-del-problema">Analisi del Problema</a></li>
 		<li><a href="#progettazione">Progettazione</a></li>
@@ -27,3 +25,27 @@ da DOTS.
 		<li><a href="#manutenzione">Manutenzione</a></li>
 	</ol>
 </details>
+
+## Abstract
+
+
+## Analisi dei Requisiti
+
+### User Story
+
+## Analisi del Problema
+
+## Progettazione
+
+## Testing
+- [] componenti gui
+- [] load dati pokèmon
+- [] stream video
+- [] audio
+- [] riconoscimento (restituzione id giusto, con una certa percentuale di accuratezza)
+
+
+## Deployment
+
+## Manutenzione
+Non necessaria, in quanto l'applicazione una volta fatto il deployment non varia.
