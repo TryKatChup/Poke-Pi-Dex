@@ -13,12 +13,13 @@ from pydub.playback import play
 
 background = "grey"
 background_dark = "#6a6a6a"
-icons_path = "utilities/icons/"
-thumbnails_path = "utilities/thumbnails/"
-sprites_path = "utilities/sprites/"
-cries_path = "utilities/cries/"
+icons_path = "../utilities/icons/"
+thumbnails_path = "../utilities/thumbnails/"
+sprites_path = "../utilities/sprites/"
+cries_path = "../utilities/cries/"
 sprite_size = (40, 40)
 
+self.windows.attributes("-fullscreen", True)
 class App:
     def __init__(self, window, window_title, video_source=0):  # se non specificato viene preso il primo input
         self.window = window
