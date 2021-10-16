@@ -78,8 +78,8 @@ def create_dataset(
     train_dataset = train_dataset.batch(batch_size)
     val_dataset = val_dataset.batch(batch_size)
     
-    train_dataset = train_dataset.repeat(epochs)
-    val_dataset = val_dataset.repeat(epochs)
+    #train_dataset = train_dataset.repeat(epochs)
+    #val_dataset = val_dataset.repeat(epochs)
     
     train_dataset = train_dataset.prefetch(tf.data.AUTOTUNE)
     val_dataset = val_dataset.prefetch(tf.data.AUTOTUNE)
@@ -99,12 +99,37 @@ def create_dataset(
 
 def create_model(res):
     
+    # 1. Input
+    # 2. Conv2D(16 filtri)
+    # 3. ReLU
+    # 4. Conv2D(32 filtri)
+    # 5. ReLU
+    # 6. Conv2D(64 filtri)
+    # 7. ReLU
+    # 8. Flatten
+    # 9. Dense(numero di neuroni variabile, potenza di 2)
+    # 10. ReLU
+    # 11. Dense(numero di neuroni pari alle classi, 150)
+    
     input_layer = tf.keras.layers.Input(shape=(res[0], res[1], 3))
-    gigi = tf.keras.layers.Conv2D(16, 3, padding="same")(input_layer)
-    nunzio = tf.keras.layers.BatchNormalization()(gigi)
-    ciro = tf.keras.layers.ReLU()(nunzio)
-
-    model = tf.keras.Model(inputs=input_layer, outputs=ciro, name="Pokemon-classifier")
+    conv1 = tf.keras.layers.Conv2D(16, 3, padding="same")(input_layer)
+    relu1 = tf.keras.layers.ReLU()(conv1)
+    pool1 = tf.keras.layers.MaxPooling2D(pool_size=(2, 2))(relu1)
+    
+    conv2 = tf.keras.layers.Conv2D(32, 3, padding="same")(pool1)
+    relu2 = tf.keras.layers.ReLU()(conv2)
+    pool2 = tf.keras.layers.MaxPooling2D(pool_size=(2, 2))(relu2)
+    
+    conv3 = tf.keras.layers.Conv2D(64, 3, padding="same")(pool2)
+    relu3 = tf.keras.layers.ReLU()(conv3)
+    pool3 = tf.keras.layers.MaxPooling2D(pool_size=(2, 2))(relu3)
+    
+    flat = tf.keras.layers.Flatten()(pool3)
+    
+    hidden1 = tf.keras.layers.Dense(1024, activation='relu')(flat)
+    output = tf.keras.layers.Dense(150)(hidden1)
+    model = tf.keras.Model(inputs=input_layer, outputs=output,name="Pokemon-classifier")
+    
     return model
 
 
