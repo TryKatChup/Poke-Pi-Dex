@@ -39,8 +39,8 @@ L'applicazione consiste in un'emulazione del pokèdex, che permette di riconosce
 ## Abstract
 Progettare e sviluppare un'applicazione che implementi le funzionalità di un [pokèdex](https://it.wikipedia.org/wiki/Pok%C3%A9dex). In particolare, l'applicazione dovrà:
 - eseguire su un Raspberry Pi4 dotato di display da 3.5 pollici;
-- caricare un dataset con i pokèmon della prima generazione (ID da 1 a 151);
-- prendere in ingresso uno stream video, tramite una videocamera collegata al Raspberry;
+- caricare un dataset con i pokèmon della prima generazione;
+- prendere in ingresso uno stream video, tramite una picamera collegata al Raspberry;
 - rilevare che l'oggetto inquadrato sia un pokèmon;
 - riconoscere il pokèmon inquadrato, restituendo il suo ID nel pokèdex;
 - mostrare a schermo i dati di tale pokèmon.
@@ -71,29 +71,44 @@ Progettare e sviluppare un'applicazione che implementi le funzionalità di un [p
 Vocabolario (significato di nomi e verbi inclusi nei requisiti)
 <table>
 	<tr>
-		<td width="32%">Termine</td>
-		<td width="32%">Definizione</td>
-		<td width="32%">Sinonimi</td>
+		<td width="10%">Termine</td>
+		<td width="60%">Definizione</td>
+		<td width="20%">Sinonimi</td>
 	</tr>
 	<tr>
-		<td>PokèMon</td>
-		<td></td>
+		<td>PokèDex</td>
+		<td>Strumento elettronico immaginario che appare nei videogiochi, nell'anime e nei manga dei PokèMon. Ha la funzione di un assistente digitale personale, progettato per catalogare e fornire informazioni sulle varie specie di Pokémon. È ciò che l'applicativo dovrà emulare.</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>Raspberry</td>
-		<td></td>
+		<td>È l'architettura hardware su cui l'applicazione esegue.</td>
 		<td>Elaboratore, Calcolatore</td>
 	</tr>
 	<tr>
-		<td>Picamera</td>
-		<td></td>
-		<td>Videocamera</td>
+		<td>Display</td>
+		<td>Schermo LCD da 3.5 pollici (480x320), supportato dal Raspberry, che permetta di visualizzare ed interagire con l'interfaccia grafica dell'applicazione.</td>
+		<td>Monitor</td>
 	</tr>
 	<tr>
-		<td>Display</td>
+		<td>Dataset</td>
+		<td>Insieme di informazioni completo per ciascun pokèmon, che includa: ID, nome, tipi, descrizione, statistiche e almeno un'immagine.</td>
 		<td></td>
-		<td>Monitor</td>
+	</tr>
+	<tr>
+		<td>PokèMon</td>
+		<td>Il tipo di oggetto che l'applicazione dev'essere in grado di riconoscere e distinguere, ovvero una creatura fantastica, appunto un "mostro" (Mon-ster) "tascabile" (Pok-et) da cui prende il nome, dell'omonimo franchise.</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Prima generazione</td>
+		<td>I pokèmon si dividono in generazioni, ciascuna delle quali comprende specie originarie dalla stessa regione. I pokèmon di prima generazione provengono da Kanto e sono 151, ovvero ciascun tipo di pokèmon di questa generazione ha un identificativo compreso tra 1 (Charmander) e 151 (Mew), e sono quelli che l'applicazione dovrà essere in grado di riconoscere e catalogare.</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Picamera</td>
+		<td>Componente esterno, supportato dal Raspberry, che permette di registrare e inviare all'elaboratore un flusso continuo di immagini in tempo reale.</td>
+		<td>Videocamera</td>
 	</tr>
 </table>
 
@@ -101,7 +116,7 @@ Vocabolario (significato di nomi e verbi inclusi nei requisiti)
 - 1x [LABISTS Starter Kit for Raspberry Pi4](https://labists.com/products/labists-raspberry-pi-4g-ram-32gb-card)
 	- 1x [Raspberry Pi4 Model B 4GB RAM](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/)
 	- 1x Adattatore USB-C per l'Alimentatore
-	- 1x 32GB MicroSD card
+	- 1x 32GB MicroSD Card
 	- 1x Mini Ventola Silenziosa
 	- 3x Dissipatori in Rame
 - 1x [Joystick Analogico](https://arduinomodules.info/ky-023-joystick-dual-axis-module/)
@@ -122,14 +137,14 @@ Modello\
 ### User Story
 <table>
 	<tr>
-		<td>Come utente accendo il dispositivo ed eseguo l'applicazione (o viene eseguita in automatico all'avvio). Dunque mi aspetto di vedere un'interfaccia grafica che comprende una sezione relativa all'output video di una videocamera, ed una sezione relativa ai dati.
+		<td>Come utente accendo il dispositivo ed eseguo l'applicazione (o viene eseguita in automatico all'avvio). Dunque mi aspetto di vedere un'interfaccia grafica che comprende una sezione relativa all'output video di una videocamera, ed una sezione relativa ai dati.\
 Quando inquadrerò un Pokémon (che può essere una carta, un peluche o una figure) l'applicazione dev'essere in grado di riconoscerlo e mostrare nella sezione dedicata ai dati le informazioni ed i dettagli relativi a tale Pokémon.</td>
 		<td width="40%"><img src="https://github.com/TryKatChup/pokemon-cv-revival/blob/main/docs/example.png"/></td>
 	</tr>
 </table>
 
 ### Test Plan Informale
-Poiché l'obbiettivo principale del progetto è il riconoscimento di un pokèmon, il Test Plan deve innanzitutto verificare che l'oggetto relativo ad esso, potrebbe essere una carta da gioco o una figure, venga riconosciuto correttamente. Ad esempio, se il pokèmon da riconoscere è Squirtle (Pokèdex ID = 7) la rete neurale deve restituire 7.\
+Poiché l'obbiettivo principale del progetto è il riconoscimento di un pokèmon, il Test Plan deve innanzitutto verificare che l'oggetto relativo ad esso, il quale potrebbe essere una carta da gioco o una figure, venga riconosciuto correttamente. Ad esempio, avendo a disposizione una carta da gioco di Squirtle (Pokèdex ID = 7), è possibile inquadrarla utilizzando il dispositivo su cui esegue l'applicativo, per ottenere i dati relativi a tale pokèmon: la rete neurale dovrà quindi riconoscere che il pokèmon inquadrato sia Squirtle, e restituire 7.\
 Come test secondari è necessario verificare il funzionamento dei componenti hardware (speaker audio, joystick analogico) e dei canali di comunicazione tra questi ed il Raspberry (cavo aux, cavetti e convertitore AD).
 
 ## Analisi del Problema
