@@ -22,6 +22,8 @@ def create_dataset(
         cur_samples = [(cur_sample, label) for cur_sample in cur_samples]
         samples.extend(cur_samples)
     
+    # return samples
+    
     # Get dataset length
     data_len = len(samples)
 
@@ -44,10 +46,11 @@ def create_dataset(
     
     def map_fn(path, label):
         # path/label represent values for a single example
-        image = tf.image.decode_jpeg(tf.io.read_file(path))
+        image = tf.image.decode_image(tf.io.read_file(path), expand_animations=False, channels=3)
 
         # some mapping to constant size - be careful with distorting aspec ratios
         image = tf.image.resize(image, res)
+        
         # Normalize to [0, 1] range
         image /= 255.
         return image, label
@@ -78,8 +81,8 @@ def create_dataset(
     train_dataset = train_dataset.batch(batch_size)
     val_dataset = val_dataset.batch(batch_size)
     
-    #train_dataset = train_dataset.repeat(epochs)
-    #val_dataset = val_dataset.repeat(epochs)
+    train_dataset = train_dataset.repeat(epochs)
+    val_dataset = val_dataset.repeat(epochs)
     
     train_dataset = train_dataset.prefetch(tf.data.AUTOTUNE)
     val_dataset = val_dataset.prefetch(tf.data.AUTOTUNE)
@@ -97,7 +100,7 @@ def create_dataset(
     return data_dict
 
 
-def create_model(res):
+def create_model(res, n_conv):
     
     # 1. Input
     # 2. Conv2D(16 filtri)
@@ -112,21 +115,16 @@ def create_model(res):
     # 11. Dense(numero di neuroni pari alle classi, 150)
     
     input_layer = tf.keras.layers.Input(shape=(res[0], res[1], 3))
-    conv1 = tf.keras.layers.Conv2D(16, 3, padding="same")(input_layer)
-    relu1 = tf.keras.layers.ReLU()(conv1)
-    pool1 = tf.keras.layers.MaxPooling2D(pool_size=(2, 2))(relu1)
+    x = input_layer
     
-    conv2 = tf.keras.layers.Conv2D(32, 3, padding="same")(pool1)
-    relu2 = tf.keras.layers.ReLU()(conv2)
-    pool2 = tf.keras.layers.MaxPooling2D(pool_size=(2, 2))(relu2)
+    for i in range(n_conv):
+        n_filters = 2 ** (i + 4)
+        x = tf.keras.layers.Conv2D(n_filters, 3, padding="same", activation="relu")(x)
+        x = tf.keras.layers.MaxPooling2D(pool_size=(2, 2))(x)
     
-    conv3 = tf.keras.layers.Conv2D(64, 3, padding="same")(pool2)
-    relu3 = tf.keras.layers.ReLU()(conv3)
-    pool3 = tf.keras.layers.MaxPooling2D(pool_size=(2, 2))(relu3)
+    flat = tf.keras.layers.Flatten()(x)
     
-    flat = tf.keras.layers.Flatten()(pool3)
-    
-    hidden1 = tf.keras.layers.Dense(1024, activation='relu')(flat)
+    hidden1 = tf.keras.layers.Dense(2048, activation='relu')(flat)
     output = tf.keras.layers.Dense(150)(hidden1)
     model = tf.keras.Model(inputs=input_layer, outputs=output,name="Pokemon-classifier")
     
