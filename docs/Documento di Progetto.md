@@ -15,10 +15,20 @@ L'applicazione consiste in un'emulazione del pokèdex, che permette di riconosce
 		<li><a href="#abstract">Abstract</a></li>
 		<li><a href="#analisi-dei-requisiti">Analisi dei Requisiti</a>
 			<ul>
+				<li><a href="#raccolta-dei-requisiti">Raccolta dei Requisiti</a></li>
+				<li><a href="#analisi-del-dominio">Analisi del Dominio</a></li>
+				<li><a href="#use-case">Use Case</a></li>
 				<li><a href="#user-story">User Story</a></li>
+				<li><a href="#test-plan-informale">Test Plan Informale</a></li>
 			</ul>
 		</li>
-		<li><a href="#analisi-del-problema">Analisi del Problema</a></li>
+		<li><a href="#analisi-del-problema">Analisi del Problema</a>
+			<ul>
+				<li><a href="#aspetti-rilevanti">Aspetti Rilevanti</a></li>
+				<li><a href="#problemi-principali">Problemi Principali</a></li>
+				<li><a href="#architettura-logica">Architettura Logica</a></li>
+			</ul>
+		</li>
 		<li><a href="#progettazione">Progettazione</a></li>
 		<li><a href="#testing">Testing</a></li>
 		<li><a href="#deployment">Deployment</a></li>
@@ -67,6 +77,7 @@ Componenti a disposizione:
 - comvertitore AD
 
 ### Analisi del Dominio
+Vocabolario (significato di nomi e verbi inclusi nei requisiti)
 <table>
 	<tr>
 		<td width="32%">Termine</td>
@@ -100,25 +111,30 @@ Come test secondari è necessario verificare il funzionamento dei componenti har
 ## Analisi del Problema
 
 ### Aspetti Rilevanti
+Identificare i problemi principali dati dai requisiti e le tecnologie (software) più appropriate da adottare (motivare scelta Python - per API tensorflow, probabilmente possiamo prendere qualcosa dalle slide, conda, tkinter, keras, ecc.)
+WARNING: expressions like 'we have chosen to ...', 'I decided ...', etc. are forbidden here.
+Rather, this section should include sentences like 'this (aspect of the) problem implies that ...' or 'the usage of this (legacy) component requires that ...', etc.
 
 ### Problemi Principali
-- divverenti tipi di oggetto
+- differenti tipi di oggetto
 
 ### Architettura Logica
-- diagrammi generici
+- diagrammi generici (modello dell'architettura logica del sistema)
 
 ## Test Plan
 Facendo riferimento all'architettura logica del sistema, predisporre dei test che devono essere soddisfatti
 
-NB: spiegare che sono state provate diverse librerie per le quali sono stati riscontrati problemi con le dipendenze e alla fine si è optato per pygame ed il suo modulo "mixer".
+NB: Qui proporre librerie e API diverse, in Testing spiegare che sono state provate diverse librerie per le quali sono stati riscontrati problemi con le dipendenze e alla fine si è optato per pygame ed il suo modulo "mixer".
 
 + aggiungere programmino di test audio che avevo fatto sul rapberry (+ passaggi per attivare alzare il volume(?))
 
 ## Progettazione
+Partendo dall'architettura logica del sistema, definire l'architettura concreta del sistema ed il comportamento di ciascun componente.
 - diagrammi nel dettaglio (con tipi delle variabili e nomi effettivi)
+- diagrammi di dominio, di interfacce, di flusso e di sequenza.
 
 ## Testing
-Completare i test
+Completare i test in base al codice del progetto ed eseguirli (aggiungere video)
 - [ ] componenti gui - risposta della gui senza delay, cambio di interfaccia in tempistiche accettabili
 - [ ] load dati pokèmon
 - [ ] stream video
@@ -130,4 +146,4 @@ Preparare virtual env?
 Container docker(?)
 
 ## Manutenzione
-L'ambiente di esecuzione (hardware e software) rimarrà il medesimo e l'applicazione, una volta effettuato il deployment, non verrà modificata né aggiornata. Dunque, salvo bug applicativi trovati a posteriori, o eventuali ottimizzazioni, non è necessario alcun tipo di manutenzione.
+L'ambiente di esecuzione (hardware e software) rimarrà il medesimo e l'applicazione, una volta effettuato il deployment, non verrà modificata né aggiornata. Dunque, salvo bug applicativi trovati a posteriori, o eventuali ottimizzazioni, non sarà necessario alcun tipo di manutenzione.
