@@ -37,44 +37,35 @@ L'applicazione consiste in un'emulazione del pokèdex, che permette di riconosce
 </details>
 
 ## Abstract
-L'obbiettivo è progettare e sviluppare un'applicazione che implementi le funzionalità di un pokèdex. In particolare, l'applicazione dovrà:
+Progettare e sviluppare un'applicazione che implementi le funzionalità di un [pokèdex](https://it.wikipedia.org/wiki/Pok%C3%A9dex). In particolare, l'applicazione dovrà:
 - eseguire su un Raspberry Pi4 dotato di display da 3.5 pollici;
 - caricare un dataset con i pokèmon della prima generazione (ID da 1 a 151);
-- prendere in ingresso uno stream video da Picamera;
+- prendere in ingresso uno stream video, tramite una videocamera collegata al Raspberry;
+- rilevare che l'oggetto inquadrato sia un pokèmon;
 - riconoscere il pokèmon inquadrato, restituendo il suo ID nel pokèdex;
 - mostrare a schermo i dati di tale pokèmon.
 
-### Componenti
-Componenti a disposizione:
-- 1x [LABISTS Starter Kit for Raspberry Pi4](https://labists.com/products/labists-raspberry-pi-4g-ram-32gb-card)
-	- 1x [Raspberry Pi4 Model B 4GB RAM](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/)
-	- 1x USB-C Power Adapter
-	- 1x 32GB MicroSD card
-	- 1x Mini Silent Fan
-	- [...]
-- 1x [Raspberry Pi Camera Rev 1.3 (5MP, 1080p)]() - [specs](https://picamera.readthedocs.io/en/release-1.3/fov.html) <- aggiungere link
-- 1x [Display 3.5 pollici]() <- aggiungere link
-- 2x [Mini Speaker](https://www.amazon.it/dp/B07FT9CFY4/ref=cm_sw_r_apan_glt_i_Y86XG3MWY2A2D21EF8ZH?_encoding=UTF8&psc=1)
-- 1x [Powerbank](https://www.amazon.it/Auskang-compatibile-batteria-Caricabatterie-Portatile/dp/B096FX9226/ref=sr_1_1?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=auskang&qid=1634322262&qsid=258-6802503-2920908&sr=8-1&sres=B096FX9226%2CB08RDTRWHY%2CB096B29B6G%2CB08RDTR7F7%2CB08R8J1D19%2CB08R8CKQJT%2CB08SHFYHSR%2CB08SJ5K3LR%2CB096JXNZ17%2CB08R8HCWRT%2CB09715272M%2CB091CGG33P%2CB08NTHCNB8%2CB08DTP9LZ8%2CB096B9TV8C%2CB0972SQQS7%2CB0932PZ857%2CB094J428L5%2CB082PPPWXY%2CB019GJLER8)
-- 1x [Case Pokèdex](https://github.com/TryKatChup/pokemon-cv-revival/tree/main/3D%20models/pok%C3%A8dex%20case)
-- joystick analogico, convertitore A/D, bottoni, switch per l'alimentazione
-
 ## Analisi dei Requisiti
+È necessario realizzare l'applicativo **pokèdex_app**.
 
 ### Raccolta dei Requisiti
+##### Requisiti Hardware
 - Raspberry Pi
 - videocamera
 - display
 - batteria
 - case fisico in cui inserire i vari componenti
-- applicazione software che implementi:
-	- rete neurale per il riconoscimento
-	- interfaccia grafica utente (GUI) che mostri i dettagli sui pokèmon riconosciuti
-- dataset con pokèmon di prima generazione (nome, id, tipi, evoluzioni, descrizione, immagini e verso)
 - speaker
 - joystick analogico
 - canali di comunicazione (cavetti)
 - comvertitore AD
+
+##### Requisiti Software
+- dataset con pokèmon di prima generazione (nome, id, tipi, evoluzioni, descrizione, immagini e verso)
+- applicativo che implementi:
+	- rete neurale per il riconoscimento
+	- interfaccia grafica utente (GUI) che mostri i dettagli sui pokèmon riconosciuti
+- ambiente virtuale di esecuzione
 
 ### Analisi del Dominio
 Vocabolario (significato di nomi e verbi inclusi nei requisiti)
@@ -89,7 +80,40 @@ Vocabolario (significato di nomi e verbi inclusi nei requisiti)
 		<td></td>
 		<td></td>
 	</tr>
+	<tr>
+		<td>Raspberry</td>
+		<td></td>
+		<td>Elaboratore, Calcolatore</td>
+	</tr>
+	<tr>
+		<td>Picamera</td>
+		<td></td>
+		<td>Videocamera</td>
+	</tr>
+	<tr>
+		<td>Display</td>
+		<td></td>
+		<td>Monitor</td>
+	</tr>
 </table>
+
+### Componenti a Disposizione
+- 1x [LABISTS Starter Kit for Raspberry Pi4](https://labists.com/products/labists-raspberry-pi-4g-ram-32gb-card)
+	- 1x [Raspberry Pi4 Model B 4GB RAM](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/)
+	- 1x Adattatore USB-C per l'Alimentatore
+	- 1x 32GB MicroSD card
+	- 1x Mini Ventola Silenziosa
+	- 3x Dissipatori in Rame
+- 1x [Joystick Analogico](https://arduinomodules.info/ky-023-joystick-dual-axis-module/)
+
+### Componenti da Comprare
+- 1x [Raspberry Pi Camera Rev 1.3 (5MP, 1080p)](https://www.amazon.it/dp/B08KZLVD36/ref=cm_sw_r_apan_glt_i_C1SA6N8GZESBFRTRQEFH?_encoding=UTF8&psc=1) - [specifiche](https://picamera.readthedocs.io/en/release-1.3/fov.html)
+- 1x [Display LCD 3.5 pollici, HDMI touch screen](https://www.amazon.it/dp/B08HVDLHRW/ref=cm_sw_r_apan_glt_i_P4JYG7RGEMVPB287BHZ1?_encoding=UTF8&psc=1)
+- 2x [Mini Speaker](https://www.amazon.it/dp/B07FT9CFY4/ref=cm_sw_r_apan_glt_i_Y86XG3MWY2A2D21EF8ZH?_encoding=UTF8&psc=1)
+- 1x [Powerbank](https://www.amazon.it/Auskang-compatibile-batteria-Caricabatterie-Portatile/dp/B096FX9226/ref=sr_1_1?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=auskang&qid=1634322262&qsid=258-6802503-2920908&sr=8-1&sres=B096FX9226%2CB08RDTRWHY%2CB096B29B6G%2CB08RDTR7F7%2CB08R8J1D19%2CB08R8CKQJT%2CB08SHFYHSR%2CB08SJ5K3LR%2CB096JXNZ17%2CB08R8HCWRT%2CB09715272M%2CB091CGG33P%2CB08NTHCNB8%2CB08DTP9LZ8%2CB096B9TV8C%2CB0972SQQS7%2CB0932PZ857%2CB094J428L5%2CB082PPPWXY%2CB019GJLER8)
+- 1x [Case Pokèdex](https://github.com/TryKatChup/pokemon-cv-revival/tree/main/3D%20models/pok%C3%A8dex%20case)
+- 1x [Adafruit MCP3008 Convertitore A/D](https://www.adafruit.com/product/856) - [guida](https://grantwinney.com/connecting-an-analog-joystick-to-the-raspberry-pi-and-using-it-with-an-rgb-led-to-simulate-a-color-wheel/)
+- 1x Interruttore Switch per Alimentazione
 
 ### Use Case
 Modello\
