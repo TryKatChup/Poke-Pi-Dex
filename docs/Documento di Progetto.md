@@ -179,6 +179,12 @@ Tutta la parte sulla definizione del modello per la rete neurale, il codice per 
 Riconoscere tipi di oggetto differenti.
 
 ### Architettura Logica
+
+##### Struttura Applicativo
+<img src="https://github.com/TryKatChup/pokemon-cv-revival/blob/main/docs/diagrams/class_diagram.png"/>
+
+##### Funzionamento Classificatore
+- schema non UML
 - diagrammi generici (modello dell'architettura logica del sistema)
 modificare il diagramma aggiungendo la parte di riconoscimento
 
