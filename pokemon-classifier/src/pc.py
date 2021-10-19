@@ -8,22 +8,21 @@ import typing
 def create_dataset(
     data_folder: str,
     epochs: int,
-    batch_size: int,
+    batch_size: int, # how many samples are processed in parallel (2^n)
     res: typing.Tuple[int, int],
     seed: int,
 ) -> tf.data.Dataset:
+    # Import folder with images
     folders = sorted(glob.glob(os.path.join(data_folder, "*", "")))
     samples = []
     for folder in folders:
         cur_samples = sorted(glob.glob(os.path.join(folder, "*.jpg")))
         # /app/data/Vaporeon/
-        # Obtaining only pokemon name:
+        # Obtaining only pokemon name
         label = folder.split(os.path.sep)[-2]
         cur_samples = [(cur_sample, label) for cur_sample in cur_samples]
         samples.extend(cur_samples)
-    
-    # return samples
-    
+   
     # Get dataset length
     data_len = len(samples)
 
@@ -43,7 +42,7 @@ def create_dataset(
     # Create Dataset object
     dataset = tf.data.Dataset.from_tensor_slices((image_paths, labels))
 
-    
+    # Load images from disk
     def map_fn(path, label):
         # path/label represent values for a single example
         image = tf.image.decode_image(tf.io.read_file(path), expand_animations=False, channels=3)
@@ -59,11 +58,6 @@ def create_dataset(
     dataset = dataset.map(map_fn, num_parallel_calls=tf.data.AUTOTUNE)
     # Initial shuffle with seed
     dataset = dataset.shuffle(buffer_size=256, seed=seed)
-    # TODO: split dataset
-    # 80% of the samples to training set
-    # 10% of the samples to validation set
-    # 10% of the samples to test set
-    # dataset = dataset.shuffle(buffer_size=100).repeat(epochs)
     val_split = test_split = 0.1
     
     test_len = int(test_split * data_len)
@@ -75,7 +69,43 @@ def create_dataset(
     trainval_dataset = dataset.skip(test_len)
     val_dataset = trainval_dataset.take(val_len)
     train_dataset = trainval_dataset.skip(val_len)
-    
+
+    train_dataset = train_dataset.cache()
+    val_dataset = val_dataset.cache()
+
+    # =====================================================================================
+    # Data Augmentation techniques
+    # =====================================================================================
+    #
+    # Useful to expand the size of a training set by creating modified data from the existing one.
+    # - Prevent overfitting;
+    # - Expand dataset in case it is too small;
+    # - It can improve the performance of the model by augmenting the data we already have.
+    #
+    # We apply various changes to the initial data:
+    # - Random rotation of image;
+    # - Random flip from left to right and viceversa;
+    # - Change randomly brightness, with a minimum decrease of 20% and a maximum one of 19.9%
+
+    def random_rotate(image, label):
+        # Generate a random number, between 0 and 3 (number of 90 degrees rotation)
+        k = tf.random.uniform(shape=(), minval=0, maxval=4, dtype=tf.int32)
+        # tf.cond wants always a function :D
+        image = tf.image.rot90(image, k)
+        return image, label
+
+    # Apply functions on train dataset
+    train_dataset = train_dataset.map(
+        lambda image, label: (tf.image.random_flip_left_right(image), label),
+        num_parallel_calls=tf.data.AUTOTUNE
+    ).map(
+        lambda image, label: (tf.image.random_brightness(image, 0.2), label),
+        num_parallel_calls=tf.data.AUTOTUNE
+    ).map(
+        random_rotate,
+        num_parallel_calls=tf.data.AUTOTUNE
+    )
+
     train_dataset = train_dataset.shuffle(buffer_size=256, reshuffle_each_iteration = True)
     
     train_dataset = train_dataset.batch(batch_size)
@@ -129,5 +159,4 @@ def create_model(res, n_conv):
     model = tf.keras.Model(inputs=input_layer, outputs=output,name="Pokemon-classifier")
     
     return model
-
 
