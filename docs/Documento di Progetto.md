@@ -57,8 +57,9 @@ Progettare e sviluppare un'applicazione che implementi le funzionalità di un [p
 - case fisico in cui inserire i vari componenti
 - speaker
 - joystick analogico
+- bottoni
 - canali di comunicazione (cavetti)
-- comvertitore AD
+- convertitore AD
 
 ##### Requisiti Software
 - dataset con pokèmon di prima generazione (nome, id, tipi, evoluzioni, descrizione, immagini e verso)
@@ -137,7 +138,8 @@ Vocabolario (significato di nomi e verbi inclusi nei requisiti)
 - [x] 2x [Mini Speaker](https://www.amazon.it/dp/B07FT9CFY4/ref=cm_sw_r_apan_glt_i_Y86XG3MWY2A2D21EF8ZH?_encoding=UTF8&psc=1)
 - [x] 1x [Powerbank](https://www.amazon.it/Auskang-compatibile-batteria-Caricabatterie-Portatile/dp/B096FX9226/ref=sr_1_1?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=auskang&qid=1634322262&qsid=258-6802503-2920908&sr=8-1&sres=B096FX9226%2CB08RDTRWHY%2CB096B29B6G%2CB08RDTR7F7%2CB08R8J1D19%2CB08R8CKQJT%2CB08SHFYHSR%2CB08SJ5K3LR%2CB096JXNZ17%2CB08R8HCWRT%2CB09715272M%2CB091CGG33P%2CB08NTHCNB8%2CB08DTP9LZ8%2CB096B9TV8C%2CB0972SQQS7%2CB0932PZ857%2CB094J428L5%2CB082PPPWXY%2CB019GJLER8)
 - [ ] 1x [Case Pokèdex](https://github.com/TryKatChup/pokemon-cv-revival/tree/main/3D%20models/pok%C3%A8dex%20case)
-- [ ] 1x [Adafruit MCP3008 Convertitore A/D](https://www.adafruit.com/product/856) - [guida](https://grantwinney.com/connecting-an-analog-joystick-to-the-raspberry-pi-and-using-it-with-an-rgb-led-to-simulate-a-color-wheel/)
+- [ ] 1x [ADS1115 Convertitore A/D](https://www.amazon.it/dp/B07RGHK4PT/ref=cm_sw_r_apan_glt_i_FAYJNF9N4QYT623VEMRE)
+- [x] 2x [Bottoni](https://www.amazon.it/dp/B07XRKN3F3/ref=cm_sw_r_apan_glt_i_BY216EXJ1756Y5SFS4DW)
 - [ ] 1x Interruttore Switch per Alimentazione
 
 ### Use Case
@@ -162,13 +164,14 @@ Come test secondari è necessario verificare il funzionamento dei componenti har
 ### Aspetti Rilevanti
 - rilevazione e riconoscimento di oggetti;
 - utilizzo dell'hardware sottostante;
-- grafica.
+- interfaccia utente.
 
 Phyton è il linguaggio più utilizzato, documentato e flessibile per quanto riguarda data science, machine learning e computer vision. Inoltre, esistono diversi framework e librerie utili, tra cui tensorflow, keras, opencv e molti altri, la maggior parte dei quali sono open source. In aggiunta, python dispone di API specifiche che rendono semplice l'interazione con l'hardware del raspberry, fra cui picamera, bottoni e joystick.
-tkinter
-conda(?)
+Python fornisce anche package per lo sviluppo di applicazioni grafiche, ad esempio tkinter, PyQT, Kivy.
 
 <!--
+conda(?)
+
 Identificare i problemi principali dati dai requisiti e le tecnologie (software) più appropriate da adottare (motivare scelta Python - per API tensorflow, probabilmente possiamo prendere qualcosa dalle slide, conda, tkinter, keras, ecc.)
 WARNING: expressions like 'we have chosen to ...', 'I decided ...', etc. are forbidden here.
 Rather, this section should include sentences like 'this (aspect of the) problem implies that ...' or 'the usage of this (legacy) component requires that ...', etc.
@@ -176,11 +179,18 @@ Rather, this section should include sentences like 'this (aspect of the) problem
 
 ### Problemi Principali
 Tutta la parte sulla definizione del modello per la rete neurale, il codice per il riconoscimento, l'allenamento della rete.
-Riconoscere tipi di oggetto differenti.
+Riconoscere tipi di "oggetto" (pokèmon) differenti.
 
 ### Architettura Logica
 
-##### Struttura Applicativo
+##### Diagramma dei Package
+<img src="https://github.com/TryKatChup/pokemon-cv-revival/blob/main/docs/diagrams/package_diagram.png"/>
+
+##### Diagramma delle classi: Dominio
+
+##### Diagramma delle classi: Controller
+
+##### Diagramma delle classi: 
 <img src="https://github.com/TryKatChup/pokemon-cv-revival/blob/main/docs/diagrams/class_diagram.png"/>
 
 ##### Funzionamento Classificatore
