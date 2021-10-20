@@ -11,7 +11,7 @@ COPY ./data /app/data
 
 # Unzip dataset
 WORKDIR /app/data
-RUN curl https://www.kaggle.com/lantian773030/pokemonclassification/download -O /app/data/ \
+RUN curl https://drive.google.com/u/0/uc?id=1B1kzsppgreGzB3qGde5BnLgpMogJPyKI&export=download \
 && unzip /app/data/archive.zip -d /app/data/ \
 && rm /app/data/archive.zip
 

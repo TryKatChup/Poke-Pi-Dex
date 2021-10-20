@@ -14,36 +14,65 @@ def create_dataset(
 ) -> tf.data.Dataset:
     # Import folder with images
     folders = sorted(glob.glob(os.path.join(data_folder, "*", "")))
-    samples = []
+    train_samples = []
+    val_samples = []
+    test_samples = []
+    val_split = test_split = 0.1
+    train_len = 0
+    val_len = 0
+    test_len = 0
+    # Iterate over folders
     for folder in folders:
         cur_samples = sorted(glob.glob(os.path.join(folder, "*.jpg")))
         # /app/data/Vaporeon/
         # Obtaining only pokemon name
         label = folder.split(os.path.sep)[-2]
         cur_samples = [(cur_sample, label) for cur_sample in cur_samples]
-        samples.extend(cur_samples)
-   
-    # Get dataset length
-    data_len = len(samples)
+        cur_samples_len = len(cur_samples)
+        
+        # Determine train/test/val splits
+        cur_test_len = int(test_split * cur_samples_len)
+        cur_val_len = int(val_split * cur_samples_len)
+        cur_train_len = cur_samples_len - cur_val_len - cur_test_len
+        # Perform split
+        train_samples.extend(cur_samples[:cur_train_len])
+        val_samples.extend(cur_samples[:cur_val_len])
+        test_samples.extend(cur_samples[:cur_test_len])
+        
+        # Increment global train/val/test lengths
+        train_len += cur_train_len
+        val_len += cur_val_len
+        test_len += cur_test_len
 
     # Create LabelEncoder
     label_encoder = LabelEncoder()
     # Extract images and labels
-    image_paths, labels = list(zip(*samples))
+    train_image_paths, train_labels = list(zip(*train_samples))
     # Train LabelEncoder
-    label_encoder.fit(list(set(labels)))  # convert to set to remove duplicates
+    label_encoder.fit(list(set(train_labels)))  # convert to set to remove duplicates
     # Convert string labels to integer
-    labels = label_encoder.transform(labels)
+    train_labels = label_encoder.transform(train_labels)
 
     # Convert both lists to tensors
-    image_paths = tf.convert_to_tensor(image_paths, dtype=tf.string)
-    labels = tf.convert_to_tensor(labels)
-    
+    train_image_paths = tf.convert_to_tensor(train_image_paths, dtype=tf.string)
+    train_labels = tf.convert_to_tensor(train_labels)
     # Create Dataset object
-    dataset = tf.data.Dataset.from_tensor_slices((image_paths, labels))
+    train_dataset = tf.data.Dataset.from_tensor_slices((train_image_paths, train_labels))
+    
+    # Repeat for validation and test sets
+    val_image_paths, val_labels = list(zip(*val_samples))
+    val_labels = label_encoder.transform(val_labels)
+    val_image_paths = tf.convert_to_tensor(val_image_paths, dtype=tf.string)
+    val_labels = tf.convert_to_tensor(val_labels)
+    val_dataset = tf.data.Dataset.from_tensor_slices((val_image_paths, val_labels))
+    test_image_paths, test_labels = list(zip(*test_samples))
+    test_labels = label_encoder.transform(test_labels)
+    test_image_paths = tf.convert_to_tensor(test_image_paths, dtype=tf.string)
+    test_labels = tf.convert_to_tensor(test_labels)
+    test_dataset = tf.data.Dataset.from_tensor_slices((test_image_paths, test_labels))
 
     # Load images from disk
-    def map_fn(path, label):
+    def load_image(path, label):
         # path/label represent values for a single example
         image = tf.image.decode_image(tf.io.read_file(path), expand_animations=False, channels=3)
 
@@ -55,7 +84,11 @@ def create_dataset(
         return image, label
 
     # num_parallel_calls > 1 induces intra-batch shuffling
-    dataset = dataset.map(map_fn, num_parallel_calls=tf.data.AUTOTUNE)
+    train_dataset = train_dataset.map(load_image, num_parallel_calls=tf.data.AUTOTUNE)
+    val_dataset = val_dataset.map(load_image, num_parallel_calls=tf.data.AUTOTUNE)
+    test_dataset = test_dataset.map(load_image, num_parallel_calls=tf.data.AUTOTUNE)
+    
+    '''
     # Initial shuffle of the whole dataset with seed
     dataset = dataset.shuffle(buffer_size=data_len, reshuffle_each_iteration=False, seed=seed)
     val_split = test_split = 0.1
@@ -69,7 +102,9 @@ def create_dataset(
     trainval_dataset = dataset.skip(test_len)
     val_dataset = trainval_dataset.take(val_len)
     train_dataset = trainval_dataset.skip(val_len)
+    '''
 
+    # Cache
     train_dataset = train_dataset.cache()
     val_dataset = val_dataset.cache()
 
