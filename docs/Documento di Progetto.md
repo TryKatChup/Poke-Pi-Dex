@@ -164,7 +164,7 @@ Come test secondari è necessario verificare il funzionamento dei componenti har
 - utilizzo dell'hardware sottostante;
 - grafica.
 
-Phyton è il linguaggio più utilizzato, documentato e flessibile per quanto riguarda data science, machine learning e computer vision. Inoltre, esistono diversi framework e librerie utili, tra cui tensorflow, keras, opencv e molti altri, la maggior parte dei quali sono open source. In aggiunta, python dispone di API specifiche che rendono semplice l'interazione con l'hardware del raspberry, ad esempio la picamera.
+Phyton è il linguaggio più utilizzato, documentato e flessibile per quanto riguarda data science, machine learning e computer vision. Inoltre, esistono diversi framework e librerie utili, tra cui tensorflow, keras, opencv e molti altri, la maggior parte dei quali sono open source. In aggiunta, python dispone di API specifiche che rendono semplice l'interazione con l'hardware del raspberry, fra cui picamera, bottoni e joystick.
 tkinter
 conda(?)
 
