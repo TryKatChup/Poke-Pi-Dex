@@ -56,8 +56,8 @@ def create_dataset(
 
     # num_parallel_calls > 1 induces intra-batch shuffling
     dataset = dataset.map(map_fn, num_parallel_calls=tf.data.AUTOTUNE)
-    # Initial shuffle with seed
-    dataset = dataset.shuffle(buffer_size=256, seed=seed)
+    # Initial shuffle of the whole dataset with seed
+    dataset = dataset.shuffle(buffer_size=data_len, reshuffle_each_iteration=False, seed=seed)
     val_split = test_split = 0.1
     
     test_len = int(test_split * data_len)
@@ -93,20 +93,20 @@ def create_dataset(
         # tf.cond wants always a function :D
         image = tf.image.rot90(image, k)
         return image, label
-
+    
     # Apply functions on train dataset
     train_dataset = train_dataset.map(
         lambda image, label: (tf.image.random_flip_left_right(image), label),
         num_parallel_calls=tf.data.AUTOTUNE
-    ).map(
-        lambda image, label: (tf.image.random_brightness(image, 0.2), label),
-        num_parallel_calls=tf.data.AUTOTUNE
+    #).map(
+    #    lambda image, label: (tf.image.random_brightness(image, 0.2), label),
+    #    num_parallel_calls=tf.data.AUTOTUNE
     ).map(
         random_rotate,
         num_parallel_calls=tf.data.AUTOTUNE
     )
-
-    train_dataset = train_dataset.shuffle(buffer_size=256, reshuffle_each_iteration = True)
+    
+    train_dataset = train_dataset.shuffle(buffer_size=256, reshuffle_each_iteration=True)
     
     train_dataset = train_dataset.batch(batch_size)
     val_dataset = val_dataset.batch(batch_size)
@@ -130,33 +130,58 @@ def create_dataset(
     return data_dict
 
 
-def create_model(res, n_conv):
+def create_model(
+    n_conv: int = 3,
+    use_bn: bool = False,
+    res: typing.Tuple[int, int] = (256, 256)
+):
     
     # 1. Input
-    # 2. Conv2D(16 filtri)
-    # 3. ReLU
-    # 4. Conv2D(32 filtri)
-    # 5. ReLU
-    # 6. Conv2D(64 filtri)
-    # 7. ReLU
-    # 8. Flatten
-    # 9. Dense(numero di neuroni variabile, potenza di 2)
-    # 10. ReLU
-    # 11. Dense(numero di neuroni pari alle classi, 150)
+    # 2. Feature extraction con n_conv livelli e numero crescente di filtri (32 -> 64 -> 128...):
+    #     1. Conv2D
+    #     2. BatchNorm (se specificato)
+    #     3. ReLU
+    # 3. Flatten
+    # 4. Classifier con 3 livelli fully connected:
+    #     1. Dense con 1024 neuroni
+    #     2. BatchNorm (se specificato)
+    #     3. ReLU
+    #     4. Dense con 1024 neuroni
+    #     5. BatchNorm (se specificato)
+    #     6. ReLU
+    #     7. Dense con 150 neuroni (come il numero di classi)
+    #     8. Softmax
     
     input_layer = tf.keras.layers.Input(shape=(res[0], res[1], 3))
     x = input_layer
     
     for i in range(n_conv):
-        n_filters = 2 ** (i + 4)
-        x = tf.keras.layers.Conv2D(n_filters, 3, padding="same", activation="relu")(x)
+        n_filters = 2 ** (i + 6)
+        
+        # Conv2D + BatchNorm + ReLU
+        x = tf.keras.layers.Conv2D(n_filters, 3, padding="same")(x)
+        if use_bn:
+            x = tf.keras.layers.BatchNormalization()(x)
+        x = tf.keras.layers.ReLU()(x)
+
         x = tf.keras.layers.MaxPooling2D(pool_size=(2, 2))(x)
     
     flat = tf.keras.layers.Flatten()(x)
     
-    hidden1 = tf.keras.layers.Dense(2048, activation='relu')(flat)
-    output = tf.keras.layers.Dense(150)(hidden1)
-    model = tf.keras.Model(inputs=input_layer, outputs=output,name="Pokemon-classifier")
+    # 1st Dense(1024) + BatchNorm + ReLU
+    fc1 = tf.keras.layers.Dense(1024)(flat)
+    if use_bn:
+        fc1 = tf.keras.layers.BatchNormalization()(fc1)
+    fc1 = tf.keras.layers.ReLU()(fc1)
+    # 2nd Dense(1024) + BatchNorm + ReLU
+    fc2 = tf.keras.layers.Dense(1024)(fc1)
+    if use_bn:
+        fc2 = tf.keras.layers.BatchNormalization()(fc2)
+    fc2 = tf.keras.layers.ReLU()(fc2)
+    # 3rd Dense(150) + softmax
+    fc3 = tf.keras.layers.Dense(150)(fc2)
+    fc3 = tf.keras.layers.Softmax()(fc3)
+
+    model = tf.keras.Model(inputs=input_layer, outputs=fc3, name="Pokemon-classifier")
     
     return model
-
