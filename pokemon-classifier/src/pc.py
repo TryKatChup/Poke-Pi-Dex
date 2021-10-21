@@ -133,9 +133,9 @@ def create_dataset(
     train_dataset = train_dataset.map(
         lambda image, label: (tf.image.random_flip_left_right(image), label),
         num_parallel_calls=tf.data.AUTOTUNE
-    #).map(
-    #    lambda image, label: (tf.image.random_brightness(image, 0.2), label),
-    #    num_parallel_calls=tf.data.AUTOTUNE
+    # .map(
+    #     lambda image, label: (tf.image.random_brightness(image, 0.2), label),
+    #     num_parallel_calls=tf.data.AUTOTUNE
     ).map(
         random_rotate,
         num_parallel_calls=tf.data.AUTOTUNE
@@ -191,7 +191,7 @@ def create_model(
     x = input_layer
     
     for i in range(n_conv):
-        n_filters = 2 ** (i + 6)
+        n_filters = 2 ** (i + 4)
         
         # Conv2D + BatchNorm + ReLU
         x = tf.keras.layers.Conv2D(n_filters, 3, padding="same")(x)
@@ -204,17 +204,19 @@ def create_model(
     flat = tf.keras.layers.Flatten()(x)
     
     # 1st Dense(1024) + BatchNorm + ReLU
-    fc1 = tf.keras.layers.Dense(1024)(flat)
+    fc1 = tf.keras.layers.Dense(2048)(flat)
     if use_bn:
         fc1 = tf.keras.layers.BatchNormalization()(fc1)
     fc1 = tf.keras.layers.ReLU()(fc1)
+    # Dropout
+    fc1 = tf.keras.layers.Dropout(0.5)(fc1)
     # 2nd Dense(1024) + BatchNorm + ReLU
-    fc2 = tf.keras.layers.Dense(1024)(fc1)
-    if use_bn:
-        fc2 = tf.keras.layers.BatchNormalization()(fc2)
-    fc2 = tf.keras.layers.ReLU()(fc2)
+    # fc2 = tf.keras.layers.Dense(1024)(fc1)
+    # if use_bn:
+    #     fc2 = tf.keras.layers.BatchNormalization()(fc2)
+    # fc2 = tf.keras.layers.ReLU()(fc2)
     # 3rd Dense(150) + softmax
-    fc3 = tf.keras.layers.Dense(150)(fc2)
+    fc3 = tf.keras.layers.Dense(150)(fc1)
     fc3 = tf.keras.layers.Softmax()(fc3)
 
     model = tf.keras.Model(inputs=input_layer, outputs=fc3, name="Pokemon-classifier")
