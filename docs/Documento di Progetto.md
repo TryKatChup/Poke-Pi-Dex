@@ -194,9 +194,12 @@ Riconoscere tipi di "oggetto" (pokèmon) differenti.
 <img src="https://github.com/TryKatChup/pokemon-cv-revival/blob/main/docs/diagrams/class_diagram_domain_classifier.png"/>
 
 ##### Diagramma delle classi: Controller
+<img src="https://github.com/TryKatChup/pokemon-cv-revival/blob/main/docs/diagrams/class_diagram_controller_app.png"/>
 
-##### Diagramma delle classi: 
-<img src="https://github.com/TryKatChup/pokemon-cv-revival/blob/main/docs/diagrams/class_diagram.png"/>
+##### Diagramma delle classi: Interfacce
+<img src="https://github.com/TryKatChup/pokemon-cv-revival/blob/main/docs/diagrams/class_diagram_interface_menu.png"/>
+
+<img src="https://github.com/TryKatChup/pokemon-cv-revival/blob/main/docs/diagrams/class_diagram_interface_pokèdex.png"/>
 
 ##### Funzionamento Classificatore
 - schema non UML
