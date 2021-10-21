@@ -145,12 +145,15 @@ def create_dataset(
     
     train_dataset = train_dataset.batch(batch_size)
     val_dataset = val_dataset.batch(batch_size)
+    test_dataset = test_dataset.batch(1)
     
     train_dataset = train_dataset.repeat(epochs)
     val_dataset = val_dataset.repeat(epochs)
     
     train_dataset = train_dataset.prefetch(tf.data.AUTOTUNE)
     val_dataset = val_dataset.prefetch(tf.data.AUTOTUNE)
+    
+    
     
     data_dict = {
         "train_dataset": train_dataset,
