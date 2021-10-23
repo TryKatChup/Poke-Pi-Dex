@@ -10,8 +10,7 @@ RUN apt-get update -y && apt-get install -y unzip curl \
 COPY ./data /app/data
 
 # Unzip dataset
-WORKDIR /app/data
-RUN curl https://drive.google.com/u/0/uc?id=1B1kzsppgreGzB3qGde5BnLgpMogJPyKI&export=download \
+WORKDIR /app/data \
 && unzip /app/data/archive.zip -d /app/data/ \
 && rm /app/data/archive.zip
 
