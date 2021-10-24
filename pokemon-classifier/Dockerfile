@@ -1,6 +1,6 @@
 FROM tensorflow/tensorflow:latest-gpu
-RUN apt-get update -y && apt-get install -y unzip curl \ 
-    && pip install --upgrade pip && pip install jupyter sklearn matplotlib \
+RUN apt-get update -y && apt-get install -y unzip curl graphviz \
+    && pip install --upgrade pip && pip install jupyter sklearn pydot matplotlib \
     black jupyter_contrib_nbextensions tqdm h5py \
     && jupyter nbextension install https://github.com/drillan/jupyter-black/archive/master.zip --user \
     && jupyter nbextension enable jupyter-black-master/jupyter-black
