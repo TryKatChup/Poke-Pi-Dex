@@ -10,9 +10,10 @@ RUN apt-get update -y && apt-get install -y unzip curl graphviz \
 COPY ./data /app/data
 
 # Unzip dataset
-WORKDIR /app/data \
-&& unzip /app/data/archive.zip -d /app/data/ \
-&& rm /app/data/archive.zip
+
+WORKDIR /app/data
+RUN unzip /app/data/archive.zip -d /app/data/ && \
+    rm /app/data/archive.zip
 
 # During development, the src folder will be overriden by a volume
 COPY ./src /app/src
