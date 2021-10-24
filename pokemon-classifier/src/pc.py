@@ -133,9 +133,6 @@ def create_dataset(
     train_dataset = train_dataset.map(
         lambda image, label: (tf.image.random_flip_left_right(image), label),
         num_parallel_calls=tf.data.AUTOTUNE
-    # .map(
-    #     lambda image, label: (tf.image.random_brightness(image, 0.2), label),
-    #     num_parallel_calls=tf.data.AUTOTUNE
     ).map(
         random_rotate,
         num_parallel_calls=tf.data.AUTOTUNE
@@ -181,21 +178,18 @@ def create_model(
     #     3. ReLU
     # 3. Flatten
     # 4. Classifier con 3 livelli fully connected:
-    #     1. Dense con 1024 neuroni
-    #     2. BatchNorm (se specificato)
+    #     1. Dense con 2048 neuroni
+    #     2. BatchNorm
     #     3. ReLU
-    #     4. Dense con 1024 neuroni
-    #     5. BatchNorm (se specificato)
-    #     6. ReLU
-    #     7. Dense con 150 neuroni (come il numero di classi)
-    #     8. Softmax
+    #     4. Dense con 150 neuroni (come il numero di classi)
+    #     5. Softmax
     
     input_layer = tf.keras.layers.Input(shape=(res[0], res[1], 3))
     x = input_layer
     
     for i in range(n_conv):
         n_filters = 2 ** (i + 4)
-        
+ 
         # Conv2D + BatchNorm + ReLU
         x = tf.keras.layers.Conv2D(n_filters, 3, padding="same")(x)
         if use_bn:
@@ -205,20 +199,15 @@ def create_model(
         x = tf.keras.layers.MaxPooling2D(pool_size=(2, 2))(x)
     
     flat = tf.keras.layers.Flatten()(x)
-    
     # 1st Dense(1024) + BatchNorm + ReLU
     fc1 = tf.keras.layers.Dense(2048)(flat)
     if use_bn:
         fc1 = tf.keras.layers.BatchNormalization()(fc1)
     fc1 = tf.keras.layers.ReLU()(fc1)
+    
     # Dropout
-    fc1 = tf.keras.layers.Dropout(0.5)(fc1)
-    # 2nd Dense(1024) + BatchNorm + ReLU
-    # fc2 = tf.keras.layers.Dense(1024)(fc1)
-    # if use_bn:
-    #     fc2 = tf.keras.layers.BatchNormalization()(fc2)
-    # fc2 = tf.keras.layers.ReLU()(fc2)
-    # 3rd Dense(150) + softmax
+    # fc1 = tf.keras.layers.Dropout(0.5)(fc1)
+    # 2nd Dense(150) + softmax
     fc3 = tf.keras.layers.Dense(150)(fc1)
     fc3 = tf.keras.layers.Softmax()(fc3)
 
