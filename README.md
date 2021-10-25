@@ -47,6 +47,14 @@ See our demo on YouTube! https://www.youtube.com/watch?v=6A07DGlRxg4
 - Fix the docs
 - Separate different gui parts in different files/classes(?)
 - Make a video with clips of the building, test and different implementation parts
+- Latex with:
+  - Awesome cover with our Pokédex
+  - Images list
+  - CNN chapter
+  - Software chapter (GUI, openCV, CNN app integration, Pokémon JSON, frame processing, UML) 
+  - Hardware chapter (Paper prototype, 3D model, every component, link on amazon and price, design decisions)
+  - Use case
+  - Conclusion
 
 ## GUI Prototype
 ![GUI prototype Squirtle example](https://github.com/TryKatChup/pokemon-cv-revival/blob/main/gui/prototype/gui_example_squirtle.png)
