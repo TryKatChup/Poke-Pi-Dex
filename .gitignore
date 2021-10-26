@@ -1,6 +1,8 @@
-# roba in comune
+# Python stuff
 *.pyc
 *.pyo
+
+# General stuff
 .installed.cfg
 bin
 develop-eggs
@@ -12,9 +14,45 @@ src/*.egg-info
 lib
 lib64
 
-# roba Kary
+
+## LaTex/pdflatex auxiliary files:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+## Bibliography auxiliary files (bibtex/biblatex/biber):
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+## Build tool auxiliary files:
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+
+# minted
+_minted*
+*.pyg
+
+# Jupyter
 .ipynb_checkpoints
 
-# roba Miky
+# Python app
 *.idea
 /docs/template
