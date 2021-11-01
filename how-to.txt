@@ -10,3 +10,7 @@ https://www.youtube.com/watch?v=dcH-0bNeEVQ
 
 Increase raspberry audio output volume:
 https://forums.raspberrypi.com/viewtopic.php?t=299080
+
+
+Get input from button:
+https://www.youtube.com/watch?v=AlcF1_rs9e0
