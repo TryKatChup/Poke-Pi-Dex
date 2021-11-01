@@ -9,11 +9,11 @@ RUN apt-get update -y && apt-get install -y unzip curl graphviz \
 # Copy data
 COPY ./data /app/data
 
-# Download dataset
-RUN curl https://cloud.fuo.ninja/index.php/s/9mfWtjnEB77qsyj
-
 # Unzip dataset
 WORKDIR /app/data
+
+# Download dataset
+RUN curl https://cloud.fuo.ninja/index.php/s/9mfWtjnEB77qsyj
 RUN unzip /app/data/archive.zip -d /app/data/ && \
     rm /app/data/archive.zip
 
