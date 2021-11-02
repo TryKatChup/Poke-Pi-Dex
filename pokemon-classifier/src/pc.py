@@ -3,7 +3,7 @@ import glob
 import tensorflow as tf
 from sklearn.preprocessing import LabelEncoder
 import typing
-
+import numpy as np
 
 def create_dataset(
     data_folder: str,
@@ -214,3 +214,15 @@ def create_model(
     model = tf.keras.Model(inputs=input_layer, outputs=fc3, name="Pokemon-classifier")
     
     return model
+
+
+def top_k_predictions(model, img, label_encoder, k=5):
+    scores = model.predict(img)
+    (top_k_scores, top_k_idx) = tf.math.top_k(scores, k)
+
+    top_k_scores = np.squeeze(top_k_scores.numpy(), axis=0)
+    top_k_idx = np.squeeze(top_k_idx.numpy(), axis=0)
+
+    top_k_labels = label_encoder.inverse_transform(top_k_idx)
+
+    return(list(zip(top_k_labels, top_k_scores)))
