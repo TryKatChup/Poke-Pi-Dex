@@ -5,6 +5,7 @@ from sklearn.preprocessing import LabelEncoder
 import typing
 import numpy as np
 
+
 def create_dataset(
     data_folder: str,
     epochs: int,
@@ -149,9 +150,7 @@ def create_dataset(
     
     train_dataset = train_dataset.prefetch(tf.data.AUTOTUNE)
     val_dataset = val_dataset.prefetch(tf.data.AUTOTUNE)
-    
-    
-    
+
     data_dict = {
         "train_dataset": train_dataset,
         "val_dataset": val_dataset,
@@ -225,4 +224,4 @@ def top_k_predictions(model, img, label_encoder, k=5):
 
     top_k_labels = label_encoder.inverse_transform(top_k_idx)
 
-    return(list(zip(top_k_labels, top_k_scores)))
+    return list(zip(top_k_labels, top_k_scores))
