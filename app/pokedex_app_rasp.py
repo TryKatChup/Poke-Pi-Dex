@@ -1,7 +1,7 @@
 import tkinter as tk
 from PIL import ImageTk, Image
-from app.pokemon_repository import PokemonRepository
-from app.pokemon import Pokemon
+from pokemon_repository import PokemonRepository
+from pokemon import Pokemon
 import cv2
 import video_capture as vc
 import time
@@ -76,14 +76,14 @@ class App:
         # self.button_quit.pack(side=tk.TOP)
 
         # Pokédex App
-        self.frame_left = tk.Frame(width=240, height=320, background="lime")
+        self.frame_left = tk.Frame(width=240, height=320, bg=background)
         self.frame_left.pack_propagate(0)  # set the frame so that its children cannot control its size
         self.frame_right = tk.Frame(width=240, height=320, bg=background)
         self.frame_right.pack_propagate(0)
 
         # Left (video stream)
         self.canvas_video = tk.Canvas(master=self.frame_left, width=self.video.width/2, height=(self.video.height/2)-20, bg=background, highlightthickness=0)
-        self.canvas_video.pack(side=tk.TOP)
+        self.canvas_video.pack(side=tk.TOP, pady=(50, 0))
         self.frame_video_controls = tk.Frame(master=self.frame_left, bg=background)
         self.frame_video_controls.pack(side=tk.TOP)
 
