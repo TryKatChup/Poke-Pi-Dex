@@ -1,0 +1,12 @@
+Kary
+- ottimizzazione rete (quantizzazione + prova immagine con tf.lite)
+- riallenare rete con foto tagliate + regolazione luminosità
+
+
+Miky
+- fixare spazio tra i due frame nella gui
+- finire doc progetto e aggiungere parti nella relazione
+
+Entrambi:
+- ritagliare foto pokémon (Kary dispari, Miky pari)
+- rettificazione picamera
