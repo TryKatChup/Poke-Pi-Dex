@@ -85,7 +85,7 @@ class App:
         self.canvas_video = tk.Canvas(master=self.frame_left, width=self.video.width/2, height=(self.video.height/2)-20, bg=background, highlightthickness=0)
         self.canvas_video.pack(side=tk.TOP, pady=(50, 0))
         self.frame_video_controls = tk.Frame(master=self.frame_left, bg=background)
-        self.frame_video_controls.pack(side=tk.TOP)
+        self.frame_video_controls.pack(side=tk.TOP, pady=(5, 0))
 
         self.button_search = tk.Button(master=self.frame_video_controls, text="Search", bg=background, activebackground=background, command=lambda: self.load_pokemon(self.entry_name_text.get()))
         self.button_search.pack(side=tk.LEFT, anchor=tk.CENTER, padx=(0, 10))
