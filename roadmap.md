@@ -7,10 +7,11 @@ Miky
 - [x] fixare spazio tra i due frame nella gui
 - [x] aggiungere pulsante per tornare al menu principale al posto di info
 - [x] aggiungere controllo per non far aggiornare il video quando si è nel menù (o non aprire nemmeno la camera)
-- [ ] finire doc progetto e aggiungere parti nella relazione
-- [ ] modello case 3D
+- [ ] refactor stats: usare un unico canvas
 - [ ] aggiungere colori diversi per i vari tipi
 - [ ] impostazioni persistenti
+- [ ] finire doc progetto e aggiungere parti nella relazione
+- [ ] modello case 3D
 - [ ] extra con piccole sprite che girano per lo schermo tipo i quadrati
 - [ ] usare bottoni
 - [ ] usare analogico
