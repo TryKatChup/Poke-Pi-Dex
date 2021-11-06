@@ -34,6 +34,7 @@ class App:
         self.window.attributes("-fullscreen", self.fullscreen.get())
         image = ImageTk.PhotoImage(file=icons_path + "icon-pokeball.png")
         self.window.tk.call("wm", "iconphoto", self.window._w, image)
+        self.window.configure(bg=background)
         self.video_source = video_source
         
         # Sound init
@@ -74,15 +75,20 @@ class App:
         self.button_quit = tk.Button(master=self.frame_menu, text="Quit", width=15, bg=background, activebackground=background, command=lambda: self.quit())
         self.canvas_background.create_window(197, 182+50, anchor=tk.N, window=self.button_quit)
         # self.button_quit.pack(side=tk.TOP)
+        self.image_button_info = ImageTk.PhotoImage(Image.open(icons_path + "icon-info.png").resize((25, 25), Image.ANTIALIAS))
+        self.button_info = tk.Button(master=self.frame_menu, image=self.image_button_info, bg=background, command=lambda: self.show_info())
+        self.canvas_background.create_window(322, 232 + 30, anchor=tk.N, window=self.button_info)
+
+        # Info
 
         # Pokédex App
-        self.frame_left = tk.Frame(width=240, height=320, bg=background)
+        self.frame_left = tk.Frame(width=239, height=320, bg=background)
         self.frame_left.pack_propagate(0)  # set the frame so that its children cannot control its size
-        self.frame_right = tk.Frame(width=240, height=320, bg=background)
+        self.frame_right = tk.Frame(width=239, height=320, bg=background)
         self.frame_right.pack_propagate(0)
 
         # Left (video stream)
-        self.canvas_video = tk.Canvas(master=self.frame_left, width=self.video.width/2, height=(self.video.height/2)-20, bg=background, highlightthickness=0)
+        self.canvas_video = tk.Canvas(master=self.frame_left, width=self.video.width/2, height=(self.video.height/2)-20, bg=background, highlightbackground=background, highlightthickness=1)
         self.canvas_video.pack(side=tk.TOP, pady=(50, 0))
         self.frame_video_controls = tk.Frame(master=self.frame_left, bg=background)
         self.frame_video_controls.pack(side=tk.TOP, pady=(5, 0))
@@ -96,19 +102,19 @@ class App:
         self.frame_top = tk.Frame(master=self.frame_right, width=240, bg=background)
         self.frame_top.pack(side=tk.TOP)
 
-        # Settings & Info
+        # Settings & Back
         # Fake button to space on the left (easter egg -> show blaziken <3)
         self.button_egg = tk.Button(master=self.frame_top, text=" ", bg=background, fg=background, bd=0, highlightthickness=0, command=lambda: self.load_pokemon('Blaziken'))
         self.button_egg.pack(side=tk.LEFT, anchor=tk.N)
-        # Settings & info frame
-        self.frame_settings_info = tk.Frame(master=self.frame_top, bg=background)
-        self.frame_settings_info.pack(side=tk.RIGHT, anchor=tk.N, padx=(16, 0))
+        # Settings & Back frame
+        self.frame_settings_back = tk.Frame(master=self.frame_top, bg=background)
+        self.frame_settings_back.pack(side=tk.RIGHT, anchor=tk.N, padx=(16, 0))
         self.image_button_settings = ImageTk.PhotoImage(Image.open(icons_path + "icon-settings.png").resize((25, 25), Image.ANTIALIAS))
-        self.button_settings = tk.Button(master=self.frame_settings_info, image=self.image_button_settings, bg=background, command=lambda: self.show_settings())
+        self.button_settings = tk.Button(master=self.frame_settings_back, image=self.image_button_settings, bg=background, command=lambda: self.show_settings())
         self.button_settings.pack(side=tk.TOP, anchor=tk.E)
-        self.image_button_info = ImageTk.PhotoImage(Image.open(icons_path + "icon-info.png").resize((25, 25), Image.ANTIALIAS))
-        self.button_info = tk.Button(master=self.frame_settings_info, image=self.image_button_info, bg=background, command=lambda: self.show_info())
-        self.button_info.pack(side=tk.TOP, anchor=tk.E)
+        self.image_button_back = ImageTk.PhotoImage(Image.open(icons_path + "icon-back.png").resize((25, 25), Image.ANTIALIAS))
+        self.button_back = tk.Button(master=self.frame_settings_back, image=self.image_button_back, bg=background, command=lambda: self.show_menu())
+        self.button_back.pack(side=tk.TOP, anchor=tk.E)
 
         # Top (right)
         self.frame_top_right = tk.Frame(master=self.frame_top, bg=background)
@@ -268,27 +274,32 @@ class App:
         self.image_button_close_settings = ImageTk.PhotoImage(Image.open(icons_path + "icon-close.png").resize((25, 25), Image.ANTIALIAS))
         self.button_close = tk.Button(master=self.frame_settings, image=self.image_button_close_settings, bg=background, command=lambda: self.close_settings())
         self.button_close.pack(side=tk.TOP, anchor=tk.E)
+        self.label_settings = tk.Label(master=self.frame_settings, text="Settings", bg=background)
+        self.label_settings.config(font=("Helvetica", 16, "bold italic"))
+        self.label_settings.pack(side=tk.TOP)
         # Toggle Fullscreen
-        self.frame_fullscreen = tk.Frame(master=self.frame_settings, bg=background)
-        self.frame_fullscreen.pack(side=tk.TOP, pady=(50, 0))
+        self.frame_fullscreen = tk.Frame(master=self.frame_settings, width=240, bg=background)
+        self.frame_fullscreen.pack(side=tk.TOP, anchor=tk.W, pady=(10, 0), padx=(10, 0))
         self.check_fullscreen = tk.Checkbutton(master=self.frame_fullscreen, variable=self.fullscreen, onvalue=1, offvalue=0, bg=background, bd=0, highlightthickness=0, fg="black")
+        self.label_fullscreen = tk.Label(master=self.frame_fullscreen, text="Full screen: ", width=10, anchor=tk.W, bg=background)
+        self.label_fullscreen.pack(side=tk.LEFT, padx=(0, 100))
         self.check_fullscreen.select() if self.fullscreen.get() == 1 else self.check_fullscreen.deselect()
         self.check_fullscreen.pack(side=tk.LEFT)
-        self.label_fullscreen = tk.Label(master=self.frame_fullscreen, text="Fullscreen", bg=background)
-        self.label_fullscreen.pack(side=tk.LEFT)
         # Volume
-        self.frame_volume = tk.Frame(master=self.frame_settings, bg=background)
-        self.frame_volume.pack(side=tk.TOP)
-        self.label_volume = tk.Label(master=self.frame_volume, text="Volume: ", bg=background)
-        self.label_volume.pack(side=tk.LEFT)
+        self.frame_volume = tk.Frame(master=self.frame_settings, width=240, bg=background)
+        self.frame_volume.pack(side=tk.TOP, anchor=tk.W, padx=(10, 0))
+        self.label_volume = tk.Label(master=self.frame_volume, text="Volume: ", width=10, anchor=tk.W, bg=background)
+        self.label_volume.pack(side=tk.LEFT, padx=(0, 20))
         self.scale_volume = tk.Scale(master=self.frame_volume, from_=0, to=100, tickinterval=100, orient=tk.HORIZONTAL, bg=background, bd=0, highlightthickness=0)
         self.scale_volume.set(50)
         self.scale_volume.pack(side=tk.LEFT)
         # Save/Cancel buttons
-        self.button_save_settings = tk.Button(master=self.frame_settings, text="Save", bg=background, width=6, command=lambda: self.save_settings())
-        self.button_save_settings.pack(side=tk.LEFT, anchor=tk.N, padx=(50, 5))
-        self.button_cancel_settings = tk.Button(master=self.frame_settings, text="Cancel", bg=background, command=lambda: self.close_settings())
-        self.button_cancel_settings.pack(side=tk.LEFT, anchor=tk.N, padx=5)
+        self.frame_settings_controls = tk.Frame(master=self.frame_settings, width=240, bg=background)
+        self.frame_settings_controls.pack(side=tk.BOTTOM, pady=(0, 20))
+        self.button_save_settings = tk.Button(master=self.frame_settings_controls, text="Save", bg=background, width=6, command=lambda: self.save_settings())
+        self.button_save_settings.pack(side=tk.LEFT, anchor=tk.CENTER)
+        self.button_cancel_settings = tk.Button(master=self.frame_settings_controls, text="Cancel", bg=background, command=lambda: self.close_settings())
+        self.button_cancel_settings.pack(side=tk.LEFT, anchor=tk.CENTER, padx=10)
 
         # Info
         self.frame_info = tk.Frame(width=240, height=320, bg=background)
@@ -304,18 +315,33 @@ class App:
 
     def start(self):
         # Show the App Menu
-        self.frame_menu.pack(anchor=tk.CENTER, fill=None, expand=False)
+        self.show_menu()
 
         # After it is called once, the update method will be automatically called every delay milliseconds
         self.delay = 1
         self.update()
         self.window.mainloop()
 
+    def show_menu(self):
+        self.frame_info.pack_forget()
+        self.frame_left.pack_forget()
+        self.frame_right.pack_forget()
+        self.frame_settings.pack_forget()
+        print("SHOW MENU")
+        self.frame_menu.pack(anchor=tk.CENTER, fill=None, expand=False)
+
+    def show_info(self):
+            print("SHOW INFO")
+            self.frame_right.pack_forget()
+            self.frame_info.pack(side=tk.RIGHT, fill=None, expand=False)
+
     def show_app(self):
-        print("START POKÉDEX APP")
         self.frame_menu.pack_forget()
-        self.frame_left.pack(side=tk.LEFT, fill=None, expand=False)
-        self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
+        self.frame_info.pack_forget()
+        self.frame_settings.pack_forget()
+        print("START POKÉDEX APP")
+        self.frame_left.pack(side=tk.LEFT, fill=None, expand=False, padx=(0, 1))
+        self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False, padx=(1, 0))
 
     def update(self):
         ret, frame = self.video.get_frame()
@@ -324,7 +350,6 @@ class App:
             self.canvas_video.create_image(120, 120, image=self.photo, anchor=tk.CENTER)  # this way the image is put at the center of the canvas
 
         self.window.after(self.delay, self.update)
-
 
     def load_pokemon(self, pkmn_id):
         try:
@@ -382,27 +407,27 @@ class App:
         s_hp = self.loaded_pokemon.stats["HP"]
         self.entry_hp_text.set(s_hp)
         self.canvas_hp.coords(self.rect_hp, self.x1, self.y1, s_hp / 2, self.y2)
-        self.canvas_hp.itemconfig(self.rect_hp, fill=self.get_color(s_hp))
+        self.canvas_hp.itemconfig(self.rect_hp, fill=self.get_stat_color(s_hp))
         s_atk = self.loaded_pokemon.stats["Attack"]
         self.entry_attack_text.set(s_atk)
         self.canvas_attack.coords(self.rect_hp, self.x1, self.y1, s_atk / 2, self.y2)
-        self.canvas_attack.itemconfig(self.rect_attack, fill=self.get_color(s_atk))
+        self.canvas_attack.itemconfig(self.rect_attack, fill=self.get_stat_color(s_atk))
         s_def = self.loaded_pokemon.stats["Defense"]
         self.entry_defense_text.set(s_def)
         self.canvas_defense.coords(self.rect_hp, self.x1, self.y1, s_def / 2, self.y2)
-        self.canvas_defense.itemconfig(self.rect_defense, fill=self.get_color(s_def))
+        self.canvas_defense.itemconfig(self.rect_defense, fill=self.get_stat_color(s_def))
         s_sp_atk = self.loaded_pokemon.stats["Sp. Attack"]
         self.entry_sp_atk_text.set(s_sp_atk)
         self.canvas_sp_atk.coords(self.rect_hp, self.x1, self.y1, s_sp_atk / 2, self.y2)
-        self.canvas_sp_atk.itemconfig(self.rect_sp_atk, fill=self.get_color(s_sp_atk))
+        self.canvas_sp_atk.itemconfig(self.rect_sp_atk, fill=self.get_stat_color(s_sp_atk))
         s_sp_def = self.loaded_pokemon.stats["Sp. Defense"]
         self.entry_sp_def_text.set(s_sp_def)
         self.canvas_sp_def.coords(self.rect_hp, self.x1, self.y1, s_sp_def / 2, self.y2)
-        self.canvas_sp_def.itemconfig(self.rect_sp_def, fill=self.get_color(s_sp_def))
+        self.canvas_sp_def.itemconfig(self.rect_sp_def, fill=self.get_stat_color(s_sp_def))
         s_speed = self.loaded_pokemon.stats["Speed"]
         self.entry_speed_text.set(s_speed)
         self.canvas_speed.coords(self.rect_hp, self.x1, self.y1, s_speed / 2, self.y2)
-        self.canvas_speed.itemconfig(self.rect_speed, fill=self.get_color(s_speed))
+        self.canvas_speed.itemconfig(self.rect_speed, fill=self.get_stat_color(s_speed))
         print("HP:\t\t\t" + str(s_hp) + "\nAttack:\t\t" + str(s_atk) + "\nDefense:\t" + str(s_def) + "\nSp. Atk:\t" +
               str(s_sp_atk) + "\nSp. Def:\t" + str(s_sp_def) + "\nSpeed:\t\t" + str(s_speed))
 
@@ -463,7 +488,6 @@ class App:
         if self.evo_to_i + 1 == len(evo_to):
             self.button_evo_to_next.config(state=tk.DISABLED)
 
-    # Play cry
     def play_cry(self):
         if 1 <= self.loaded_pokemon.num <= 151 or self.loaded_pokemon.num == 257:
             print("PLAY CRY\nPokémon #" + str(self.loaded_pokemon.num) + " Volume: " + str(self.channel.get_volume()))
@@ -471,18 +495,11 @@ class App:
         else:
             print("No pokémon has been loaded")
 
-    # Show settings
     def show_settings(self):
-        print("SHOW SETTINGS")
         self.scale_volume.set(self.volume * 100)
         self.frame_right.pack_forget()
-        self.frame_settings.pack(side=tk.RIGHT, fill=None, expand=False)
-
-    # Show info
-    def show_info(self):
-        print("SHOW INFO")
-        self.frame_right.pack_forget()
-        self.frame_info.pack(side=tk.RIGHT, fill=None, expand=False)
+        print("SHOW SETTINGS")
+        self.frame_settings.pack(side=tk.RIGHT)
 
     def close_settings(self):
         if self.window.attributes("-fullscreen") == 1:
@@ -510,7 +527,7 @@ class App:
         self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
 
     # get RGB color from stat
-    def get_color(self, stat):
+    def get_stat_color(self, stat):
         if 0 <= stat < 25:
             return "#ff0000"
         elif 25 <= stat < 50:
@@ -526,6 +543,10 @@ class App:
         elif 150 <= stat < 200:
             return "#00ff80"
         return "#00ffff"
+
+    def get_type_color(self, type: str):
+        if type.lower() == "fire":
+            print("ESATTO")
 
     def save_video_snapshot(self):
         # Get a frame from the video source
