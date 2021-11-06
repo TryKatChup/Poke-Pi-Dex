@@ -16,6 +16,7 @@ import pyautogui as pg
 
 app_name = "Poké-Pi-Dex"
 version = "1.0 beta"
+info_text = "App megafiga by Miky & Kary\nDeveloped with ..."
 background = "grey"
 background_dark = "#6a6a6a"
 icons_path = "utilities/icons/"
@@ -55,7 +56,7 @@ class App:
         # Menu
         self.frame_menu = tk.Frame(width=480, height=320, background="yellow")
         self.frame_menu.pack_propagate(0)
-        self.canvas_background = tk.Canvas(master=self.frame_menu, width=480, height=320)
+        self.canvas_background = tk.Canvas(master=self.frame_menu, width=480, height=320, highlightbackground=background, highlightthickness=1)
         self.canvas_background.pack()
         image = Image.open("menu-background.png").resize((480, 320), Image.ANTIALIAS)
         self.image_background = ImageTk.PhotoImage(image)
@@ -70,9 +71,11 @@ class App:
         # self.canvas_background.create_window(240, 80+52, anchor=tk.N, window=self.label_app_version)
         # self.label_app_version.pack(side=tk.TOP, pady=(0, 30))
         self.button_start = tk.Button(master=self.frame_menu, text="Start", width=15, bg=background, activebackground=background, command=lambda: self.show_app())
+        # self.button_start.config(font=("Helvetica", 9, "bold"))
         self.canvas_background.create_window(197, 132+50, anchor=tk.N, window=self.button_start)
         # self.button_start.pack(side=tk.TOP, pady=(0, 10))
         self.button_quit = tk.Button(master=self.frame_menu, text="Quit", width=15, bg=background, activebackground=background, command=lambda: self.quit())
+        # self.button_quit.config(font=("Helvetica", 9, "bold"))
         self.canvas_background.create_window(197, 182+50, anchor=tk.N, window=self.button_quit)
         # self.button_quit.pack(side=tk.TOP)
         self.image_button_info = ImageTk.PhotoImage(Image.open(icons_path + "icon-info.png").resize((25, 25), Image.ANTIALIAS))
@@ -80,6 +83,16 @@ class App:
         self.canvas_background.create_window(322, 232 + 30, anchor=tk.N, window=self.button_info)
 
         # Info
+        self.frame_info = tk.Frame(master=self.frame_menu, width=314, height=240, bg=background)
+        self.frame_info.pack_propagate(0)
+        self.image_button_close_info = ImageTk.PhotoImage(Image.open(icons_path + "icon-close.png").resize((25, 25), Image.ANTIALIAS))
+        self.button_close = tk.Button(master=self.frame_info, image=self.image_button_close_info, bg=background, command=lambda: self.close_info())
+        self.button_close.pack(side=tk.TOP, anchor=tk.E, padx=(0, 2), pady=(2, 0))
+        self.text_info = tk.Text(master=self.frame_info, height=4, bg=background_dark, bd=0, highlightthickness=0)
+        self.text_info.tag_configure('tag-center', justify='center')
+        self.text_info.pack(side=tk.TOP, padx=10, pady=10)
+        self.text_info.insert('end', info_text)
+        self.window_info = None
 
         # Pokédex App
         self.frame_left = tk.Frame(width=239, height=320, bg=background)
@@ -93,9 +106,9 @@ class App:
         self.frame_video_controls = tk.Frame(master=self.frame_left, bg=background)
         self.frame_video_controls.pack(side=tk.TOP, pady=(5, 0))
 
-        self.button_search = tk.Button(master=self.frame_video_controls, text="Search", bg=background, activebackground=background, command=lambda: self.load_pokemon(self.entry_name_text.get()))
+        self.button_search = tk.Button(master=self.frame_video_controls, text="Search", width=10, bg=background, activebackground=background, command=lambda: self.load_pokemon(self.entry_name_text.get()))
         self.button_search.pack(side=tk.LEFT, anchor=tk.CENTER, padx=(0, 10))
-        self.button_screenshot = tk.Button(master=self.frame_video_controls, text="Screenshot", bg=background, activebackground=background, command=lambda: self.save_screenshot())
+        self.button_screenshot = tk.Button(master=self.frame_video_controls, text="Screenshot", width=10, bg=background, activebackground=background, command=lambda: self.save_screenshot())
         self.button_screenshot.pack(side=tk.LEFT, anchor=tk.CENTER)
 
         # Right (pokedex info)
@@ -273,7 +286,7 @@ class App:
         self.frame_settings.pack_propagate(0)
         self.image_button_close_settings = ImageTk.PhotoImage(Image.open(icons_path + "icon-close.png").resize((25, 25), Image.ANTIALIAS))
         self.button_close = tk.Button(master=self.frame_settings, image=self.image_button_close_settings, bg=background, command=lambda: self.close_settings())
-        self.button_close.pack(side=tk.TOP, anchor=tk.E)
+        self.button_close.pack(side=tk.TOP, anchor=tk.E, padx=(0, 2), pady=(2, 0))
         self.label_settings = tk.Label(master=self.frame_settings, text="Settings", bg=background)
         self.label_settings.config(font=("Helvetica", 16, "bold italic"))
         self.label_settings.pack(side=tk.TOP)
@@ -301,22 +314,9 @@ class App:
         self.button_cancel_settings = tk.Button(master=self.frame_settings_controls, text="Cancel", bg=background, command=lambda: self.close_settings())
         self.button_cancel_settings.pack(side=tk.LEFT, anchor=tk.CENTER, padx=10)
 
-        # Info
-        self.frame_info = tk.Frame(width=240, height=320, bg=background)
-        self.frame_info.pack_propagate(0)
-        self.image_button_close_info = ImageTk.PhotoImage(Image.open(icons_path + "icon-close.png").resize((25, 25), Image.ANTIALIAS))
-        self.button_close = tk.Button(master=self.frame_info, image=self.image_button_close_info, bg=background, command=lambda: self.close_info())
-        self.button_close.pack(side=tk.TOP, anchor=tk.E)
-        self.text_info = tk.Text(master=self.frame_info, height=4, bg=background_dark, bd=0, highlightthickness=0)
-        self.text_info.tag_configure('tag-center', justify='center')
-        self.text_info.pack(side=tk.TOP, padx=10, pady=10)
-        self.text_info.insert('end', "App megafiga by Miky & Kary\n", 'tag-center')
-        self.text_info.insert('end', "Developed with ...", 'tag-center')
-
     def start(self):
         # Show the App Menu
         self.show_menu()
-
         # After it is called once, the update method will be automatically called every delay milliseconds
         self.delay = 1
         self.update()
@@ -331,15 +331,27 @@ class App:
         self.frame_menu.pack(anchor=tk.CENTER, fill=None, expand=False)
 
     def show_info(self):
-            print("SHOW INFO")
-            self.frame_right.pack_forget()
-            self.frame_info.pack(side=tk.RIGHT, fill=None, expand=False)
+        print("SHOW INFO")
+        self.window_info = self.canvas_background.create_window(157+40, 40, anchor=tk.N, window=self.frame_info)
+        # self.frame_info.pack(side=tk.RIGHT, fill=None, expand=False)
+        self.button_start.config(state=tk.DISABLED)
+        self.button_quit.config(state=tk.DISABLED)
+        self.button_info.config(state=tk.DISABLED)
+
+    def close_info(self):
+        print("CLOSE INFO")
+        self.canvas_background.delete(self.window_info)
+        # self.frame_info.pack_forget()
+        self.button_start.config(state=tk.NORMAL)
+        self.button_quit.config(state=tk.NORMAL)
+        self.button_info.config(state=tk.NORMAL)
 
     def show_app(self):
         self.frame_menu.pack_forget()
         self.frame_info.pack_forget()
         self.frame_settings.pack_forget()
         print("START POKÉDEX APP")
+        self.update_video = True
         self.frame_left.pack(side=tk.LEFT, fill=None, expand=False, padx=(0, 1))
         self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False, padx=(1, 0))
 
@@ -348,7 +360,6 @@ class App:
         if ret:
             self.photo = ImageTk.PhotoImage(image=Image.fromarray(frame).resize((240, 240), Image.ANTIALIAS))
             self.canvas_video.create_image(120, 120, image=self.photo, anchor=tk.CENTER)  # this way the image is put at the center of the canvas
-
         self.window.after(self.delay, self.update)
 
     def load_pokemon(self, pkmn_id):
@@ -520,11 +531,6 @@ class App:
         self.frame_settings.pack_forget()
         self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
         print("SAVE SETTINGS\nFullscreen: " + str(bool(self.fullscreen.get())) + "\nVolume: " + str(self.volume))
-
-    def close_info(self):
-        print("CLOSE INFO")
-        self.frame_info.pack_forget()
-        self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
 
     # get RGB color from stat
     def get_stat_color(self, stat):
