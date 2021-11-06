@@ -17,6 +17,9 @@ import pyautogui as pg
 app_name = "Poké-Pi-Dex"
 version = "1.0 beta"
 info_text = "App megafiga by Miky & Kary\nDeveloped with ..."
+res_width=480
+res_height=320
+dim_image=(int(res_width/2), int(res_width/2))  # 240x240
 background = "grey"
 background_dark = "#6a6a6a"
 icons_path = "utilities/icons/"
@@ -26,17 +29,16 @@ cries_path = "utilities/cries (ogg)/"
 sprite_size = (40, 40)
 
 class App:
-    def __init__(self, window, window_title, video_source=0):  # se non specificato viene preso il primo input video
+    def __init__(self, window, window_title):  # se non specificato viene preso il primo input video
         self.window = window
         self.window.title(window_title)
         self.window.geometry("480x320")
         self.fullscreen = tk.IntVar()
-        self.fullscreen.set(1)
+        self.fullscreen.set(0)
         self.window.attributes("-fullscreen", self.fullscreen.get())
         image = ImageTk.PhotoImage(file=icons_path + "icon-pokeball.png")
         self.window.tk.call("wm", "iconphoto", self.window._w, image)
         self.window.configure(bg=background)
-        self.video_source = video_source
         
         # Sound init
         pygame.mixer.pre_init(44100, 16, 2, 4096)
@@ -48,17 +50,18 @@ class App:
         self.channel.set_volume(self.volume)
 
         self.pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
-        self.video = vc.VideoCapture(self.video_source)
+        self.update_video = False
+        self.video = None
 
         self.loaded_pokemon = Pokemon(0, "", "", {}, {}, "")
         self.evo_to_i = 0  # index of the multiple evolutions list
 
         # Menu
-        self.frame_menu = tk.Frame(width=480, height=320, background="yellow")
+        self.frame_menu = tk.Frame(width=res_width, height=res_height, background="yellow")
         self.frame_menu.pack_propagate(0)
-        self.canvas_background = tk.Canvas(master=self.frame_menu, width=480, height=320, highlightbackground=background, highlightthickness=1)
+        self.canvas_background = tk.Canvas(master=self.frame_menu, width=res_width, height=res_height, highlightbackground=background, highlightthickness=1)
         self.canvas_background.pack()
-        image = Image.open("menu-background.png").resize((480, 320), Image.ANTIALIAS)
+        image = Image.open("menu-background.png").resize((res_width, res_height), Image.ANTIALIAS)
         self.image_background = ImageTk.PhotoImage(image)
         self.canvas_background.create_image(0, 0, anchor=tk.NW, image=self.image_background)
         '''self.label_app_name = tk.Label(master=self.frame_menu, text=app_name, bg=background)
@@ -91,20 +94,20 @@ class App:
         self.text_info = tk.Text(master=self.frame_info, height=4, bg=background_dark, bd=0, highlightthickness=0)
         self.text_info.tag_configure('tag-center', justify='center')
         self.text_info.pack(side=tk.TOP, padx=10, pady=10)
-        self.text_info.insert('end', info_text)
+        self.text_info.insert('end', info_text, 'tag-center')
         self.window_info = None
 
         # Pokédex App
-        self.frame_left = tk.Frame(width=239, height=320, bg=background)
+        self.frame_left = tk.Frame(width=(res_width/2)-1, height=res_height, bg=background)
         self.frame_left.pack_propagate(0)  # set the frame so that its children cannot control its size
-        self.frame_right = tk.Frame(width=239, height=320, bg=background)
+        self.frame_right = tk.Frame(width=(res_width/2)-1, height=res_height, bg=background)
         self.frame_right.pack_propagate(0)
 
         # Left (video stream)
-        self.canvas_video = tk.Canvas(master=self.frame_left, width=self.video.width/2, height=(self.video.height/2)-20, bg=background, highlightbackground=background, highlightthickness=1)
-        self.canvas_video.pack(side=tk.TOP, pady=(50, 0))
+        self.canvas_video = tk.Canvas(master=self.frame_left, width=res_width/2, height=res_width/2, bg=background, highlightbackground=background, highlightthickness=1)
+        self.canvas_video.pack(side=tk.TOP, pady=((res_height-(res_width/2))/2, 0))
         self.frame_video_controls = tk.Frame(master=self.frame_left, bg=background)
-        self.frame_video_controls.pack(side=tk.TOP, pady=(5, 0))
+        self.frame_video_controls.pack(side=tk.TOP, pady=(2, 0))
 
         self.button_search = tk.Button(master=self.frame_video_controls, text="Search", width=10, bg=background, activebackground=background, command=lambda: self.load_pokemon(self.entry_name_text.get()))
         self.button_search.pack(side=tk.LEFT, anchor=tk.CENTER, padx=(0, 10))
@@ -112,7 +115,7 @@ class App:
         self.button_screenshot.pack(side=tk.LEFT, anchor=tk.CENTER)
 
         # Right (pokedex info)
-        self.frame_top = tk.Frame(master=self.frame_right, width=240, bg=background)
+        self.frame_top = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
         self.frame_top.pack(side=tk.TOP)
 
         # Settings & Back
@@ -209,7 +212,7 @@ class App:
         self.x2 = 50
         self.y2 = 16
         # HP
-        self.frame_hp = tk.Frame(master=self.frame_right, width=240, bg=background)
+        self.frame_hp = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
         self.frame_hp.pack()
         self.label_hp = tk.Label(master=self.frame_hp, width=8, text="HP:", anchor=tk.W, bg=background)
         self.entry_hp_text = tk.StringVar()
@@ -221,7 +224,7 @@ class App:
         self.entry_hp.pack(side=tk.LEFT)
         self.canvas_hp.pack(side=tk.LEFT)
         # Attack
-        self.frame_attack = tk.Frame(master=self.frame_right, width=240, bg=background)
+        self.frame_attack = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
         self.frame_attack.pack()
         self.label_attack = tk.Label(master=self.frame_attack, width=8, text="Attack:", anchor=tk.W, bg=background)  # anchor=tk.W to justify the text
         self.entry_attack_text = tk.StringVar()
@@ -233,7 +236,7 @@ class App:
         self.entry_attack.pack(side=tk.LEFT)
         self.canvas_attack.pack(side=tk.LEFT)
         # Defense
-        self.frame_defense = tk.Frame(master=self.frame_right, width=240, bg=background)
+        self.frame_defense = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
         self.frame_defense.pack()
         self.label_defense = tk.Label(master=self.frame_defense, width=8, text="Defense:", anchor=tk.W, bg=background)
         self.entry_defense_text = tk.StringVar()
@@ -245,7 +248,7 @@ class App:
         self.entry_defense.pack(side=tk.LEFT)
         self.canvas_defense.pack(side=tk.LEFT)
         # Sp. Atk
-        self.frame_sp_atk = tk.Frame(master=self.frame_right, width=240, bg=background)
+        self.frame_sp_atk = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
         self.frame_sp_atk.pack()
         self.label_sp_atk = tk.Label(master=self.frame_sp_atk, width=8, text="Sp. Atk:", anchor=tk.W, bg=background)
         self.entry_sp_atk_text = tk.StringVar()
@@ -257,7 +260,7 @@ class App:
         self.entry_sp_atk.pack(side=tk.LEFT)
         self.canvas_sp_atk.pack(side=tk.LEFT)
         # Sp. Def
-        self.frame_sp_def = tk.Frame(master=self.frame_right, width=240, bg=background)
+        self.frame_sp_def = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
         self.frame_sp_def.pack()
         self.label_sp_def = tk.Label(master=self.frame_sp_def, width=8, text="Sp. Def:", anchor=tk.W, bg=background)
         self.entry_sp_def_text = tk.StringVar()
@@ -269,7 +272,7 @@ class App:
         self.entry_sp_def.pack(side=tk.LEFT)
         self.canvas_sp_def.pack(side=tk.LEFT)
         # Speed
-        self.frame_speed = tk.Frame(master=self.frame_right, width=240, bg=background)
+        self.frame_speed = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
         self.frame_speed.pack()
         self.label_speed = tk.Label(master=self.frame_speed, width=8, text="Speed:", anchor=tk.W, bg=background)
         self.entry_speed_text = tk.StringVar()
@@ -282,7 +285,7 @@ class App:
         self.canvas_speed.pack(side=tk.LEFT)
 
         # Settings
-        self.frame_settings = tk.Frame(width=240, height=320, bg=background)
+        self.frame_settings = tk.Frame(width=res_width/2, height=res_height, bg=background)
         self.frame_settings.pack_propagate(0)
         self.image_button_close_settings = ImageTk.PhotoImage(Image.open(icons_path + "icon-close.png").resize((25, 25), Image.ANTIALIAS))
         self.button_close = tk.Button(master=self.frame_settings, image=self.image_button_close_settings, bg=background, command=lambda: self.close_settings())
@@ -291,7 +294,7 @@ class App:
         self.label_settings.config(font=("Helvetica", 16, "bold italic"))
         self.label_settings.pack(side=tk.TOP)
         # Toggle Fullscreen
-        self.frame_fullscreen = tk.Frame(master=self.frame_settings, width=240, bg=background)
+        self.frame_fullscreen = tk.Frame(master=self.frame_settings, width=res_width/2, bg=background)
         self.frame_fullscreen.pack(side=tk.TOP, anchor=tk.W, pady=(10, 0), padx=(10, 0))
         self.check_fullscreen = tk.Checkbutton(master=self.frame_fullscreen, variable=self.fullscreen, onvalue=1, offvalue=0, bg=background, bd=0, highlightthickness=0, fg="black")
         self.label_fullscreen = tk.Label(master=self.frame_fullscreen, text="Full screen: ", width=10, anchor=tk.W, bg=background)
@@ -299,7 +302,7 @@ class App:
         self.check_fullscreen.select() if self.fullscreen.get() == 1 else self.check_fullscreen.deselect()
         self.check_fullscreen.pack(side=tk.LEFT)
         # Volume
-        self.frame_volume = tk.Frame(master=self.frame_settings, width=240, bg=background)
+        self.frame_volume = tk.Frame(master=self.frame_settings, width=res_width/2, bg=background)
         self.frame_volume.pack(side=tk.TOP, anchor=tk.W, padx=(10, 0))
         self.label_volume = tk.Label(master=self.frame_volume, text="Volume: ", width=10, anchor=tk.W, bg=background)
         self.label_volume.pack(side=tk.LEFT, padx=(0, 20))
@@ -307,7 +310,7 @@ class App:
         self.scale_volume.set(50)
         self.scale_volume.pack(side=tk.LEFT)
         # Save/Cancel buttons
-        self.frame_settings_controls = tk.Frame(master=self.frame_settings, width=240, bg=background)
+        self.frame_settings_controls = tk.Frame(master=self.frame_settings, width=res_width/2, bg=background)
         self.frame_settings_controls.pack(side=tk.BOTTOM, pady=(0, 20))
         self.button_save_settings = tk.Button(master=self.frame_settings_controls, text="Save", bg=background, width=6, command=lambda: self.save_settings())
         self.button_save_settings.pack(side=tk.LEFT, anchor=tk.CENTER)
@@ -317,6 +320,7 @@ class App:
     def start(self):
         # Show the App Menu
         self.show_menu()
+        self.video = vc.VideoCapture()
         # After it is called once, the update method will be automatically called every delay milliseconds
         self.delay = 1
         self.update()
@@ -327,6 +331,9 @@ class App:
         self.frame_left.pack_forget()
         self.frame_right.pack_forget()
         self.frame_settings.pack_forget()
+        if self.video:
+            self.video.close()
+        self.update_video = False
         print("SHOW MENU")
         self.frame_menu.pack(anchor=tk.CENTER, fill=None, expand=False)
 
@@ -351,15 +358,17 @@ class App:
         self.frame_info.pack_forget()
         self.frame_settings.pack_forget()
         print("START POKÉDEX APP")
+        self.video.open()
         self.update_video = True
         self.frame_left.pack(side=tk.LEFT, fill=None, expand=False, padx=(0, 1))
         self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False, padx=(1, 0))
 
     def update(self):
-        ret, frame = self.video.get_frame()
-        if ret:
-            self.photo = ImageTk.PhotoImage(image=Image.fromarray(frame).resize((240, 240), Image.ANTIALIAS))
-            self.canvas_video.create_image(120, 120, image=self.photo, anchor=tk.CENTER)  # this way the image is put at the center of the canvas
+        if self.update_video:
+            ret, frame = self.video.get_frame()
+            if ret:
+                self.photo = ImageTk.PhotoImage(image=Image.fromarray(frame).resize(dim_image, Image.ANTIALIAS))
+                self.canvas_video.create_image(res_width/4, res_width/4, image=self.photo, anchor=tk.CENTER)  # this way the image is put at the center of the canvas
         self.window.after(self.delay, self.update)
 
     def load_pokemon(self, pkmn_id):
