@@ -35,8 +35,9 @@ class VideoCapture:
 
     # Release the video source when the object is destroyed
     def __del__(self):
-        if self.vid.isOpened():
-            self.vid.release()
+        if self.vid:
+            if self.vid.isOpened():
+                self.vid.release()
 
 '''
 # Class which uses picamera API (?)
