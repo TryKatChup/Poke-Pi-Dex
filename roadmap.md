@@ -7,6 +7,7 @@ Miky
 - [x] fixare spazio tra i due frame nella gui
 - [x] aggiungere pulsante per tornare al menu principale al posto di info
 - [x] aggiungere controllo per non far aggiornare il video quando si è nel menù (o non aprire nemmeno la camera)
+- [ ] reset pokémon e caricare i vari pezzi tramite parametro, altrimenti devo riscrivere codice
 - [ ] add toggle to flip image
 - [ ] aggiungere colori diversi o immagini per i vari tipi
 - [ ] refactor stats: usare un unico canvas
