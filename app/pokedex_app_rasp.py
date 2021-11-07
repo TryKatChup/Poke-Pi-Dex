@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import ttk
 from PIL import ImageTk, Image
 from pokemon_repository import PokemonRepository
 from pokemon import Pokemon
@@ -25,8 +26,10 @@ background_dark = "#6a6a6a"
 icons_path = "utilities/icons/"
 thumbnails_path = "utilities/thumbnails/"
 sprites_path = "utilities/sprites/"
+types_path = "utilities/types/"
 cries_path = "utilities/cries (ogg)/"
 sprite_size = (40, 40)
+languages = ["English", "Italian"]
 
 class App:
     def __init__(self, window, window_title):  # se non specificato viene preso il primo input video
@@ -52,6 +55,7 @@ class App:
         self.pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
         self.update_video = False
         self.video = None
+        self.language = "en"
 
         self.loaded_pokemon = Pokemon(0, "", "", {}, {}, "")
         self.evo_to_i = 0  # index of the multiple evolutions list
@@ -200,12 +204,12 @@ class App:
         '''self.entry_types.config(readonlybackground=background_dark, state="readonly")
         self.entry_types.pack(side=tk.LEFT)'''
         self.canvas_types = tk.Canvas(master=self.frame_id_types, width=res_width/2, height=18, bg=background, highlightthickness=0)
-        image = Image.open("utilities/types4/Bug_en.png").resize((50, 18), Image.ANTIALIAS)
+        image = Image.open("utilities/types4/Unknown_en.png").resize((50, 18), Image.ANTIALIAS)
         self.image_type1 = ImageTk.PhotoImage(image)
-        self.canvas_types.create_image(0, 0, anchor=tk.NW, image=self.image_type1)
-        image = Image.open("utilities/types4/Dark_en.png").resize((50, 18), Image.ANTIALIAS)
+        self.canvas_image_type1 = self.canvas_types.create_image(0, 0, anchor=tk.NW, image=self.image_type1)
+        image = Image.open("utilities/types4/Unknown_en.png").resize((50, 18), Image.ANTIALIAS)
         self.image_type2 = ImageTk.PhotoImage(image)
-        self.canvas_types.create_image(60, 0, anchor=tk.NW, image=self.image_type2)
+        self.canvas_image_type2 = self.canvas_types.create_image(52, 0, anchor=tk.NW, image=self.image_type2)
         self.canvas_types.pack(side=tk.LEFT)
 
         # description
@@ -300,33 +304,43 @@ class App:
         self.label_settings = tk.Label(master=self.frame_settings, text="Settings", bg=background)
         self.label_settings.config(font=("Helvetica", 16, "bold italic"))
         self.label_settings.pack(side=tk.TOP)
+        # Language Picker
+        self.frame_language = tk.Frame(master=self.frame_settings, width=res_width/2, bg=background)
+        self.frame_language.pack(side=tk.TOP, anchor=tk.W, pady=(5, 0), padx=(10, 0))
+        self.label_fullscreen = tk.Label(master=self.frame_language, text="Language: ", width=12, anchor=tk.W, bg=background)
+        self.label_fullscreen.pack(side=tk.LEFT, padx=(0, 10))
+        self.combobox_language_text = tk.StringVar()
+        self.combobox_language = ttk.Combobox(master=self.frame_language, state="readonly", textvariable=self.combobox_language_text, values=languages, width=9)
+        self.combobox_language.current(0)
+        self.combobox_language.pack(side=tk.LEFT)
+        self.combobox_language.bind("<<ComboboxSelected>>", lambda e: self.frame_language.focus())  # just for aesthetics
         # Toggle Fullscreen
         self.frame_fullscreen = tk.Frame(master=self.frame_settings, width=res_width/2, bg=background)
-        self.frame_fullscreen.pack(side=tk.TOP, anchor=tk.W, pady=(10, 0), padx=(10, 0))
+        self.frame_fullscreen.pack(side=tk.TOP, anchor=tk.W, pady=(5, 0), padx=(10, 0))
         self.check_fullscreen = tk.Checkbutton(master=self.frame_fullscreen, variable=self.fullscreen, onvalue=1, offvalue=0, bg=background, bd=0, highlightthickness=0, fg="black")
-        self.label_fullscreen = tk.Label(master=self.frame_fullscreen, text="Full screen: ", width=14, anchor=tk.W, bg=background)
+        self.label_fullscreen = tk.Label(master=self.frame_fullscreen, text="Full screen: ", width=12, anchor=tk.W, bg=background)
         self.label_fullscreen.pack(side=tk.LEFT, padx=(0, 90))
         self.check_fullscreen.select() if self.fullscreen.get() == 1 else self.check_fullscreen.deselect()
         self.check_fullscreen.pack(side=tk.LEFT)
-        # Toggle Mirror Image
-        self.frame_mirror = tk.Frame(master=self.frame_settings, width=res_width/2, bg=background)
-        self.frame_mirror.pack(side=tk.TOP, anchor=tk.W, pady=(10, 0), padx=(10, 0))
-        self.check_mirror = tk.Checkbutton(master=self.frame_mirror, onvalue=1, offvalue=0, bg=background, bd=0, highlightthickness=0, fg="black")
-        self.label_mirror = tk.Label(master=self.frame_mirror, text="Mirror image: ", width=14, anchor=tk.W, bg=background)
-        self.label_mirror.pack(side=tk.LEFT, padx=(0, 90))
-        # self.check_mirror.select() if self.fullscreen.get() == 1 else self.check_fullscreen.deselect()
-        self.check_mirror.pack(side=tk.LEFT)
+        # Toggle Flip Image
+        self.frame_flip = tk.Frame(master=self.frame_settings, width=res_width/2, bg=background)
+        self.frame_flip.pack(side=tk.TOP, anchor=tk.W, pady=(5, 0), padx=(10, 0))
+        self.check_flip = tk.Checkbutton(master=self.frame_flip, onvalue=1, offvalue=0, bg=background, bd=0, highlightthickness=0, fg="black")
+        self.label_flip = tk.Label(master=self.frame_flip, text="Flip image: ", width=12, anchor=tk.W, bg=background)
+        self.label_flip.pack(side=tk.LEFT, padx=(0, 90))
+        # self.check_flip.select() if self.fullscreen.get() == 1 else self.check_fullscreen.deselect()
+        self.check_flip.pack(side=tk.LEFT)
         # Volume
         self.frame_volume = tk.Frame(master=self.frame_settings, width=res_width/2, bg=background)
-        self.frame_volume.pack(side=tk.TOP, anchor=tk.W, padx=(10, 0))
-        self.label_volume = tk.Label(master=self.frame_volume, text="Volume: ", width=14, anchor=tk.W, bg=background)
+        self.frame_volume.pack(side=tk.TOP, anchor=tk.W, pady=(5, 0), padx=(10, 0))
+        self.label_volume = tk.Label(master=self.frame_volume, text="Volume: ", width=12, anchor=tk.W, bg=background)
         self.label_volume.pack(side=tk.LEFT, padx=(0, 10))
         self.scale_volume = tk.Scale(master=self.frame_volume, from_=0, to=100, tickinterval=100, orient=tk.HORIZONTAL, bg=background, bd=0, highlightthickness=0)
         self.scale_volume.set(50)
         self.scale_volume.pack(side=tk.LEFT)
         # Save/Cancel buttons
         self.frame_settings_controls = tk.Frame(master=self.frame_settings, width=res_width/2, bg=background)
-        self.frame_settings_controls.pack(side=tk.BOTTOM, pady=(0, 20))
+        self.frame_settings_controls.pack(side=tk.BOTTOM, pady=(0, 10))
         self.button_save_settings = tk.Button(master=self.frame_settings_controls, text="Save", bg=background, width=6, command=lambda: self.save_settings())
         self.button_save_settings.pack(side=tk.LEFT, anchor=tk.CENTER)
         self.button_cancel_settings = tk.Button(master=self.frame_settings_controls, text="Cancel", bg=background, command=lambda: self.close_settings())
@@ -378,6 +392,8 @@ class App:
         self.frame_left.pack(side=tk.LEFT, fill=None, expand=False, padx=(0, 1))
         self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False, padx=(1, 0))
 
+        self.reset_pokemon()
+
     def update(self):
         if self.update_video:
             ret, frame = self.video.get_frame()
@@ -385,6 +401,38 @@ class App:
                 self.photo = ImageTk.PhotoImage(image=Image.fromarray(frame).resize(dim_image, Image.ANTIALIAS))
                 self.canvas_video.create_image(res_width/4, res_width/4, image=self.photo, anchor=tk.CENTER)  # this way the image is put at the center of the canvas
         self.window.after(self.delay, self.update)
+
+    def reset_pokemon(self):
+        print("RESET POKÉMON DETAILS")
+        self.thumbnail = ImageTk.PhotoImage(Image.open(thumbnails_path + "0.png").resize((50, 50), Image.ANTIALIAS))
+        self.label_thumb.configure(image=self.thumbnail)
+        self.entry_name_text.set("")
+        self.entry_id_text.set("")
+        self.image_type1 = ImageTk.PhotoImage(Image.open(types_path + "Empty_en.png").resize((50, 18), Image.ANTIALIAS))
+        self.canvas_types.itemconfig(self.canvas_image_type1, image=self.image_type1)
+        self.image_type2 = ImageTk.PhotoImage(Image.open(types_path + "Empty_en.png").resize((50, 18), Image.ANTIALIAS))
+        self.canvas_types.itemconfig(self.canvas_image_type2, image=self.image_type2)
+        self.text_description.config(state="normal")
+        self.text_description.delete('1.0', tk.END)
+        self.text_description.config(state="disabled")
+        self.entry_hp_text.set("")
+        self.canvas_hp.coords(self.rect_hp, self.x1, self.y1, 5, self.y2)
+        self.canvas_hp.itemconfig(self.rect_hp, fill=self.get_stat_color(0))
+        self.entry_attack_text.set("")
+        self.canvas_attack.coords(self.rect_hp, self.x1, self.y1, 5, self.y2)
+        self.canvas_attack.itemconfig(self.rect_attack, fill=self.get_stat_color(0))
+        self.entry_defense_text.set("")
+        self.canvas_defense.coords(self.rect_hp, self.x1, self.y1, 5, self.y2)
+        self.canvas_defense.itemconfig(self.rect_defense, fill=self.get_stat_color(0))
+        self.entry_sp_atk_text.set("")
+        self.canvas_sp_atk.coords(self.rect_hp, self.x1, self.y1, 5, self.y2)
+        self.canvas_sp_atk.itemconfig(self.rect_sp_atk, fill=self.get_stat_color(0))
+        self.entry_sp_def_text.set("")
+        self.canvas_sp_def.coords(self.rect_hp, self.x1, self.y1, 5, self.y2)
+        self.canvas_sp_def.itemconfig(self.rect_sp_def, fill=self.get_stat_color(0))
+        self.entry_speed_text.set("")
+        self.canvas_speed.coords(self.rect_hp, self.x1, self.y1, 5, self.y2)
+        self.canvas_speed.itemconfig(self.rect_speed, fill=self.get_stat_color(0))
 
     def load_pokemon(self, pkmn_id):
         try:
@@ -417,15 +465,28 @@ class App:
 
     # update ID
     def load_id(self):
-        print("ID:" + str(self.loaded_pokemon.num))
+        print("ID: " + str(self.loaded_pokemon.num))
         self.entry_id_text.set(str(self.loaded_pokemon.num))
 
     # update type(s)
     def load_types(self):
         types = self.loaded_pokemon.types[0]
+        path_image = types_path + self.loaded_pokemon.types[0] + "_" + self.language + ".png"
+        image = Image.open(path_image).resize((50, 18), Image.ANTIALIAS)
+        self.image_type1 = ImageTk.PhotoImage(image)
+        self.canvas_types.itemconfig(self.canvas_image_type1, image=self.image_type1)
         if len(self.loaded_pokemon.types) == 2:
             types += ", " + self.loaded_pokemon.types[1]
-        self.entry_types_text.set(types)
+            path_image = types_path + self.loaded_pokemon.types[1] + "_" + self.language + ".png"
+            image = Image.open(path_image).resize((50, 18), Image.ANTIALIAS)
+            self.image_type2 = ImageTk.PhotoImage(image)
+            self.canvas_types.itemconfig(self.canvas_image_type2, image=self.image_type2)
+        else:
+            path_image = types_path + "Empty_en.png"
+            image = Image.open(path_image).resize((50, 18), Image.ANTIALIAS)
+            self.image_type2 = ImageTk.PhotoImage(image)
+            self.canvas_types.itemconfig(self.canvas_image_type2, image=self.image_type2)
+        # self.entry_types_text.set(types)
         print("Type(s): " + types)
 
     # update description
@@ -531,12 +592,16 @@ class App:
             print("No pokémon has been loaded")
 
     def show_settings(self):
+        self.combobox_language.selection_clear()
         self.scale_volume.set(self.volume * 100)
         self.frame_right.pack_forget()
         print("SHOW SETTINGS")
         self.frame_settings.pack(side=tk.RIGHT)
 
     def close_settings(self):
+        for l in languages:
+            if self.language == l.lower()[0:2]:
+                self.combobox_language_text.set(l)
         if self.window.attributes("-fullscreen") == 1:
             self.check_fullscreen.select()
             self.fullscreen.set(True)
@@ -549,6 +614,9 @@ class App:
         print("CLOSE SETTINGS\nFullscreen: " + str(bool(self.fullscreen.get())) + "\nVolume: " + str(self.volume))
 
     def save_settings(self):
+        self.language = self.combobox_language_text.get().lower()[0:2]
+        self.load_types()
+        self.load_description()
         self.window.attributes("-fullscreen", self.fullscreen.get())
         self.volume = self.scale_volume.get() / 100
         self.channel.set_volume(self.volume)
