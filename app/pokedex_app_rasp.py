@@ -30,7 +30,7 @@ types_path = "utilities/types/"
 cries_path = "utilities/cries (ogg)/"
 sprite_size = (40, 40)
 languages = ["English", "Italian"]
-labels = {
+'''labels = {
     "start": {"en": "Start", "it": "Inizia"},
     "quit": {"en": "Quit", "it": "Esci"},
     "info": {"en": "Application developed by Michele Righi & Karina Chichifoi\nusing ...", "it": "Applicazione sviluppata da Michele Righi e Karina Chichifoi\nutilizzando ..."},
@@ -51,7 +51,7 @@ labels = {
     "flip image": {"en": "Flip image", "it": "Specchia img."},
     "save": {"en": "Save", "it": "Salva"},
     "cancel": {"en": "Cancel", "it": "Annulla"}
-}
+}'''
 
 class App:
     def __init__(self, window, window_title):  # se non specificato viene preso il primo input video
@@ -59,7 +59,7 @@ class App:
         self.window.title(window_title)
         self.window.geometry("480x320")
         self.fullscreen = tk.IntVar()
-        self.fullscreen.set(0)
+        self.fullscreen.set(1)
         self.window.attributes("-fullscreen", self.fullscreen.get())
         image = ImageTk.PhotoImage(file=icons_path + "icon-pokeball.png")
         self.window.tk.call("wm", "iconphoto", self.window._w, image)
@@ -79,7 +79,7 @@ class App:
         self.video = None
         self.language = "en"
 
-        self.loaded_pokemon = Pokemon(0, "", "", {}, {}, "")
+        self.loaded_pokemon = None  # Pokemon(0, "", "", {}, {}, "") # NB: in this case we have to change the if condition in save_settings
         self.evo_to_i = 0  # index of the multiple evolutions list
 
         # Menu
@@ -638,8 +638,9 @@ class App:
 
     def save_settings(self):
         self.language = self.combobox_language_text.get().lower()[0:2]
-        self.load_types()
-        self.load_description()
+        if self.loaded_pokemon:
+            self.load_types()
+            self.load_description()
         self.window.attributes("-fullscreen", self.fullscreen.get())
         self.volume = self.scale_volume.get() / 100
         self.channel.set_volume(self.volume)
