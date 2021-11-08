@@ -201,7 +201,7 @@ class App:
 
         # Name
         self.frame_name = tk.Frame(master=self.frame_right, bg=background)
-        self.frame_name.pack(side=tk.TOP)
+        self.frame_name.pack(side=tk.TOP, pady=(0, 2))
         self.label_name = tk.Label(master=self.frame_name, text="Name: ", bg=background)
         self.label_name.pack(side=tk.LEFT)
         self.entry_name_text = tk.StringVar()
@@ -211,14 +211,13 @@ class App:
 
         # ID and Type(s)
         self.frame_id_types = tk.Frame(master=self.frame_right, bg=background)
-        self.frame_id_types.pack()
+        self.frame_id_types.pack(side=tk.TOP, pady=(0, 2))
         self.label_id = tk.Label(master=self.frame_id_types, text="ID: ", bg=background)
         self.label_id.pack(side=tk.LEFT)
         self.entry_id_text = tk.StringVar()
         self.entry_id = tk.Entry(master=self.frame_id_types, width=3, textvariable=self.entry_id_text, bg=background_dark, bd=0, highlightthickness=0)
         self.entry_id.config(readonlybackground=background_dark, state="readonly")
         self.entry_id.pack(side=tk.LEFT)
-
         self.label_types = tk.Label(master=self.frame_id_types, text="Type(s): ", bg=background)
         self.label_types.pack(side=tk.LEFT)
         self.entry_types_text = tk.StringVar()
@@ -234,10 +233,10 @@ class App:
         self.canvas_image_type2 = self.canvas_types.create_image(52, 0, anchor=tk.NW, image=self.image_type2)
         self.canvas_types.pack(side=tk.LEFT)
 
-        # description
+        # Description
         self.text_description = tk.Text(master=self.frame_right, height=4, bg=background_dark, bd=0, highlightthickness=0)
         self.text_description.config(font=("Helvetica", 9, "normal"), state="disabled")
-        self.text_description.pack()
+        self.text_description.pack(side=tk.TOP,pady=(0, 2))
 
         # Stats coordinates
         self.x1 = 2
@@ -246,7 +245,7 @@ class App:
         self.y2 = 16
         # HP
         self.frame_hp = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
-        self.frame_hp.pack()
+        self.frame_hp.pack(side=tk.TOP)
         self.label_hp = tk.Label(master=self.frame_hp, width=8, text="HP:", anchor=tk.W, bg=background)
         self.entry_hp_text = tk.StringVar()
         self.entry_hp = tk.Entry(master=self.frame_hp, width=3, textvariable=self.entry_hp_text, bd=0, highlightthickness=0)
@@ -258,7 +257,7 @@ class App:
         self.canvas_hp.pack(side=tk.LEFT)
         # Attack
         self.frame_attack = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
-        self.frame_attack.pack()
+        self.frame_attack.pack(side=tk.TOP)
         self.label_attack = tk.Label(master=self.frame_attack, width=8, text="Attack:", anchor=tk.W, bg=background)  # anchor=tk.W to justify the text
         self.entry_attack_text = tk.StringVar()
         self.entry_attack = tk.Entry(master=self.frame_attack, width=3, textvariable=self.entry_attack_text, bd=0, highlightthickness=0)
@@ -270,7 +269,7 @@ class App:
         self.canvas_attack.pack(side=tk.LEFT)
         # Defense
         self.frame_defense = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
-        self.frame_defense.pack()
+        self.frame_defense.pack(side=tk.TOP)
         self.label_defense = tk.Label(master=self.frame_defense, width=8, text="Defense:", anchor=tk.W, bg=background)
         self.entry_defense_text = tk.StringVar()
         self.entry_defense = tk.Entry(master=self.frame_defense, width=3, textvariable=self.entry_defense_text, bd=0, highlightthickness=0)
@@ -282,7 +281,7 @@ class App:
         self.canvas_defense.pack(side=tk.LEFT)
         # Sp. Atk
         self.frame_sp_atk = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
-        self.frame_sp_atk.pack()
+        self.frame_sp_atk.pack(side=tk.TOP)
         self.label_sp_atk = tk.Label(master=self.frame_sp_atk, width=8, text="Sp. Atk:", anchor=tk.W, bg=background)
         self.entry_sp_atk_text = tk.StringVar()
         self.entry_sp_atk = tk.Entry(master=self.frame_sp_atk, width=3, textvariable=self.entry_sp_atk_text, bd=0, highlightthickness=0)
@@ -294,7 +293,7 @@ class App:
         self.canvas_sp_atk.pack(side=tk.LEFT)
         # Sp. Def
         self.frame_sp_def = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
-        self.frame_sp_def.pack()
+        self.frame_sp_def.pack(side=tk.TOP)
         self.label_sp_def = tk.Label(master=self.frame_sp_def, width=8, text="Sp. Def:", anchor=tk.W, bg=background)
         self.entry_sp_def_text = tk.StringVar()
         self.entry_sp_def = tk.Entry(master=self.frame_sp_def, width=3, textvariable=self.entry_sp_def_text, bd=0, highlightthickness=0)
@@ -306,7 +305,7 @@ class App:
         self.canvas_sp_def.pack(side=tk.LEFT)
         # Speed
         self.frame_speed = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
-        self.frame_speed.pack()
+        self.frame_speed.pack(side=tk.TOP)
         self.label_speed = tk.Label(master=self.frame_speed, width=8, text="Speed:", anchor=tk.W, bg=background)
         self.entry_speed_text = tk.StringVar()
         self.entry_speed = tk.Entry(master=self.frame_speed, width=3, textvariable=self.entry_speed_text, bd=0, highlightthickness=0)
