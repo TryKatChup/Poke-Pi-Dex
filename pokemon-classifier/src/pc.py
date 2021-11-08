@@ -225,3 +225,10 @@ def top_k_predictions(model, img, label_encoder, k=5):
     top_k_labels = label_encoder.inverse_transform(top_k_idx)
 
     return list(zip(top_k_labels, top_k_scores))
+
+
+def get_label_encoder():
+    encoder = LabelEncoder()
+    encoder.classes_ = np.load('./classes.npy')
+    return encoder
+
