@@ -150,7 +150,7 @@ class App:
         self.button_egg.pack(side=tk.LEFT, anchor=tk.N)
         # Settings & Back frame
         self.frame_settings_back = tk.Frame(master=self.frame_top, bg=background)
-        self.frame_settings_back.pack(side=tk.RIGHT, anchor=tk.N, padx=(16, 0))
+        self.frame_settings_back.pack(side=tk.RIGHT, anchor=tk.N, padx=(10, 2), pady=(1, 0))
         self.image_button_settings = ImageTk.PhotoImage(Image.open(icons_path + "icon-settings.png").resize((25, 25), Image.ANTIALIAS))
         self.button_settings = tk.Button(master=self.frame_settings_back, image=self.image_button_settings, bg=background, command=lambda: self.show_settings())
         self.button_settings.pack(side=tk.TOP, anchor=tk.E)
