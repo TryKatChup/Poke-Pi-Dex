@@ -30,6 +30,28 @@ types_path = "utilities/types/"
 cries_path = "utilities/cries (ogg)/"
 sprite_size = (40, 40)
 languages = ["English", "Italian"]
+labels = {
+    "start": {"en": "Start", "it": "Inizia"},
+    "quit": {"en": "Quit", "it": "Esci"},
+    "info": {"en": "Application developed by Michele Righi & Karina Chichifoi\nusing ...", "it": "Applicazione sviluppata da Michele Righi e Karina Chichifoi\nutilizzando ..."},
+    "search": {"en": "Search", "it": "Cerca"},
+    "screenshot": {"en": "Screenshot", "it": "Schermata"},
+    "cry": {"en": "Cry", "it": "Verso"},
+    "name": {"en": "Name", "it": "Nome"},
+    "types": {"en": "Type(s)", "it": "Tipo/i"},
+    "hp": {"en": "HP", "it": "PS"},
+    "attack": {"en": "Attack", "it": "Attacco"},
+    "defense": {"en": "Defense", "it": "Difesa"},
+    "sp. atk": {"en": "Sp. Atk", "it": "Att. Sp."},
+    "sp. def": {"en": "Sp. Def", "it": "Dif. Sp."},
+    "speed": {"en": "Speed", "it": "Veloc."},
+    "settings": {"en": "Settings", "it": "Impostazioni"},
+    "language": {"en": "Language", "it": "Lingua"},
+    "full screen": {"en": "Full screen", "it": "Schermo int."},
+    "flip image": {"en": "Flip image", "it": "Specchia img."},
+    "save": {"en": "Save", "it": "Salva"},
+    "cancel": {"en": "Cancel", "it": "Annulla"}
+}
 
 class App:
     def __init__(self, window, window_title):  # se non specificato viene preso il primo input video
@@ -204,10 +226,10 @@ class App:
         '''self.entry_types.config(readonlybackground=background_dark, state="readonly")
         self.entry_types.pack(side=tk.LEFT)'''
         self.canvas_types = tk.Canvas(master=self.frame_id_types, width=res_width/2, height=18, bg=background, highlightthickness=0)
-        image = Image.open("utilities/types4/Unknown_en.png").resize((50, 18), Image.ANTIALIAS)
+        image = Image.open(types_path + "Unknown_en.png").resize((50, 18), Image.ANTIALIAS)
         self.image_type1 = ImageTk.PhotoImage(image)
         self.canvas_image_type1 = self.canvas_types.create_image(0, 0, anchor=tk.NW, image=self.image_type1)
-        image = Image.open("utilities/types4/Unknown_en.png").resize((50, 18), Image.ANTIALIAS)
+        image = Image.open(types_path + "/Unknown_en.png").resize((50, 18), Image.ANTIALIAS)
         self.image_type2 = ImageTk.PhotoImage(image)
         self.canvas_image_type2 = self.canvas_types.create_image(52, 0, anchor=tk.NW, image=self.image_type2)
         self.canvas_types.pack(side=tk.LEFT)
@@ -398,6 +420,7 @@ class App:
         if self.update_video:
             ret, frame = self.video.get_frame()
             if ret:
+                # .transpose(Image.FLIP_LEFT_RIGHT) to flip the image
                 self.photo = ImageTk.PhotoImage(image=Image.fromarray(frame).resize(dim_image, Image.ANTIALIAS))
                 self.canvas_video.create_image(res_width/4, res_width/4, image=self.photo, anchor=tk.CENTER)  # this way the image is put at the center of the canvas
         self.window.after(self.delay, self.update)
