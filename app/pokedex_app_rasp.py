@@ -427,6 +427,7 @@ class App:
 
     def reset_pokemon(self):
         print("RESET POKÉMON DETAILS")
+        self.loaded_pokemon = None
         self.thumbnail = ImageTk.PhotoImage(Image.open(thumbnails_path + "0.png").resize((50, 50), Image.ANTIALIAS))
         self.label_thumb.configure(image=self.thumbnail)
         self.entry_name_text.set("")
@@ -456,6 +457,10 @@ class App:
         self.entry_speed_text.set("")
         self.canvas_speed.coords(self.rect_hp, self.x1, self.y1, 5, self.y2)
         self.canvas_speed.itemconfig(self.rect_speed, fill=self.get_stat_color(0))
+        self.image_evo_to = ImageTk.PhotoImage(Image.open(sprites_path + "0.png").resize((40, 40), Image.ANTIALIAS))
+        self.label_evo_to.configure(image=self.image_evo_to)
+        self.image_evo_from = ImageTk.PhotoImage(Image.open(sprites_path + "0.png").resize((40, 40), Image.ANTIALIAS))
+        self.label_evo_from.configure(image=self.image_evo_from)
 
     def load_pokemon(self, pkmn_id):
         try:
@@ -472,6 +477,7 @@ class App:
             self.load_evolutions()
             self.load_cry()
         except KeyError:
+            self.loaded_pokemon = None
             print("Pokémon not found.")
 
     # update image
@@ -608,7 +614,7 @@ class App:
             self.button_evo_to_next.config(state=tk.DISABLED)
 
     def play_cry(self):
-        if 1 <= self.loaded_pokemon.num <= 151 or self.loaded_pokemon.num == 257:
+        if self.loaded_pokemon:
             print("PLAY CRY\nPokémon #" + str(self.loaded_pokemon.num) + " Volume: " + str(self.channel.get_volume()))
             self.channel.play(self.cry)
         else:
