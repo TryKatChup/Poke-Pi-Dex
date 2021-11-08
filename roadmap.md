@@ -11,17 +11,18 @@ Miky
 - [x] aggiungere colori diversi o immagini per i vari tipi
 - [x] scelta della lingua
 - [ ] aggiungere descrizioni in lingua differente (IT)
-- [ ] impostazioni persistenti
-- [ ] add toggle to flip image
-- [ ] refactor stats: usare un unico canvas
-- [ ] finire doc progetto e aggiungere parti nella relazione
-- [ ] modello case 3D
-- [ ] extra con piccole sprite che girano per lo schermo tipo i quadrati
-- [ ] usare bottoni
-- [ ] usare analogico
+- [ ] registrare per ciascuna descrizione in Inglese la traccia audio letta da un bot (https://www.youtube.com/watch?v=rjlOJjX-6Ug)
 - [ ] opzione nelle impostazioni per abilitare la lettura automatica della descrizione del poémon quando viene riconosciuto
 - [ ] bottone nella descrizione per riprodurre la voce che legge la descrizione
+- [ ] impostazioni persistenti
+- [ ] finire doc progetto e aggiungere parti nella relazione
 - [ ] aggiungere sezione con ringraziamenti e crediti
+- [ ] modello case 3D
+- [ ] usare bottoni
+- [ ] usare analogico
+- [ ] implementare toggle per flip immagine
+- [ ] refactor stats: usare un unico canvas
+- [ ] extra con piccole sprite che girano per lo schermo tipo i quadrati
 - [ ] easter egg per Umbreon
 
 Entrambi:
