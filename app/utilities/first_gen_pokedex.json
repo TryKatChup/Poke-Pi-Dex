@@ -1217,7 +1217,7 @@
     },
 	"description": {
 		"en": "Meowth withdraws its sharp claws into its paws to slinkily sneak about without making any incriminating footsteps. For some reason, this Pokémon loves shiny coins that glitter with light.",
-		"it": ""
+		"it": "Meowth, il Pokémon Graffimiao. Quando vede oggetti rotondi si mette a giocare e dimentica tutto il resto."
 	}
   },
   {
@@ -1240,7 +1240,7 @@
     },
 	"description": {
 		"en": "Persian has six bold whiskers that give it a look of toughness. The whiskers sense air movements to determine what is in the Pokémon's surrounding vicinity. It becomes docile if grabbed by the whiskers.",
-		"it": ""
+		"it": "Persian, il Pokémon Nobilgatto. È la fase evolutiva di Meowth. Sonda l'ambiente circostante con i suoi sei baffi che captano gli spostamenti dell'aria."
 	}
   },
   {
@@ -1263,7 +1263,7 @@
     },
 	"description": {
 		"en": "If it uses its mysterious power, Psyduck can't remember having done so. It apparently can't form a memory of such an event because it goes into an altered state that is much like deep sleep.",
-		"it": ""
+		"it": "Psyduck, il Pokémon Papero. Usa poteri misteriosi, che scatenano onde cerebrali rilevabili apparentemente soltanto su persone addormentate. Questa scoperta ha causato reazioni contrastanti tra gli studiosi."
 	}
   },
   {
@@ -1286,7 +1286,7 @@
     },
 	"description": {
 		"en": "Golduck is the fastest swimmer among all Pokémon. It swims effortlessly, even in a rough, stormy sea. It sometimes rescues people from wrecked ships floundering in high seas.",
-		"it": ""
+		"it": "Golduck, il Pokémon Papero. È la forma evolutiva di Psyduck. Le zampe anteriori e posteriori a pinna dotate di membrana interdigitale e il corpo longilineo di Golduck gli conferiscono una velocità incredibile."
 	}
   },
   {
@@ -1309,7 +1309,7 @@
     },
 	"description": {
 		"en": "When Mankey starts shaking and its nasal breathing turns rough, it's a sure sign that it is becoming angry. However, because it goes into a towering rage almost instantly, it is impossible for anyone to flee its wrath.",
-		"it": ""
+		"it": "Mankey, il Pokémon Suinpanzé. Quando inizia a tremare e la sua respirazione nasale diventa pesante significa che si sta infuriando. Tuttavia, a causa dei suoi repentini attacchi d'ira, è impossibile per chiunque sfuggire alla sua furia."
 	}
   },
   {
@@ -1332,7 +1332,7 @@
     },
 	"description": {
 		"en": "When Primeape becomes furious, its blood circulation is boosted. In turn, its muscles are made even stronger. However, it also becomes much less intelligent at the same time.",
-		"it": ""
+		"it": "Primeape, il Pokémon Suinpanzé. È la forma evolutiva di Mankey. Quando s'infuria, la circolazione sanguigna si fa intensa, irrobustendo i suoi muscoli. Allo stesso tempo, tuttavia, perde anche la sua lucidità e intelligenza."
 	}
   },
   {
@@ -1355,7 +1355,7 @@
     },
 	"description": {
 		"en": "Growlithe has a superb sense of smell. Once it smells anything, this Pokémon won't forget the scent, no matter what. It uses its advanced olfactory sense to determine the emotions of other living things.",
-		"it": ""
+		"it": "Growlithe, il Pokémon Cagnolino. Ha un senso dell'olfatto molto sviluppato: una volta annusato qualcosa non scorda più quell'odore. Sfrutta questa dote per determinare le emozioni delle altre creature."
 	}
   },
   {
@@ -1377,8 +1377,8 @@
       "Speed": 95
     },
 	"description": {
-		"en": "Arcanine is known for its high speed. It is said to be capable of running over 6,200 miles in a single day and night. The fire that blazes wildly within this Pokémon's body is its source of power.",
-		"it": ""
+		"en": "Arcanine is known for its high speed. It is said to be capable of running over 10.000 km in a single day and night. The fire that blazes wildly within this Pokémon's body is its source of power.",
+		"it": "Arcanine, il Pokémon Leggenda. È la forma evolutiva di Growlithe. È noto per la sua velocità. Si dice sia in grado di percorrere 10.000 km in un giorno e una notte. Il fuoco che arde indomabile nel suo corpo è fonte di forza."
 	}
   },
   {
@@ -1401,7 +1401,7 @@
     },
 	"description": {
 		"en": "Poliwag has a very thin skin. It is possible to see the Pokémon's spiral innards right through the skin. Despite its thinness, however, the skin is also very flexible. Even sharp fangs bounce right off it.",
-		"it": ""
+		"it": "Poliwag, il Pokémon Girino. Ha una pelle molto sensibile, attraverso cui è possibile intravedere i suoi organi interni spiraliformi. Nonostante il suo esiguo spessore, la pelle è molto elastica. Anche le zanne più affilate non riescono a lacerarla."
 	}
   },
   {
@@ -1424,7 +1424,7 @@
     },
 	"description": {
 		"en": "The surface of Poliwhirl's body is always wet and slick with a slimy fluid. Because of this slippery covering, it can easily slip and slide out of the clutches of any enemy in battle.",
-		"it": ""
+		"it": "Poliwhirl, il Pokémon Girino. È la forma evolutiva di Poliwag. La superficie del suo corpo è sempre umida e unta di fluido oleoso. Grazie a questa pellicola viscida, nella lotta riesce a sfuggire agilmente alle grinfie del nemico."
 	}
   },
   {
@@ -1448,7 +1448,7 @@
     },
 	"description": {
 		"en": "Poliwrath's highly developed, brawny muscles never grow fatigued, however much it exercises. It is so tirelessly strong, this Pokémon can swim back and forth across the ocean without effort.",
-		"it": ""
+		"it": "Poliwrath, il Pokémon Girino. È la forma evolutiva di Poliwhirl. È dotato di muscoli molto sviluppati e robusti. Per quanto si alleni, non si stanca mai. Questo Pokémon è così infaticabile e forte che riesce ad attraversare a nuoto interi oceani."
 	}
   },
   {
@@ -1471,7 +1471,7 @@
     },
 	"description": {
 		"en": "Abra needs to sleep for eighteen hours a day. If it doesn't, this Pokémon loses its ability to use telekinetic powers. If it is attacked, Abra escapes using Teleport while it is still sleeping.",
-		"it": ""
+		"it": "Abra, il Pokémon Psico. Dorme per 18 ore al giorno, ma riesce a captare la presenza dei nemici anche durante il sonno. In questo caso il Pokémon si teletrasporta immediatamente al sicuro."
 	}
   },
   {
@@ -1494,7 +1494,7 @@
     },
 	"description": {
 		"en": "Kadabra holds a silver spoon in its hand. The spoon is used to amplify the alpha waves in its brain. Without the spoon, the Pokémon is said to be limited to half the usual amount of its telekinetic powers.",
-		"it": ""
+		"it": "Kadabra, il Pokémon Psico. È la forma evolutiva di Abra. Emette particolari onde alfa che causano mal di testa a chi si trova nelle vicinanze."
 	}
   },
   {
@@ -1517,7 +1517,7 @@
     },
 	"description": {
 		"en": "Alakazam's brain continually grows, infinitely multiplying brain cells. This amazing brain gives this Pokémon an astoundingly high IQ of 5,000. It has a thorough memory of everything that has occurred in the world.",
-		"it": ""
+		"it": "Alakazam, il Pokémon Psico. È la forma evolutiva di Kadabra. Il cervello di Alakazam cresce in continuazione rendendo la sua testa troppo pesante per il collo. Pertanto è costretto a usare i suoi poteri psicocinetici per sostenerla."
 	}
   },
   {
@@ -1540,7 +1540,7 @@
     },
 	"description": {
 		"en": "Machop exercises by hefting around a Graveler as if it were a barbell. There are some Machop that travel the world in a quest to master all kinds of martial arts.",
-		"it": ""
+		"it": "Machop, il Pokémon Megaforza. I suoi particolari muscoli non si infiammano mai, nemmeno in caso di esercizio eccessivo. Questo Pokémon ha la forza sufficiente per scagliare lontano un centinaio di uomini."
 	}
   },
   {
@@ -1563,7 +1563,7 @@
     },
 	"description": {
 		"en": "Machoke undertakes bodybuilding every day even as it helps people with tough, physically demanding labor. On its days off, this Pokémon heads to the fields and mountains to exercise and train.",
-		"it": ""
+		"it": "Machoke, il Pokémon Megaforza. È la forma evolutiva di Machop. I suoi muscoli perfettamente tonici possiedono la durezza dell'acciaio. Questo Pokémon è così forte da riuscire a sollevare un lottatore di sumo con un dito."
 	}
   },
   {
@@ -1586,7 +1586,7 @@
     },
 	"description": {
 		"en": "Machamp is known as the Pokémon that has mastered every kind of martial arts. If it grabs hold of the foe with its four arms, the battle is all but over. The hapless foe is thrown far over the horizon.",
-		"it": ""
+		"it": "Machamp, il Pokémon Megaforza. È la forma evolutiva di Machoke. È noto per la sua conoscenza di ogni tipo di arti marziali. Può sferrare un migliaio di pugni in pochi secondi e con una sola mano può muovere persino una montagna"
 	}
   },
   {
@@ -1610,7 +1610,7 @@
     },
 	"description": {
 		"en": "Bellsprout's thin and flexible body lets it bend and sway to avoid any attack, however strong it may be. From its mouth, this Pokémon spits a corrosive fluid that melts even iron.",
-		"it": ""
+		"it": "Bellsprout, il Pokémon Fiore. Il suo corpo esile e flessibile gli consente di piegarsi e oscillare per evitare ogni attacco, anche violento. Dalla bocca sputa un fluido corrosivo in grado di sciogliere anche il ferro."
 	}
   },
   {
@@ -1634,7 +1634,7 @@
     },
 	"description": {
 		"en": "Weepinbell has a large hook on its rear end. At night, the Pokémon hooks on to a tree branch and goes to sleep. If it moves around in its sleep, it may wake up to find itself on the ground.",
-		"it": ""
+		"it": "Weepinbell, il Pokémon Moschivoro. È la forma evolutiva di Bellsprout. è dotato di un grande uncino posteriore. Di notte lo usa per appendersi a un ramo e mettersi a dormire. Talvolta, agitandosi nel sonno, si sveglia al suolo."
 	}
   },
   {
@@ -1658,7 +1658,7 @@
     },
 	"description": {
 		"en": "Victreebel has a long vine that extends from its head. This vine is waved and flicked about as if it were an animal to attract prey. When an unsuspecting prey draws near, this Pokémon swallows it whole.",
-		"it": ""
+		"it": "Victreebel, il Pokémon Moschivoro. È la forma evolutiva di Weepinbell. È dotato di una lunga liana che parte dalla testa. Il Pokémon la sventola e la agita come fosse un'esca per attirare la preda. Quando la preda ignara si avvicina, il Pokémon la inghiotte in un sol boccone."
 	}
   },
   {
