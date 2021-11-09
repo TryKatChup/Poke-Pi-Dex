@@ -519,10 +519,10 @@ class App:
 
     # update description
     def load_description(self):
-        print("Description: " + self.loaded_pokemon.description)
+        print("Description: " + self.loaded_pokemon.description[self.language])
         self.text_description.config(state="normal")
         self.text_description.delete('1.0', tk.END)
-        self.text_description.insert('1.0', self.loaded_pokemon.description)
+        self.text_description.insert('1.0', self.loaded_pokemon.description[self.language])
         self.text_description.config(state="disabled")
 
     # update stats
