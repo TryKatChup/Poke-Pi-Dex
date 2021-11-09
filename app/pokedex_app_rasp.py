@@ -234,7 +234,7 @@ class App:
         self.canvas_types.pack(side=tk.LEFT)
 
         # Description
-        self.text_description = tk.Text(master=self.frame_right, height=4, bg=background_dark, bd=0, highlightthickness=0)
+        self.text_description = tk.Text(master=self.frame_right, height=5, bg=background_dark, bd=0, highlightthickness=0)
         self.text_description.config(font=("Helvetica", 9, "normal"), state="disabled")
         self.text_description.pack(side=tk.TOP,pady=(0, 2))
 
