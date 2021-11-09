@@ -1682,7 +1682,7 @@
     },
 	"description": {
 		"en": "Tentacool absorbs sunlight and refracts it using water inside its body to convert it into beam energy. This Pokémon shoots beams from the small round organ above its eyes.",
-		"it": ""
+		"it": "Tentacool, il Pokémon Medusa. Il suo corpo è costituito quasi completamente da acqua. Non essendo molto abile a nuotare, va in cerca di prede fluttuando in acque poco profonde."
 	}
   },
   {
@@ -1706,7 +1706,7 @@
     },
 	"description": {
 		"en": "Tentacruel has tentacles that can be freely elongated and shortened at will. It ensnares prey with its tentacles and weakens the prey by dosing it with a harsh toxin. It can catch up to 80 prey at the same time.",
-		"it": ""
+		"it": "Tentacruel, il Pokémon Medusa. È la forma evolutiva di Tentacool. Ha due grandi sfere rosse sulla testa. Le sfere brillano prima di emettere potenti ultrasuoni. Gli attacchi di questo Pokémon creano onde impetuose nei dintorni."
 	}
   },
   {
@@ -1730,7 +1730,7 @@
     },
 	"description": {
 		"en": "When Geodude sleeps deeply, it buries itself halfway into the ground. It will not awaken even if hikers step on it unwittingly. In the morning, this Pokémon rolls downhill in search of food.",
-		"it": ""
+		"it": "Geodude, il Pokémon Roccia. Lo si può trovare vicino ai sentieri di montagna. Bisogna fare attenzione a non calpestarlo per sbaglio, altrimenti diventa furioso."
 	}
   },
   {
@@ -1754,7 +1754,7 @@
     },
 	"description": {
 		"en": "Rocks are Graveler's favorite food. This Pokémon will climb a mountain from the base to the summit, crunchingly feasting on rocks all the while. Upon reaching the peak, it rolls back down to the bottom.",
-		"it": ""
+		"it": "Graveler, il Pokémon Roccia. È la forma evolutiva di Geodude. Si ciba di rocce e pare preferisca quelle ricoperte di muschio. Spesso viene visto rotolare giù per i sentieri di montagna, travolgendo tutto ciò che incontra."
 	}
   },
   {
@@ -1778,7 +1778,7 @@
     },
 	"description": {
 		"en": "Golem is known for rolling down from mountains. To prevent them from rolling into the homes of people downhill, grooves have been dug into the sides of mountains to serve as guideways for diverting this Pokémon's course.",
-		"it": ""
+		"it": "Golem, il Pokémon Megatone. È la forma evolutiva di Graveler. Vivono in alta montagna. In caso di terremoto, questi Pokémon rotolano giù per i monti in massa e si fermano a valle."
 	}
   },
   {
@@ -1801,7 +1801,7 @@
     },
 	"description": {
 		"en": "Ponyta is very weak at birth. It can barely stand up. This Pokémon becomes stronger by stumbling and falling to keep up with its parent.",
-		"it": ""
+		"it": "Ponyta, il Pokémon Cavalfuoco. È molto debole alla nascita e riesce a malapena a reggersi in piedi. Poi si rinforza a furia di inciampare e cadere, cercando di tenere il passo dei suoi genitori."
 	}
   },
   {
@@ -1823,8 +1823,8 @@
       "Speed": 105
     },
 	"description": {
-		"en": "Rapidash usually can be seen casually cantering in the fields and plains. However, when this Pokémon turns serious, its fiery manes flare and blaze as it gallops its way up to 150 mph.",
-		"it": ""
+		"en": "Rapidash usually can be seen casually cantering in the fields and plains. However, when this Pokémon turns serious, its fiery manes flare and blaze as it gallops its way up to 240 km/h.",
+		"it": "Rapidash, il Pokémon Cavalfuoco. È la forma evolutiva di Ponyta. Si vede comunemente galoppare in campagne e pianure. Quando si lancia a tutta velocità la sua fiera criniera brilla e arde mentre galoppa fino a 240 km/h."
 	}
   },
   {
@@ -1848,7 +1848,7 @@
     },
 	"description": {
 		"en": "Slowpoke uses its tail to catch prey by dipping it in water at the side of a river. However, this Pokémon often forgets what it's doing and often spends entire days just loafing at water's edge.",
-		"it": ""
+		"it": "Slowpoke, il Pokémon Ronfone. Usa la coda per pescare la preda, immergendola in acqua dalle rive dei fiumi. Tuttavia, spesso dimentica cosa stava facendo e trascorre giorni interi a ciondolare vicino ai corsi d'acqua."
 	}
   },
   {
@@ -1872,7 +1872,7 @@
     },
 	"description": {
 		"en": "Slowbro's tail has a Shellder firmly attached with a bite. As a result, the tail can't be used for fishing anymore. This causes Slowbro to grudgingly swim and catch prey instead.",
-		"it": ""
+		"it": "Slowbro, il Pokémon . È la forma evolutiva di Slowpoke. Ha uno Shellder saldamente attaccato alla coda, che quindi non può più essere usata per pescare. Così Slowbro può essere visto nuotare di malavoglia per catturare una preda."
 	}
   },
   {
@@ -1896,7 +1896,7 @@
     },
 	"description": {
 		"en": "Magnemite floats in the air by emitting electromagnetic waves from the units at its sides. These waves block gravity. This Pokémon becomes incapable of flight if its internal electrical supply is depleted.",
-		"it": ""
+		"it": "Magnemite, il Pokémon Calamita. Si attacca alle linee elettriche per caricarsi di energia. Può capitare che esaurisca la sua riserva di elettricità e di cadere al suolo. Se gli viene data una batteria, torna a muoversi."
 	}
   },
   {
@@ -1920,7 +1920,7 @@
     },
 	"description": {
 		"en": "Magneton emits a powerful magnetic force that is fatal to electronics and precision instruments. Because of this, it is said that some towns warn people to keep this Pokémon inside a Poké Ball.",
-		"it": ""
+		"it": "Magneton, il Pokémon Calamita. È la forma evolutiva di Magnemite. Emette una potente carica magnetica fatale per tutte le apparecchiature meccaniche. Nelle città, le sirene avvertono la popolazione di grandi invasioni di questi Pokémon."
 	}
   },
   {
@@ -1944,7 +1944,7 @@
     },
 	"description": {
 		"en": "Farfetch'd is always seen with a stalk from a plant of some sort. Apparently, there are good stalks and bad stalks. This Pokémon has been known to fight with others over stalks.",
-		"it": ""
+		"it": "Farfetch'd, il Pokémon Selvanatra. Ha sempre con sé il gambo di qualche pianta. Pare che alcuni gambi siano migliori di altri. Spesso lotta con altri Pokémon per avere i gambi migliori."
 	}
   },
   {
@@ -1968,7 +1968,7 @@
     },
 	"description": {
 		"en": "Doduo's two heads contain completely identical brains. A scientific study reported that on rare occasions, there will be examples of this Pokémon possessing different sets of brains.",
-		"it": ""
+		"it": "Doduo, il Pokémon Biuccello. Le due teste di Doduo non dormono mai nello stesso momento, in modo che una sia sempre vigile per difendersi dai nemici, mentre l'altra può riposarsi tranquilla."
 	}
   },
   {
@@ -1992,7 +1992,7 @@
     },
 	"description": {
 		"en": "Apparently, the heads aren't the only parts of the body that Dodrio has three of. It has three sets of hearts and lungs as well, so it is capable of running long distances without rest.",
-		"it": ""
+		"it": "Dodrio, il Pokémon Triuccello. È la forma evolutiva di Doduo. Se le tre teste di Dodrio guardano in tre direzioni diverse, significa che il Pokémon è vigile. In questo stato il Pokémon non va avvicinato, poiché potrebbe decidere di attaccare."
 	}
   },
   {
@@ -2015,7 +2015,7 @@
     },
 	"description": {
 		"en": "Seel hunts for prey in the frigid sea underneath sheets of ice. When it needs to breathe, it punches a hole through the ice with the sharply protruding section of its head.",
-		"it": ""
+		"it": "Seel, il Pokémon Otaria. Caccia le prede nel mare gelido sotto le lastre di ghiaccio. Per respirare apre un foro nel ghiaccio usando la protuberanza appuntita sulla sommità del capo."
 	}
   },
   {
@@ -2039,7 +2039,7 @@
     },
 	"description": {
 		"en": "Dewgong loves to snooze on bitterly cold ice. The sight of this Pokémon sleeping on a glacier was mistakenly thought to be a mermaid by a mariner long ago.",
-		"it": ""
+		"it": "Dewgong, il Pokémon Otaria. È la forma evolutiva di Seel. Adora riposare su una gelida lastra di ghiaccio. In passato i marinai confondevano il profilo di questo Pokémon addormentato sulla superficie gelata con una sirena."
 	}
   },
   {
@@ -2062,7 +2062,7 @@
     },
 	"description": {
 		"en": "Grimer emerged from the sludge that settled on a polluted seabed. This Pokémon loves anything filthy. It constantly leaks a horribly germ-infested fluid from all over its body.",
-		"it": ""
+		"it": "Grimer, il Pokémon Melma. Il suo corpo fangoso e gommoso può passare attraverso ogni apertura, anche la più angusta. Si intrufola dentro le condotte fognarie per bere le ripugnanti acque di scarico."
 	}
   },
   {
@@ -2085,7 +2085,7 @@
     },
 	"description": {
 		"en": "This Pokémon's favorite food is anything that is repugnantly filthy. In dirty towns where people think nothing of throwing away litter on the streets, Muk are certain to gather.",
-		"it": ""
+		"it": "Muk, il Pokémon Melma. È la forma evolutiva di Grimer. Quelli che sembrano denti e artigli sono in realtà tossine cristallizzate che avvelenano al solo contatto. Avvicinarsi è molto pericoloso."
 	}
   },
   {
@@ -2108,7 +2108,7 @@
     },
 	"description": {
 		"en": "At night, this Pokémon uses its broad tongue to burrow a hole in the seafloor sand and then sleep in it. While it is sleeping, Shellder closes its shell, but leaves its tongue hanging out.",
-		"it": ""
+		"it": "Shellder, il Pokémon Bivalve. "
 	}
   },
   {
@@ -2132,7 +2132,7 @@
     },
 	"description": {
 		"en": "Cloyster is capable of swimming in the sea. It does so by swallowing water, then jetting it out toward the rear. This Pokémon shoots spikes from its shell using the same system.",
-		"it": ""
+		"it": "Cloyster, il Pokémon Bivalve. È la forma evolutiva di Shellder. È in grado di nuotare in mare aperto, ingerendo acqua dalla bocca per poi espellerla violentemente a mo' di propulsore. Questo Pokémon usa lo stesso metodo per sparare punte dalla conchiglia."
 	}
   },
   {
@@ -2156,7 +2156,7 @@
     },
 	"description": {
 		"en": "Gastly is largely composed of gaseous matter. When exposed to a strong wind, the gaseous body quickly dwindles away. Groups of this Pokémon cluster under the eaves of houses to escape the ravages of wind.",
-		"it": ""
+		"it": "Gastly, il Pokémon Gas. è composto prevalentemente di sostanze gassose. Se esposto al vento forte il suo corpo gassoso si disperde subito. Gruppi di questi Pokémon si radunano sotto i cornicioni per ripararsi dal vento."
 	}
   },
   {
@@ -2180,7 +2180,7 @@
     },
 	"description": {
 		"en": "Haunter is a dangerous Pokémon. If one beckons you while floating in darkness, you must never approach it. This Pokémon will try to lick you with its tongue and steal your life away.",
-		"it": ""
+		"it": "Haunter, il Pokémon Gas. È la forma evolutiva di Gastly. È un Pokémon pericoloso. Se lo vedi fare cenni mentre fluttua nell'oscurità, è meglio fuggire, poiché il Pokémon cercherà di leccare il malcapitato e succhiargli la vita."
 	}
   },
   {
@@ -2204,7 +2204,7 @@
     },
 	"description": {
 		"en": "Sometimes, on a dark night, your shadow thrown by a streetlight will suddenly and startlingly overtake you. It is actually a Gengar running past you, pretending to be your shadow.",
-		"it": ""
+		"it": "Gengar, il Pokémon Ombra. È la forma evolutiva di Haunter. Talvolta, nelle notti buie, può accadere che un passante sia improvvisamente aggredito dalla propria ombra. È opera di Gengar, che usa avvicinarsi fingendosi un'ombra."
 	}
   },
   {
@@ -2228,7 +2228,7 @@
     },
 	"description": {
 		"en": "Onix has a magnet in its brain. It acts as a compass so that this Pokémon does not lose direction while it is tunneling. As it grows older, its body becomes increasingly rounder and smoother.",
-		"it": ""
+		"it": "Onix, il Pokémon Serpesasso. Ha una calamita nel cervello, che agisce da bussola per consentirgli di non perdere l'orientamento mentre scava sottoterra. Con il passare del tempo il suo corpo diventa sempre più smussato e levigato."
 	}
   },
   {
@@ -2251,7 +2251,7 @@
     },
 	"description": {
 		"en": "If your nose becomes itchy while you are sleeping, it's a sure sign that one of these Pokémon is standing above your pillow and trying to eat your dream through your nostrils.",
-		"it": ""
+		"it": "Drowzee, il Pokémon Ipnosi. È solito nutrirsi dei sogni degli altri mentre dormono, estraendoli dalle loro narici. Se durante il sonno si avverte prurito al naso, significa che Drowzee è già all'opera."
 	}
   },
   {
@@ -2274,7 +2274,7 @@
     },
 	"description": {
 		"en": "Hypno holds a pendulum in its hand. The arcing movement and glitter of the pendulum lull the foe into a deep state of hypnosis. While this Pokémon searches for prey, it polishes the pendulum.",
-		"it": ""
+		"it": "Hypno, il Pokémon Ipnosi. È la fase evolutiva di Drowzee. È solito nutrirsi dei sogni degli altri mentre dormono, estraendoli dalle loro narici. Se durante il sonno si avverte prurito al naso, significa che Drowzee è già all'opera."
 	}
   },
   {
@@ -2297,7 +2297,7 @@
     },
 	"description": {
 		"en": "Krabby live on beaches, burrowed inside holes dug into the sand. On sandy beaches with little in the way of food, these Pokémon can be seen squabbling with each other over territory.",
-		"it": ""
+		"it": "Krabby il Pokémon Granchio. Vive in spiaggia, nascosto in buche scavate nella sabbia. Sulle spiagge molto sabbiose, dove scarseggia il cibo, è possibile vedere questi Pokémon attaccarsi a vicenda in difesa del proprio territorio."
 	}
   },
   {
@@ -2320,7 +2320,7 @@
     },
 	"description": {
 		"en": "Kingler has an enormous, oversized claw. It waves this huge claw in the air to communicate with others. However, because the claw is so heavy, the Pokémon quickly tires.",
-		"it": ""
+		"it": "Kingler, il Pokémon Chela. È la forma evolutiva di Krabby. È dotato di un'enorme chela, che brandisce nell'aria per comunicare con i suoi simili. Tuttavia, dato il notevole peso della chela sovradimensionata, il Pokémon si stanca in fretta."
 	}
   },
   {
@@ -2342,8 +2342,8 @@
       "Speed": 100
     },
 	"description": {
-		"en": "Voltorb is extremely sensitive—it explodes at the slightest of shocks. It is rumored that it was first created when a Poké Ball was exposed to a powerful pulse of energy.",
-		"it": ""
+		"en": "Voltorb is extremely sensitive: it explodes at the slightest of shocks. It is rumored that it was first created when a Poké Ball was exposed to a powerful pulse of energy.",
+		"it": "Voltorb, il Pokémon Ball. Si dice che abbia un aspetto simile a una Poké Ball per passare inosservato. Tende ad autodistruggersi al minimo stimolo."
 	}
   },
   {
@@ -2366,7 +2366,7 @@
     },
 	"description": {
 		"en": "One of Electrode's characteristics is its attraction to electricity. It is a problematical Pokémon that congregates mostly at electrical power plants to feed on electricity that has just been generated.",
-		"it": ""
+		"it": "Electrode, il Pokémon Ball. È la forma evolutiva di Voltorb. L'energia elettrica accumulata nel suo corpo può provocare un'esplosione al minimo urto. Temuto da tutti, è noto come \"Palla Esplosiva\"."
 	}
   },
   {
