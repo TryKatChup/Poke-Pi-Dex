@@ -10,7 +10,7 @@ Miky
 - [x] reset pokémon (servirà quando non viene riconosciuto un pokémon per più di qualche secondo(?))
 - [x] aggiungere colori diversi o immagini per i vari tipi
 - [x] scelta della lingua
-- [ ] aggiungere descrizioni in lingua differente (IT)
+- [x] aggiungere descrizioni in lingua differente (IT)
 - [ ] registrare per ciascuna descrizione in Inglese la traccia audio letta da un bot (https://www.youtube.com/watch?v=rjlOJjX-6Ug)
 - [ ] opzione nelle impostazioni per abilitare la lettura automatica della descrizione del poémon quando viene riconosciuto
 - [ ] bottone nella descrizione per riprodurre la voce che legge la descrizione
