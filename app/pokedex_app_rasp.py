@@ -30,7 +30,7 @@ types_path = "utilities/types/"
 cries_path = "utilities/cries (ogg)/"
 sprite_size = (40, 40)
 languages = ["English", "Italian"]
-'''labels = {
+labels = {
     "start": {"en": "Start", "it": "Inizia"},
     "quit": {"en": "Quit", "it": "Esci"},
     "info": {"en": "Application developed by Michele Righi & Karina Chichifoi\nusing ...", "it": "Applicazione sviluppata da Michele Righi e Karina Chichifoi\nutilizzando ..."},
@@ -51,7 +51,7 @@ languages = ["English", "Italian"]
     "flip image": {"en": "Flip image", "it": "Specchia img."},
     "save": {"en": "Save", "it": "Salva"},
     "cancel": {"en": "Cancel", "it": "Annulla"}
-}'''
+}
 
 class App:
     def __init__(self, window, window_title):  # se non specificato viene preso il primo input video
@@ -99,7 +99,9 @@ class App:
         self.canvas_background.create_window(197, 91, anchor=tk.N, window=self.label_app_version)
         # self.canvas_background.create_window(240, 80+52, anchor=tk.N, window=self.label_app_version)
         # self.label_app_version.pack(side=tk.TOP, pady=(0, 30))
-        self.button_start = tk.Button(master=self.frame_menu, text="Start", width=15, bg=background, activebackground=background, command=lambda: self.show_app())
+        self.button_start_text = tk.StringVar()
+        self.button_start_text.set(labels["start"][self.language])
+        self.button_start = tk.Button(master=self.frame_menu, textvar=self.button_start_text, width=15, bg=background, activebackground=background, command=lambda: self.show_app())
         # self.button_start.config(font=("Helvetica", 9, "bold"))
         self.canvas_background.create_window(197, 132+50, anchor=tk.N, window=self.button_start)
         # self.button_start.pack(side=tk.TOP, pady=(0, 10))
