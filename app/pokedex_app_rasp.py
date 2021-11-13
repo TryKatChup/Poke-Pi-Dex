@@ -2,7 +2,6 @@ import tkinter as tk
 from tkinter import ttk
 from PIL import ImageTk, Image
 from pokemon_repository import PokemonRepository
-from pokemon import Pokemon
 import cv2
 import video_capture as vc
 import time
@@ -93,27 +92,17 @@ class App:
         image = Image.open("menu-background.png").resize((res_width, res_height), Image.ANTIALIAS)
         self.image_background = ImageTk.PhotoImage(image)
         self.canvas_background.create_image(0, 0, anchor=tk.NW, image=self.image_background)
-        '''self.label_app_name = tk.Label(master=self.frame_menu, text=app_name, bg=background)
-        self.label_app_name.config(font=("Helvetica", 24, "bold italic"))
-        self.canvas_background.create_window(240, 0+80, anchor=tk.N, window=self.label_app_name)'''
-        # self.label_app_name.pack(side=tk.TOP, pady=(80, 0))
         self.label_app_version = tk.Label(master=self.frame_menu, text="v" + version, width=10, bg="black", fg="grey")
         self.label_app_version.config(font=("Helvetica", 10, "italic bold"))
         self.canvas_background.create_window(197, 91, anchor=tk.N, window=self.label_app_version)
-        # self.canvas_background.create_window(240, 80+52, anchor=tk.N, window=self.label_app_version)
-        # self.label_app_version.pack(side=tk.TOP, pady=(0, 30))
         self.text_start = tk.StringVar()
         self.text_start.set(labels["start"][self.language])
         self.button_start = tk.Button(master=self.frame_menu, textvar=self.text_start, width=15, bg=background, activebackground=background, command=lambda: self.show_app())
-        # self.button_start.config(font=("Helvetica", 9, "bold"))
         self.canvas_background.create_window(197, 132+50, anchor=tk.N, window=self.button_start)
-        # self.button_start.pack(side=tk.TOP, pady=(0, 10))
         self.text_quit = tk.StringVar()
         self.text_quit.set(labels["quit"][self.language])
         self.button_quit = tk.Button(master=self.frame_menu, textvar=self.text_quit, width=15, bg=background, activebackground=background, command=lambda: self.quit())
-        # self.button_quit.config(font=("Helvetica", 9, "bold"))
         self.canvas_background.create_window(197, 182+50, anchor=tk.N, window=self.button_quit)
-        # self.button_quit.pack(side=tk.TOP)
         self.image_button_info = ImageTk.PhotoImage(Image.open(icons_path + "icon-info.png").resize((25, 25), Image.ANTIALIAS))
         self.button_info = tk.Button(master=self.frame_menu, image=self.image_button_info, bg=background, command=lambda: self.show_info())
         self.canvas_background.create_window(322, 232 + 30, anchor=tk.N, window=self.button_info)
@@ -151,7 +140,7 @@ class App:
         self.button_screenshot = tk.Button(master=self.frame_video_controls, textvar=self.text_screenshot, width=10, bg=background, activebackground=background, command=lambda: self.save_screenshot())
         self.button_screenshot.pack(side=tk.LEFT, anchor=tk.CENTER)
 
-        # Right (pokedex info)
+        # Right (Pokémon details)
         # Top
         self.frame_top = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
         self.frame_top.pack(side=tk.TOP)
@@ -163,7 +152,7 @@ class App:
         self.frame_top_left_upper = tk.Frame(master=self.frame_top_left, bg=background)
         self.frame_top_left_upper.pack(side=tk.TOP, anchor=tk.E)
         # Easter Egg: loads Blaziken, even if it's not in the first gen
-        self.button_egg = tk.Button(master=self.frame_top_left_upper, width=2, bg="lime", fg=background, bd=0, highlightthickness=0, command=lambda: self.load_pokemon('Blaziken'))
+        self.button_egg = tk.Button(master=self.frame_top_left_upper, width=1, bg=background, fg=background, bd=0, highlightthickness=0, command=lambda: self.load_pokemon('Blaziken'))
         self.button_egg.pack(side=tk.LEFT, anchor=tk.N)
         # Evolution (from)
         image = Image.open(sprites_path + "0.png").resize((40, 40), Image.ANTIALIAS)
@@ -243,8 +232,6 @@ class App:
         self.label_types.pack(side=tk.LEFT)
         self.entry_types_text = tk.StringVar()
         self.entry_types = tk.Entry(master=self.frame_id_types, textvariable=self.entry_types_text, width=18, bd=0, highlightthickness=0)
-        '''self.entry_types.config(readonlybackground=background_dark, state="readonly")
-        self.entry_types.pack(side=tk.LEFT)'''
         self.canvas_types = tk.Canvas(master=self.frame_id_types, width=res_width/2, height=18, bg=background, highlightthickness=0)
         image = Image.open(types_path + "Unknown_en.png").resize((50, 18), Image.ANTIALIAS)
         self.image_type1 = ImageTk.PhotoImage(image)
@@ -437,7 +424,6 @@ class App:
     def show_info(self):
         print("SHOW INFO")
         self.window_info = self.canvas_background.create_window(157+40, 40, anchor=tk.N, window=self.frame_info)
-        # self.frame_info.pack(side=tk.RIGHT, fill=None, expand=False)
         self.button_start.config(state=tk.DISABLED)
         self.button_quit.config(state=tk.DISABLED)
         self.button_info.config(state=tk.DISABLED)
@@ -445,7 +431,6 @@ class App:
     def close_info(self):
         print("CLOSE INFO")
         self.canvas_background.delete(self.window_info)
-        # self.frame_info.pack_forget()
         self.button_start.config(state=tk.NORMAL)
         self.button_quit.config(state=tk.NORMAL)
         self.button_info.config(state=tk.NORMAL)
