@@ -85,11 +85,11 @@ class App:
         self.evo_to_i = 0  # index of the multiple evolutions list
 
         # Menu
-        self.frame_menu = tk.Frame(width=res_width, height=res_height, background="yellow")
+        self.frame_menu = tk.Frame(width=res_width, height=res_height, background=background)
         self.frame_menu.pack_propagate(0)
         self.canvas_background = tk.Canvas(master=self.frame_menu, width=res_width, height=res_height, highlightbackground=background, highlightthickness=1)
         self.canvas_background.pack()
-        image = Image.open("menu-background.png").resize((res_width, res_height), Image.ANTIALIAS)
+        image = Image.open("utilities/images/menu-background.png").resize((res_width, res_height), Image.ANTIALIAS)
         self.image_background = ImageTk.PhotoImage(image)
         self.canvas_background.create_image(0, 0, anchor=tk.NW, image=self.image_background)
         self.label_app_version = tk.Label(master=self.frame_menu, text="v" + version, width=10, bg="black", fg="grey")
