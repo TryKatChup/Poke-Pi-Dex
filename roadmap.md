@@ -31,5 +31,6 @@ Miky
 - [ ] easter egg per Umbreon
 
 Entrambi:
-- ritagliare foto pokémon (Kary dispari, Miky pari)
-- rettificazione picamera
+- [ ] ritagliare foto pokémon (Kary dispari, Miky pari)
+  - [dataset](https://liveunibo-my.sharepoint.com/personal/karina_chichifoi_studio_unibo_it/_layouts/15/onedrive.aspx?isAscending=false&id=%2Fpersonal%2Fkarina%5Fchichifoi%5Fstudio%5Funibo%5Fit%2FDocuments%2FPok%C3%A9dex%2Fdataset&sortField=Modified) (NB: *Old* are the ones already present, but checked and fixed; *New* are the ones downloaded and edited)
+- [ ] rettificazione picamera
