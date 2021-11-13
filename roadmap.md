@@ -1,5 +1,10 @@
 Kary
 - [x] ottimizzazione rete (quantizzazione + prova immagine con tf.lite)
+**Data Augmentation (usare API STATELESS):**
+- [x] Random flip
+- [x] Random rotation
+- [x] Random brightness
+- [ ] Random contrast   
 - [ ] riallenare rete con foto tagliate + regolazione luminosità
 
 
