@@ -152,19 +152,18 @@ class App:
         self.button_screenshot.pack(side=tk.LEFT, anchor=tk.CENTER)
 
         # Right (pokedex info)
+        # Top
         self.frame_top = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
         self.frame_top.pack(side=tk.TOP)
 
-
-        # Refactor:
-        # Top-left
+        # Top-left:
         self.frame_top_left = tk.Frame(master=self.frame_top, width=87, height=65, bg=background)
         self.frame_top_left.pack(side=tk.LEFT, anchor=tk.N)
-
+        # Top-left up (pre-evolution)
         self.frame_top_left_upper = tk.Frame(master=self.frame_top_left, bg=background)
-        self.frame_top_left_upper.pack(side=tk.TOP, anchor=tk.W)
-        # Fake button to space on the left (easter egg -> show blaziken <3)
-        self.button_egg = tk.Button(master=self.frame_top_left_upper, width=2, text=" ", bg="lime", fg=background, bd=0, highlightthickness=0, command=lambda: self.load_pokemon('Blaziken'))
+        self.frame_top_left_upper.pack(side=tk.TOP, anchor=tk.E)
+        # Easter Egg: loads Blaziken, even if it's not in the first gen
+        self.button_egg = tk.Button(master=self.frame_top_left_upper, width=2, bg="lime", fg=background, bd=0, highlightthickness=0, command=lambda: self.load_pokemon('Blaziken'))
         self.button_egg.pack(side=tk.LEFT, anchor=tk.N)
         # Evolution (from)
         image = Image.open(sprites_path + "0.png").resize((40, 40), Image.ANTIALIAS)
@@ -179,60 +178,43 @@ class App:
         self.text_cry.set(labels["cry"][self.language])
         self.label_cry = tk.Label(master=self.frame_cry, textvar=self.text_cry, bg=background)
         self.label_cry.pack(side=tk.LEFT)
-        self.image_button_cry = ImageTk.PhotoImage(
-            Image.open(icons_path + "icon-sound.png").resize((20, 20), Image.ANTIALIAS))
-        self.button_cry = tk.Button(master=self.frame_cry, image=self.image_button_cry, bg=background,
-                                    activebackground=background, command=lambda: self.play_cry())
+        self.image_button_cry = ImageTk.PhotoImage(Image.open(icons_path + "icon-sound.png").resize((20, 20), Image.ANTIALIAS))
+        self.button_cry = tk.Button(master=self.frame_cry, image=self.image_button_cry, bg=background, activebackground=background, command=lambda: self.play_cry())
         self.button_cry.pack(side=tk.LEFT)
 
-        # Image
+        # Image (Top Center)
         image = Image.open(thumbnails_path + "0.png").resize((65, 65), Image.ANTIALIAS)
         self.thumbnail = ImageTk.PhotoImage(image)
         self.label_thumb = tk.Label(master=self.frame_top, image=self.thumbnail, width=65, height=65, bg=background)
         self.label_thumb.pack(side=tk.LEFT, anchor=tk.N, fill=tk.BOTH)
 
         # Top Right:
-        # Top (right)
         self.frame_top_right = tk.Frame(master=self.frame_top, width=87, bg=background)
         self.frame_top_right.pack(side=tk.LEFT, anchor=tk.N)
-
         # Evolution (to)
         image = Image.open(sprites_path + "0.png").resize(sprite_size, Image.ANTIALIAS)
         self.image_evo_to = ImageTk.PhotoImage(image)
-        self.label_evo_to = tk.Label(master=self.frame_top_right, image=self.image_evo_to, width=40, height=40,
-                                     bg=background)
+        self.label_evo_to = tk.Label(master=self.frame_top_right, image=self.image_evo_to, width=40, height=40, bg=background)
         self.label_evo_to.pack(side=tk.TOP, anchor=tk.W)
         # Buttons (for multiple "to" evolutions)
-        self.image_button_evo_prev = ImageTk.PhotoImage(
-            Image.open(icons_path + "icon-evo-to-prev.png").resize((10, 10), Image.ANTIALIAS))
-        self.button_evo_to_prev = tk.Button(master=self.frame_top_right, image=self.image_button_evo_prev,
-                                            bg=background, command=lambda: self.show_prev_evo_to())
+        self.image_button_evo_prev = ImageTk.PhotoImage(Image.open(icons_path + "icon-evo-to-prev.png").resize((10, 10), Image.ANTIALIAS))
+        self.button_evo_to_prev = tk.Button(master=self.frame_top_right, image=self.image_button_evo_prev, bg=background, command=lambda: self.show_prev_evo_to())
         self.button_evo_to_prev.config(state=tk.DISABLED)
-        self.image_button_evo_next = ImageTk.PhotoImage(
-            Image.open(icons_path + "icon-evo-to-next.png").resize((10, 10), Image.ANTIALIAS))
-        self.button_evo_to_next = tk.Button(master=self.frame_top_right, image=self.image_button_evo_next,
-                                            bg=background, command=lambda: self.next_evo_to())
-        self.button_evo_to_next.config(state=tk.DISABLED)
         self.button_evo_to_prev.pack(side=tk.LEFT, anchor=tk.N)
+        self.image_button_evo_next = ImageTk.PhotoImage(Image.open(icons_path + "icon-evo-to-next.png").resize((10, 10), Image.ANTIALIAS))
+        self.button_evo_to_next = tk.Button(master=self.frame_top_right, image=self.image_button_evo_next, bg=background, command=lambda: self.next_evo_to())
+        self.button_evo_to_next.config(state=tk.DISABLED)
         self.button_evo_to_next.pack(side=tk.LEFT, anchor=tk.N)
 
         # Settings & Back
-        # Settings & Back frame
         self.frame_settings_back = tk.Frame(master=self.frame_top, bg=background)
         self.frame_settings_back.pack(side=tk.RIGHT, anchor=tk.N, padx=(10, 2), pady=(1, 0))
-        self.image_button_settings = ImageTk.PhotoImage(
-            Image.open(icons_path + "icon-settings.png").resize((25, 25), Image.ANTIALIAS))
-        self.button_settings = tk.Button(master=self.frame_settings_back, image=self.image_button_settings,
-                                         bg=background, command=lambda: self.show_settings())
+        self.image_button_settings = ImageTk.PhotoImage(Image.open(icons_path + "icon-settings.png").resize((25, 25), Image.ANTIALIAS))
+        self.button_settings = tk.Button(master=self.frame_settings_back, image=self.image_button_settings, bg=background, command=lambda: self.show_settings())
         self.button_settings.pack(side=tk.TOP, anchor=tk.E)
-        self.image_button_back = ImageTk.PhotoImage(
-            Image.open(icons_path + "icon-back.png").resize((25, 25), Image.ANTIALIAS))
-        self.button_back = tk.Button(master=self.frame_settings_back, image=self.image_button_back, bg=background,
-                                     command=lambda: self.show_menu())
+        self.image_button_back = ImageTk.PhotoImage(Image.open(icons_path + "icon-back.png").resize((25, 25), Image.ANTIALIAS))
+        self.button_back = tk.Button(master=self.frame_settings_back, image=self.image_button_back, bg=background, command=lambda: self.show_menu())
         self.button_back.pack(side=tk.TOP, anchor=tk.E)
-
-
-
 
         # Name
         self.frame_name = tk.Frame(master=self.frame_right, bg=background)
