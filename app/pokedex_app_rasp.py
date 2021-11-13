@@ -31,24 +31,25 @@ cries_path = "utilities/cries (ogg)/"
 sprite_size = (40, 40)
 languages = ["English", "Italian"]
 labels = {
-    "start": {"en": "Start", "it": "Inizia"},
+    "start": {"en": "Start", "it": "Avvia"},
     "quit": {"en": "Quit", "it": "Esci"},
     "info": {"en": "Application developed by Michele Righi & Karina Chichifoi\nusing ...", "it": "Applicazione sviluppata da Michele Righi e Karina Chichifoi\nutilizzando ..."},
     "search": {"en": "Search", "it": "Cerca"},
     "screenshot": {"en": "Screenshot", "it": "Schermata"},
-    "cry": {"en": "Cry", "it": "Verso"},
-    "name": {"en": "Name", "it": "Nome"},
-    "types": {"en": "Type(s)", "it": "Tipo/i"},
-    "hp": {"en": "HP", "it": "PS"},
-    "attack": {"en": "Attack", "it": "Attacco"},
-    "defense": {"en": "Defense", "it": "Difesa"},
-    "sp. atk": {"en": "Sp. Atk", "it": "Att. Sp."},
-    "sp. def": {"en": "Sp. Def", "it": "Dif. Sp."},
-    "speed": {"en": "Speed", "it": "Veloc."},
+    "cry": {"en": "Cry: ", "it": "Verso: "},
+    "name": {"en": "Name: ", "it": "Nome: "},
+    "types": {"en": "Type(s): ", "it": "Tipo/i: "},
+    "hp": {"en": "HP:", "it": "PS:"},
+    "attack": {"en": "Attack:", "it": "Attacco:"},
+    "defense": {"en": "Defense:", "it": "Difesa:"},
+    "sp. atk": {"en": "Sp. Atk:", "it": "Att. Sp.:"},
+    "sp. def": {"en": "Sp. Def:", "it": "Dif. Sp.:"},
+    "speed": {"en": "Speed:", "it": "Veloc.:"},
     "settings": {"en": "Settings", "it": "Impostazioni"},
-    "language": {"en": "Language", "it": "Lingua"},
-    "full screen": {"en": "Full screen", "it": "Schermo int."},
-    "flip image": {"en": "Flip image", "it": "Specchia img."},
+    "language": {"en": "Language: ", "it": "Lingua: "},
+    "full screen": {"en": "Full screen: ", "it": "Schermo int.: "},
+    "flip image": {"en": "Flip image: ", "it": "Specchia imm.: "},
+    "volume": {"en": "Volume: ", "it": "Volume: "},
     "save": {"en": "Save", "it": "Salva"},
     "cancel": {"en": "Cancel", "it": "Annulla"}
 }
@@ -79,6 +80,8 @@ class App:
         self.video = None
         self.language = "en"
 
+        # Settings Loading(?)
+
         self.loaded_pokemon = None  # Pokemon(0, "", "", {}, {}, "") # NB: in this case we have to change the if condition in save_settings
         self.evo_to_i = 0  # index of the multiple evolutions list
 
@@ -99,13 +102,15 @@ class App:
         self.canvas_background.create_window(197, 91, anchor=tk.N, window=self.label_app_version)
         # self.canvas_background.create_window(240, 80+52, anchor=tk.N, window=self.label_app_version)
         # self.label_app_version.pack(side=tk.TOP, pady=(0, 30))
-        self.button_start_text = tk.StringVar()
-        self.button_start_text.set(labels["start"][self.language])
-        self.button_start = tk.Button(master=self.frame_menu, textvar=self.button_start_text, width=15, bg=background, activebackground=background, command=lambda: self.show_app())
+        self.text_start = tk.StringVar()
+        self.text_start.set(labels["start"][self.language])
+        self.button_start = tk.Button(master=self.frame_menu, textvar=self.text_start, width=15, bg=background, activebackground=background, command=lambda: self.show_app())
         # self.button_start.config(font=("Helvetica", 9, "bold"))
         self.canvas_background.create_window(197, 132+50, anchor=tk.N, window=self.button_start)
         # self.button_start.pack(side=tk.TOP, pady=(0, 10))
-        self.button_quit = tk.Button(master=self.frame_menu, text="Quit", width=15, bg=background, activebackground=background, command=lambda: self.quit())
+        self.text_quit = tk.StringVar()
+        self.text_quit.set(labels["quit"][self.language])
+        self.button_quit = tk.Button(master=self.frame_menu, textvar=self.text_quit, width=15, bg=background, activebackground=background, command=lambda: self.quit())
         # self.button_quit.config(font=("Helvetica", 9, "bold"))
         self.canvas_background.create_window(197, 182+50, anchor=tk.N, window=self.button_quit)
         # self.button_quit.pack(side=tk.TOP)
@@ -137,9 +142,13 @@ class App:
         self.frame_video_controls = tk.Frame(master=self.frame_left, bg=background)
         self.frame_video_controls.pack(side=tk.TOP, pady=(2, 0))
 
-        self.button_search = tk.Button(master=self.frame_video_controls, text="Search", width=10, bg=background, activebackground=background, command=lambda: self.load_pokemon(self.entry_name_text.get()))
+        self.text_search = tk.StringVar()
+        self.text_search.set(labels["search"][self.language])
+        self.button_search = tk.Button(master=self.frame_video_controls, textvar=self.text_search, width=10, bg=background, activebackground=background, command=lambda: self.load_pokemon(self.entry_name_text.get()))
         self.button_search.pack(side=tk.LEFT, anchor=tk.CENTER, padx=(0, 10))
-        self.button_screenshot = tk.Button(master=self.frame_video_controls, text="Screenshot", width=10, bg=background, activebackground=background, command=lambda: self.save_screenshot())
+        self.text_screenshot = tk.StringVar()
+        self.text_screenshot.set(labels["screenshot"][self.language])
+        self.button_screenshot = tk.Button(master=self.frame_video_controls, textvar=self.text_screenshot, width=10, bg=background, activebackground=background, command=lambda: self.save_screenshot())
         self.button_screenshot.pack(side=tk.LEFT, anchor=tk.CENTER)
 
         # Right (pokedex info)
@@ -195,7 +204,9 @@ class App:
         self.label_evo_from.pack(side=tk.TOP, anchor=tk.E)
 
         # Cry
-        self.label_cry = tk.Label(master=self.frame_top_left, text="Cry:", bg=background)
+        self.text_cry = tk.StringVar()
+        self.text_cry.set(labels["cry"][self.language])
+        self.label_cry = tk.Label(master=self.frame_top_left, textvar=self.text_cry, bg=background)
         self.label_cry.pack(side=tk.LEFT)
         self.image_button_cry = ImageTk.PhotoImage(Image.open(icons_path + "icon-sound.png").resize((20, 20), Image.ANTIALIAS))
         self.button_cry = tk.Button(master=self.frame_top_left, image=self.image_button_cry, bg=background, activebackground=background, command=lambda: self.play_cry())
@@ -204,7 +215,9 @@ class App:
         # Name
         self.frame_name = tk.Frame(master=self.frame_right, bg=background)
         self.frame_name.pack(side=tk.TOP, pady=(0, 2))
-        self.label_name = tk.Label(master=self.frame_name, text="Name: ", bg=background)
+        self.text_name = tk.StringVar()
+        self.text_name.set(labels["name"][self.language])
+        self.label_name = tk.Label(master=self.frame_name, textvar=self.text_name, bg=background)
         self.label_name.pack(side=tk.LEFT)
         self.entry_name_text = tk.StringVar()
         self.entry_name = tk.Entry(master=self.frame_name, width=11, textvariable=self.entry_name_text, bg=background_dark, bd=0, highlightthickness=0)
@@ -220,7 +233,9 @@ class App:
         self.entry_id = tk.Entry(master=self.frame_id_types, width=3, textvariable=self.entry_id_text, bg=background_dark, bd=0, highlightthickness=0)
         self.entry_id.config(readonlybackground=background_dark, state="readonly")
         self.entry_id.pack(side=tk.LEFT)
-        self.label_types = tk.Label(master=self.frame_id_types, text="Type(s): ", bg=background)
+        self.text_types = tk.StringVar()
+        self.text_types.set(labels["types"][self.language])
+        self.label_types = tk.Label(master=self.frame_id_types, textvar=self.text_types, bg=background)
         self.label_types.pack(side=tk.LEFT)
         self.entry_types_text = tk.StringVar()
         self.entry_types = tk.Entry(master=self.frame_id_types, textvariable=self.entry_types_text, width=18, bd=0, highlightthickness=0)
@@ -248,7 +263,9 @@ class App:
         # HP
         self.frame_hp = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
         self.frame_hp.pack(side=tk.TOP)
-        self.label_hp = tk.Label(master=self.frame_hp, width=8, text="HP:", anchor=tk.W, bg=background)
+        self.text_hp = tk.StringVar()
+        self.text_hp.set(labels["hp"][self.language])
+        self.label_hp = tk.Label(master=self.frame_hp, width=8, textvar=self.text_hp, anchor=tk.W, bg=background)
         self.entry_hp_text = tk.StringVar()
         self.entry_hp = tk.Entry(master=self.frame_hp, width=3, textvariable=self.entry_hp_text, bd=0, highlightthickness=0)
         self.entry_hp.config(readonlybackground=background_dark, state="readonly")
@@ -260,7 +277,9 @@ class App:
         # Attack
         self.frame_attack = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
         self.frame_attack.pack(side=tk.TOP)
-        self.label_attack = tk.Label(master=self.frame_attack, width=8, text="Attack:", anchor=tk.W, bg=background)  # anchor=tk.W to justify the text
+        self.text_atk = tk.StringVar()
+        self.text_atk.set(labels["attack"][self.language])
+        self.label_attack = tk.Label(master=self.frame_attack, width=8, textvar=self.text_atk, anchor=tk.W, bg=background)  # anchor=tk.W to justify the text
         self.entry_attack_text = tk.StringVar()
         self.entry_attack = tk.Entry(master=self.frame_attack, width=3, textvariable=self.entry_attack_text, bd=0, highlightthickness=0)
         self.entry_attack.config(readonlybackground=background_dark, state="readonly")
@@ -272,7 +291,9 @@ class App:
         # Defense
         self.frame_defense = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
         self.frame_defense.pack(side=tk.TOP)
-        self.label_defense = tk.Label(master=self.frame_defense, width=8, text="Defense:", anchor=tk.W, bg=background)
+        self.text_def = tk.StringVar()
+        self.text_def.set(labels["defense"][self.language])
+        self.label_defense = tk.Label(master=self.frame_defense, width=8, textvar=self.text_def, anchor=tk.W, bg=background)
         self.entry_defense_text = tk.StringVar()
         self.entry_defense = tk.Entry(master=self.frame_defense, width=3, textvariable=self.entry_defense_text, bd=0, highlightthickness=0)
         self.entry_defense.config(readonlybackground=background_dark, state="readonly")
@@ -284,7 +305,9 @@ class App:
         # Sp. Atk
         self.frame_sp_atk = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
         self.frame_sp_atk.pack(side=tk.TOP)
-        self.label_sp_atk = tk.Label(master=self.frame_sp_atk, width=8, text="Sp. Atk:", anchor=tk.W, bg=background)
+        self.text_spatk = tk.StringVar()
+        self.text_spatk.set(labels["sp. atk"][self.language])
+        self.label_sp_atk = tk.Label(master=self.frame_sp_atk, width=8, textvar=self.text_spatk, anchor=tk.W, bg=background)
         self.entry_sp_atk_text = tk.StringVar()
         self.entry_sp_atk = tk.Entry(master=self.frame_sp_atk, width=3, textvariable=self.entry_sp_atk_text, bd=0, highlightthickness=0)
         self.entry_sp_atk.config(readonlybackground=background_dark, state="readonly")
@@ -296,7 +319,9 @@ class App:
         # Sp. Def
         self.frame_sp_def = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
         self.frame_sp_def.pack(side=tk.TOP)
-        self.label_sp_def = tk.Label(master=self.frame_sp_def, width=8, text="Sp. Def:", anchor=tk.W, bg=background)
+        self.text_spdef = tk.StringVar()
+        self.text_spdef.set(labels["sp. def"][self.language])
+        self.label_sp_def = tk.Label(master=self.frame_sp_def, width=8, textvar=self.text_spdef, anchor=tk.W, bg=background)
         self.entry_sp_def_text = tk.StringVar()
         self.entry_sp_def = tk.Entry(master=self.frame_sp_def, width=3, textvariable=self.entry_sp_def_text, bd=0, highlightthickness=0)
         self.entry_sp_def.config(readonlybackground=background_dark, state="readonly")
@@ -308,7 +333,9 @@ class App:
         # Speed
         self.frame_speed = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
         self.frame_speed.pack(side=tk.TOP)
-        self.label_speed = tk.Label(master=self.frame_speed, width=8, text="Speed:", anchor=tk.W, bg=background)
+        self.text_speed = tk.StringVar()
+        self.text_speed.set(labels["speed"][self.language])
+        self.label_speed = tk.Label(master=self.frame_speed, width=8, textvar=self.text_speed, anchor=tk.W, bg=background)
         self.entry_speed_text = tk.StringVar()
         self.entry_speed = tk.Entry(master=self.frame_speed, width=3, textvariable=self.entry_speed_text, bd=0, highlightthickness=0)
         self.entry_speed.config(readonlybackground=background_dark, state="readonly")
@@ -324,14 +351,18 @@ class App:
         self.image_button_close_settings = ImageTk.PhotoImage(Image.open(icons_path + "icon-close.png").resize((25, 25), Image.ANTIALIAS))
         self.button_close = tk.Button(master=self.frame_settings, image=self.image_button_close_settings, bg=background, command=lambda: self.close_settings())
         self.button_close.pack(side=tk.TOP, anchor=tk.E, padx=(0, 2), pady=(2, 0))
-        self.label_settings = tk.Label(master=self.frame_settings, text="Settings", bg=background)
+        self.text_settings = tk.StringVar()
+        self.text_settings.set(labels["settings"][self.language])
+        self.label_settings = tk.Label(master=self.frame_settings, textvar=self.text_settings, bg=background)
         self.label_settings.config(font=("Helvetica", 16, "bold italic"))
         self.label_settings.pack(side=tk.TOP)
         # Language Picker
         self.frame_language = tk.Frame(master=self.frame_settings, width=res_width/2, bg=background)
         self.frame_language.pack(side=tk.TOP, anchor=tk.W, pady=(5, 0), padx=(10, 0))
-        self.label_fullscreen = tk.Label(master=self.frame_language, text="Language: ", width=12, anchor=tk.W, bg=background)
-        self.label_fullscreen.pack(side=tk.LEFT, padx=(0, 10))
+        self.text_language = tk.StringVar()
+        self.text_language.set(labels["language"][self.language])
+        self.label_language = tk.Label(master=self.frame_language, textvar=self.text_language, width=12, anchor=tk.W, bg=background)
+        self.label_language.pack(side=tk.LEFT, padx=(0, 10))
         self.combobox_language_text = tk.StringVar()
         self.combobox_language = ttk.Combobox(master=self.frame_language, state="readonly", textvariable=self.combobox_language_text, values=languages, width=9)
         self.combobox_language.current(0)
@@ -341,7 +372,9 @@ class App:
         self.frame_fullscreen = tk.Frame(master=self.frame_settings, width=res_width/2, bg=background)
         self.frame_fullscreen.pack(side=tk.TOP, anchor=tk.W, pady=(5, 0), padx=(10, 0))
         self.check_fullscreen = tk.Checkbutton(master=self.frame_fullscreen, variable=self.fullscreen, onvalue=1, offvalue=0, bg=background, bd=0, highlightthickness=0, fg="black")
-        self.label_fullscreen = tk.Label(master=self.frame_fullscreen, text="Full screen: ", width=12, anchor=tk.W, bg=background)
+        self.text_fullscreen = tk.StringVar()
+        self.text_fullscreen.set(labels["full screen"][self.language])
+        self.label_fullscreen = tk.Label(master=self.frame_fullscreen, textvar=self.text_fullscreen, width=12, anchor=tk.W, bg=background)
         self.label_fullscreen.pack(side=tk.LEFT, padx=(0, 90))
         self.check_fullscreen.select() if self.fullscreen.get() == 1 else self.check_fullscreen.deselect()
         self.check_fullscreen.pack(side=tk.LEFT)
@@ -349,14 +382,18 @@ class App:
         self.frame_flip = tk.Frame(master=self.frame_settings, width=res_width/2, bg=background)
         self.frame_flip.pack(side=tk.TOP, anchor=tk.W, pady=(5, 0), padx=(10, 0))
         self.check_flip = tk.Checkbutton(master=self.frame_flip, onvalue=1, offvalue=0, bg=background, bd=0, highlightthickness=0, fg="black")
-        self.label_flip = tk.Label(master=self.frame_flip, text="Flip image: ", width=12, anchor=tk.W, bg=background)
+        self.text_flip = tk.StringVar()
+        self.text_flip.set(labels["flip image"][self.language])
+        self.label_flip = tk.Label(master=self.frame_flip, textvar=self.text_flip, width=12, anchor=tk.W, bg=background)
         self.label_flip.pack(side=tk.LEFT, padx=(0, 90))
         # self.check_flip.select() if self.fullscreen.get() == 1 else self.check_fullscreen.deselect()
         self.check_flip.pack(side=tk.LEFT)
         # Volume
         self.frame_volume = tk.Frame(master=self.frame_settings, width=res_width/2, bg=background)
         self.frame_volume.pack(side=tk.TOP, anchor=tk.W, pady=(5, 0), padx=(10, 0))
-        self.label_volume = tk.Label(master=self.frame_volume, text="Volume: ", width=12, anchor=tk.W, bg=background)
+        self.text_volume = tk.StringVar()
+        self.text_volume.set(labels["volume"][self.language])
+        self.label_volume = tk.Label(master=self.frame_volume, textvar=self.text_volume, width=12, anchor=tk.W, bg=background)
         self.label_volume.pack(side=tk.LEFT, padx=(0, 10))
         self.scale_volume = tk.Scale(master=self.frame_volume, from_=0, to=100, tickinterval=100, orient=tk.HORIZONTAL, bg=background, bd=0, highlightthickness=0)
         self.scale_volume.set(50)
@@ -364,9 +401,13 @@ class App:
         # Save/Cancel buttons
         self.frame_settings_controls = tk.Frame(master=self.frame_settings, width=res_width/2, bg=background)
         self.frame_settings_controls.pack(side=tk.BOTTOM, pady=(0, 10))
-        self.button_save_settings = tk.Button(master=self.frame_settings_controls, text="Save", bg=background, width=6, command=lambda: self.save_settings())
+        self.text_save = tk.StringVar()
+        self.text_save.set(labels["save"][self.language])
+        self.button_save_settings = tk.Button(master=self.frame_settings_controls, textvar=self.text_save, bg=background, width=6, command=lambda: self.save_settings())
         self.button_save_settings.pack(side=tk.LEFT, anchor=tk.CENTER)
-        self.button_cancel_settings = tk.Button(master=self.frame_settings_controls, text="Cancel", bg=background, command=lambda: self.close_settings())
+        self.text_cancel = tk.StringVar()
+        self.text_cancel.set(labels["cancel"][self.language])
+        self.button_cancel_settings = tk.Button(master=self.frame_settings_controls, textvar=self.text_cancel, bg=background, command=lambda: self.close_settings())
         self.button_cancel_settings.pack(side=tk.LEFT, anchor=tk.CENTER, padx=10)
 
     def start(self):
@@ -643,17 +684,40 @@ class App:
         self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
         print("CLOSE SETTINGS\nFullscreen: " + str(bool(self.fullscreen.get())) + "\nVolume: " + str(self.volume))
 
-    def save_settings(self):
-        self.language = self.combobox_language_text.get().lower()[0:2]
+    def update_language(self):
+        self.text_start.set(labels["start"][self.language])
+        self.text_quit.set(labels["quit"][self.language])
+        self.text_search.set(labels["search"][self.language])
+        self.text_screenshot.set(labels["screenshot"][self.language])
+        self.text_cry.set(labels["cry"][self.language])
+        self.text_name.set(labels["name"][self.language])
+        self.text_types.set(labels["types"][self.language])
+        self.text_hp.set(labels["hp"][self.language])
+        self.text_atk.set(labels["attack"][self.language])
+        self.text_def.set(labels["defense"][self.language])
+        self.text_spatk.set(labels["sp. atk"][self.language])
+        self.text_spdef.set(labels["sp. def"][self.language])
+        self.text_speed.set(labels["speed"][self.language])
+        self.text_settings.set(labels["settings"][self.language])
+        self.text_language.set(labels["language"][self.language])
+        self.text_fullscreen.set(labels["full screen"][self.language])
+        self.text_flip.set(labels["flip image"][self.language])
+        self.text_volume.set(labels["volume"][self.language])
+        self.text_save.set(labels["save"][self.language])
+        self.text_cancel.set(labels["cancel"][self.language])
         if self.loaded_pokemon:
             self.load_types()
             self.load_description()
+
+    def save_settings(self):
+        self.language = self.combobox_language_text.get().lower()[0:2]
+        self.update_language()
         self.window.attributes("-fullscreen", self.fullscreen.get())
         self.volume = self.scale_volume.get() / 100
         self.channel.set_volume(self.volume)
         self.frame_settings.pack_forget()
         self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
-        print("SAVE SETTINGS\nFullscreen: " + str(bool(self.fullscreen.get())) + "\nVolume: " + str(self.volume))
+        print("SAVE SETTINGS\nLanguage: " + self.language + "\nFullscreen: " + str(bool(self.fullscreen.get())) + "\nVolume: " + str(self.volume))
 
     # get RGB color from stat
     def get_stat_color(self, stat):
