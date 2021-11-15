@@ -169,7 +169,7 @@ Pokémon da tagliare:
 - [ ] Tauros
 - [ ] Magikarp
 - [ ] Gyarados
-- [ ] Lapras
+- [x] Lapras
 - [x] Ditto
 - [ ] Eevee
 - [x] Vaporeon
@@ -181,7 +181,7 @@ Pokémon da tagliare:
 - [ ] Kabuto
 - [ ] Kabutops
 - [ ] Aerodactyl
-- [ ] Snorlax
+- [x] Snorlax
 - [ ] Articuno
 - [ ] Zapdos
 - [ ] Moltres
@@ -189,4 +189,4 @@ Pokémon da tagliare:
 - [ ] Dragonair
 - [ ] Dragonite
 - [x] Mewtwo
-- [ ] Mew
+- [x] Mew
