@@ -88,7 +88,7 @@ Pokémon da tagliare:
 - [ ] Parasect
 - [ ] Venonat (parte Miky fatta)
 - [ ] Venomoth
-- [ ] Diglett
+- [ ] Diglett (parte Miky fatta)
 - [ ] Dugtrio
 - [ ] Meowth
 - [ ] Persian
