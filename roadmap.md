@@ -83,14 +83,14 @@ Pokémon da tagliare:
 - [x] Golbat
 - [x] Oddish
 - [x] Gloom
-- [ ] Vileplume
+- [x] Vileplume
 - [ ] Paras (parte Miky fatta)
 - [ ] Parasect
 - [ ] Venonat (parte Miky fatta)
 - [ ] Venomoth
 - [ ] Diglett (parte Miky fatta)
 - [ ] Dugtrio
-- [ ] Meowth
+- [x] Meowth
 - [ ] Persian
 - [ ] Psyduck (parte Miky fatta)
 - [ ] Golduck
@@ -133,7 +133,7 @@ Pokémon da tagliare:
 - [ ] Gastly
 - [ ] Haunter
 - [ ] Gengar
-- [ ] Onix
+- [x] Onix
 - [ ] Drowzee
 - [ ] Hypno
 - [ ] Krabby
@@ -162,7 +162,7 @@ Pokémon da tagliare:
 - [x] Starmie
 - [ ] Mr. Mime
 - [ ] Scyther
-- [ ] Jynx
+- [x] Jynx
 - [ ] Electabuzz
 - [ ] Magmar
 - [ ] Pinsir
@@ -172,9 +172,9 @@ Pokémon da tagliare:
 - [ ] Lapras
 - [ ] Ditto
 - [ ] Eevee
-- [ ] Vaporeon
+- [x] Vaporeon
 - [ ] Jolteon
-- [ ] Flareon
+- [x] Flareon
 - [x] Porygon
 - [ ] Omanyte
 - [ ] Omastar
@@ -185,8 +185,8 @@ Pokémon da tagliare:
 - [ ] Articuno
 - [ ] Zapdos
 - [ ] Moltres
-- [ ] Dratini
+- [x] Dratini
 - [ ] Dragonair
 - [ ] Dragonite
-- [ ] Mewtwo
+- [x] Mewtwo
 - [ ] Mew
