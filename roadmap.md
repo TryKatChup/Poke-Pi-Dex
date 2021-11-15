@@ -92,7 +92,7 @@ Pokémon da tagliare:
 - [ ] Dugtrio
 - [ ] Meowth
 - [ ] Persian
-- [ ] Psyduck
+- [ ] Psyduck (parte Miky fatta)
 - [ ] Golduck
 - [ ] Mankey
 - [ ] Primeape
