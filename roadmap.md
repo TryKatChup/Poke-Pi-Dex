@@ -77,115 +77,115 @@ Pokémon da tagliare:
 - [x] Vulpix
 - [x] Ninetales
 - [x] Jigglypuff
-- [] Wigglytuff (parziale Kary)
+- [x] Wigglytuff
 - [x] Zubat
-- [] Golbat (parziale Kary)
+- [ ] Golbat (parziale Kary)
 - [x] Oddish
-- [] Gloom (parziale Kary)
-- [] Vileplume
-- [] Paras
-- [] Parasect
-- [] enonat
-- [] Venomoth
-- [] Diglett
-- [] Dugtrio
-- [] Meowth
-- [] Persian
-- [] Psyduck
-- [] Golduck
-- [] Mankey
-- [] Primeape
-- [] Growlithe
+- [ ] Gloom (parziale Kary)
+- [ ] Vileplume
+- [ ] Paras
+- [ ] Parasect
+- [ ] enonat
+- [ ] Venomoth
+- [ ] Diglett
+- [ ] Dugtrio
+- [ ] Meowth
+- [ ] Persian
+- [ ] Psyduck
+- [ ] Golduck
+- [ ] Mankey
+- [ ] Primeape
+- [ ] Growlithe
 - [x] Arcanine
-- [] Poliwag
-- [] Poliwhirl
-- [] Poliwrath
-- [] Abra
-- [] Kadabra
-- [] Alakazam
-- [] Machop
-- [] Machoke
+- [ ] Poliwag
+- [ ] Poliwhirl
+- [ ] Poliwrath
+- [ ] Abra
+- [ ] Kadabra
+- [ ] Alakazam
+- [ ] Machop
+- [ ] Machoke
 - [x] Machamp
-- [] Bellsprout
-- [] Weepinbell
-- [] Victreebel
-- [] Tentacool
-- [] Tentacruel
-- [] Geodude
-- [] Graveler
-- [] Golem
-- [] Ponyta
-- [] Rapidash
+- [ ] Bellsprout
+- [ ] Weepinbell
+- [ ] Victreebel
+- [ ] Tentacool
+- [ ] Tentacruel
+- [ ] Geodude
+- [ ] Graveler
+- [ ] Golem
+- [ ] Ponyta
+- [ ] Rapidash
 - [x] Slowpoke
-- [] Slowbro
-- [] Magnemite
+- [ ] Slowbro
+- [ ] Magnemite
 - [x] Magneton
-- [] Farfetch’d
-- [] Doduo
-- [] Dodrio
-- [] Seel
-- [] Dewgong
-- [] Grimer
-- [] Muk
-- [] Shellder
-- [] Cloyster
-- [] Gastly
-- [] Haunter
-- [] Gengar
-- [] Onix
-- [] Drowzee
-- [] Hypno
-- [] Krabby
-- [] Kingler
-- [] Voltorb
+- [ ] Farfetch’d
+- [ ] Doduo
+- [ ] Dodrio
+- [ ] Seel
+- [ ] Dewgong
+- [ ] Grimer
+- [ ] Muk
+- [ ] Shellder
+- [ ] Cloyster
+- [ ] Gastly
+- [ ] Haunter
+- [ ] Gengar
+- [ ] Onix
+- [ ] Drowzee
+- [ ] Hypno
+- [ ] Krabby
+- [ ] Kingler
+- [ ] Voltorb
 - [x] Electrode
-- [] Exeggcute
-- [] Exeggutor
-- [] Cubone
-- [] Marowak
-- [] Hitmonlee
-- [] Hitmonchan
-- [] Lickitung
-- [] Koffing
-- [] Weezing
-- [] Rhyhorn
-- [] Rhydon
-- [] Chansey
-- [] Tangela
-- [] Kangaskhan
-- [] Horsea
-- [] Seadra
-- [] Goldeen
-- [] Seaking
-- [] Staryu
+- [ ] Exeggcute
+- [ ] Exeggutor
+- [ ] Cubone
+- [ ] Marowak
+- [ ] Hitmonlee
+- [ ] Hitmonchan
+- [ ] Lickitung
+- [ ] Koffing
+- [ ] Weezing
+- [ ] Rhyhorn
+- [ ] Rhydon
+- [ ] Chansey
+- [ ] Tangela
+- [ ] Kangaskhan
+- [ ] Horsea
+- [ ] Seadra
+- [ ] Goldeen
+- [ ] Seaking
+- [ ] Staryu
 - [x] Starmie
-- [] Mr. Mime
-- [] Scyther
-- [] Jynx
-- [] Electabuzz
-- [] Magmar
-- [] Pinsir
-- [] Tauros
-- [] Magikarp
-- [] Gyarados
-- [] Lapras
-- [] Ditto
-- [] Eevee
-- [] Vaporeon
-- [] Jolteon
-- [] Flareon
+- [ ] Mr. Mime
+- [ ] Scyther
+- [ ] Jynx
+- [ ] Electabuzz
+- [ ] Magmar
+- [ ] Pinsir
+- [ ] Tauros
+- [ ] Magikarp
+- [ ] Gyarados
+- [ ] Lapras
+- [ ] Ditto
+- [ ] Eevee
+- [ ] Vaporeon
+- [ ] Jolteon
+- [ ] Flareon
 - [x] Porygon
-- [] Omanyte
-- [] Omastar
-- [] Kabuto
-- [] Kabutops
-- [] Aerodactyl
-- [] Snorlax
-- [] Articuno
-- [] Zapdos
-- [] Moltres
-- [] Dratini
-- [] Dragonair
-- [] Dragonite
-- [] Mewtwo
-- [] Mew
+- [ ] Omanyte
+- [ ] Omastar
+- [ ] Kabuto
+- [ ] Kabutops
+- [ ] Aerodactyl
+- [ ] Snorlax
+- [ ] Articuno
+- [ ] Zapdos
+- [ ] Moltres
+- [ ] Dratini
+- [ ] Dragonair
+- [ ] Dragonite
+- [ ] Mewtwo
+- [ ] Mew
