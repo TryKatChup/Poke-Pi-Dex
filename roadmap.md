@@ -166,7 +166,7 @@ Pokémon da tagliare:
 - [ ] Electabuzz
 - [ ] Magmar
 - [ ] Pinsir
-- [ ] Tauros
+- [x] Tauros
 - [ ] Magikarp
 - [ ] Gyarados
 - [x] Lapras
