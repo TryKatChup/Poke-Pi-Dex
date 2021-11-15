@@ -81,7 +81,7 @@ Pokémon da tagliare:
 - [x] Zubat
 - [x] Golbat
 - [x] Oddish
-- [ ] Gloom (parziale Kary)
+- [x] Gloom
 - [ ] Vileplume
 - [ ] Paras
 - [ ] Parasect
