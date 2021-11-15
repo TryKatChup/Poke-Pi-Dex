@@ -173,20 +173,20 @@ Pokémon da tagliare:
 - [x] Ditto
 - [ ] Eevee
 - [x] Vaporeon
-- [ ] Jolteon
+- [x] Jolteon
 - [x] Flareon
 - [x] Porygon
 - [ ] Omanyte
-- [ ] Omastar
+- [x] Omastar
 - [ ] Kabuto
 - [ ] Kabutops
-- [ ] Aerodactyl
+- [x] Aerodactyl
 - [x] Snorlax
 - [ ] Articuno
-- [ ] Zapdos
-- [ ] Moltres
+- [x] Zapdos
+- [x] Moltres
 - [x] Dratini
 - [ ] Dragonair
-- [ ] Dragonite
+- [x] Dragonite
 - [x] Mewtwo
 - [x] Mew
