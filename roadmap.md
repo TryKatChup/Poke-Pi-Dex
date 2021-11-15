@@ -170,7 +170,7 @@ Pokémon da tagliare:
 - [ ] Magikarp
 - [ ] Gyarados
 - [ ] Lapras
-- [ ] Ditto
+- [x] Ditto
 - [ ] Eevee
 - [x] Vaporeon
 - [ ] Jolteon
