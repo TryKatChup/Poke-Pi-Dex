@@ -84,15 +84,15 @@ Pokémon da tagliare:
 - [x] Oddish
 - [x] Gloom
 - [x] Vileplume
-- [ ] Paras (parte Miky fatta)
+- [x] Paras
 - [ ] Parasect
-- [ ] Venonat (parte Miky fatta)
+- [x] Venonat
 - [ ] Venomoth
-- [ ] Diglett (parte Miky fatta)
+- [x] Diglett
 - [ ] Dugtrio
 - [x] Meowth
 - [ ] Persian
-- [ ] Psyduck (parte Miky fatta)
+- [x] Psyduck
 - [ ] Golduck
 - [ ] Mankey
 - [ ] Primeape
