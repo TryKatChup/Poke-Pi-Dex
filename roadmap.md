@@ -79,7 +79,7 @@ Pokémon da tagliare:
 - [x] Jigglypuff
 - [x] Wigglytuff
 - [x] Zubat
-- [ ] Golbat (parziale Kary)
+- [x] Golbat
 - [x] Oddish
 - [ ] Gloom (parziale Kary)
 - [ ] Vileplume
