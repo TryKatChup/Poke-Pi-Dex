@@ -17,7 +17,7 @@ Miky
 - [x] scelta della lingua
 - [x] aggiungere descrizioni in lingua differente (IT)
 - [ ] registrare per ciascuna descrizione in Inglese la traccia audio letta da un bot (https://www.youtube.com/watch?v=rjlOJjX-6Ug)
-- [ ] opzione nelle impostazioni per abilitare la lettura automatica della descrizione del poémon quando viene riconosciuto
+- [ ] opzione nelle impostazioni per abilitare la lettura automatica della descrizione del pokémon quando viene riconosciuto
 - [ ] check nella descrizione per riprodurre la voce che legge la descrizione
 - [ ] impostazioni persistenti
 - [ ] finire doc progetto e aggiungere parti nella relazione
