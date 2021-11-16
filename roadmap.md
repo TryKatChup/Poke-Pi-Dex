@@ -100,39 +100,39 @@ Pokémon da tagliare:
 - [x] Arcanine
 - [x] Poliwag
 - [ ] Poliwhirl
-- [ ] Poliwrath
+- [x] Poliwrath
 - [ ] Abra
-- [ ] Kadabra
+- [ ] Kadabra (solo Kary)
 - [ ] Alakazam
-- [ ] Machop
+- [ ] Machop (solo Kary)
 - [ ] Machoke
 - [x] Machamp
 - [ ] Bellsprout
-- [ ] Weepinbell
+- [ ] Weepinbell (solo Kary)
 - [ ] Victreebel
-- [ ] Tentacool
+- [ ] Tentacool (solo Kary)
 - [ ] Tentacruel
-- [ ] Geodude
+- [ ] Geodude (solo Kary)
 - [ ] Graveler
-- [ ] Golem
+- [ ] Golem (solo Kary)
 - [ ] Ponyta
-- [ ] Rapidash
+- [ ] Rapidash (solo Kary)
 - [x] Slowpoke
-- [ ] Slowbro
+- [ ] Slowbro (lo fa Kary)
 - [ ] Magnemite
 - [x] Magneton
 - [ ] Farfetch’d
-- [ ] Doduo
+- [ ] Doduo (solo Kary)
 - [ ] Dodrio
-- [ ] Seel
+- [ ] Seel (solo Kary)
 - [ ] Dewgong
-- [ ] Grimer
-- [ ] Muk
-- [ ] Shellder
+- [ ] Grimer (solo Kary)
+- [ ] Muk (solo Kary)
+- [ ] Shellder (solo Kary)
 - [ ] Cloyster
-- [ ] Gastly
+- [ ] Gastly (solo Kary)
 - [ ] Haunter
-- [ ] Gengar
+- [ ] Gengar (solo Kary)
 - [x] Onix
 - [ ] Drowzee
 - [ ] Hypno
