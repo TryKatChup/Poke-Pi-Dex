@@ -94,7 +94,7 @@ Pokémon da tagliare:
 - [ ] Persian
 - [x] Psyduck
 - [ ] Golduck
-- [ ] Mankey
+- [x] Mankey
 - [ ] Primeape
 - [ ] Growlithe
 - [x] Arcanine
