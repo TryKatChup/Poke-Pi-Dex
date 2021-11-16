@@ -96,9 +96,9 @@ Pokémon da tagliare:
 - [ ] Golduck
 - [x] Mankey
 - [x] Primeape
-- [ ] Growlithe
+- [x] Growlithe
 - [x] Arcanine
-- [ ] Poliwag
+- [x] Poliwag
 - [ ] Poliwhirl
 - [ ] Poliwrath
 - [ ] Abra
