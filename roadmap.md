@@ -36,8 +36,8 @@ Entrambi:
   - per le immagini nuove cercare: <nome_pokémon> fanart, drawings, anime, 3d model, plush, action figure, carte ([sito utile](https://pkmncards.com/card))
 - [ ] rettificazione picamera
 
-
-Pokémon da tagliare:
+<!-- Mi raccomando aggiornare il numero di pokémon rimasti 🥝-->
+Pokémon da tagliare (49 rimasti o parzialmente rimasti):
 
 - [x] Bulbasaur
 - [x] Ivysaur
@@ -85,15 +85,15 @@ Pokémon da tagliare:
 - [x] Gloom
 - [x] Vileplume
 - [x] Paras
-- [ ] Parasect
+- [x] Parasect
 - [x] Venonat
-- [ ] Venomoth
+- [x] Venomoth
 - [x] Diglett
-- [ ] Dugtrio
+- [x] Dugtrio
 - [x] Meowth
-- [ ] Persian
+- [x] Persian
 - [x] Psyduck
-- [ ] Golduck
+- [x] Golduck
 - [x] Mankey
 - [x] Primeape
 - [x] Growlithe
@@ -111,14 +111,14 @@ Pokémon da tagliare:
 - [ ] Weepinbell (solo Kary)
 - [ ] Victreebel
 - [ ] Tentacool (solo Kary)
-- [ ] Tentacruel
+- [x] Tentacruel
 - [ ] Geodude (solo Kary)
 - [ ] Graveler
 - [ ] Golem (solo Kary)
 - [ ] Ponyta
 - [x] Rapidash
 - [x] Slowpoke
-- [ ] Slowbro (lo fa Kary)
+- [x] Slowbro
 - [ ] Magnemite
 - [x] Magneton
 - [ ] Farfetch’d
@@ -134,7 +134,7 @@ Pokémon da tagliare:
 - [ ] Haunter
 - [ ] Gengar (solo Kary)
 - [x] Onix
-- [ ] Drowzee
+- [x] Drowzee
 - [ ] Hypno
 - [ ] Krabby
 - [ ] Kingler
@@ -151,23 +151,23 @@ Pokémon da tagliare:
 - [ ] Weezing
 - [ ] Rhyhorn
 - [ ] Rhydon
-- [ ] Chansey
+- [x] Chansey
 - [ ] Tangela
-- [ ] Kangaskhan
+- [x] Kangaskhan
 - [ ] Horsea
 - [ ] Seadra
 - [ ] Goldeen
-- [ ] Seaking
+- [x] Seaking
 - [ ] Staryu
 - [x] Starmie
 - [ ] Mr. Mime
-- [ ] Scyther
+- [x] Scyther
 - [x] Jynx
-- [ ] Electabuzz
-- [ ] Magmar
+- [x] Electabuzz
+- [x] Magmar
 - [ ] Pinsir
 - [x] Tauros
-- [ ] Magikarp
+- [x] Magikarp
 - [ ] Gyarados
 - [x] Lapras
 - [x] Ditto
@@ -179,14 +179,14 @@ Pokémon da tagliare:
 - [ ] Omanyte
 - [x] Omastar
 - [ ] Kabuto
-- [ ] Kabutops
+- [x] Kabutops
 - [x] Aerodactyl
 - [x] Snorlax
-- [ ] Articuno
+- [x] Articuno
 - [x] Zapdos
 - [x] Moltres
 - [x] Dratini
-- [ ] Dragonair
+- [x] Dragonair
 - [x] Dragonite
 - [x] Mewtwo
 - [x] Mew
