@@ -116,7 +116,7 @@ Pokémon da tagliare:
 - [ ] Graveler
 - [ ] Golem (solo Kary)
 - [ ] Ponyta
-- [ ] Rapidash (solo Kary)
+- [x] Rapidash
 - [x] Slowpoke
 - [ ] Slowbro (lo fa Kary)
 - [ ] Magnemite
