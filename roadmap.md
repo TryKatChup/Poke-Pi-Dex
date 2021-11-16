@@ -171,7 +171,7 @@ Pokémon da tagliare:
 - [ ] Gyarados
 - [x] Lapras
 - [x] Ditto
-- [ ] Eevee
+- [x] Eevee
 - [x] Vaporeon
 - [x] Jolteon
 - [x] Flareon
