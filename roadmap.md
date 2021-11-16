@@ -104,7 +104,7 @@ Pokémon da tagliare:
 - [ ] Abra
 - [ ] Kadabra (solo Kary)
 - [ ] Alakazam
-- [ ] Machop (solo Kary)
+- [x] Machop
 - [ ] Machoke
 - [x] Machamp
 - [ ] Bellsprout
