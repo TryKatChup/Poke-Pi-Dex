@@ -127,7 +127,7 @@ Pokémon da tagliare:
 - [ ] Seel (solo Kary)
 - [ ] Dewgong
 - [x] Grimer
-- [ ] Muk (solo Kary)
+- [x] Muk
 - [ ] Shellder (solo Kary)
 - [ ] Cloyster
 - [ ] Gastly (solo Kary)
