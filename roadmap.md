@@ -37,7 +37,7 @@ Entrambi:
 - [ ] rettificazione picamera
 
 <!-- Mi raccomando aggiornare il numero di pokémon rimasti 🥝-->
-Pokémon da tagliare (49 rimasti o parzialmente rimasti):
+Pokémon da tagliare (44 rimasti o parzialmente rimasti):
 
 - [x] Bulbasaur
 - [x] Ivysaur
@@ -101,7 +101,7 @@ Pokémon da tagliare (49 rimasti o parzialmente rimasti):
 - [x] Poliwag
 - [ ] Poliwhirl
 - [x] Poliwrath
-- [ ] Abra
+- [x] Abra
 - [ ] Kadabra (solo Kary)
 - [ ] Alakazam
 - [x] Machop
@@ -125,7 +125,7 @@ Pokémon da tagliare (49 rimasti o parzialmente rimasti):
 - [ ] Doduo (solo Kary)
 - [ ] Dodrio
 - [ ] Seel (solo Kary)
-- [ ] Dewgong
+- [x] Dewgong
 - [x] Grimer
 - [x] Muk
 - [ ] Shellder (solo Kary)
@@ -155,17 +155,17 @@ Pokémon da tagliare (49 rimasti o parzialmente rimasti):
 - [ ] Tangela
 - [x] Kangaskhan
 - [ ] Horsea
-- [ ] Seadra
+- [x] Seadra
 - [ ] Goldeen
 - [x] Seaking
 - [ ] Staryu
 - [x] Starmie
-- [ ] Mr. Mime
+- [x] Mr. Mime
 - [x] Scyther
 - [x] Jynx
 - [x] Electabuzz
 - [x] Magmar
-- [ ] Pinsir
+- [x] Pinsir
 - [x] Tauros
 - [x] Magikarp
 - [ ] Gyarados
