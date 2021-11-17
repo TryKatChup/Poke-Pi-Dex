@@ -37,7 +37,7 @@ Entrambi:
 - [ ] rettificazione picamera
 
 <!-- Mi raccomando aggiornare il numero di pokémon rimasti 🥝-->
-Pokémon da tagliare (43 rimasti o parzialmente rimasti):
+Pokémon da tagliare (42 rimasti o parzialmente rimasti):
 
 - [x] Bulbasaur
 - [x] Ivysaur
@@ -115,7 +115,7 @@ Pokémon da tagliare (43 rimasti o parzialmente rimasti):
 - [ ] Geodude (solo Kary)
 - [ ] Graveler
 - [ ] Golem (solo Kary)
-- [ ] Ponyta (parte Miky)
+- [x] Ponyta
 - [x] Rapidash
 - [x] Slowpoke
 - [x] Slowbro
