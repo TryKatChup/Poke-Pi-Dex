@@ -119,9 +119,9 @@ Pokémon da tagliare (38 rimasti o parzialmente rimasti):
 - [x] Rapidash
 - [x] Slowpoke
 - [x] Slowbro
-- [ ] Magnemite
+- [x] Magnemite
 - [x] Magneton
-- [ ] Farfetch’d
+- [x] Farfetch’d
 - [x] Doduo
 - [x] Dodrio
 - [ ] Seel (solo Kary)
@@ -129,7 +129,7 @@ Pokémon da tagliare (38 rimasti o parzialmente rimasti):
 - [x] Grimer
 - [x] Muk
 - [ ] Shellder (solo Kary)
-- [ ] Cloyster
+- [x] Cloyster
 - [ ] Gastly (solo Kary)
 - [ ] Haunter
 - [ ] Gengar (solo Kary)
@@ -146,7 +146,7 @@ Pokémon da tagliare (38 rimasti o parzialmente rimasti):
 - [ ] Marowak
 - [ ] Hitmonlee
 - [ ] Hitmonchan
-- [ ] Lickitung
+- [x] Lickitung
 - [ ] Koffing
 - [ ] Weezing
 - [ ] Rhyhorn
