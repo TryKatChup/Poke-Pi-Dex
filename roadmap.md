@@ -132,7 +132,7 @@ Pokémon da tagliare (21 rimasti o parzialmente rimasti):
 - [x] Cloyster
 - [ ] Gastly (solo Kary)
 - [x] Haunter
-- [ ] Gengar (solo Kary)
+- [x] Gengar
 - [x] Onix
 - [x] Drowzee
 - [x] Hypno
