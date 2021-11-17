@@ -37,7 +37,7 @@ Entrambi:
 - [ ] rettificazione picamera
 
 <!-- Mi raccomando aggiornare il numero di pokémon rimasti 🥝-->
-Pokémon da tagliare (42 rimasti o parzialmente rimasti):
+Pokémon da tagliare (41 rimasti o parzialmente rimasti):
 
 - [x] Bulbasaur
 - [x] Ivysaur
@@ -99,13 +99,13 @@ Pokémon da tagliare (42 rimasti o parzialmente rimasti):
 - [x] Growlithe
 - [x] Arcanine
 - [x] Poliwag
-- [ ] Poliwhirl
+- [ ] Poliwhirl (solo Kary)
 - [x] Poliwrath
 - [x] Abra
 - [ ] Kadabra (solo Kary)
-- [ ] Alakazam
+- [ ] Alakazam (solo Kary)
 - [x] Machop
-- [ ] Machoke
+- [x] Machoke
 - [x] Machamp
 - [x] Bellsprout
 - [ ] Weepinbell (solo Kary)
