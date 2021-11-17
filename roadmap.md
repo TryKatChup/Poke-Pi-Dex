@@ -37,7 +37,7 @@ Entrambi:
 - [ ] rettificazione picamera
 
 <!-- Mi raccomando aggiornare il numero di pokémon rimasti 🥝-->
-Pokémon da tagliare (41 rimasti o parzialmente rimasti):
+Pokémon da tagliare (38 rimasti o parzialmente rimasti):
 
 - [x] Bulbasaur
 - [x] Ivysaur
@@ -113,7 +113,7 @@ Pokémon da tagliare (41 rimasti o parzialmente rimasti):
 - [ ] Tentacool (solo Kary)
 - [x] Tentacruel
 - [ ] Geodude (solo Kary)
-- [ ] Graveler
+- [x] Graveler
 - [ ] Golem (solo Kary)
 - [x] Ponyta
 - [x] Rapidash
@@ -123,7 +123,7 @@ Pokémon da tagliare (41 rimasti o parzialmente rimasti):
 - [x] Magneton
 - [ ] Farfetch’d
 - [ ] Doduo (solo Kary)
-- [ ] Dodrio
+- [x] Dodrio
 - [ ] Seel (solo Kary)
 - [x] Dewgong
 - [x] Grimer
@@ -141,7 +141,7 @@ Pokémon da tagliare (41 rimasti o parzialmente rimasti):
 - [ ] Voltorb
 - [x] Electrode
 - [ ] Exeggcute
-- [ ] Exeggutor
+- [x] Exeggutor
 - [ ] Cubone
 - [ ] Marowak
 - [ ] Hitmonlee
