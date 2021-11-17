@@ -122,7 +122,7 @@ Pokémon da tagliare (38 rimasti o parzialmente rimasti):
 - [ ] Magnemite
 - [x] Magneton
 - [ ] Farfetch’d
-- [ ] Doduo (solo Kary)
+- [x] Doduo
 - [x] Dodrio
 - [ ] Seel (solo Kary)
 - [x] Dewgong
