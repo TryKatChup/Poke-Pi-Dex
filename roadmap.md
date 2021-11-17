@@ -99,7 +99,7 @@ Pokémon da tagliare (41 rimasti o parzialmente rimasti):
 - [x] Growlithe
 - [x] Arcanine
 - [x] Poliwag
-- [ ] Poliwhirl (solo Kary)
+- [x] Poliwhirl
 - [x] Poliwrath
 - [x] Abra
 - [ ] Kadabra (solo Kary)
