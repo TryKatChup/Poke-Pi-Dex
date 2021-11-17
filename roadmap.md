@@ -168,7 +168,7 @@ Pokémon da tagliare (38 rimasti o parzialmente rimasti):
 - [x] Pinsir
 - [x] Tauros
 - [x] Magikarp
-- [ ] Gyarados
+- [x] Gyarados
 - [x] Lapras
 - [x] Ditto
 - [x] Eevee
