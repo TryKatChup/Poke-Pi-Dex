@@ -109,7 +109,7 @@ Pokémon da tagliare (38 rimasti o parzialmente rimasti):
 - [x] Machamp
 - [x] Bellsprout
 - [x] Weepinbell
-- [ ] Victreebel
+- [x] Victreebel
 - [ ] Tentacool (solo Kary)
 - [x] Tentacruel
 - [ ] Geodude (solo Kary)
