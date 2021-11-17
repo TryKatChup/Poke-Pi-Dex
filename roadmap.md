@@ -37,7 +37,7 @@ Entrambi:
 - [ ] rettificazione picamera
 
 <!-- Mi raccomando aggiornare il numero di pokémon rimasti 🥝-->
-Pokémon da tagliare (44 rimasti o parzialmente rimasti):
+Pokémon da tagliare (43 rimasti o parzialmente rimasti):
 
 - [x] Bulbasaur
 - [x] Ivysaur
@@ -107,7 +107,7 @@ Pokémon da tagliare (44 rimasti o parzialmente rimasti):
 - [x] Machop
 - [ ] Machoke
 - [x] Machamp
-- [ ] Bellsprout
+- [x] Bellsprout
 - [ ] Weepinbell (solo Kary)
 - [ ] Victreebel
 - [ ] Tentacool (solo Kary)
