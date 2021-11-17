@@ -37,7 +37,7 @@ Entrambi:
 - [ ] rettificazione picamera
 
 <!-- Mi raccomando aggiornare il numero di pokémon rimasti 🥝-->
-Pokémon da tagliare (38 rimasti o parzialmente rimasti):
+Pokémon da tagliare (21 rimasti o parzialmente rimasti):
 
 - [x] Bulbasaur
 - [x] Ivysaur
@@ -131,23 +131,23 @@ Pokémon da tagliare (38 rimasti o parzialmente rimasti):
 - [ ] Shellder (solo Kary)
 - [x] Cloyster
 - [ ] Gastly (solo Kary)
-- [ ] Haunter
+- [x] Haunter
 - [ ] Gengar (solo Kary)
 - [x] Onix
 - [x] Drowzee
-- [ ] Hypno
+- [x] Hypno
 - [ ] Krabby
-- [ ] Kingler
+- [x] Kingler
 - [ ] Voltorb
 - [x] Electrode
 - [ ] Exeggcute
 - [x] Exeggutor
 - [ ] Cubone
-- [ ] Marowak
+- [x] Marowak
 - [ ] Hitmonlee
-- [ ] Hitmonchan
+- [x] Hitmonchan
 - [x] Lickitung
-- [ ] Koffing
+- [x] Koffing
 - [ ] Weezing
 - [ ] Rhyhorn
 - [ ] Rhydon
