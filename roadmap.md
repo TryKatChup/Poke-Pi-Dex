@@ -103,7 +103,7 @@ Pokémon da tagliare (41 rimasti o parzialmente rimasti):
 - [x] Poliwrath
 - [x] Abra
 - [x] Kadabra
-- [ ] Alakazam (solo Kary)
+- [x] Alakazam
 - [x] Machop
 - [x] Machoke
 - [x] Machamp
