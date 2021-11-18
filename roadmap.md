@@ -138,7 +138,7 @@ Pokémon da tagliare (21 rimasti o parzialmente rimasti):
 - [x] Hypno
 - [ ] Krabby
 - [x] Kingler
-- [ ] Voltorb
+- [x] Voltorb
 - [x] Electrode
 - [ ] Exeggcute
 - [x] Exeggutor
