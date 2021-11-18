@@ -128,7 +128,7 @@ Pokémon da tagliare (12 rimasti o parzialmente rimasti):
 - [x] Dewgong
 - [x] Grimer
 - [x] Muk
-- [ ] Shellder (solo Kary)
+- [x] Shellder
 - [x] Cloyster
 - [ ] Gastly (solo Kary)
 - [x] Haunter
