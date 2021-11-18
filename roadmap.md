@@ -37,7 +37,7 @@ Entrambi:
 - [ ] rettificazione picamera
 
 <!-- Mi raccomando aggiornare il numero di pokémon rimasti 🥝-->
-Pokémon da tagliare (12 rimasti o parzialmente rimasti):
+Pokémon tagliati:
 
 - [x] Bulbasaur
 - [x] Ivysaur
