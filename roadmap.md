@@ -130,7 +130,7 @@ Pokémon da tagliare (12 rimasti o parzialmente rimasti):
 - [x] Muk
 - [x] Shellder
 - [x] Cloyster
-- [ ] Gastly (solo Kary)
+- [x] Gastly
 - [x] Haunter
 - [x] Gengar
 - [x] Onix
