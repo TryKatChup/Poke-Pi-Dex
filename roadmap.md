@@ -178,7 +178,7 @@ Pokémon da tagliare (12 rimasti o parzialmente rimasti):
 - [x] Porygon
 - [x] Omanyte
 - [x] Omastar
-- [ ] Kabuto
+- [x] Kabuto
 - [x] Kabutops
 - [x] Aerodactyl
 - [x] Snorlax
