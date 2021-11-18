@@ -136,7 +136,7 @@ Pokémon da tagliare (12 rimasti o parzialmente rimasti):
 - [x] Onix
 - [x] Drowzee
 - [x] Hypno
-- [ ] Krabby
+- [x] Krabby
 - [x] Kingler
 - [x] Voltorb
 - [x] Electrode
