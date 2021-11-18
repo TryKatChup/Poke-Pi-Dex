@@ -144,21 +144,21 @@ Pokémon da tagliare (12 rimasti o parzialmente rimasti):
 - [x] Exeggutor
 - [x] Cubone
 - [x] Marowak
-- [ ] Hitmonlee
+- [x] Hitmonlee
 - [x] Hitmonchan
 - [x] Lickitung
 - [x] Koffing
-- [ ] Weezing
+- [x] Weezing
 - [x] Rhyhorn
-- [ ] Rhydon
+- [x] Rhydon
 - [x] Chansey
 - [x] Tangela
 - [x] Kangaskhan
-- [ ] Horsea
+- [x] Horsea
 - [x] Seadra
 - [ ] Goldeen
 - [x] Seaking
-- [ ] Staryu
+- [x] Staryu
 - [x] Starmie
 - [x] Mr. Mime
 - [x] Scyther
