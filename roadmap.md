@@ -114,7 +114,7 @@ Pokémon da tagliare (21 rimasti o parzialmente rimasti):
 - [x] Tentacruel
 - [x] Geodude
 - [x] Graveler
-- [ ] Golem (solo Kary)
+- [x] Golem
 - [x] Ponyta
 - [x] Rapidash
 - [x] Slowpoke
