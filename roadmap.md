@@ -140,7 +140,7 @@ Pokémon da tagliare (12 rimasti o parzialmente rimasti):
 - [x] Kingler
 - [x] Voltorb
 - [x] Electrode
-- [ ] Exeggcute
+- [x] Exeggcute
 - [x] Exeggutor
 - [x] Cubone
 - [x] Marowak
@@ -156,7 +156,7 @@ Pokémon da tagliare (12 rimasti o parzialmente rimasti):
 - [x] Kangaskhan
 - [x] Horsea
 - [x] Seadra
-- [ ] Goldeen
+- [x] Goldeen
 - [x] Seaking
 - [x] Staryu
 - [x] Starmie
