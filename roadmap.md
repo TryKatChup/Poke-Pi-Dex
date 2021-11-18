@@ -124,7 +124,7 @@ Pokémon da tagliare (12 rimasti o parzialmente rimasti):
 - [x] Farfetch’d
 - [x] Doduo
 - [x] Dodrio
-- [ ] Seel (solo Kary)
+- [x] Seel
 - [x] Dewgong
 - [x] Grimer
 - [x] Muk
