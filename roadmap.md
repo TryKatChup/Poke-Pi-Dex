@@ -37,7 +37,7 @@ Entrambi:
 - [ ] rettificazione picamera
 
 <!-- Mi raccomando aggiornare il numero di pokémon rimasti 🥝-->
-Pokémon da tagliare (21 rimasti o parzialmente rimasti):
+Pokémon da tagliare (xxx rimasti o parzialmente rimasti):
 
 - [x] Bulbasaur
 - [x] Ivysaur
@@ -142,17 +142,17 @@ Pokémon da tagliare (21 rimasti o parzialmente rimasti):
 - [x] Electrode
 - [ ] Exeggcute
 - [x] Exeggutor
-- [ ] Cubone
+- [x] Cubone
 - [x] Marowak
 - [ ] Hitmonlee
 - [x] Hitmonchan
 - [x] Lickitung
 - [x] Koffing
 - [ ] Weezing
-- [ ] Rhyhorn
+- [x] Rhyhorn
 - [ ] Rhydon
 - [x] Chansey
-- [ ] Tangela
+- [x] Tangela
 - [x] Kangaskhan
 - [ ] Horsea
 - [x] Seadra
@@ -176,7 +176,7 @@ Pokémon da tagliare (21 rimasti o parzialmente rimasti):
 - [x] Jolteon
 - [x] Flareon
 - [x] Porygon
-- [ ] Omanyte
+- [x] Omanyte
 - [x] Omastar
 - [ ] Kabuto
 - [x] Kabutops
