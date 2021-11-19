@@ -12,7 +12,7 @@ COPY ./data /app/data
 # Unzip dataset
 WORKDIR /app/data
 # Download dataset
-RUN wget https://cloud.fuo.ninja/index.php/s/9mfWtjnEB77qsyj/download/archive.zip -O /app/data/archive.zip \
+RUN wget https://cloud.fuo.ninja/index.php/s/2wsRee4aGS7d6BP/download/archive.zip -O /app/data/archive.zip \
 && unzip /app/data/archive.zip -d /app/data/ && \
 rm /app/data/archive.zip
 
