@@ -1,0 +1,632 @@
+{
+  "pokemon": [
+    {
+      "nome": "Bulbasaur",
+      "descrizione": "Bulbasaur, il Pokémon Seme. Da piccolo usa i nutrienti del suo bulbo per ricavare l'energia che gli serve per crescere."
+    },
+    {
+      "nome": "Ivysaur",
+      "descrizione": "Ivysaur, il Pokémon Seme. È la forma evolutiva di Bulbasaur. Il bulbo che ha sul dorso assorbe il nutrimento e sboccia in un grande fiore."
+    },
+    {
+      "nome": "Venusaur",
+      "descrizione": "Venusaur, il Pokémon Seme. È la forma evolutiva di Ivysaur. Trae energia dall'assorbimento dei raggi solari, che permettono al fiore sul suo dorso di sbocciare."
+    },
+    {
+      "nome": "Charmander",
+      "descrizione": "Charmander, il Pokémon Lucertola. Sull'estremità della sua coda arde una fiammella. Si dice che per il Pokémon sarebbe la fine se la sua fiamma si esaurisse."
+    },
+    {
+      "nome": "Charmeleon",
+      "descrizione": "Charmeleon, il Pokémon Fiamma. È la forma evolutiva di Charmander. Atterra gli avversari con la coda per poi finirli con i suoi affilatissimi artigli."
+    },
+    {
+      "nome": "Charizard",
+      "descrizione": "Charizard, il Pokémon Fiamma. È la forma evolutiva di Charmeleon. La sua potente fiammata può fondere praticamente qualsiasi cosa."
+    },
+    {
+      "nome": "Squirtle",
+      "descrizione": "Squirtle, il Pokémon Tartaghina. Durante la lotta si nasconde dentro il suo guscio e, appena è possibile, spruzza acqua sull'avversario."
+    },
+    {
+      "nome": "Wartortle",
+      "descrizione": "Wartortle, il Pokémon Targaruga. È la forma evolutiva di Squirtle. La sua lunga e morbida coda è indice di purità, saggezza e fortuna."
+    },
+    {
+      "nome": "Blastoise",
+      "descrizione": "Blastoise, Pokémon Crostaceo. È la forma evolutiva di Wartortle. Il suo guscio è come un'armatura e usa gli idrocannoni che ha sul dorso per lanciare attacchi estremamente potenti."
+    },
+    {
+      "nome": "Caterpie",
+      "descrizione": "Caterpie, il Pokémon Baco. Per tenere lontani i nemici, rilascia un odore sgradevole dalle antenne. Crescendo cambia la pelle più volte."
+    },
+    {
+      "nome": "Metapod",
+      "descrizione": "Metapod, il Pokémon Bozzolo. È la forma evolutiva di Caterpie. In attesa di evolversi, il vulnerabile corpo di Metapod è circondato da un guscio duro che lo protegge."
+    },
+    {
+      "nome": "Butterfree",
+      "descrizione": "Butterfree, il Pokémon Farfalla. È la forma evolutiva di Metapod. La passione di Butterfree per il nettare lo spinge a cercare sempre fiori, anche se hanno poco polline."
+    },
+    {
+      "nome": "Weedle",
+      "descrizione": "Weedle, il Pokémon Millepiedi. L'aculeo posto sulla testa di questo Pokémon serve a iniettare una dose di veleno letale."
+    },
+    {
+      "nome": "Kakuna",
+      "descrizione": "Kakuna, il Pokémon Bozzolo. È la forma evolutiva di Weedle. È molto limitato nei movimenti. Se si sente minacciato, estrae il pungiglione e avvelena il nemico."
+    },
+    {
+      "nome": "Beedrill",
+      "descrizione": "Beedrill, il Pokémon Velenape. È la forma evolutiva di Kakuna. Vola attaccando con i pungiglioni velenosi della coda e delle zampe anteriori."
+    },
+    {
+      "nome": "Pidgey",
+      "descrizione": "Pidgey, il Pokémon Uccellino. Di solito non ama lottare, ma non esita ad attaccare se viene provocato."
+    },
+    {
+      "nome": "Pidgeotto",
+      "descrizione": "Pidgeotto, il Pokémon Uccello. È la forma evolutiva di Pidgey. È dotato di lunghi artigli, scende in picchiata dal cielo per acciuffare la sua preda."
+    },
+    {
+      "nome": "Pidgeot",
+      "descrizione": "Pidgeot, Pokémon Uccello. È la forma evolutiva di Pidgeotto. Può volare a una velocità doppia di quella del suono a un chilometro e mezzo di quota."
+    },
+    {
+      "nome": "Rattata",
+      "descrizione": "Rattata, il Pokémon Topo. Adora formaggi, noci, frutta e bacche. Spesso esce dalla foresta per rubare delle provviste ai campeggiatori e viaggiatori sciocchi."
+    },
+    {
+      "nome": "Raticate",
+      "descrizione": "Raticate, il Pokémon Topo. È la forma evolutiva di Rattata. Rosicchia qualsiasi cosa con i suoi denti che crescono in continuazione."
+    },
+    {
+      "nome": "Spearow",
+      "descrizione": "Spearow, il Pokémon Uccellino. Ha un bruttissimo carattere. È molto aggressivo e può attaccare altri Pokémon e addirittura gli umani."
+    },
+    {
+      "nome": "Fearow",
+      "descrizione": "Fearow, il Pokémon Becco. È la forma evolutiva di Spearow. Le sue ali ampie e potenti gli consentono di volare anche per un giorno intero. La forza del suo becco è tremenda."
+    },
+    {
+      "nome": "Ekans",
+      "descrizione": "Ekans, il Pokémon Serpente. Si attorciglia a spirale per riposarsi. In questa posizione riesce a reagire alle insidie provenienti da ogni parte grazie alla testa sollevata e allo sguardo fulminante."
+    },
+    {
+      "nome": "Arbok",
+      "descrizione": "Arbok, il Pokémon Cobra. È così forte da riuscire a stritolare qualsiasi cosa col corpo, persino un bidone in acciaio. Se Arbok si avvinghia a un nemico è impossibile sfuggire a questa morsa fatale."
+    },
+    {
+      "nome": "Pikachu",
+      "descrizione": "Pikachu, il Pokémon Topo. È capace di produrre attacchi elettrici dalle sacche che ha sulle guance."
+    },
+    {
+      "nome": "Raichu",
+      "descrizione": "Raichu, il Pokémon Topo. È la forma evolutiva di Pikachu. La sua lunga coda serve da messa a terra per proteggerlo dalla sua stessa alta tensione."
+    },
+    {
+      "nome": "Sandshrew",
+      "descrizione": "Sandshrew, il Pokémon Topo. Può arrotolarsi per proteggersi dagli attacchi nemici. Di notte si sotterra nella sabbia per risposarsi."
+    },
+    {
+      "nome": "Sandslash",
+      "descrizione": "Sandslash, il Pokémon Topo. È la forma evolutiva di Sandshrew. Il suo corpo è ricoperto da aculei coriacei, costituiti da parti di corazza indurita."
+    },
+    {
+      "nome": "Nidoran-f",
+      "descrizione": "Nidoran Femmina, il Pokémon Velenago. È più sensibile agli odori rispetto ai maschi. Capta le correnti d’aria con le vibrisse e si posiziona sottovento per cercare le prede."
+    },
+    {
+      "nome": "Nidorina",
+      "descrizione": "Nidorina, il Pokémon Velenago. È la forma evolutiva di Nidoran-f. Si pensa che il corno sulla fronte si sia atrofizzato per evitare che Nidorina punga i suoi cuccioli quando li nutre."
+    },
+    {
+      "nome": "Nidoqueen",
+      "descrizione": "Nidoqueen, il Pokémon Trapano. È la forma evolutiva di Nidorina. Più abile nella difesa che nell’attacco, protegge i cuccioli da qualunque attacco grazie alla corazza di squame."
+    },
+    {
+      "nome": "Nidoran-m",
+      "descrizione": "Nidoran Maschio, il Pokémon Velenago. Il corno sulla fronte è estremamente velenoso. Di indole circospetta, rizza costantemente le sue grandi orecchie."
+    },
+    {
+      "nome": "Nidorino",
+      "descrizione": "Nidorino, il Pokémon Velenago. È la forma evolutiva di Nidoran-m. Vaga alla ricerca di una Pietralunare frantumando rocce con il suo corno più duro del diamante."
+    },
+    {
+      "nome": "Nidoking",
+      "descrizione": "Nidoking, il Pokémon Trapano. È la forma evolutiva di Nidorino. Quando si scatena non c’è modo di fermarlo, ma davanti a Nidoqueen, la sua compagna di lunga data, ritrova la calma."
+    },
+    {
+      "nome": "Clefairy",
+      "descrizione": "Clefairy, il Pokémon Fata. Questo delicato Pokémon è amichevole e pacifico. Si dice che vedere un gruppo di Clefairy ballare con la luna piena sia di ottimo auspicio."
+    },
+    {
+      "nome": "Clefable",
+      "descrizione": "Clefable, il Pokémon Fata. È la forma evolutiva di Clefairy. È un Pokémon timido, molto raro a vedersi. Scappa e si nasconde non appena avverte la presenza delle persone."
+    },
+    {
+      "nome": "Vulpix",
+      "descrizione": "Vulpix, il Pokémon Volpe. Quando è giovane ha sei meravigliose code, che si moltiplicano durante la sua crescita."
+    },
+    {
+      "nome": "Ninetales",
+      "descrizione": "Ninetales, il Pokémon Volpe. È la forma evolutiva di Vulpix. Ha nove code e un mantello dorato splendente. Si dice che i Ninetales vivano molto a lungo."
+    },
+    {
+      "nome": "Jigglypuff",
+      "descrizione": "Jigglypuff, il Pokémon Pallone. Le sue corde vocali gli consentono di cantare esattamente alla lunghezza d'onda richiesta per addormentare l'avversario."
+    },
+    {
+      "nome": "Wigglytuff",
+      "descrizione": "Wigglytuff, il Pokémon Pallone. È la forma evolutiva di Jigglypuff. Più aria inala, più il suo corpo si gonfia. Se è di cattivo umore, si gonfia per intimidire l'avversario."
+    },
+    {
+      "nome": "Zubat",
+      "descrizione": "Zubat, il Pokémon Pipistrello. Rimane perfettamente immobile al buio durante le ore diurne più luminose. Infatti, la prolungata esposizione al sole gli provoca delle bruciature."
+    },
+    {
+      "nome": "Golbat",
+      "descrizione": "Golbat, il Pokémon Pipistrello. È la forma evolutiva di Zubat. Va matto per il sangue di altre creature. Si dice che a volte lo condivida con i compagni affamati."
+    },
+    {
+      "nome": "Oddish",
+      "descrizione": "Oddish, il Pokémon Malerba. Durante il giorno, Oddish si nasconde nel terreno per assorbire sostanze nutritive con tutto il corpo. più il suolo è fertile, più lucide diventano le foglie."
+    },
+    {
+      "nome": "Gloom",
+      "descrizione": "Gloom, il Pokémon Malerba. È la forma evolutiva di Oddish. Gloom rilascia un odore fetido dal pistillo del suo fiore. Quando è in pericolo, l'olezzo peggiora. Quando invece si sente tranquillo e sicuro, non emana questa sostanza maleodorante."
+    },
+    {
+      "nome": "Vileplume",
+      "descrizione": "Vileplume, il Pokémon Fiore. È la forma evolutiva di Gloom. Il suo polline velenoso scatena paurose reazioni allergiche. Per questo motivo si consiglia di non avvicinarsi mai a nessun fiore di bosco, per quanto bello possa essere."
+    },
+    {
+      "nome": "Paras",
+      "descrizione": "Paras, il Pokémon Fungo. Ha sulla schiena dei funghi parassiti chiamati tochukaso, che crescono traendo nutrimento dal Paras ospite. Sono molto apprezzati come farmaco di longevità."
+    },
+    {
+      "nome": "Parasect",
+      "descrizione": "Parasect, il Pokémon Fungo. È la forma evolutiva di Paras. Ha un grosso fungo sulla schiena, che assorbe l'energia dell'organismo ospite, su cui ha anche pieno controllo."
+    },
+    {
+      "nome": "Venonat",
+      "descrizione": "Venonat, il Pokémon Insetto. Si dice che per proteggersi Venonat abbia sviluppato una pelliccia sottile e irsuta che ricopre il suo corpo. Nemmeno la preda più piccola può sfuggire ai suoi occhi enormi."
+    },
+    {
+      "nome": "Venomoth",
+      "descrizione": "Venomoth, il Pokémon Velentarma. È la forma evolutiva di Venonat. È un Pokémon notturno e le sue prede preferite sono i piccoli insetti che si raggruppano attorno ai lampioni attratti dalla luce nel buio."
+    },
+    {
+      "nome": "Diglett",
+      "descrizione": "Diglett, il Pokémon Talpa. Viene allevato in molte aziende agricole. La ragione è semplice: quando questo Pokémon scava, lascia il suolo perfettamente arato per la semina, pronto per la coltivazione di squisite verdure."
+    },
+    {
+      "nome": "Dugtrio",
+      "descrizione": "Dugtrio, il Pokémon Talpa. È la forma evolutiva di Diglett. È un Pokémon formato da tre unità legate in un solo corpo. Ogni trio è un'unica mente pensante e le tre unità collaborano scavando instancabilmente."
+    },
+    {
+      "nome": "Meowth",
+      "descrizione": "Meowth, il Pokémon Graffimiao. Quando vede oggetti rotondi si mette a giocare e dimentica tutto il resto."
+    },
+    {
+      "nome": "Persian",
+      "descrizione": "Persian, il Pokémon Nobilgatto. È la fase evolutiva di Meowth. Sonda l'ambiente circostante con i suoi sei baffi che captano gli spostamenti dell'aria."
+    },
+    {
+      "nome": "Psyduck",
+      "descrizione": "Psyduck, il Pokémon Papero. Usa poteri misteriosi, che scatenano onde cerebrali rilevabili apparentemente soltanto su persone addormentate. Questa scoperta ha causato reazioni contrastanti tra gli studiosi."
+    },
+    {
+      "nome": "Golduck",
+      "descrizione": "Golduck, il Pokémon Papero. È la forma evolutiva di Psyduck. Le zampe anteriori e posteriori a pinna dotate di membrana interdigitale e il corpo longilineo di Golduck gli conferiscono una velocità incredibile."
+    },
+    {
+      "nome": "Mankey",
+      "descrizione": "Mankey, il Pokémon Suinpanzé. Quando inizia a tremare e la sua respirazione nasale diventa pesante significa che si sta infuriando. Tuttavia, a causa dei suoi repentini attacchi d'ira, è impossibile per chiunque sfuggire alla sua furia."
+    },
+    {
+      "nome": "Primeape",
+      "descrizione": "Primeape, il Pokémon Suinpanzé. È la forma evolutiva di Mankey. Quando s'infuria, la circolazione sanguigna si fa intensa, irrobustendo i suoi muscoli. Allo stesso tempo, tuttavia, perde anche la sua lucidità e intelligenza."
+    },
+    {
+      "nome": "Growlithe",
+      "descrizione": "Growlithe, il Pokémon Cagnolino. Ha un senso dell'olfatto molto sviluppato: una volta annusato qualcosa non scorda più quell'odore. Sfrutta questa dote per determinare le emozioni delle altre creature."
+    },
+    {
+      "nome": "Arcanine",
+      "descrizione": "Arcanine, il Pokémon Leggenda. È la forma evolutiva di Growlithe. È noto per la sua velocità. Si dice sia in grado di percorrere 10.000 km in un giorno e una notte. Il fuoco che arde indomabile nel suo corpo è fonte di forza."
+    },
+    {
+      "nome": "Poliwag",
+      "descrizione": "Poliwag, il Pokémon Girino. Ha una pelle molto sensibile, attraverso cui è possibile intravedere i suoi organi interni spiraliformi. Nonostante il suo esiguo spessore, la pelle è molto elastica. Anche le zanne più affilate non riescono a lacerarla."
+    },
+    {
+      "nome": "Poliwhirl",
+      "descrizione": "Poliwhirl, il Pokémon Girino. È la forma evolutiva di Poliwag. La superficie del suo corpo è sempre umida e unta di fluido oleoso. Grazie a questa pellicola viscida, nella lotta riesce a sfuggire agilmente alle grinfie del nemico."
+    },
+    {
+      "nome": "Poliwrath",
+      "descrizione": "Poliwrath, il Pokémon Girino. È la forma evolutiva di Poliwhirl. È dotato di muscoli molto sviluppati e robusti. Per quanto si alleni, non si stanca mai. Questo Pokémon è così infaticabile e forte che riesce ad attraversare a nuoto interi oceani."
+    },
+    {
+      "nome": "Abra",
+      "descrizione": "Abra, il Pokémon Psico. Dorme per 18 ore al giorno, ma riesce a captare la presenza dei nemici anche durante il sonno. In questo caso il Pokémon si teletrasporta immediatamente al sicuro."
+    },
+    {
+      "nome": "Kadabra",
+      "descrizione": "Kadabra, il Pokémon Psico. È la forma evolutiva di Abra. Emette particolari onde alfa che causano mal di testa a chi si trova nelle vicinanze."
+    },
+    {
+      "nome": "Alakazam",
+      "descrizione": "Alakazam, il Pokémon Psico. È la forma evolutiva di Kadabra. Il cervello di Alakazam cresce in continuazione rendendo la sua testa troppo pesante per il collo. Pertanto è costretto a usare i suoi poteri psicocinetici per sostenerla."
+    },
+    {
+      "nome": "Machop",
+      "descrizione": "Machop, il Pokémon Megaforza. I suoi particolari muscoli non si infiammano mai, nemmeno in caso di esercizio eccessivo. Questo Pokémon ha la forza sufficiente per scagliare lontano un centinaio di uomini."
+    },
+    {
+      "nome": "Machoke",
+      "descrizione": "Machoke, il Pokémon Megaforza. È la forma evolutiva di Machop. I suoi muscoli perfettamente tonici possiedono la durezza dell'acciaio. Questo Pokémon è così forte da riuscire a sollevare un lottatore di sumo con un dito."
+    },
+    {
+      "nome": "Machamp",
+      "descrizione": "Machamp, il Pokémon Megaforza. È la forma evolutiva di Machoke. È noto per la sua conoscenza di ogni tipo di arti marziali. Può sferrare un migliaio di pugni in pochi secondi e con una sola mano può muovere persino una montagna"
+    },
+    {
+      "nome": "Bellsprout",
+      "descrizione": "Bellsprout, il Pokémon Fiore. Il suo corpo esile e flessibile gli consente di piegarsi e oscillare per evitare ogni attacco, anche violento. Dalla bocca sputa un fluido corrosivo in grado di sciogliere anche il ferro."
+    },
+    {
+      "nome": "Weepinbell",
+      "descrizione": "Weepinbell, il Pokémon Moschivoro. È la forma evolutiva di Bellsprout. è dotato di un grande uncino posteriore. Di notte lo usa per appendersi a un ramo e mettersi a dormire. Talvolta, agitandosi nel sonno, si sveglia al suolo."
+    },
+    {
+      "nome": "Victreebel",
+      "descrizione": "Victreebel, il Pokémon Moschivoro. È la forma evolutiva di Weepinbell. È dotato di una lunga liana che parte dalla testa. Il Pokémon la sventola e la agita come fosse un'esca per attirare la preda. Quando la preda ignara si avvicina, il Pokémon la inghiotte in un sol boccone."
+    },
+    {
+      "nome": "Tentacool",
+      "descrizione": "Tentacool, il Pokémon Medusa. Il suo corpo è costituito quasi completamente da acqua. Non essendo molto abile a nuotare, va in cerca di prede fluttuando in acque poco profonde."
+    },
+    {
+      "nome": "Tentacruel",
+      "descrizione": "Tentacruel, il Pokémon Medusa. È la forma evolutiva di Tentacool. Ha due grandi sfere rosse sulla testa. Le sfere brillano prima di emettere potenti ultrasuoni. Gli attacchi di questo Pokémon creano onde impetuose nei dintorni."
+    },
+    {
+      "nome": "Geodude",
+      "descrizione": "Geodude, il Pokémon Roccia. Lo si può trovare vicino ai sentieri di montagna. Bisogna fare attenzione a non calpestarlo per sbaglio, altrimenti diventa furioso."
+    },
+    {
+      "nome": "Graveler",
+      "descrizione": "Graveler, il Pokémon Roccia. È la forma evolutiva di Geodude. Si ciba di rocce e pare preferisca quelle ricoperte di muschio. Spesso viene visto rotolare giù per i sentieri di montagna, travolgendo tutto ciò che incontra."
+    },
+    {
+      "nome": "Golem",
+      "descrizione": "Golem, il Pokémon Megatone. È la forma evolutiva di Graveler. Vivono in alta montagna. In caso di terremoto, questi Pokémon rotolano giù per i monti in massa e si fermano a valle."
+    },
+    {
+      "nome": "Ponyta",
+      "descrizione": "Ponyta, il Pokémon Cavalfuoco. È molto debole alla nascita e riesce a malapena a reggersi in piedi. Poi si rinforza a furia di inciampare e cadere, cercando di tenere il passo dei suoi genitori."
+    },
+    {
+      "nome": "Rapidash",
+      "descrizione": "Rapidash, il Pokémon Cavalfuoco. È la forma evolutiva di Ponyta. Si vede comunemente galoppare in campagne e pianure. Quando si lancia a tutta velocità la sua fiera criniera brilla e arde mentre galoppa fino a 240 km/h."
+    },
+    {
+      "nome": "Slowpoke",
+      "descrizione": "Slowpoke, il Pokémon Ronfone. Usa la coda per pescare la preda, immergendola in acqua dalle rive dei fiumi. Tuttavia, spesso dimentica cosa stava facendo e trascorre giorni interi a ciondolare vicino ai corsi d'acqua."
+    },
+    {
+      "nome": "Slowbro",
+      "descrizione": "Slowbro, il Pokémon . È la forma evolutiva di Slowpoke. Ha uno Shellder saldamente attaccato alla coda, che quindi non può più essere usata per pescare. Così Slowbro può essere visto nuotare di malavoglia per catturare una preda."
+    },
+    {
+      "nome": "Magnemite",
+      "descrizione": "Magnemite, il Pokémon Calamita. Si attacca alle linee elettriche per caricarsi di energia. Può capitare che esaurisca la sua riserva di elettricità e di cadere al suolo. Se gli viene data una batteria, torna a muoversi."
+    },
+    {
+      "nome": "Magneton",
+      "descrizione": "Magneton, il Pokémon Calamita. È la forma evolutiva di Magnemite. Emette una potente carica magnetica fatale per tutte le apparecchiature meccaniche. Nelle città, le sirene avvertono la popolazione di grandi invasioni di questi Pokémon."
+    },
+    {
+      "nome": "Farfetch'd",
+      "descrizione": "Farfetch'd, il Pokémon Selvanatra. Ha sempre con sé il gambo di qualche pianta. Pare che alcuni gambi siano migliori di altri. Spesso lotta con altri Pokémon per avere i gambi migliori."
+    },
+    {
+      "nome": "Doduo",
+      "descrizione": "Doduo, il Pokémon Biuccello. Le due teste di Doduo non dormono mai nello stesso momento, in modo che una sia sempre vigile per difendersi dai nemici, mentre l'altra può riposarsi tranquilla."
+    },
+    {
+      "nome": "Dodrio",
+      "descrizione": "Dodrio, il Pokémon Triuccello. È la forma evolutiva di Doduo. Se le tre teste di Dodrio guardano in tre direzioni diverse, significa che il Pokémon è vigile. In questo stato il Pokémon non va avvicinato, poiché potrebbe decidere di attaccare."
+    },
+    {
+      "nome": "Seel",
+      "descrizione": "Seel, il Pokémon Otaria. Caccia le prede nel mare gelido sotto le lastre di ghiaccio. Per respirare apre un foro nel ghiaccio usando la protuberanza appuntita sulla sommità del capo."
+    },
+    {
+      "nome": "Dewgong",
+      "descrizione": "Dewgong, il Pokémon Otaria. È la forma evolutiva di Seel. Adora riposare su una gelida lastra di ghiaccio. In passato i marinai confondevano il profilo di questo Pokémon addormentato sulla superficie gelata con una sirena."
+    },
+    {
+      "nome": "Grimer",
+      "descrizione": "Grimer, il Pokémon Melma. Il suo corpo fangoso e gommoso può passare attraverso ogni apertura, anche la più angusta. Si intrufola dentro le condotte fognarie per bere le ripugnanti acque di scarico."
+    },
+    {
+      "nome": "Muk",
+      "descrizione": "Muk, il Pokémon Melma. È la forma evolutiva di Grimer. Quelli che sembrano denti e artigli sono in realtà tossine cristallizzate che avvelenano al solo contatto. Avvicinarsi è molto pericoloso."
+    },
+    {
+      "nome": "Shellder",
+      "descrizione": "Shellder, il Pokémon Bivalve. La conchiglia esterna è più dura del diamante e gli permette di respingere ogni tipo di attacco. In passato era usata per costruire scudi."
+    },
+    {
+      "nome": "Cloyster",
+      "descrizione": "Cloyster, il Pokémon Bivalve. È la forma evolutiva di Shellder. È in grado di nuotare in mare aperto, ingerendo acqua dalla bocca per poi espellerla violentemente a mo' di propulsore. Questo Pokémon usa lo stesso metodo per sparare punte dalla conchiglia."
+    },
+    {
+      "nome": "Gastly",
+      "descrizione": "Gastly, il Pokémon Gas. è composto prevalentemente di sostanze gassose. Se esposto al vento forte il suo corpo gassoso si disperde subito. Gruppi di questi Pokémon si radunano sotto i cornicioni per ripararsi dal vento."
+    },
+    {
+      "nome": "Haunter",
+      "descrizione": "Haunter, il Pokémon Gas. È la forma evolutiva di Gastly. È un Pokémon pericoloso. Se lo vedi fare cenni mentre fluttua nell'oscurità, è meglio fuggire, poiché il Pokémon cercherà di leccare il malcapitato e succhiargli la vita."
+    },
+    {
+      "nome": "Gengar",
+      "descrizione": "Gengar, il Pokémon Ombra. È la forma evolutiva di Haunter. Talvolta, nelle notti buie, può accadere che un passante sia improvvisamente aggredito dalla propria ombra. È opera di Gengar, che usa avvicinarsi fingendosi un'ombra."
+    },
+    {
+      "nome": "Onix",
+      "descrizione": "Onix, il Pokémon Serpesasso. Ha una calamita nel cervello, che agisce da bussola per consentirgli di non perdere l'orientamento mentre scava sottoterra. Con il passare del tempo il suo corpo diventa sempre più smussato e levigato."
+    },
+    {
+      "nome": "Drowzee",
+      "descrizione": "Drowzee, il Pokémon Ipnosi. È solito nutrirsi dei sogni degli altri mentre dormono, estraendoli dalle loro narici. Se durante il sonno si avverte prurito al naso, significa che Drowzee è già all'opera."
+    },
+    {
+      "nome": "Hypno",
+      "descrizione": "Hypno, il Pokémon Ipnosi. È la fase evolutiva di Drowzee. È solito nutrirsi dei sogni degli altri mentre dormono, estraendoli dalle loro narici. Se durante il sonno si avverte prurito al naso, significa che Drowzee è già all'opera."
+    },
+    {
+      "nome": "Krabby",
+      "descrizione": "Krabby il Pokémon Granchio. Vive in spiaggia, nascosto in buche scavate nella sabbia. Sulle spiagge molto sabbiose, dove scarseggia il cibo, è possibile vedere questi Pokémon attaccarsi a vicenda in difesa del proprio territorio."
+    },
+    {
+      "nome": "Kingler",
+      "descrizione": "Kingler, il Pokémon Chela. È la forma evolutiva di Krabby. È dotato di un'enorme chela, che brandisce nell'aria per comunicare con i suoi simili. Tuttavia, dato il notevole peso della chela sovradimensionata, il Pokémon si stanca in fretta."
+    },
+    {
+      "nome": "Voltorb",
+      "descrizione": "Voltorb, il Pokémon Ball. Si dice che abbia un aspetto simile a una Poké Ball per passare inosservato. Tende ad autodistruggersi al minimo stimolo."
+    },
+    {
+      "nome": "Electrode",
+      "descrizione": "Electrode, il Pokémon Ball. È la forma evolutiva di Voltorb. L'energia elettrica accumulata nel suo corpo può provocare un'esplosione al minimo urto. Temuto da tutti, è noto come \"Palla Esplosiva\"."
+    },
+    {
+      "nome": "Exeggcute",
+      "descrizione": "Exeggcute, il Pokémon Uovo. È costituito da un nucleo composto da sei uova, che girano vorticosamente attraendosi a vicenda. Quando i gusci iniziano a rompersi, Exeggcute è prossimo all'evoluzione."
+    },
+    {
+      "nome": "Exeggutor",
+      "descrizione": "Exeggutor, il Pokémon Nocecocco. È la fase evolutiva di Exeggcute. è originario dei tropici. Le teste crescono costantemente se esposte a forte luce solare. Pare che quando le teste cadono, si uniscano per formare un Exeggcute."
+    },
+    {
+      "nome": "Cubone",
+      "descrizione": "Cubone, il Pokémon Solitario. Si strugge per la madre che non rivedrà mai più. Piange alla luna piena che somiglia molto alla madre. Le macchie sul teschio che indossa sono dovute alle lacrime copiose."
+    },
+    {
+      "nome": "Marowak",
+      "descrizione": "Marowak, il Pokémon Guardaossi. È la forma evolutiva di Cubone. Si è evoluto dopo essersi temprato e aver superato il lutto. Usa l'osso come un'arma e lotta valorosamente contro i nemici."
+    },
+    {
+      "nome": "Hitmonlee",
+      "descrizione": "Hitmonlee, il Pokémon Tiracalci. Le sue zampe sono estremamente elastiche. Usandole a mo' di molla, si scaglia sul nemico con calci rovinosi. Dopo la lotta si strofina le zampe e scioglie i muscoli per recuperare le forze."
+    },
+    {
+      "nome": "Hitmonchan",
+      "descrizione": "Hitmonchan, il Pokémon Tirapugni. Si dice che abbia l'animo di un pugile destinato a partecipare al campionato mondiale. Questo Pokémon ha uno spirito indomito e non demorde mai di fronte alle avversità."
+    },
+    {
+      "nome": "Lickitung",
+      "descrizione": "Lickitung, il Pokémon Linguaccia. Quando si trova davanti a qualcosa di nuovo, istintivamente lo assaggia con una leccata. È dotato infatti di una memoria legata al gusto e alla consistenza degli oggetti. Non ama i sapori aspri."
+    },
+    {
+      "nome": "Koffing",
+      "descrizione": "Koffing, il Pokémon Velenuvola. Il suo corpo è gonfio di gas velenosi. Va nelle discariche attratto dall'odore di rifiuti putrescenti."
+    },
+    {
+      "nome": "Weezing",
+      "descrizione": "Weezing, il Pokémon Velenuvola. Si serve del suo duplice corpo per miscelare i gas. Si sente a suo agio in case sudicie e maltenute, e la notte, mentre dormono tutti, lui si aggira furtivo tra i rifiuti domestici."
+    },
+    {
+      "nome": "Rhyhorn",
+      "descrizione": "Rhyhorn, il Pokémon Punzoni. È molto forte, benché non particolarmente brillante. Se si scaglia contro un grattacielo può raderlo al suolo."
+    },
+    {
+      "nome": "Rhydon",
+      "descrizione": "Rhydon, il Pokémon Trapano. È la fase evolutiva di Rhyhorn. Possiede un corno che usa come trivella. Può sfruttarlo per distruggere roccie e massi."
+    },
+    {
+      "nome": "Chansey",
+      "descrizione": "Chansey, il Pokémon Uovo. Ogni giorno depone uova molto nutrienti. Queste uova sono così buone da far tornare l'appetito a chi lo ha perso."
+    },
+    {
+      "nome": "Tangela",
+      "descrizione": "Tangela, il Pokémon Liana. Se le sue liane vengono afferrate, si staccano con facilità, ma in modo indolore, consentendo una pratica scappatoia al Pokémon."
+    },
+    {
+      "nome": "Kangaskhan",
+      "descrizione": "Kangaskhan, il Pokémon Genitore. Se si avvista un cucciolo di Kangaskhan giocare per conto suo, non bisogna mai disturbarlo o cercare di catturarlo. Il suo genitore, infatti, è sicuramente nei paraggi e potrebbe reagire molto violentemente."
+    },
+    {
+      "nome": "Horsea",
+      "descrizione": "Horsea, il Pokémon Drago. Vive in mari dalle correnti tranquille. Quando viene attaccato spruzza inchiostro nero e ne approfitta per fuggire."
+    },
+    {
+      "nome": "Seadra",
+      "descrizione": "Seadra, il Pokémon Drago. È la forma evolutiva di Horsea. Dorme dopo essersi sistemato tra i rami di un corallo. I cercatori di corallo spesso rischiano di essere punti dai suoi aculei velenosi se non si accorgono della sua presenza."
+    },
+    {
+      "nome": "Goldeen",
+      "descrizione": "Goldeen, il Pokémon Pescerosso. È un Pokémon molto elegante dai movimenti aggraziati. Tuttavia, è necessario stare attenti poiché è capace di attaccare violentemente con il suo corno."
+    },
+    {
+      "nome": "Seaking",
+      "descrizione": "Seaking, il Pokémon Pescerosso. È la forma evolutiva di Goldeen. In autunno ingrassa in previsione della stagione degli amori e assume colori sgargianti."
+    },
+    {
+      "nome": "Staryu",
+      "descrizione": "Staryu, il Pokémon Stella. Quando si raggruppano di notte, i loro nuclei centrali brillano al ritmo delle stelle. Se perde un'appendice, questo Pokémon la rigenera senza problemi."
+    },
+    {
+      "nome": "Starmie",
+      "descrizione": "Starmie, il Pokémon Misterioso. È la forma evolutiva di Staryu. Nuota roteando vorticosamente il corpo a stella come fosse l'elica di una nave. Il suo nucleo brilla in sette diversi colori."
+    },
+    {
+      "nome": "Mr. Mime",
+      "descrizione": "Mr. Mime, il Pokémon Barriera. È un esperto di mimica. Con la gestualità convince l'osservatore dell'esistenza di oggetti invisibili che saranno percepiti come reali."
+    },
+    {
+      "nome": "Scyther",
+      "descrizione": "Scyther, il Pokémon Mantide. È veloce come una saetta. La rapidità rende le falci sulle zampe anteriori così efficaci da tranciare con un colpo secco persino un tronco secolare."
+    },
+    {
+      "nome": "Jynx",
+      "descrizione": "Jynx, il Pokémon Umanoide. Avanza oscillando ritmicamente come in una specie di danza che ammalia chi lo vede. L'osservatore viene così indotto a danzare senza rendersene conto."
+    },
+    {
+      "nome": "Electabuzz",
+      "descrizione": "Electabuzz, il Pokémon Elettrico. All'arrivo di un temporale questi Pokémon si raggruppano e a gara scalano le vette più alte sperando di riuscire a prendere qualche fulmine."
+    },
+    {
+      "nome": "Magmar",
+      "descrizione": "Magmar, il Pokémon Sputafuoco. In lotta, sputa fiamme roventi da tutto il corpo per intimidire l'avversario. La sua furia provoca ondate di calore che bruciano la vegetazione circostante."
+    },
+    {
+      "nome": "Pinsir",
+      "descrizione": "Pinsir, il Pokémon Cervolante. È dotato di due chele enormi sul capo, dalla cui superficie sporgono aculei. Questi vengono conficcati nel corpo del nemico quando le chele si chiudono, per impedirne la fuga."
+    },
+    {
+      "nome": "Tauros",
+      "descrizione": "Tauros, il Pokémon Torobrado. Questo Pokémon è molto insofferente e sempre alla ricerca della rissa. Se non trova un avversario con cui lottare, Tauros si lancia contro grossi tronchi per abbaterli e calmarsi."
+    },
+    {
+      "nome": "Magikarp",
+      "descrizione": "Magikarp, il Pokémon Pesce. Nella lotta è virtualmente inutile, poiché può solo sguazzare. Per questo motivo è considerato debole. In realtà, si tratta di un Pokémon molto robusto che sopravvive in qualsiasi tipo di bacino d'acqua, anche i più inquinati."
+    },
+    {
+      "nome": "Gyarados",
+      "descrizione": "Gyarados, il Pokémon Atroce. È la fase evolutiva di Magikarp. Quando s'infuria, la sua indole feroce e violenta non si placa finché non ha incendiato ogni cosa. Ci sono testimonianze di sfuriate di questo Pokémon durate anche un mese intero."
+    },
+    {
+      "nome": "Lapras",
+      "descrizione": "Lapras, il Pokémon Trasporto. Portato quasi alla totale estinzione, si dice che la sera lo si senta cantare malinconico per richiamare i suoi pochi simili ancora in vita."
+    },
+    {
+      "nome": "Ditto",
+      "descrizione": "Ditto, il Pokémon Mutante. Cambia la sua struttura cellulare per assumere molte altre forme. Tuttavia, quando si affida solo alla sua memoria, talvolta dimentica dettagli importanti."
+    },
+    {
+      "nome": "Eevee",
+      "descrizione": "Eevee, il Pokémon Evoluzione. È dotato di un instabile corredo genetico che muta in base all'habitat naturale in cui vive. Le radiazioni di diverse Pietre ne scatenano l'evoluzione."
+    },
+    {
+      "nome": "Vaporeon",
+      "descrizione": "Vaporeon, il Pokémon Bollajet. È la forma evolutiva di Eevee. Frutto di una mutazione naturale, ha sviluppato pinne e branchie per vivere sott'acqua. Ha la capacità di sfruttare l'acqua a suo vantaggio."
+    },
+    {
+      "nome": "Jolteon",
+      "descrizione": "Jolteon, il Pokémon Luminoso. È la forma evolutiva di Eevee. Le sue cellule generano un basso potenziale elettrico, che viene tuttavia amplificato dall'elettricità statica della sua pelliccia, da cui scatena fulmini."
+    },
+    {
+      "nome": "Flareon",
+      "descrizione": "Flareon, il Pokémon Fiamma. È la forma evolutiva di Eevee. La sua morbida pelliccia di ha lo scopo di liberare calore nell'aria abbassando in tal modo la temperatura corporea, che raggiunge al massimo 900°C."
+    },
+    {
+      "nome": "Porygon",
+      "descrizione": "Porygon, il Pokémon Virtuale. Può regredire ai suoi codici di programmazione originari ed entrare nel ciberspazio. È dotato di un sistema antipirateria per evitare la duplicazione."
+    },
+    {
+      "nome": "Omanyte",
+      "descrizione": "Omanyte, il Pokémon Spirale. È uno degli antichi Pokémon estinti rigenerati di recente dall'uomo. Se viene aggredito da un nemico, si ritira all'interno della sua dura corazza."
+    },
+    {
+      "nome": "Omastar",
+      "descrizione": "Omastar, il Pokémon Spirale. È la forma evolutiva di Omanyte. Usa i tentacoli per catturare la preda. Si pensa che si sia estinto a causa della conchiglia troppo ingombrante, che rendeva i movimenti lenti e difficoltosi."
+    },
+    {
+      "nome": "Kabuto",
+      "descrizione": "Kabuto, il Pokémon Crostaceo. È stato rigenerato da un fossile, sebbene in rari casi siano stati scoperti esemplari viventi. Non ha subito alcuna mutazione in oltre 300 milioni di anni."
+    },
+    {
+      "nome": "Kabutops",
+      "descrizione": "Kabutops, il Pokémon Crostaceo. È la forma evolutiva di Kabuto. Nell'antichità cacciava le prede sott'acqua. Le mutazioni su branchie e zampe confermano la teoria che si stesse adattando alla vita sulla terraferma."
+    },
+    {
+      "nome": "Aerodactyl",
+      "descrizione": "Aerodactyl, il Pokémon Fossile.  Risale all'epoca dei dinosauri. È stato rigenerato da materiale genetico estratto dall'ambra. Si suppone che nell'antichità fosse il signore dei cieli."
+    },
+    {
+      "nome": "Snorlax",
+      "descrizione": "Snorlax, il Pokémon Sonno. In una giornata tipica, Snorlax non fa altro che mangiare e dormire. È così docile che i bambini usano la sua enorme pancia come parco giochi."
+    },
+    {
+      "nome": "Articuno",
+      "descrizione": "Articuno, il Pokémon Gelo. È un uccello leggendario, a suo agio tra i ghiacci. Quando batte le ali, l'aria diventa gelida. Quando nevica, si dice che sia passato di lì."
+    },
+    {
+      "nome": "Zapdos",
+      "descrizione": "Zapdos, il Pokémon Elettrico. È un uccello leggendario perfettamente in grado di gestire l'elettricità. Vive nelle nubi temporalesche e acquista forza se colpito da qualche fulmine."
+    },
+    {
+      "nome": "Moltres",
+      "descrizione": "Moltres, il Pokémon Fiamma. È un uccello leggendario in grado di gestire il fuoco. Se rimane ferito, si dice che si immerga nel magma di un vulcano per ardere e tornare in salute."
+    },
+    {
+      "nome": "Dratini",
+      "descrizione": "Dratini, il Pokémon Drago. Fa la muta cambiando continuamente la pelle vecchia, perché l'energia vitale del suo corpo aumenta fino a raggiungere livelli incontrollabili."
+    },
+    {
+      "nome": "Dragonair",
+      "descrizione": "Dragonair, il Pokémon Drago. È la fase evolutiva di Dratini. Questo Pokémon accumula un'enorme quantità d'energia all'interno del corpo. Si dice che sia in grado di mutare le condizioni meteorologiche circostanti scaricando energia dai cristalli del collo e della coda."
+    },
+    {
+      "nome": "Dragonite",
+      "descrizione": "Dragonite, il Pokémon Drago. È la forma evolutiva di Dragonair. È in grado di fare il giro del mondo in sole sedici ore. È un Pokémon buono e mansueto che guida fino alla terra ferma le navi prossime al naufragio."
+    },
+    {
+      "nome": "Mewtwo",
+      "descrizione": "Mewtwo, il Pokémon Genetico. È stato creato grazie ad una manipolazione genetica. Tuttavia, sebbene la scienza sia riuscita a creare un corpo di Pokémon, ha fallito nell'intento di dare a Mewtwo un animo generoso."
+    },
+    {
+      "nome": "Mew",
+      "descrizione": "Mew, il Pokémon Novaspecie. Si dice che possegga il patrimonio genetico di tutti i Pokémon. È in grado di rendersi invisibile, quando vuole, in modo da non farsi notare nemmeno da vicino."
+    },
+    {
+      "nome": "Espeon",
+      "descrizione": "Espeon, il Pokémon Sole. È la forma evolutiva di Eevee. È estremamente leale nei confronti di qualsiasi Allenatore considerato all'altezza. Si dice che questo Pokémon abbia sviluppato capacità precognitive per proteggere il proprio Allenatore."
+    },
+    {
+      "nome": "Umbreon",
+      "descrizione": "Umbreon, il Pokémon Lucelunare. È la forma evolutiva di Eevee. Si è evoluto con l'esposizione alle onde lunari. Rimane nascosto al buio in attesa di un movimento del suo nemico. I cerchi sul corpo brillano quando attacca."
+    },
+    {
+      "nome": "Combusken",
+      "descrizione": "Combusken, il Pokémon Rampollo. È la forma evolutiva di Torchic. Allena gli arti superiori e inferiori correndo in campagna e in montagna. Le zampe inferiori sono rapide e potenti e riescono a sferrare dieci calci al secondo."
+    },
+    {
+      "nome": "Blaziken",
+      "descrizione": "Blaziken, il Pokémon Vampe. È la forma evolutiva di Combusken. Emette fiamme micidiali coi suoi pugni, attaccando coraggiosamente il nemico. Più forte è il nemico, tanto più intenso è il fuoco proveniente dai pugni."
+    },
+    {
+      "nome": "Leafeon",
+      "descrizione": "Leafeon, il Pokémon Rigoglioso. È la forma evolutiva di Eevee. Ha una struttura cellulare simile a quella delle piante, perciò usa la fotosintesi."
+    },
+    {
+      "nome": "Glaceon",
+      "descrizione": "Glaceon, il Pokémon Nevefresca. È la forma evolutiva di Eevee. Modificando la temperatura del corpo, congela l'aria e crea folate di cristalli di ghiaccio."
+    }
+  ]
+}

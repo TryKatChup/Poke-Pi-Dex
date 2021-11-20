@@ -18,7 +18,7 @@
       "Speed": 45
     },
 	"description": {
-		"en": "Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.",
+		"en": "Bulbasaur, the Seed Pokémon. It can be seen napping in bright sunlight. By soaking up the sun's rays, the seed on its back grows progressively larger.",
 		"it": "Bulbasaur, il Pokémon Seme. Da piccolo usa i nutrienti del suo bulbo per ricavare l'energia che gli serve per crescere."
 	}
   },
@@ -42,7 +42,7 @@
       "Speed": 60
     },
 	"description": {
-		"en": "There is a bud on this Pokémon's back. To support its weight, Ivysaur's legs and trunk grow thick and strong. If it starts spending more time lying in the sunlight, it's a sign that the bud will bloom into a large flower soon.",
+		"en": "Ivysaur, the Seed Pokémon. It's the evolved form of Bulbasaur. To support its bulb, its legs grow sturdy. If it spends more time lying in the sunlight, the bud will soon bloom into a large flower.",
 		"it": "Ivysaur, il Pokémon Seme. È la forma evolutiva di Bulbasaur. Il bulbo che ha sul dorso assorbe il nutrimento e sboccia in un grande fiore."
 	}
   },
@@ -66,7 +66,7 @@
       "Speed": 80
     },
 	"description": {
-		"en": "There is a large flower on Venusaur's back. The flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower's aroma soothes the emotions of people.",
+		"en": "Venusaur, the Seed Pokémon. It's the evolved form of Ivysaur. The large flower on its back is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower's aroma soothes the emotions of people.",
 		"it": "Venusaur, il Pokémon Seme. È la forma evolutiva di Ivysaur. Trae energia dall'assorbimento dei raggi solari, che permettono al fiore sul suo dorso di sbocciare."
 	}
   },
@@ -89,7 +89,7 @@
       "Speed": 65
     },
 	"description": {
-		"en": "The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely.",
+		"en": "Charmander, the Lizard Pokémon. The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is happy, and blazes when it is enraged.",
 		"it": "Charmander, il Pokémon Lucertola. Sull'estremità della sua coda arde una fiammella. Si dice che per il Pokémon sarebbe la fine se la sua fiamma si esaurisse."
 	}
   },
@@ -112,7 +112,7 @@
       "Speed": 80
     },
 	"description": {
-		"en": "Charmeleon mercilessly destroys its foes using its sharp claws. If it encounters a strong foe, it turns aggressive. In this excited state, the flame at the tip of its tail flares with a bluish white color.",
+		"en": "Charmeleon, the Flame Pokémon. It's the evolved form of Charmander. It knocks down opponents with its tail, then defeats them using razor sharp claws.",
 		"it": "Charmeleon, il Pokémon Fiamma. È la forma evolutiva di Charmander. Atterra gli avversari con la coda per poi finirli con i suoi affilatissimi artigli."
 	}
   },
@@ -136,7 +136,7 @@
       "Speed": 100
     },
 	"description": {
-		"en": "Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself.",
+		"en": "Charizard, the Flame Pokémon. It's the evolved form of Charmeleon. It flies about in search of strong opponents. Charizard breathes intense flames that can melt any material. However, it will never torch a weaker foe.",
 		"it": "Charizard, il Pokémon Fiamma. È la forma evolutiva di Charmeleon. La sua potente fiammata può fondere praticamente qualsiasi cosa."
 	}
   },
@@ -159,7 +159,7 @@
       "Speed": 43
     },
 	"description": {
-		"en": "Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds.",
+		"en": "Squirtle, the Tiny Turtle Pokémon. Its shell is not just for protection. Its rounded shape and the grooves on its surface minimize resistance in water, enabling Squirtle to swim at high speeds.",
 		"it": "Squirtle, il Pokémon Tartaghina. Durante la lotta si nasconde dentro il suo guscio e, appena è possibile, spruzza acqua sull'avversario."
 	}
   },
@@ -182,7 +182,7 @@
       "Speed": 58
     },
 	"description": {
-		"en": "Its tail is large and covered with a rich, thick fur. The tail becomes increasingly deeper in color as Wartortle ages. The scratches on its shell are evidence of this Pokémon's toughness as a battler.",
+		"en": "Wartortle, the Turtle Pokémon. It's the evolved form of Squirtle. Its large tail is covered with rich, thick fur that deepens in color with age. The scratches on its shell are evidence of this Pokémon’s toughness in battle.",
 		"it": "Wartortle, il Pokémon Targaruga. È la forma evolutiva di Squirtle. La sua lunga e morbida coda è indice di purità, saggezza e fortuna."
 	}
   },
@@ -205,8 +205,8 @@
       "Speed": 78
     },
 	"description": {
-		"en": "Blastoise has water spouts that protrude from its shell. The water spouts are very accurate. They can shoot bullets of water with enough accuracy to strike empty cans from a distance of over 160 feet.",
-		"it": "Blastoise, Pokémon Crostaceo. È la forma evolutiva di Wartortle. Il suo guscio è come un'armatura e usa gli idrocannoni che ha sul dorso per lanciare attacchi estremamente potenti."
+		"en": "Blastoise, the Shellfish Pokémon. It's the evolved form of Wartortle. The waterspouts that protrude from its shell are highly accurate. Their bullets of water can precisely nail tin cans from a distance of over 160 feet.",
+		"it": "Blastoise, il Pokémon Crostaceo. È la forma evolutiva di Wartortle. Il suo guscio è come un'armatura e usa gli idrocannoni che ha sul dorso per lanciare attacchi estremamente potenti."
 	}
   },
   {
@@ -228,7 +228,7 @@
       "Speed": 45
     },
 	"description": {
-		"en": "Caterpie has a voracious appetite. It can devour leaves bigger than its body right before your eyes. From its antenna, this Pokémon releases a terrifically strong odor.",
+		"en": "Caterpie, the Worm Pokémon. Its voracious appetite compels it to devour leaves bigger than itself without hesitation. It releases a terribly strong odor from its antennae.",
 		"it": "Caterpie, il Pokémon Baco. Per tenere lontani i nemici, rilascia un odore sgradevole dalle antenne. Crescendo cambia la pelle più volte."
 	}
   },
@@ -251,7 +251,7 @@
       "Speed": 30
     },
 	"description": {
-		"en": "The shell covering this Pokémon's body is as hard as an iron slab. Metapod does not move very much. It stays still because it is preparing its soft innards for evolution inside the hard shell.",
+		"en": "Metapod, the Cocoon Pokémon. It's the evolved form of Caterpie. Its shell is as hard as an iron slab. A Metapod does not move very much because it is preparing its soft innards for evolution inside the shell.",
 		"it": "Metapod, il Pokémon Bozzolo. È la forma evolutiva di Caterpie. In attesa di evolversi, il vulnerabile corpo di Metapod è circondato da un guscio duro che lo protegge."
 	}
   },
@@ -275,7 +275,7 @@
       "Speed": 70
     },
 	"description": {
-		"en": "Butterfree has a superior ability to search for delicious honey from flowers. It can even search out, extract, and carry honey from flowers that are blooming over six miles from its nest.",
+		"en": "Butterfree, the Butterfly Pokémon. It's the evolved form of Metapod. It has a superior ability to search for delicious honey from flowers. It can seek, extract, and carry honey from flowers blooming over six miles away.",
 		"it": "Butterfree, il Pokémon Farfalla. È la forma evolutiva di Metapod. La passione di Butterfree per il nettare lo spinge a cercare sempre fiori, anche se hanno poco polline."
 	}
   },
@@ -299,7 +299,7 @@
       "Speed": 50
     },
 	"description": {
-		"en": "Weedle has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose).",
+		"en": "Weedle, the Hairy Bug Pokémon. It has an extremely acute sense of smell. It distinguishes its favorite kinds of leaves from those it dislikes by sniffing with its big red proboscis (nose).",
 		"it": "Weedle, il Pokémon Millepiedi. L'aculeo posto sulla testa di questo Pokémon serve a iniettare una dose di veleno letale."
 	}
   },
@@ -323,7 +323,7 @@
       "Speed": 35
     },
 	"description": {
-		"en": "Kakuna remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch.",
+		"en": "Kakuna, the Cocoon Pokémon. It's the evolved form of Weedle. It remains virtually immobile while it clings to a tree. However, on the inside, it busily prepares for evolution. This is evident from how hot its shell becomes.",
 		"it": "Kakuna, il Pokémon Bozzolo. È la forma evolutiva di Weedle. È molto limitato nei movimenti. Se si sente minacciato, estrae il pungiglione e avvelena il nemico."
 	}
   },
@@ -347,7 +347,7 @@
       "Speed": 75
     },
 	"description": {
-		"en": "Beedrill is extremely territorial. No one should ever approach its nest—this is for their own safety. If angered, they will attack in a furious swarm.",
+		"en": "Beedrill, the Poison Bee Pokémon. It's the evolved form of Kakuna. It is extremely territorial. For safety reasons, no one should ever approach its nest. If angered, they will attack in a swarm.",
 		"it": "Beedrill, il Pokémon Velenape. È la forma evolutiva di Kakuna. Vola attaccando con i pungiglioni velenosi della coda e delle zampe anteriori."
 	}
   },
@@ -371,7 +371,7 @@
       "Speed": 56
     },
 	"description": {
-		"en": "Pidgey has an extremely sharp sense of direction. It is capable of unerringly returning home to its nest, however far it may be removed from its familiar surroundings.",
+		"en": "Pidgey, the Tiny Bird Pokémon. It has an extremely sharp sense of direction. It can unerringly return home to its nest, however far it may be removed from its familiar surroundings.",
 		"it": "Pidgey, il Pokémon Uccellino. Di solito non ama lottare, ma non esita ad attaccare se viene provocato."
 	}
   },
@@ -395,7 +395,7 @@
       "Speed": 71
     },
 	"description": {
-		"en": "Pidgeotto claims a large area as its own territory. This Pokémon flies around, patrolling its living space. If its territory is violated, it shows no mercy in thoroughly punishing the foe with its sharp claws.",
+		"en": "Pidgeotto, the Bird Pokémon. It's the evolved form of Pidgey. It flies around, patrolling its large territory. If its living space is violated, it shows no mercy in thoroughly punishing the foe with its sharp claws.",
 		"it": "Pidgeotto, il Pokémon Uccello. È la forma evolutiva di Pidgey. È dotato di lunghi artigli, scende in picchiata dal cielo per acciuffare la sua preda."
 	}
   },
@@ -419,8 +419,8 @@
       "Speed": 101
     },
 	"description": {
-		"en": "This Pokémon has a dazzling plumage of beautifully glossy feathers. Many Trainers are captivated by the striking beauty of the feathers on its head, compelling them to choose Pidgeot as their Pokémon.",
-		"it": "Pidgeot, Pokémon Uccello. È la forma evolutiva di Pidgeotto. Può volare a una velocità doppia di quella del suono a un chilometro e mezzo di quota."
+		"en": "Pidgeot, the Bird Pokémon. It's the evolved form of Pidgeotto. It spreads its beautiful wings wide to frighten its enemies. It can fly at Mach 2 speed.",
+		"it": "Pidgeot, il Pokémon Uccello. È la forma evolutiva di Pidgeotto. Può volare a una velocità doppia di quella del suono a un chilometro e mezzo di quota."
 	}
   },
   {
@@ -442,7 +442,7 @@
       "Speed": 72
     },
 	"description": {
-		"en": "Rattata is cautious in the extreme. Even while it is asleep, it constantly listens by moving its ears around. It is not picky about where it lives—it will make its nest anywhere.",
+		"en": "Rattata, the Mouse Pokémon. It's cautious in the extreme. Even while it is asleep, it constantly moves its ears and listens for danger. It will make its nest anywhere.",
 		"it": "Rattata, il Pokémon Topo. Adora formaggi, noci, frutta e bacche. Spesso esce dalla foresta per rubare delle provviste ai campeggiatori e viaggiatori sciocchi."
 	}
   },
@@ -465,7 +465,7 @@
       "Speed": 97
     },
 	"description": {
-		"en": "Raticate's sturdy fangs grow steadily. To keep them ground down, it gnaws on rocks and logs. It may even chew on the walls of houses.",
+		"en": "Raticate, the Mouse Pokémon. It's the evolved form of Rattata. It gnaws on anything with its tough fangs. It can even topple concrete buildings by gnawing on them.",
 		"it": "Raticate, il Pokémon Topo. È la forma evolutiva di Rattata. Rosicchia qualsiasi cosa con i suoi denti che crescono in continuazione."
 	}
   },
@@ -489,7 +489,7 @@
       "Speed": 70
     },
 	"description": {
-		"en": "Spearow has a very loud cry that can be heard over half a mile away. If its high, keening cry is heard echoing all around, it is a sign that they are warning each other of danger.",
+		"en": "Spearow, the Tiny Bird Pokémon. Its loud cry can be heard over a kilometer away. If its high, keening cry is heard echoing all around, it is a sign that they are warning each other of danger.",
 		"it": "Spearow, il Pokémon Uccellino. Ha un bruttissimo carattere. È molto aggressivo e può attaccare altri Pokémon e addirittura gli umani."
 	}
   },
@@ -513,7 +513,7 @@
       "Speed": 100
     },
 	"description": {
-		"en": "Fearow is recognized by its long neck and elongated beak. They are conveniently shaped for catching prey in soil or water. It deftly moves its long and skinny beak to pluck prey.",
+		"en": "Fearow, the Beak Pokémon. It's the evolved form of Spearow. Its long neck and elongated beak are ideal for catching prey in soil or water. It deftly moves this extended and skinny beak to pluck prey.",
 		"it": "Fearow, il Pokémon Becco. È la forma evolutiva di Spearow. Le sue ali ampie e potenti gli consentono di volare anche per un giorno intero. La forza del suo becco è tremenda."
 	}
   },
@@ -536,7 +536,7 @@
       "Speed": 55
     },
 	"description": {
-		"en": "Ekans curls itself up in a spiral while it rests. Assuming this position allows it to quickly respond to a threat from any direction with a glare from its upraised head.",
+		"en": "Ekans, the Snake Pokémon. It curls itself up in a spiral while it rests. This position allows it to quickly respond to an enemy from any direction with a threat from its upraised head.",
 		"it": "Ekans, il Pokémon Serpente. Si attorciglia a spirale per riposarsi. In questa posizione riesce a reagire alle insidie provenienti da ogni parte grazie alla testa sollevata e allo sguardo fulminante."
 	}
   },
@@ -559,7 +559,7 @@
       "Speed": 80
     },
 	"description": {
-		"en": "This Pokémon is terrifically strong in order to constrict things with its body. It can even flatten steel oil drums. Once Arbok wraps its body around its foe, escaping its crunching embrace is impossible.",
+		"en": "Arbok, the Cobra Pokémon. It's the evolved form of Ekans. It has a terrifically strong constricting power. It can even flatten steel oil drums. Once it wraps its body around its foe, escaping is impossible.",
 		"it": "Arbok, il Pokémon Cobra. È così forte da riuscire a stritolare qualsiasi cosa col corpo, persino un bidone in acciaio. Se Arbok si avvinghia a un nemico è impossibile sfuggire a questa morsa fatale."
 	}
   },
@@ -582,7 +582,7 @@
       "Speed": 90
     },
 	"description": {
-		"en": "This Pokémon has electricity-storing pouches on its cheeks. These appear to become electrically charged during the night while Pikachu sleeps. It occasionally discharges electricity when it is dozy after waking up.",
+		"en": "Pikachu, the Mouse Pokémon. It stores electricity in the electric sacs on its cheeks. When it releases pent-up energy in a burst, the electric power is equal to a lightning bolt.",
 		"it": "Pikachu, il Pokémon Topo. È capace di produrre attacchi elettrici dalle sacche che ha sulle guance."
 	}
   },
@@ -605,7 +605,7 @@
       "Speed": 110
     },
 	"description": {
-		"en": "This Pokémon exudes a weak electrical charge from all over its body that makes it take on a slight glow in darkness. Raichu plants its tail in the ground to discharge electricity.",
+		"en": "Raichu, the Mouse Pokémon. It's the evolved form of Pikachu. If it stores too much electricity, its behavior turns aggressive. To avoid this, it occasionally discharges excess energy and calms itself down.",
 		"it": "Raichu, il Pokémon Topo. È la forma evolutiva di Pikachu. La sua lunga coda serve da messa a terra per proteggerlo dalla sua stessa alta tensione."
 	}
   },
@@ -628,7 +628,7 @@
       "Speed": 40
     },
 	"description": {
-		"en": "Sandshrew's body is configured to absorb water without waste, enabling it to survive in an arid desert. It can roll into a ball that repels any attack. At night, it burrows into the desert sand to sleep.",
+		"en": "Sandshrew, the Mouse Pokémon. When it curls up in a ball, it can make any attack bounce off harmlessly. Its hide has turned tough and solid as a result of living in the desert.",
 		"it": "Sandshrew, il Pokémon Topo. Può arrotolarsi per proteggersi dagli attacchi nemici. Di notte si sotterra nella sabbia per risposarsi."
 	}
   },
@@ -651,7 +651,7 @@
       "Speed": 65
     },
 	"description": {
-		"en": "Sandslash can roll up its body as if it were a ball covered with large spikes. In battle, this Pokémon will try to make the foe flinch by jabbing it with its spines. It then leaps at the stunned foe to tear wildly with its sharp claws.",
+		"en": "Sandslash, the Mouse Pokémon. It's the evolved form of Sandshrew. It curls up in a ball to protect itself from enemy attacks. It also curls up to prevent heatstroke during the daytime when temperatures rise sharply.",
 		"it": "Sandslash, il Pokémon Topo. È la forma evolutiva di Sandshrew. Il suo corpo è ricoperto da aculei coriacei, costituiti da parti di corazza indurita."
 	}
   },
@@ -674,7 +674,7 @@
       "Speed": 41
     },
 	"description": {
-		"en": "Nidoran-f has barbs that secrete a powerful poison. They are thought to have developed as protection for this small-bodied Pokémon. When enraged, it releases a horrible toxin from its horn.",
+		"en": "Nidoran-f, the Poison Pin Pokémon. Its highly toxic barbs are thought to have developed as protection for this small-bodied Pokémon. When enraged, it releases a horrible toxin from its horn.",
 		"it": "Nidoran-f, il Pokémon Velenago. È più sensibile agli odori rispetto ai maschi. Capta le correnti d’aria con le vibrisse e si posiziona sottovento per cercare le prede."
 	}
   },
@@ -697,7 +697,7 @@
       "Speed": 56
     },
 	"description": {
-		"en": "When Nidorina are with their friends or family, they keep their barbs tucked away to prevent hurting each other. This Pokémon appears to become nervous if separated from the others.",
+		"en": "Nidorina, the Poison Pin Pokémon. It's the evolved form of Nidoran-f. When it is with its friends or family, its barbs are tucked away to prevent injury. It appears to become nervous if separated from the others.",
 		"it": "Nidorina, il Pokémon Velenago. È la forma evolutiva di Nidoran-f. Si pensa che il corno sulla fronte si sia atrofizzato per evitare che Nidorina punga i suoi cuccioli quando li nutre."
 	}
   },
@@ -721,7 +721,7 @@
       "Speed": 76
     },
 	"description": {
-		"en": "Nidoqueen's body is encased in extremely hard scales. It is adept at sending foes flying with harsh tackles. This Pokémon is at its strongest when it is defending its young.",
+		"en": "Nidoqueen, the Drill Pokémon. It's the evolved form of Nidorina. It is adept at sending foes flying with harsh tackles using its tough, scaly body. This Pokémon is at its strongest when it is defending its young.",
 		"it": "Nidoqueen, il Pokémon Trapano. È la forma evolutiva di Nidorina. Più abile nella difesa che nell’attacco, protegge i cuccioli da qualunque attacco grazie alla corazza di squame."
 	}
   },
@@ -744,7 +744,7 @@
       "Speed": 50
     },
 	"description": {
-		"en": "Nidoran-m has developed muscles for moving its ears. Thanks to them, the ears can be freely moved in any direction. Even the slightest sound does not escape this Pokémon's notice.",
+		"en": "Nidoran-m, the Poison Pin Pokémon. It has developed muscles that freely move its ears in any direction. Even the slightest sound does not escape this Pokémon’s notice.",
 		"it": "Nidoran-m, il Pokémon Velenago. Il corno sulla fronte è estremamente velenoso. Di indole circospetta, rizza costantemente le sue grandi orecchie."
 	}
   },
@@ -767,7 +767,7 @@
       "Speed": 65
     },
 	"description": {
-		"en": "Nidorino has a horn that is harder than a diamond. If it senses a hostile presence, all the barbs on its back bristle up at once, and it challenges the foe with all its might.",
+		"en": "Nidorino, the Poison Pin Pokémon. It's the evolved form of Nidoran-m. Its horn is harder than a diamond. If it senses a hostile presence, all the barbs on its back bristle up at once, and it challenges the foe with all its might.",
 		"it": "Nidorino, il Pokémon Velenago. È la forma evolutiva di Nidoran-m. Vaga alla ricerca di una Pietralunare frantumando rocce con il suo corno più duro del diamante."
 	}
   },
@@ -791,7 +791,7 @@
       "Speed": 85
     },
 	"description": {
-		"en": "Nidoking's thick tail packs enormously destructive power. With one swing, it can topple a metal transmission tower. Once this Pokémon goes on a rampage, there is no stopping it.",
+		"en": "Nidoking, the Drill Pokémon. It's the evolved form of Nidorino. Its thick tail packs enormously destructive power capable of toppling a metal transmission tower. Once it goes on a rampage, there is no stopping it.",
 		"it": "Nidoking, il Pokémon Trapano. È la forma evolutiva di Nidorino. Quando si scatena non c’è modo di fermarlo, ma davanti a Nidoqueen, la sua compagna di lunga data, ritrova la calma."
 	}
   },
@@ -814,7 +814,7 @@
       "Speed": 35
     },
 	"description": {
-		"en": "On every night of a full moon, groups of this Pokémon come out to play. When dawn arrives, the tired Clefairy return to their quiet mountain retreats and go to sleep nestled up against each other.",
+		"en": "Clefairy, the Fairy Pokémon. On every night of a full moon, they come out to play. When dawn arrives, the tired Clefairy go to sleep nestled up against each other in deep and quiet mountains.",
 		"it": "Clefairy, il Pokémon Fata. Questo delicato Pokémon è amichevole e pacifico. Si dice che vedere un gruppo di Clefairy ballare con la luna piena sia di ottimo auspicio."
 	}
   },
@@ -837,7 +837,7 @@
       "Speed": 60
     },
 	"description": {
-		"en": "Clefable moves by skipping lightly as if it were flying using its wings. Its bouncy step lets it even walk on water. It is known to take strolls on lakes on quiet, moonlit nights.",
+		"en": "Clefable, the Fairy Pokémon. It's the evolved form of Clefairy. It uses its wings to skip lightly as if it were flying. Its bouncy step lets it even walk on water. On quiet, moonlit nights, it strolls on lakes.",
 		"it": "Clefable, il Pokémon Fata. È la forma evolutiva di Clefairy. È un Pokémon timido, molto raro a vedersi. Scappa e si nasconde non appena avverte la presenza delle persone."
 	}
   },
@@ -860,7 +860,7 @@
       "Speed": 65
     },
 	"description": {
-		"en": "Inside Vulpix's body burns a flame that never goes out. During the daytime, when the temperatures rise, this Pokémon releases flames from its mouth to prevent its body from growing too hot.",
+		"en": "Vulpix, the Fox Pokémon. It can freely control fire, making fiery orbs fly like will-o’-the-wisps. Just before evolution, its six tails grow hot as if on fire.",
 		"it": "Vulpix, il Pokémon Volpe. Quando è giovane ha sei meravigliose code, che si moltiplicano durante la sua crescita."
 	}
   },
@@ -883,7 +883,7 @@
       "Speed": 100
     },
 	"description": {
-		"en": "Legend has it that Ninetales came into being when nine wizards possessing sacred powers merged into one. This Pokémon is highly intelligent—it can understand human speech.",
+		"en": "Ninetales, the Fox Pokémon. It's the evolved form of Vulpix. It has long been said that each of the nine tails embody an enchanted power. A long-lived Ninetales will have fur that shines like gold.",
 		"it": "Ninetales, il Pokémon Volpe. È la forma evolutiva di Vulpix. Ha nove code e un mantello dorato splendente. Si dice che i Ninetales vivano molto a lungo."
 	}
   },
@@ -907,7 +907,7 @@
       "Speed": 20
     },
 	"description": {
-		"en": "When this Pokémon sings, it never pauses to breathe. If it is in a battle against an opponent that does not easily fall asleep, Jigglypuff cannot breathe, endangering its life.",
+		"en": "Jigglypuff, the Balloon Pokémon. Nothing can avoid falling asleep hearing a Jigglypuff’s song. The sound waves of its singing voice match the brain waves of someone in a deep sleep.",
 		"it": "Jigglypuff, il Pokémon Pallone. Le sue corde vocali gli consentono di cantare esattamente alla lunghezza d'onda richiesta per addormentare l'avversario."
 	}
   },
@@ -931,7 +931,7 @@
       "Speed": 45
     },
 	"description": {
-		"en": "Wigglytuff's body is very flexible. By inhaling deeply, this Pokémon can inflate itself seemingly without end. Once inflated, Wigglytuff bounces along lightly like a balloon.",
+		"en": "Wigglytuff, the Balloon Pokémon. It's the evolved form of Jigglypuff. Its fur is the ultimate in luxuriousness. Sleeping alongside a Wigglytuff is simply divine. Its body expands seemingly without end when it inhales.",
 		"it": "Wigglytuff, il Pokémon Pallone. È la forma evolutiva di Jigglypuff. Più aria inala, più il suo corpo si gonfia. Se è di cattivo umore, si gonfia per intimidire l'avversario."
 	}
   },
@@ -955,7 +955,7 @@
       "Speed": 55
     },
 	"description": {
-		"en": "Zubat avoids sunlight because exposure causes it to become unhealthy. During the daytime, it stays in caves or under the eaves of old houses, sleeping while hanging upside down.",
+		"en": "Zubat, the Bat Pokémon. While living in pitch-black caverns, their eyes gradually grew shut and deprived them of vision. They use ultrasonic waves to detect obstacles.",
 		"it": "Zubat, il Pokémon Pipistrello. Rimane perfettamente immobile al buio durante le ore diurne più luminose. Infatti, la prolungata esposizione al sole gli provoca delle bruciature."
 	}
   },
@@ -979,7 +979,7 @@
       "Speed": 90
     },
 	"description": {
-		"en": "Golbat bites down on prey with its four fangs and drinks the victim's blood. It becomes active on inky dark moonless nights, flying around to attack people and Pokémon.",
+		"en": "Golbat, the Bat Pokémon. It's the evolved form of Zubat. Its fangs easily puncture even thick animal hide. It loves to feast on the blood of people and Pokémon. It flits about in darkness and strikes from behind.",
 		"it": "Golbat, il Pokémon Pipistrello. È la forma evolutiva di Zubat. Va matto per il sangue di altre creature. Si dice che a volte lo condivida con i compagni affamati."
 	}
   },
@@ -1003,7 +1003,7 @@
       "Speed": 30
     },
 	"description": {
-		"en": "Oddish searches for fertile, nutrient-rich soil, then plants itself. During the daytime, while it is planted, this Pokémon's feet are thought to change shape and become similar to the roots of trees.",
+		"en": "Oddish, the Weed Pokémon. It grows by absorbing moonlight. During the daytime, it buries itself in the ground, leaving only its leaves exposed to avoid detection by its enemies.",
 		"it": "Oddish, il Pokémon Malerba. Durante il giorno, Oddish si nasconde nel terreno per assorbire sostanze nutritive con tutto il corpo. più il suolo è fertile, più lucide diventano le foglie."
 	}
   },
@@ -1027,7 +1027,7 @@
       "Speed": 40
     },
 	"description": {
-		"en": "Gloom releases a foul fragrance from the pistil of its flower. When faced with danger, the stench worsens. If this Pokémon is feeling calm and secure, it does not release its usual stinky aroma.",
+		"en": "Gloom, the Weed Pokémon. It's the evolved form of Oddish. A horribly noxious honey drools from its mouth. One whiff of the honey can result in memory loss. Some fans are said to enjoy this overwhelming stink, however.",
 		"it": "Gloom, il Pokémon Malerba. È la forma evolutiva di Oddish. Gloom rilascia un odore fetido dal pistillo del suo fiore. Quando è in pericolo, l'olezzo peggiora. Quando invece si sente tranquillo e sicuro, non emana questa sostanza maleodorante."
 	}
   },
@@ -1051,7 +1051,7 @@
       "Speed": 50
     },
 	"description": {
-		"en": "Vileplume's toxic pollen triggers atrocious allergy attacks. That's why it is advisable never to approach any attractive flowers in a jungle, however pretty they may be.",
+		"en": "Vileplume, the Flower Pokémon. It's the evolved form of Gloom. In seasons when it produces more pollen, the air around a Vileplume turns yellow with the powder as it walks. The pollen is highly toxic and causes paralysis.",
 		"it": "Vileplume, il Pokémon Fiore. È la forma evolutiva di Gloom. Il suo polline velenoso scatena paurose reazioni allergiche. Per questo motivo si consiglia di non avvicinarsi mai a nessun fiore di bosco, per quanto bello possa essere."
 	}
   },
@@ -1075,7 +1075,7 @@
       "Speed": 25
     },
 	"description": {
-		"en": "Paras has parasitic mushrooms growing on its back called tochukaso. They grow large by drawing nutrients from this Bug Pokémon host. They are highly valued as a medicine for extending life.",
+		"en": "Paras, the Mushroom Pokémon. It has parasitic tochukaso mushrooms growing on its back. They grow by drawing nutrients from the host. They are valued as a medicine for long life.",
 		"it": "Paras, il Pokémon Fungo. Ha sulla schiena dei funghi parassiti chiamati tochukaso, che crescono traendo nutrimento dal Paras ospite. Sono molto apprezzati come farmaco di longevità."
 	}
   },
@@ -1099,7 +1099,7 @@
       "Speed": 30
     },
 	"description": {
-		"en": "Parasect is known to infest large trees en masse and drain nutrients from the lower trunk and roots. When an infested tree dies, they move onto another tree all at once.",
+		"en": "Parasect, the Mushroom Pokémon. It's the evolved form of Paras. They are known to infest the roots of large trees en masse and drain nutrients. When an infested tree dies, they move onto another tree all at once.",
 		"it": "Parasect, il Pokémon Fungo. È la forma evolutiva di Paras. Ha un grosso fungo sulla schiena, che assorbe l'energia dell'organismo ospite, su cui ha anche pieno controllo."
 	}
   },
@@ -1123,7 +1123,7 @@
       "Speed": 45
     },
 	"description": {
-		"en": "Venonat is said to have evolved with a coat of thin, stiff hair that covers its entire body for protection. It possesses large eyes that never fail to spot even minuscule prey.",
+		"en": "Venonat, the Insect Pokémon. Its coat of thin, stiff hair that covers its entire body is said to have evolved for protection. Its large eyes never fail to spot even miniscule prey.",
 		"it": "Venonat, il Pokémon Insetto. Si dice che per proteggersi Venonat abbia sviluppato una pelliccia sottile e irsuta che ricopre il suo corpo. Nemmeno la preda più piccola può sfuggire ai suoi occhi enormi."
 	}
   },
@@ -1147,7 +1147,7 @@
       "Speed": 90
     },
 	"description": {
-		"en": "Venomoth is nocturnal—it is a Pokémon that only becomes active at night. Its favorite prey are small insects that gather around streetlights, attracted by the light in the darkness.",
+		"en": "Venomoth, the Poison Moth Pokémon. It's the evolved form of Venonat. It is nocturnal and its favorite prey are insects that gather around streetlights, attracted by the light in the darkness.",
 		"it": "Venomoth, il Pokémon Velentarma. È la forma evolutiva di Venonat. È un Pokémon notturno e le sue prede preferite sono i piccoli insetti che si raggruppano attorno ai lampioni attratti dalla luce nel buio."
 	}
   },
@@ -1170,7 +1170,7 @@
       "Speed": 95
     },
 	"description": {
-		"en": "Diglett are raised in most farms. The reason is simple: wherever this Pokémon burrows, the soil is left perfectly tilled for planting crops. This soil is made ideal for growing delicious vegetables.",
+		"en": "Diglett, the Mole Pokémon. They are raised in most farms. The reason is simple: wherever they burrow, the soil is left perfectly tilled for growing delicious crops.",
 		"it": "Diglett, il Pokémon Talpa. Viene allevato in molte aziende agricole. La ragione è semplice: quando questo Pokémon scava, lascia il suolo perfettamente arato per la semina, pronto per la coltivazione di squisite verdure."
 	}
   },
@@ -1193,7 +1193,7 @@
       "Speed": 120
     },
 	"description": {
-		"en": "Dugtrio are actually triplets that emerged from one body. As a result, each triplet thinks exactly like the other two triplets. They work cooperatively to burrow endlessly.",
+		"en": "Dugtrio, the Mole Pokémon. It's the evolved form of Diglett. Because the triplets originally split from one body, they think exactly alike. They work cooperatively to burrow endlessly through the ground.",
 		"it": "Dugtrio, il Pokémon Talpa. È la forma evolutiva di Diglett. È un Pokémon formato da tre unità legate in un solo corpo. Ogni trio è un'unica mente pensante e le tre unità collaborano scavando instancabilmente."
 	}
   },
@@ -1216,7 +1216,7 @@
       "Speed": 90
     },
 	"description": {
-		"en": "Meowth withdraws its sharp claws into its paws to slinkily sneak about without making any incriminating footsteps. For some reason, this Pokémon loves shiny coins that glitter with light.",
+		"en": "Meowth, the Scratch Cat Pokémon. They withdraw their sharp claws into their paws to silently sneak about. For some reason, this Pokémon loves shiny coins that glitter with light.",
 		"it": "Meowth, il Pokémon Graffimiao. Quando vede oggetti rotondi si mette a giocare e dimentica tutto il resto."
 	}
   },
@@ -1239,7 +1239,7 @@
       "Speed": 115
     },
 	"description": {
-		"en": "Persian has six bold whiskers that give it a look of toughness. The whiskers sense air movements to determine what is in the Pokémon's surrounding vicinity. It becomes docile if grabbed by the whiskers.",
+		"en": "Persian, the Classy Cat Pokémon. It's the evolved form of Meowth. Its six bold whiskers sense air movements to determine what is in its vicinity. It becomes docile if grabbed by the whiskers.",
 		"it": "Persian, il Pokémon Nobilgatto. È la fase evolutiva di Meowth. Sonda l'ambiente circostante con i suoi sei baffi che captano gli spostamenti dell'aria."
 	}
   },
@@ -1262,7 +1262,7 @@
       "Speed": 55
     },
 	"description": {
-		"en": "If it uses its mysterious power, Psyduck can't remember having done so. It apparently can't form a memory of such an event because it goes into an altered state that is much like deep sleep.",
+		"en": "Psyduck, the Duck Pokémon. When its headache intensifies, it starts using strange powers. However, it has no recollection of its powers, so it always looks befuddled and bewildered.",
 		"it": "Psyduck, il Pokémon Papero. Usa poteri misteriosi, che scatenano onde cerebrali rilevabili apparentemente soltanto su persone addormentate. Questa scoperta ha causato reazioni contrastanti tra gli studiosi."
 	}
   },
@@ -1285,7 +1285,7 @@
       "Speed": 85
     },
 	"description": {
-		"en": "Golduck is the fastest swimmer among all Pokémon. It swims effortlessly, even in a rough, stormy sea. It sometimes rescues people from wrecked ships floundering in high seas.",
+		"en": "Golduck, the Duck Pokémon. It's the evolved form of Psyduck. It's an adept swimmer. It sometimes joins competitive swimmers in training. It uses psychic powers when its forehead shimmers with light.",
 		"it": "Golduck, il Pokémon Papero. È la forma evolutiva di Psyduck. Le zampe anteriori e posteriori a pinna dotate di membrana interdigitale e il corpo longilineo di Golduck gli conferiscono una velocità incredibile."
 	}
   },
@@ -1308,7 +1308,7 @@
       "Speed": 70
     },
 	"description": {
-		"en": "When Mankey starts shaking and its nasal breathing turns rough, it's a sure sign that it is becoming angry. However, because it goes into a towering rage almost instantly, it is impossible for anyone to flee its wrath.",
+		"en": "Mankey, the Pig Monkey Pokémon. When it starts shaking and its nasal breathing turns rough, it’s a sure sign of anger. However, since this happens instantly, there is no time to flee.",
 		"it": "Mankey, il Pokémon Suinpanzé. Quando inizia a tremare e la sua respirazione nasale diventa pesante significa che si sta infuriando. Tuttavia, a causa dei suoi repentini attacchi d'ira, è impossibile per chiunque sfuggire alla sua furia."
 	}
   },
@@ -1331,7 +1331,7 @@
       "Speed": 95
     },
 	"description": {
-		"en": "When Primeape becomes furious, its blood circulation is boosted. In turn, its muscles are made even stronger. However, it also becomes much less intelligent at the same time.",
+		"en": "Primeape, the Pig Monkey Pokémon. It's the evolved form of Mankey. When it becomes furious, its blood circulation becomes more robust, and its muscles are made stronger. But it also becomes much less intelligent.",
 		"it": "Primeape, il Pokémon Suinpanzé. È la forma evolutiva di Mankey. Quando s'infuria, la circolazione sanguigna si fa intensa, irrobustendo i suoi muscoli. Allo stesso tempo, tuttavia, perde anche la sua lucidità e intelligenza."
 	}
   },
@@ -1354,7 +1354,7 @@
       "Speed": 60
     },
 	"description": {
-		"en": "Growlithe has a superb sense of smell. Once it smells anything, this Pokémon won't forget the scent, no matter what. It uses its advanced olfactory sense to determine the emotions of other living things.",
+		"en": "Growlithe, the Puppy Pokémon. Its superb sense of smell ensures that this Pokémon won’t forget any scent, no matter what. It uses its sense of smell to detect the emotions of others.",
 		"it": "Growlithe, il Pokémon Cagnolino. Ha un senso dell'olfatto molto sviluppato: una volta annusato qualcosa non scorda più quell'odore. Sfrutta questa dote per determinare le emozioni delle altre creature."
 	}
   },
@@ -1377,7 +1377,7 @@
       "Speed": 95
     },
 	"description": {
-		"en": "Arcanine is known for its high speed. It is said to be capable of running over 10.000 km in a single day and night. The fire that blazes wildly within this Pokémon's body is its source of power.",
+		"en": "Arcanine, the Legendary Pokémon. It's the evolved form of Growlithe. This fleet-footed Pokémon is said to run over 10.000 km in a single day and night. The fire that blazes wildly within its body is its source of power.",
 		"it": "Arcanine, il Pokémon Leggenda. È la forma evolutiva di Growlithe. È noto per la sua velocità. Si dice sia in grado di percorrere 10.000 km in un giorno e una notte. Il fuoco che arde indomabile nel suo corpo è fonte di forza."
 	}
   },
@@ -1400,7 +1400,7 @@
       "Speed": 90
     },
 	"description": {
-		"en": "Poliwag has a very thin skin. It is possible to see the Pokémon's spiral innards right through the skin. Despite its thinness, however, the skin is also very flexible. Even sharp fangs bounce right off it.",
+		"en": "Poliwag, the Tadpole Pokémon. It is possible to see this Pokémon’s spiral innards right through its thin skin. However, the skin is also very flexible. Even sharp fangs bounce right off it.",
 		"it": "Poliwag, il Pokémon Girino. Ha una pelle molto sensibile, attraverso cui è possibile intravedere i suoi organi interni spiraliformi. Nonostante il suo esiguo spessore, la pelle è molto elastica. Anche le zanne più affilate non riescono a lacerarla."
 	}
   },
@@ -1423,7 +1423,7 @@
       "Speed": 90
     },
 	"description": {
-		"en": "The surface of Poliwhirl's body is always wet and slick with a slimy fluid. Because of this slippery covering, it can easily slip and slide out of the clutches of any enemy in battle.",
+		"en": "Poliwhirl, the Tadpole Pokémon. It's the evolved form of Poliwag. Its body surface is always wet and slick with an oily fluid. Because of this greasy covering, it can easily slip and slide out of the clutches of any enemy in battle.",
 		"it": "Poliwhirl, il Pokémon Girino. È la forma evolutiva di Poliwag. La superficie del suo corpo è sempre umida e unta di fluido oleoso. Grazie a questa pellicola viscida, nella lotta riesce a sfuggire agilmente alle grinfie del nemico."
 	}
   },
@@ -1447,7 +1447,7 @@
       "Speed": 70
     },
 	"description": {
-		"en": "Poliwrath's highly developed, brawny muscles never grow fatigued, however much it exercises. It is so tirelessly strong, this Pokémon can swim back and forth across the ocean without effort.",
+		"en": "Poliwrath, the Tadpole Pokémon. It's the evolved form of Poliwhirl. Its highly developed muscles never grow fatigued, however much it exercises. This Pokémon can swim back and forth across the Pacific Ocean without effort.",
 		"it": "Poliwrath, il Pokémon Girino. È la forma evolutiva di Poliwhirl. È dotato di muscoli molto sviluppati e robusti. Per quanto si alleni, non si stanca mai. Questo Pokémon è così infaticabile e forte che riesce ad attraversare a nuoto interi oceani."
 	}
   },
@@ -1470,7 +1470,7 @@
       "Speed": 90
     },
 	"description": {
-		"en": "Abra needs to sleep for eighteen hours a day. If it doesn't, this Pokémon loses its ability to use telekinetic powers. If it is attacked, Abra escapes using Teleport while it is still sleeping.",
+		"en": "Abra, the Psi Pokémon. It sleeps 18 hours a day. Observation revealed that it uses Teleport to change its location once every hour.",
 		"it": "Abra, il Pokémon Psico. Dorme per 18 ore al giorno, ma riesce a captare la presenza dei nemici anche durante il sonno. In questo caso il Pokémon si teletrasporta immediatamente al sicuro."
 	}
   },
@@ -1493,7 +1493,7 @@
       "Speed": 105
     },
 	"description": {
-		"en": "Kadabra holds a silver spoon in its hand. The spoon is used to amplify the alpha waves in its brain. Without the spoon, the Pokémon is said to be limited to half the usual amount of its telekinetic powers.",
+		"en": "Kadabra, the Psi Pokémon. It's the evolved form of Abra. It is rumored that a boy with psychic abilities suddenly transformed into Kadabra while he was assisting research into extrasensory powers.",
 		"it": "Kadabra, il Pokémon Psico. È la forma evolutiva di Abra. Emette particolari onde alfa che causano mal di testa a chi si trova nelle vicinanze."
 	}
   },
@@ -1516,7 +1516,7 @@
       "Speed": 120
     },
 	"description": {
-		"en": "Alakazam's brain continually grows, infinitely multiplying brain cells. This amazing brain gives this Pokémon an astoundingly high IQ of 5,000. It has a thorough memory of everything that has occurred in the world.",
+		"en": "Alakazam, the Psi Pokémon. It's the evolved form of Kadabra. While it has strong psychic abilities and high intelligence, an Alakazam’s muscles are very weak. It uses psychic power to move its body.",
 		"it": "Alakazam, il Pokémon Psico. È la forma evolutiva di Kadabra. Il cervello di Alakazam cresce in continuazione rendendo la sua testa troppo pesante per il collo. Pertanto è costretto a usare i suoi poteri psicocinetici per sostenerla."
 	}
   },
@@ -1539,7 +1539,7 @@
       "Speed": 35
     },
 	"description": {
-		"en": "Machop exercises by hefting around a Graveler as if it were a barbell. There are some Machop that travel the world in a quest to master all kinds of martial arts.",
+		"en": "Machop, the Superpower Pokémon. It continually undertakes strenuous training to master all forms of martial arts. Its strength lets it easily hoist a sumo wrestler onto its shoulders.",
 		"it": "Machop, il Pokémon Megaforza. I suoi particolari muscoli non si infiammano mai, nemmeno in caso di esercizio eccessivo. Questo Pokémon ha la forza sufficiente per scagliare lontano un centinaio di uomini."
 	}
   },
@@ -1562,7 +1562,7 @@
       "Speed": 45
     },
 	"description": {
-		"en": "Machoke undertakes bodybuilding every day even as it helps people with tough, physically demanding labor. On its days off, this Pokémon heads to the fields and mountains to exercise and train.",
+		"en": "Machoke, the Superpower Pokémon. It's the evolved form of Machop. It wears a belt to keep its overwhelming power under control. Because it is so dangerous, no one has ever removed the belt.",
 		"it": "Machoke, il Pokémon Megaforza. È la forma evolutiva di Machop. I suoi muscoli perfettamente tonici possiedono la durezza dell'acciaio. Questo Pokémon è così forte da riuscire a sollevare un lottatore di sumo con un dito."
 	}
   },
@@ -1585,7 +1585,7 @@
       "Speed": 55
     },
 	"description": {
-		"en": "Machamp is known as the Pokémon that has mastered every kind of martial arts. If it grabs hold of the foe with its four arms, the battle is all but over. The hapless foe is thrown far over the horizon.",
+		"en": "Machamp, the Superpower Pokémon. It's the evolved form of Machoke. It is impossible to defend against punches and chops doled out by its four arms. Its fighting spirit flares up when it faces a tough opponent.",
 		"it": "Machamp, il Pokémon Megaforza. È la forma evolutiva di Machoke. È noto per la sua conoscenza di ogni tipo di arti marziali. Può sferrare un migliaio di pugni in pochi secondi e con una sola mano può muovere persino una montagna"
 	}
   },
@@ -1609,7 +1609,7 @@
       "Speed": 40
     },
 	"description": {
-		"en": "Bellsprout's thin and flexible body lets it bend and sway to avoid any attack, however strong it may be. From its mouth, this Pokémon spits a corrosive fluid that melts even iron.",
+		"en": "Bellsprout, the Flower Pokémon. Its thin and flexible body lets Bellsprout bend and sway to avoid any attack, however strong it may be. From its mouth, it leaks a fluid that melts even iron.",
 		"it": "Bellsprout, il Pokémon Fiore. Il suo corpo esile e flessibile gli consente di piegarsi e oscillare per evitare ogni attacco, anche violento. Dalla bocca sputa un fluido corrosivo in grado di sciogliere anche il ferro."
 	}
   },
@@ -1633,7 +1633,7 @@
       "Speed": 55
     },
 	"description": {
-		"en": "Weepinbell has a large hook on its rear end. At night, the Pokémon hooks on to a tree branch and goes to sleep. If it moves around in its sleep, it may wake up to find itself on the ground.",
+		"en": "Weepinbell, the Flycatcher Pokémon. It's the evolved form of Bellsprout. At night, it hangs on to a tree branch with its hooked rear and sleeps. If it moves around in its sleep, it may wake up to find itself on the ground.",
 		"it": "Weepinbell, il Pokémon Moschivoro. È la forma evolutiva di Bellsprout. è dotato di un grande uncino posteriore. Di notte lo usa per appendersi a un ramo e mettersi a dormire. Talvolta, agitandosi nel sonno, si sveglia al suolo."
 	}
   },
@@ -1657,7 +1657,7 @@
       "Speed": 70
     },
 	"description": {
-		"en": "Victreebel has a long vine that extends from its head. This vine is waved and flicked about as if it were an animal to attract prey. When an unsuspecting prey draws near, this Pokémon swallows it whole.",
+		"en": "Victreebel, the Flycatcher Pokémon. It's the evolved form of Weepinbell. The long vine extending from its head is waved about as if it were a living thing to attract prey. When an unsuspecting victim approaches, it is swallowed whole.",
 		"it": "Victreebel, il Pokémon Moschivoro. È la forma evolutiva di Weepinbell. È dotato di una lunga liana che parte dalla testa. Il Pokémon la sventola e la agita come fosse un'esca per attirare la preda. Quando la preda ignara si avvicina, il Pokémon la inghiotte in un sol boccone."
 	}
   },
@@ -1681,7 +1681,7 @@
       "Speed": 70
     },
 	"description": {
-		"en": "Tentacool absorbs sunlight and refracts it using water inside its body to convert it into beam energy. This Pokémon shoots beams from the small round organ above its eyes.",
+		"en": "Tentacool, the Jellyfish Pokémon. Its body is almost entirely composed of water. It ensnares its foe with its two long tentacles, then stabs with the poison stingers at their tips.",
 		"it": "Tentacool, il Pokémon Medusa. Il suo corpo è costituito quasi completamente da acqua. Non essendo molto abile a nuotare, va in cerca di prede fluttuando in acque poco profonde."
 	}
   },
@@ -1705,7 +1705,7 @@
       "Speed": 100
     },
 	"description": {
-		"en": "Tentacruel has tentacles that can be freely elongated and shortened at will. It ensnares prey with its tentacles and weakens the prey by dosing it with a harsh toxin. It can catch up to 80 prey at the same time.",
+		"en": "Tentacruel, the Jellyfish Pokémon. It's the evolved form of Tentacool. It lives in complex rock formations on the ocean floor and traps prey using its 80 tentacles. Its red orbs glow when it grows excited or agitated.",
 		"it": "Tentacruel, il Pokémon Medusa. È la forma evolutiva di Tentacool. Ha due grandi sfere rosse sulla testa. Le sfere brillano prima di emettere potenti ultrasuoni. Gli attacchi di questo Pokémon creano onde impetuose nei dintorni."
 	}
   },
@@ -1729,7 +1729,7 @@
       "Speed": 20
     },
 	"description": {
-		"en": "When Geodude sleeps deeply, it buries itself halfway into the ground. It will not awaken even if hikers step on it unwittingly. In the morning, this Pokémon rolls downhill in search of food.",
+		"en": "Geodude, the Rock Pokémon. It climbs mountain paths using only the power of its arms. Because they look just like boulders lining paths, hikers may step on them without noticing.",
 		"it": "Geodude, il Pokémon Roccia. Lo si può trovare vicino ai sentieri di montagna. Bisogna fare attenzione a non calpestarlo per sbaglio, altrimenti diventa furioso."
 	}
   },
@@ -1753,7 +1753,7 @@
       "Speed": 35
     },
 	"description": {
-		"en": "Rocks are Graveler's favorite food. This Pokémon will climb a mountain from the base to the summit, crunchingly feasting on rocks all the while. Upon reaching the peak, it rolls back down to the bottom.",
+		"en": "Graveler, the Rock Pokémon. It's the evolved form of Geodude. They descend from mountains by tumbling down steep slopes. They are so brutal, they smash aside obstructing trees and massive boulders with thunderous tackles.",
 		"it": "Graveler, il Pokémon Roccia. È la forma evolutiva di Geodude. Si ciba di rocce e pare preferisca quelle ricoperte di muschio. Spesso viene visto rotolare giù per i sentieri di montagna, travolgendo tutto ciò che incontra."
 	}
   },
@@ -1777,7 +1777,7 @@
       "Speed": 45
     },
 	"description": {
-		"en": "Golem is known for rolling down from mountains. To prevent them from rolling into the homes of people downhill, grooves have been dug into the sides of mountains to serve as guideways for diverting this Pokémon's course.",
+		"en": "Golem, the Megaton Pokémon. It's the evolved form of Graveler. It is said to live in volcanic craters on mountain peaks. Once a year, it sheds its hide and grows larger. The shed hide crumbles and returns to the soil.",
 		"it": "Golem, il Pokémon Megatone. È la forma evolutiva di Graveler. Vivono in alta montagna. In caso di terremoto, questi Pokémon rotolano giù per i monti in massa e si fermano a valle."
 	}
   },
@@ -1800,7 +1800,7 @@
       "Speed": 90
     },
 	"description": {
-		"en": "Ponyta is very weak at birth. It can barely stand up. This Pokémon becomes stronger by stumbling and falling to keep up with its parent.",
+		"en": "Ponyta, the Fire Horse Pokémon. It's very weak at birth. It can barely stand up. Its legs become stronger as it stumbles and falls while trying to keep up with its parent.",
 		"it": "Ponyta, il Pokémon Cavalfuoco. È molto debole alla nascita e riesce a malapena a reggersi in piedi. Poi si rinforza a furia di inciampare e cadere, cercando di tenere il passo dei suoi genitori."
 	}
   },
@@ -1823,7 +1823,7 @@
       "Speed": 105
     },
 	"description": {
-		"en": "Rapidash usually can be seen casually cantering in the fields and plains. However, when this Pokémon turns serious, its fiery manes flare and blaze as it gallops its way up to 240 km/h.",
+		"en": "Rapidash, the Fire Horse Pokémon. It's the evolved form of Ponyta. It usually canters casually in the fields and plains. But once a RAPIDASH turns serious, its fiery manes flare and blaze as it gallops its way up to 240 km/h.",
 		"it": "Rapidash, il Pokémon Cavalfuoco. È la forma evolutiva di Ponyta. Si vede comunemente galoppare in campagne e pianure. Quando si lancia a tutta velocità la sua fiera criniera brilla e arde mentre galoppa fino a 240 km/h."
 	}
   },
@@ -1847,7 +1847,7 @@
       "Speed": 15
     },
 	"description": {
-		"en": "Slowpoke uses its tail to catch prey by dipping it in water at the side of a river. However, this Pokémon often forgets what it's doing and often spends entire days just loafing at water's edge.",
+		"en": "Slowpoke, the Dopey Pokémon. It catches prey by dipping its tail in water at the side of a river. But it often forgets what it is doing and spends entire days just loafing at water’s edge.",
 		"it": "Slowpoke, il Pokémon Ronfone. Usa la coda per pescare la preda, immergendola in acqua dalle rive dei fiumi. Tuttavia, spesso dimentica cosa stava facendo e trascorre giorni interi a ciondolare vicino ai corsi d'acqua."
 	}
   },
@@ -1871,7 +1871,7 @@
       "Speed": 30
     },
 	"description": {
-		"en": "Slowbro's tail has a Shellder firmly attached with a bite. As a result, the tail can't be used for fishing anymore. This causes Slowbro to grudgingly swim and catch prey instead.",
+		"en": "Slowbro, the Hermit Crab Pokémon. It's the evolved form of Slowpoke. Its tail has a Shellder firmly attached with a bite. As a result, the tail can’t be used for fishing anymore. This forces it to reluctantly swim and catch prey.",
 		"it": "Slowbro, il Pokémon . È la forma evolutiva di Slowpoke. Ha uno Shellder saldamente attaccato alla coda, che quindi non può più essere usata per pescare. Così Slowbro può essere visto nuotare di malavoglia per catturare una preda."
 	}
   },
@@ -1895,7 +1895,7 @@
       "Speed": 45
     },
 	"description": {
-		"en": "Magnemite floats in the air by emitting electromagnetic waves from the units at its sides. These waves block gravity. This Pokémon becomes incapable of flight if its internal electrical supply is depleted.",
+		"en": "Magnemite, the Magnet Pokémon. The units at its sides are extremely powerful magnets. They generate enough magnetism to draw in iron objects from over 90 meters away.",
 		"it": "Magnemite, il Pokémon Calamita. Si attacca alle linee elettriche per caricarsi di energia. Può capitare che esaurisca la sua riserva di elettricità e di cadere al suolo. Se gli viene data una batteria, torna a muoversi."
 	}
   },
@@ -1919,7 +1919,7 @@
       "Speed": 70
     },
 	"description": {
-		"en": "Magneton emits a powerful magnetic force that is fatal to electronics and precision instruments. Because of this, it is said that some towns warn people to keep this Pokémon inside a Poké Ball.",
+		"en": "Magneton, the Magnet Pokémon. It's the evolved form of Magnemite. emits a powerful magnetic force that is fatal to electronics and precision instruments. Because of this, it is said that some towns warn people to keep this Pokémon inside a Poké Ball.",
 		"it": "Magneton, il Pokémon Calamita. È la forma evolutiva di Magnemite. Emette una potente carica magnetica fatale per tutte le apparecchiature meccaniche. Nelle città, le sirene avvertono la popolazione di grandi invasioni di questi Pokémon."
 	}
   },
@@ -1943,7 +1943,7 @@
       "Speed": 60
     },
 	"description": {
-		"en": "Farfetch'd is always seen with a stalk from a plant of some sort. Apparently, there are good stalks and bad stalks. This Pokémon has been known to fight with others over stalks.",
+		"en": "Farfetch'd, the Wild Duck Pokémon. It is always seen with a stick from a plant. Apparently, there are good sticks and bad sticks. This Pokémon occasionally fights with others over choice sticks.",
 		"it": "Farfetch'd, il Pokémon Selvanatra. Ha sempre con sé il gambo di qualche pianta. Pare che alcuni gambi siano migliori di altri. Spesso lotta con altri Pokémon per avere i gambi migliori."
 	}
   },
@@ -1967,7 +1967,7 @@
       "Speed": 75
     },
 	"description": {
-		"en": "Doduo's two heads contain completely identical brains. A scientific study reported that on rare occasions, there will be examples of this Pokémon possessing different sets of brains.",
+		"en": "Doduo, the Twin Bird Pokémon. Even while eating or sleeping, one of the heads remains always vigilant for any sign of danger. When threatened, it flees at over 100 km/h.",
 		"it": "Doduo, il Pokémon Biuccello. Le due teste di Doduo non dormono mai nello stesso momento, in modo che una sia sempre vigile per difendersi dai nemici, mentre l'altra può riposarsi tranquilla."
 	}
   },
@@ -1991,7 +1991,7 @@
       "Speed": 110
     },
 	"description": {
-		"en": "Apparently, the heads aren't the only parts of the body that Dodrio has three of. It has three sets of hearts and lungs as well, so it is capable of running long distances without rest.",
+		"en": "Dodrio, the Triple Bird Pokémon. It's the evolved form of Doduo. This peculiar Pokémon species has three heads. It vigorously races across grassy plains even in arid seasons with little rainfall.",
 		"it": "Dodrio, il Pokémon Triuccello. È la forma evolutiva di Doduo. Se le tre teste di Dodrio guardano in tre direzioni diverse, significa che il Pokémon è vigile. In questo stato il Pokémon non va avvicinato, poiché potrebbe decidere di attaccare."
 	}
   },
@@ -2014,7 +2014,7 @@
       "Speed": 45
     },
 	"description": {
-		"en": "Seel hunts for prey in the frigid sea underneath sheets of ice. When it needs to breathe, it punches a hole through the ice with the sharply protruding section of its head.",
+		"en": "Seel, the Sea Lion Pokémon. It hunts for prey in frigid, ice-covered seas. When it needs to breathe, it punches a hole through the ice with the sharply protruding section of its head.",
 		"it": "Seel, il Pokémon Otaria. Caccia le prede nel mare gelido sotto le lastre di ghiaccio. Per respirare apre un foro nel ghiaccio usando la protuberanza appuntita sulla sommità del capo."
 	}
   },
@@ -2038,7 +2038,7 @@
       "Speed": 70
     },
 	"description": {
-		"en": "Dewgong loves to snooze on bitterly cold ice. The sight of this Pokémon sleeping on a glacier was mistakenly thought to be a mermaid by a mariner long ago.",
+		"en": "Dewgong, the Sea Lion Pokémon. It's the evolved form of Seel. It loves to snooze on bitterly cold ice. The sight of this Pokémon sleeping on a glacier was mistakenly thought to be a mermaid by a mariner long ago.",
 		"it": "Dewgong, il Pokémon Otaria. È la forma evolutiva di Seel. Adora riposare su una gelida lastra di ghiaccio. In passato i marinai confondevano il profilo di questo Pokémon addormentato sulla superficie gelata con una sirena."
 	}
   },
@@ -2061,7 +2061,7 @@
       "Speed": 25
     },
 	"description": {
-		"en": "Grimer emerged from the sludge that settled on a polluted seabed. This Pokémon loves anything filthy. It constantly leaks a horribly germ-infested fluid from all over its body.",
+		"en": "Grimer, the Sludge Pokémon. Born from polluted sludge in the sea, Grimer’s favorite food is anything filthy. They feed on wastewater pumped out from factories.",
 		"it": "Grimer, il Pokémon Melma. Il suo corpo fangoso e gommoso può passare attraverso ogni apertura, anche la più angusta. Si intrufola dentro le condotte fognarie per bere le ripugnanti acque di scarico."
 	}
   },
@@ -2084,7 +2084,7 @@
       "Speed": 50
     },
 	"description": {
-		"en": "This Pokémon's favorite food is anything that is repugnantly filthy. In dirty towns where people think nothing of throwing away litter on the streets, Muk are certain to gather.",
+		"en": "Muk, the Sludge Pokémon. It's the evolved form of Grimer. It prefers warm and humid habitats. In the summertime, the toxic substances in its body intensify, making Muk reek like putrid kitchen garbage.",
 		"it": "Muk, il Pokémon Melma. È la forma evolutiva di Grimer. Quelli che sembrano denti e artigli sono in realtà tossine cristallizzate che avvelenano al solo contatto. Avvicinarsi è molto pericoloso."
 	}
   },
@@ -2107,8 +2107,8 @@
       "Speed": 40
     },
 	"description": {
-		"en": "At night, this Pokémon uses its broad tongue to burrow a hole in the seafloor sand and then sleep in it. While it is sleeping, Shellder closes its shell, but leaves its tongue hanging out.",
-		"it": "Shellder, il Pokémon Bivalve. "
+		"en": "Shellder, the Bivalve Pokémon. At night, it burrows a hole in the seafloor with its broad tongue to make a place to sleep. While asleep, it closes its shell, but leaves its tongue hanging out.",
+		"it": "Shellder, il Pokémon Bivalve. La conchiglia esterna è più dura del diamante e gli permette di respingere ogni tipo di attacco. In passato era usata per costruire scudi."
 	}
   },
   {
@@ -2131,7 +2131,7 @@
       "Speed": 70
     },
 	"description": {
-		"en": "Cloyster is capable of swimming in the sea. It does so by swallowing water, then jetting it out toward the rear. This Pokémon shoots spikes from its shell using the same system.",
+		"en": "Cloyster, the Bivalve Pokémon. It's the evolved form of Shellder. It swims in the sea by swallowing water, then jetting it out toward the rear. Cloyster shoots spikes from its shell using the same system.",
 		"it": "Cloyster, il Pokémon Bivalve. È la forma evolutiva di Shellder. È in grado di nuotare in mare aperto, ingerendo acqua dalla bocca per poi espellerla violentemente a mo' di propulsore. Questo Pokémon usa lo stesso metodo per sparare punte dalla conchiglia."
 	}
   },
@@ -2155,7 +2155,7 @@
       "Speed": 80
     },
 	"description": {
-		"en": "Gastly is largely composed of gaseous matter. When exposed to a strong wind, the gaseous body quickly dwindles away. Groups of this Pokémon cluster under the eaves of houses to escape the ravages of wind.",
+		"en": "Gastly, the Gas Pokémon. When exposed to a strong wind, a its gaseous body quickly dwindles away. They cluster under the eaves of houses to escape the ravages of wind.",
 		"it": "Gastly, il Pokémon Gas. è composto prevalentemente di sostanze gassose. Se esposto al vento forte il suo corpo gassoso si disperde subito. Gruppi di questi Pokémon si radunano sotto i cornicioni per ripararsi dal vento."
 	}
   },
@@ -2179,7 +2179,7 @@
       "Speed": 95
     },
 	"description": {
-		"en": "Haunter is a dangerous Pokémon. If one beckons you while floating in darkness, you must never approach it. This Pokémon will try to lick you with its tongue and steal your life away.",
+		"en": "Haunter, the Gas Pokémon. It's the evolved form of Gastly. If it beckons you while it's floating in darkness, don’t approach it. This Pokémon will try to lick you with its tongue and steal your life away.",
 		"it": "Haunter, il Pokémon Gas. È la forma evolutiva di Gastly. È un Pokémon pericoloso. Se lo vedi fare cenni mentre fluttua nell'oscurità, è meglio fuggire, poiché il Pokémon cercherà di leccare il malcapitato e succhiargli la vita."
 	}
   },
@@ -2203,7 +2203,7 @@
       "Speed": 110
     },
 	"description": {
-		"en": "Sometimes, on a dark night, your shadow thrown by a streetlight will suddenly and startlingly overtake you. It is actually a Gengar running past you, pretending to be your shadow.",
+		"en": "Gengar, the Shadow Pokémon. It's the evolved form of Haunter. Deep in the night, your shadow cast by a streetlight may suddenly overtake you. It is actually a Gengar running past you, pretending to be your shadow.",
 		"it": "Gengar, il Pokémon Ombra. È la forma evolutiva di Haunter. Talvolta, nelle notti buie, può accadere che un passante sia improvvisamente aggredito dalla propria ombra. È opera di Gengar, che usa avvicinarsi fingendosi un'ombra."
 	}
   },
@@ -2227,7 +2227,7 @@
       "Speed": 70
     },
 	"description": {
-		"en": "Onix has a magnet in its brain. It acts as a compass so that this Pokémon does not lose direction while it is tunneling. As it grows older, its body becomes increasingly rounder and smoother.",
+		"en": "Onix, the Rock Snake Pokémon. There is a magnet in its brain that prevents an Onix from losing direction while tunneling. As it grows older, its body becomes steadily rounder and smoother.",
 		"it": "Onix, il Pokémon Serpesasso. Ha una calamita nel cervello, che agisce da bussola per consentirgli di non perdere l'orientamento mentre scava sottoterra. Con il passare del tempo il suo corpo diventa sempre più smussato e levigato."
 	}
   },
@@ -2250,7 +2250,7 @@
       "Speed": 42
     },
 	"description": {
-		"en": "If your nose becomes itchy while you are sleeping, it's a sure sign that one of these Pokémon is standing above your pillow and trying to eat your dream through your nostrils.",
+		"en": "Drowzee, the Hypnosis Pokémon. If your nose becomes itchy while you are sleeping, it’s a sure sign that a Drowzee is standing above your pillow and trying to eat your dream through your nostrils.",
 		"it": "Drowzee, il Pokémon Ipnosi. È solito nutrirsi dei sogni degli altri mentre dormono, estraendoli dalle loro narici. Se durante il sonno si avverte prurito al naso, significa che Drowzee è già all'opera."
 	}
   },
@@ -2273,7 +2273,7 @@
       "Speed": 67
     },
 	"description": {
-		"en": "Hypno holds a pendulum in its hand. The arcing movement and glitter of the pendulum lull the foe into a deep state of hypnosis. While this Pokémon searches for prey, it polishes the pendulum.",
+		"en": "Hypno, the Hypnosis Pokémon. It's the evolved form of Drowzee. The arcing movement and glitter of the pendulum in its hand lull the foe into deep hypnosis. While searching for prey, it polishes the pendulum.",
 		"it": "Hypno, il Pokémon Ipnosi. È la fase evolutiva di Drowzee. È solito nutrirsi dei sogni degli altri mentre dormono, estraendoli dalle loro narici. Se durante il sonno si avverte prurito al naso, significa che Drowzee è già all'opera."
 	}
   },
@@ -2296,7 +2296,7 @@
       "Speed": 50
     },
 	"description": {
-		"en": "Krabby live on beaches, burrowed inside holes dug into the sand. On sandy beaches with little in the way of food, these Pokémon can be seen squabbling with each other over territory.",
+		"en": "Krabby, the River Crab Pokémon. It lives in holes dug into beaches. On sandy shores with little in the way of food, they can be seen squabbling with each other over territory.",
 		"it": "Krabby il Pokémon Granchio. Vive in spiaggia, nascosto in buche scavate nella sabbia. Sulle spiagge molto sabbiose, dove scarseggia il cibo, è possibile vedere questi Pokémon attaccarsi a vicenda in difesa del proprio territorio."
 	}
   },
@@ -2319,7 +2319,7 @@
       "Speed": 75
     },
 	"description": {
-		"en": "Kingler has an enormous, oversized claw. It waves this huge claw in the air to communicate with others. However, because the claw is so heavy, the Pokémon quickly tires.",
+		"en": "Kingler, the Pincer Pokémon. It's the evolved form of Krabby. It waves its huge, oversized claw in the air to communicate with others. But since the claw is so heavy, this Pokémon quickly tires.",
 		"it": "Kingler, il Pokémon Chela. È la forma evolutiva di Krabby. È dotato di un'enorme chela, che brandisce nell'aria per comunicare con i suoi simili. Tuttavia, dato il notevole peso della chela sovradimensionata, il Pokémon si stanca in fretta."
 	}
   },
@@ -3111,7 +3111,7 @@
       "Speed": 55
     },
 	"description": {
-		"en": "Eevee has an unstable genetic makeup that suddenly mutates due to the environment in which it lives. Radiation from various stones causes this Pokémon to evolve.",
+		"en": "Eevee, the Evolution Pokémon. It has an unstable genetic makeup that suddenly mutates due to its environment. Radiation from various Stones causes this Pokémon to evolve.",
 		"it": "Eevee, il Pokémon Evoluzione. È dotato di un instabile corredo genetico che muta in base all'habitat naturale in cui vive. Le radiazioni di diverse Pietre ne scatenano l'evoluzione."
 	}
   },
@@ -3604,8 +3604,8 @@
       "Speed": 55
     },
 	"description": {
-		"en": "Combusken toughens up its legs and thighs by running through fields and mountains. It lashes out with 10 kicks per second. Its strong fighting instinct compels it to keep up its offensive until the opponent gives up.",
-		"it": "Combusken, il Pokémon Rampollo. Allena gli arti superiori e inferiori correndo in campagna e in montagna. Le zampe inferiori sono rapide e potenti e riescono a sferrare dieci calci al secondo."
+		"en": "Combusken, the Young Fowl Pokémon. It's the evolved form of Torchic. It lashes out with 10 kicks per second. Its strong fighting instinct compels it to keep up its offensive until the opponent gives up.",
+		"it": "Combusken, il Pokémon Rampollo. È la forma evolutiva di Torchic. Allena gli arti superiori e inferiori correndo in campagna e in montagna. Le zampe inferiori sono rapide e potenti e riescono a sferrare dieci calci al secondo."
 	}
   },
   {
@@ -3628,8 +3628,8 @@
       "Speed": 80
     },
 	"description": {
-		"en": "In battle, Blaziken blows out intense flames from its wrists and attacks foes courageously. The stronger the foe, the more intensely this Pokémon’s wrists burn. Every several years, its old feathers burn off, and new, supple feathers grow back in their place.",
-		"it": "Blaziken, il Pokémon Vampe. È l'evoluzione di Combusken. Emette fiamme micidiali coi suoi pugni, attaccando coraggiosamente il nemico. Più forte è il nemico, tanto più intenso è il fuoco proveniente dai pugni."
+		"en": "Blaziken, the Blaze Pokémon. It's the evolved form of Combusken. It learns martial arts that use punches and kicks. Every several years, its old feathers burn off, and new, supple feathers grow back in their place.",
+		"it": "Blaziken, il Pokémon Vampe. È la forma evolutiva di Combusken. Emette fiamme micidiali coi suoi pugni, attaccando coraggiosamente il nemico. Più forte è il nemico, tanto più intenso è il fuoco proveniente dai pugni."
 	}
   },
   {
