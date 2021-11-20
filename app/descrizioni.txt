@@ -534,15 +534,15 @@
     },
     {
       "nome": "Vaporeon",
-      "descrizione": "Vaporeon, il Pokémon Bollajet. È la forma evolutiva di Eevee. Frutto di una mutazione naturale, ha sviluppato pinne e branchie per vivere sott'acqua. Ha la capacità di sfruttare l'acqua a suo vantaggio."
+      "descrizione": "Vaporeon, il Pokémon Bollajet. È una forma evolutiva di Eevee. Frutto di una mutazione naturale, ha sviluppato pinne e branchie per vivere sott'acqua. Ha la capacità di sfruttare l'acqua a suo vantaggio."
     },
     {
       "nome": "Jolteon",
-      "descrizione": "Jolteon, il Pokémon Luminoso. È la forma evolutiva di Eevee. Le sue cellule generano un basso potenziale elettrico, che viene tuttavia amplificato dall'elettricità statica della sua pelliccia, da cui scatena fulmini."
+      "descrizione": "Jolteon, il Pokémon Luminoso. È una forma evolutiva di Eevee. Le sue cellule generano un basso potenziale elettrico, che viene tuttavia amplificato dall'elettricità statica della sua pelliccia, da cui scatena fulmini."
     },
     {
       "nome": "Flareon",
-      "descrizione": "Flareon, il Pokémon Fiamma. È la forma evolutiva di Eevee. La sua morbida pelliccia di ha lo scopo di liberare calore nell'aria abbassando in tal modo la temperatura corporea, che raggiunge al massimo 900°C."
+      "descrizione": "Flareon, il Pokémon Fiamma. È una forma evolutiva di Eevee. La sua morbida pelliccia di ha lo scopo di liberare calore nell'aria abbassando in tal modo la temperatura corporea, che raggiunge al massimo 900°C."
     },
     {
       "nome": "Porygon",
@@ -606,11 +606,11 @@
     },
     {
       "nome": "Espeon",
-      "descrizione": "Espeon, il Pokémon Sole. È la forma evolutiva di Eevee. È estremamente leale nei confronti di qualsiasi Allenatore considerato all'altezza. Si dice che questo Pokémon abbia sviluppato capacità precognitive per proteggere il proprio Allenatore."
+      "descrizione": "Espeon, il Pokémon Sole. È una forma evolutiva di Eevee. È estremamente leale nei confronti di qualsiasi Allenatore considerato all'altezza. Si dice che questo Pokémon abbia sviluppato capacità precognitive per proteggere il proprio Allenatore."
     },
     {
       "nome": "Umbreon",
-      "descrizione": "Umbreon, il Pokémon Lucelunare. È la forma evolutiva di Eevee. Si è evoluto con l'esposizione alle onde lunari. Rimane nascosto al buio in attesa di un movimento del suo nemico. I cerchi sul corpo brillano quando attacca."
+      "descrizione": "Umbreon, il Pokémon Lucelunare. È una forma evolutiva di Eevee. Si è evoluto con l'esposizione alle onde lunari. Rimane nascosto al buio in attesa di un movimento del suo nemico. I cerchi sul corpo brillano quando attacca."
     },
     {
       "nome": "Combusken",
@@ -622,11 +622,11 @@
     },
     {
       "nome": "Leafeon",
-      "descrizione": "Leafeon, il Pokémon Rigoglioso. È la forma evolutiva di Eevee. Ha una struttura cellulare simile a quella delle piante, perciò usa la fotosintesi."
+      "descrizione": "Leafeon, il Pokémon Rigoglioso. È una forma evolutiva di Eevee. Ha una struttura cellulare simile a quella delle piante, perciò usa la fotosintesi."
     },
     {
       "nome": "Glaceon",
-      "descrizione": "Glaceon, il Pokémon Nevefresca. È la forma evolutiva di Eevee. Modificando la temperatura del corpo, congela l'aria e crea folate di cristalli di ghiaccio."
+      "descrizione": "Glaceon, il Pokémon Nevefresca. È una forma evolutiva di Eevee. Modificando la temperatura del corpo, congela l'aria e crea folate di cristalli di ghiaccio."
     }
   ]
 }

@@ -2342,7 +2342,7 @@
       "Speed": 100
     },
 	"description": {
-		"en": "Voltorb is extremely sensitive: it explodes at the slightest of shocks. It is rumored that it was first created when a Poké Ball was exposed to a powerful pulse of energy.",
+		"en": "Voltorb, the Ball Pokémon. It bears an uncanny and unexplained resemblance to a Poké Ball. Because it explodes at the slightest shock, even veteran Trainers treat it with caution.",
 		"it": "Voltorb, il Pokémon Ball. Si dice che abbia un aspetto simile a una Poké Ball per passare inosservato. Tende ad autodistruggersi al minimo stimolo."
 	}
   },
@@ -2365,8 +2365,8 @@
       "Speed": 150
     },
 	"description": {
-		"en": "One of Electrode's characteristics is its attraction to electricity. It is a problematical Pokémon that congregates mostly at electrical power plants to feed on electricity that has just been generated.",
-		"it": "Electrode, il Pokémon Ball. È la forma evolutiva di Voltorb. L'energia elettrica accumulata nel suo corpo può provocare un'esplosione al minimo urto. Temuto da tutti, è noto come \"Palla Esplosiva\"."
+		"en": "Electrode, the Ball Pokémon. It's the evolved form of Voltorb. They appear in great numbers at electric power plants. Because they feed on electricity, they cause massive and chaotic blackouts in nearby cities.",
+		"it": "Electrode, il Pokémon Ball. È la forma evolutiva di Voltorb. Nutrendosi di elettricità, gli Electrode si aggirano numerosi attorno alle centrali elettriche, talvolta causando blackout e ingenti disagi nelle città circostanti."
 	}
   },
   {
@@ -2389,7 +2389,7 @@
       "Speed": 40
     },
 	"description": {
-		"en": "This Pokémon consists of six eggs that form a closely knit cluster. The six eggs attract each other and spin around. When cracks increasingly appear on the eggs, Exeggcute is close to evolution.",
+		"en": "Exeggcute, the Egg Pokémon. It consists of six eggs that care for each other. The eggs attract each other and spin around. When cracks increasingly appear, it is close to evolution.",
 		"it": "Exeggcute, il Pokémon Uovo. È costituito da un nucleo composto da sei uova, che girano vorticosamente attraendosi a vicenda. Quando i gusci iniziano a rompersi, Exeggcute è prossimo all'evoluzione."
 	}
   },
@@ -2413,7 +2413,7 @@
       "Speed": 55
     },
 	"description": {
-		"en": "Exeggutor originally came from the tropics. Its heads steadily grow larger from exposure to strong sunlight. It is said that when the heads fall off, they group together to form Exeggcute.",
+		"en": "Exeggutor, the Coconut Pokémon. It's the evolved form of Exeggcute. Originally from the tropics, Exeggutor’s heads grow larger from exposure to strong sunlight. It is said that when the heads fall, they group to form an Exeggcute.",
 		"it": "Exeggutor, il Pokémon Nocecocco. È la fase evolutiva di Exeggcute. è originario dei tropici. Le teste crescono costantemente se esposte a forte luce solare. Pare che quando le teste cadono, si uniscano per formare un Exeggcute."
 	}
   },
@@ -2436,7 +2436,7 @@
       "Speed": 35
     },
 	"description": {
-		"en": "Cubone pines for the mother it will never see again. Seeing a likeness of its mother in the full moon, it cries. The stains on the skull the Pokémon wears are made by the tears it sheds.",
+		"en": "Cubone, the Lonely Pokémon. It pines for the mother it will never see again. Seeing a likeness of its mother in the full moon, it cries. The stains on the skull it wears are from its tears.",
 		"it": "Cubone, il Pokémon Solitario. Si strugge per la madre che non rivedrà mai più. Piange alla luna piena che somiglia molto alla madre. Le macchie sul teschio che indossa sono dovute alle lacrime copiose."
 	}
   },
@@ -2459,7 +2459,7 @@
       "Speed": 45
     },
 	"description": {
-		"en": "Marowak is the evolved form of a Cubone that has overcome its sadness at the loss of its mother and grown tough. This Pokémon's tempered and hardened spirit is not easily broken.",
+		"en": "Marowak, the Bone Keeper Pokémon. It's the evolved form of a Cubone that has grown tough by overcoming the grief of losing its mother. Its tempered and hardened spirit is not easily broken.",
 		"it": "Marowak, il Pokémon Guardaossi. È la forma evolutiva di Cubone. Si è evoluto dopo essersi temprato e aver superato il lutto. Usa l'osso come un'arma e lotta valorosamente contro i nemici."
 	}
   },
@@ -2482,7 +2482,7 @@
       "Speed": 87
     },
 	"description": {
-		"en": "Hitmonlee's legs freely contract and stretch. Using these springlike legs, it bowls over foes with devastating kicks. After battle, it rubs down its legs and loosens the muscles to overcome fatigue.",
+		"en": "Hitmonlee, the Kicking Pokémon. Its legs freely stretch and contract. Using these springlike limbs, it bowls over foes with devastating kicks. After battle, it rubs down its tired legs.",
 		"it": "Hitmonlee, il Pokémon Tiracalci. Le sue zampe sono estremamente elastiche. Usandole a mo' di molla, si scaglia sul nemico con calci rovinosi. Dopo la lotta si strofina le zampe e scioglie i muscoli per recuperare le forze."
 	}
   },
@@ -2505,7 +2505,7 @@
       "Speed": 76
     },
 	"description": {
-		"en": "Hitmonchan is said to possess the spirit of a boxer who had been working toward a world championship. This Pokémon has an indomitable spirit and will never give up in the face of adversity.",
+		"en": "Hitmonchan, the Punching Pokémon. It's said to possess the spirit of a boxer who aimed to become the world champion. Having an indomitable spirit means that it will never give up.",
 		"it": "Hitmonchan, il Pokémon Tirapugni. Si dice che abbia l'animo di un pugile destinato a partecipare al campionato mondiale. Questo Pokémon ha uno spirito indomito e non demorde mai di fronte alle avversità."
 	}
   },
@@ -2528,7 +2528,7 @@
       "Speed": 30
     },
 	"description": {
-		"en": "Whenever Lickitung comes across something new, it will unfailingly give it a lick. It does so because it memorizes things by texture and by taste. It is somewhat put off by sour things.",
+		"en": "Lickitung, the Licking Pokémon. Whenever it sees something unfamiliar, it always licks the object because it memorizes things by texture and taste. It is somewhat put off by sour things.",
 		"it": "Lickitung, il Pokémon Linguaccia. Quando si trova davanti a qualcosa di nuovo, istintivamente lo assaggia con una leccata. È dotato infatti di una memoria legata al gusto e alla consistenza degli oggetti. Non ama i sapori aspri."
 	}
   },
@@ -2551,7 +2551,7 @@
       "Speed": 35
     },
 	"description": {
-		"en": "Koffing embodies toxic substances. It mixes the toxins with raw garbage to set off a chemical reaction that results in a terribly powerful poison gas. The higher the temperature, the more gas is concocted by this Pokémon.",
+		"en": "Koffing, the Poison Gas Pokémon. Getting up close to a Koffing will give you a chance to observe, through its thin skin, the toxic gases swirling inside. It blows up at the slightest stimulation.",
 		"it": "Koffing, il Pokémon Velenuvola. Il suo corpo è gonfio di gas velenosi. Va nelle discariche attratto dall'odore di rifiuti putrescenti."
 	}
   },
@@ -2574,7 +2574,7 @@
       "Speed": 60
     },
 	"description": {
-		"en": "Weezing alternately shrinks and inflates its twin bodies to mix together toxic gases inside. The more the gases are mixed, the more powerful the toxins become. The Pokémon also becomes more putrid.",
+		"en": "Weezing, the Poison Gas Pokémon. It's the evolved form of Koffing. By diluting its toxic gases with a special process, the highest grade of perfume can be extracted. To Weezing, gases emanating from garbage are the ultimate feast.",
 		"it": "Weezing, il Pokémon Velenuvola. Si serve del suo duplice corpo per miscelare i gas. Si sente a suo agio in case sudicie e maltenute, e la notte, mentre dormono tutti, lui si aggira furtivo tra i rifiuti domestici."
 	}
   },
@@ -2598,7 +2598,7 @@
       "Speed": 25
     },
 	"description": {
-		"en": "Rhyhorn's brain is very small. It is so dense, while on a run it forgets why it started running in the first place. It apparently remembers sometimes if it demolishes something.",
+		"en": "Rhyhorn, the Spikes Pokémon. Even if strong, it's not particularly bright. This Pokémon can shatter even a skyscraper with its charging Tackles.",
 		"it": "Rhyhorn, il Pokémon Punzoni. È molto forte, benché non particolarmente brillante. Se si scaglia contro un grattacielo può raderlo al suolo."
 	}
   },
@@ -2622,7 +2622,7 @@
       "Speed": 40
     },
 	"description": {
-		"en": "Rhydon has a horn that serves as a drill. It is used for destroying rocks and boulders. This Pokémon occasionally rams into streams of magma, but the armor-like hide prevents it from feeling the heat.",
+		"en": "Rhydon, the Drill Pokémon. It's the evolved form of Rhyhorn. Its horn, which rotates like a drill, destroys tall buildings with one strike. It stands on its hind legs, and its brain is well developed.",
 		"it": "Rhydon, il Pokémon Trapano. È la fase evolutiva di Rhyhorn. Possiede un corno che usa come trivella. Può sfruttarlo per distruggere roccie e massi."
 	}
   },
@@ -2645,7 +2645,7 @@
       "Speed": 50
     },
 	"description": {
-		"en": "Chansey lays nutritionally excellent eggs on an everyday basis. The eggs are so delicious, they are easily and eagerly devoured by even those people who have lost their appetite.",
+		"en": "Chansey, the Egg Pokémon. It lays nutritionally excellent eggs every day. The eggs are so delicious, they are eagerly devoured by even those people who have lost their appetite.",
 		"it": "Chansey, il Pokémon Uovo. Ogni giorno depone uova molto nutrienti. Queste uova sono così buone da far tornare l'appetito a chi lo ha perso."
 	}
   },
@@ -2668,7 +2668,7 @@
       "Speed": 60
     },
 	"description": {
-		"en": "Tangela's vines snap off easily if they are grabbed. This happens without pain, allowing it to make a quick getaway. The lost vines are replaced by newly grown vines the very next day.",
+		"en": "Tangela, the Vine Pokémon. Its vines snap off easily and painlessly if they are grabbed, allowing it to make a quick getaway. The lost vines are replaced by new growth the very next day.",
 		"it": "Tangela, il Pokémon Liana. Se le sue liane vengono afferrate, si staccano con facilità, ma in modo indolore, consentendo una pratica scappatoia al Pokémon."
 	}
   },
@@ -2691,7 +2691,7 @@
       "Speed": 90
     },
 	"description": {
-		"en": "If you come across a young Kangaskhan playing by itself, you must never disturb it or attempt to catch it. The baby Pokémon's parent is sure to be in the area, and it will become violently enraged at you.",
+		"en": "Kangaskhan, the Parent Pokémon. If you come across a young Kangaskhan playing by itself, never try to catch it. The baby’s parent is sure to be in the area, and it will become violently enraged.",
 		"it": "Kangaskhan, il Pokémon Genitore. Se si avvista un cucciolo di Kangaskhan giocare per conto suo, non bisogna mai disturbarlo o cercare di catturarlo. Il suo genitore, infatti, è sicuramente nei paraggi e potrebbe reagire molto violentemente."
 	}
   },
@@ -2714,7 +2714,7 @@
       "Speed": 60
     },
 	"description": {
-		"en": "If Horsea senses danger, it will reflexively spray a dense black ink from its mouth and try to escape. This Pokémon swims by cleverly flapping the fin on its back.",
+		"en": "Horsea, the Dragon Pokémon. By cleverly flicking the fins on its back side to side, it moves in any direction while facing forward. It spits ink to escape if it senses danger.",
 		"it": "Horsea, il Pokémon Drago. Vive in mari dalle correnti tranquille. Quando viene attaccato spruzza inchiostro nero e ne approfitta per fuggire."
 	}
   },
@@ -2737,7 +2737,7 @@
       "Speed": 85
     },
 	"description": {
-		"en": "Seadra generates whirlpools by spinning its body. The whirlpools are strong enough to swallow even fishing boats. This Pokémon weakens prey with these currents, then swallows it whole.",
+		"en": "Seadra, the Dragon Pokémon. It's the evolved form of Horsea. The poisonous barbs all over its body are highly valued as ingredients for making traditional herbal medicine. It shows no mercy to anything approaching its nest.",
 		"it": "Seadra, il Pokémon Drago. È la forma evolutiva di Horsea. Dorme dopo essersi sistemato tra i rami di un corallo. I cercatori di corallo spesso rischiano di essere punti dai suoi aculei velenosi se non si accorgono della sua presenza."
 	}
   },
@@ -2760,7 +2760,7 @@
       "Speed": 63
     },
 	"description": {
-		"en": "Goldeen loves swimming wild and free in rivers and ponds. If one of these Pokémon is placed in an aquarium, it will shatter even the thickest glass with one ram of its horn and make its escape.",
+		"en": "Goldeen, the Goldfish Pokémon. In the springtime, schools of Goldeen can be seen swimming up falls and rivers. It metes out staggering damage with its single horn.",
 		"it": "Goldeen, il Pokémon Pescerosso. È un Pokémon molto elegante dai movimenti aggraziati. Tuttavia, è necessario stare attenti poiché è capace di attaccare violentemente con il suo corno."
 	}
   },
@@ -2783,7 +2783,7 @@
       "Speed": 68
     },
 	"description": {
-		"en": "Seaking is very protective of its eggs. The male and female will take turns patrolling around their nest and eggs. The guarding of eggs by these Pokémon goes on for over a month.",
+		"en": "Seaking, the Goldfish Pokémon. It's the evolved form of Goldeen. It punches holes in boulders on streambeds. This is a clever innovation that prevents its eggs from being attacked or washed away by the current.",
 		"it": "Seaking, il Pokémon Pescerosso. È la forma evolutiva di Goldeen. In autunno ingrassa in previsione della stagione degli amori e assume colori sgargianti."
 	}
   },
@@ -2806,7 +2806,7 @@
       "Speed": 85
     },
 	"description": {
-		"en": "Staryu apparently communicates with the stars in the night sky by flashing the red core at the center of its body. If parts of its body are torn, this Pokémon simply regenerates the missing pieces and limbs.",
+		"en": "Staryu, the Star Shape Pokémon. It gathers with others in the night and makes its red core glow on and off with the twinkling stars. It can regenerate limbs if they are severed from its body.",
 		"it": "Staryu, il Pokémon Stella. Quando si raggruppano di notte, i loro nuclei centrali brillano al ritmo delle stelle. Se perde un'appendice, questo Pokémon la rigenera senza problemi."
 	}
   },
@@ -2830,7 +2830,7 @@
       "Speed": 115
     },
 	"description": {
-		"en": "Starmie swims through water by spinning its star-shaped body as if it were a propeller on a ship. The core at the center of this Pokémon's body glows in seven colors.",
+		"en": "Starmie, the Mysterious Pokémon. It's the evolved form of Staryu. People in ancient times imagined that Starmie were transformed from the reflections of stars that twinkled on gentle waves at night.",
 		"it": "Starmie, il Pokémon Misterioso. È la forma evolutiva di Staryu. Nuota roteando vorticosamente il corpo a stella come fosse l'elica di una nave. Il suo nucleo brilla in sette diversi colori."
 	}
   },
@@ -2854,7 +2854,7 @@
       "Speed": 90
     },
 	"description": {
-		"en": "Mr. Mime is a master of pantomime. Its gestures and motions convince watchers that something unseeable actually exists. Once the watchers are convinced, the unseeable thing exists as if it were real.",
+		"en": "Mr. Mime, the Barrier Pokémon. It's a master of pantomime. It can convince others that something unseeable actually exists. Once believed, the imaginary object does become real.",
 		"it": "Mr. Mime, il Pokémon Barriera. È un esperto di mimica. Con la gestualità convince l'osservatore dell'esistenza di oggetti invisibili che saranno percepiti come reali."
 	}
   },
@@ -2878,7 +2878,7 @@
       "Speed": 105
     },
 	"description": {
-		"en": "Scyther is blindingly fast. Its blazing speed enhances the effectiveness of the twin scythes on its forearms. This Pokémon's scythes are so effective, they can slice through thick logs in one wicked stroke.",
+		"en": "Scyther, the Mantis Pokémon. Its blindingly fast speed adds to the sharpness of its twin forearm scythes. The scythes can slice through thick logs in one wicked stroke.",
 		"it": "Scyther, il Pokémon Mantide. È veloce come una saetta. La rapidità rende le falci sulle zampe anteriori così efficaci da tranciare con un colpo secco persino un tronco secolare."
 	}
   },
@@ -2902,7 +2902,7 @@
       "Speed": 95
     },
 	"description": {
-		"en": "Jynx walks rhythmically, swaying and shaking its hips as if it were dancing. Its motions are so bouncingly alluring, people seeing it are compelled to shake their hips without giving any thought to what they are doing.",
+		"en": "Jynx, the Human Shape Pokémon. It sashays rhythmically as if it were dancing. Its motions are so bouncingly alluring, people seeing it are compelled to shake their hips without noticing.",
 		"it": "Jynx, il Pokémon Umanoide. Avanza oscillando ritmicamente come in una specie di danza che ammalia chi lo vede. L'osservatore viene così indotto a danzare senza rendersene conto."
 	}
   },
@@ -2925,7 +2925,7 @@
       "Speed": 105
     },
 	"description": {
-		"en": "When a storm arrives, gangs of this Pokémon compete with each other to scale heights that are likely to be stricken by lightning bolts. Some towns use Electabuzz in place of lightning rods.",
+		"en": "Electabuzz, the Electric Pokémon. When a storm approaches, it competes with others to scale heights that are likely to be stricken by lightning. Some towns use Electabuzz in place of lightning rods.",
 		"it": "Electabuzz, il Pokémon Elettrico. All'arrivo di un temporale questi Pokémon si raggruppano e a gara scalano le vette più alte sperando di riuscire a prendere qualche fulmine."
 	}
   },
@@ -2948,7 +2948,7 @@
       "Speed": 93
     },
 	"description": {
-		"en": "In battle, Magmar blows out intensely hot flames from all over its body to intimidate its opponent. This Pokémon's fiery bursts create heat waves that ignite grass and trees in its surroundings.",
+		"en": "Magmar, the Spitfire Pokémon. In battle, it blows out intense flames from all over its body to intimidate its foe. These fiery bursts create heat waves that ignite grass and trees in the area.",
 		"it": "Magmar, il Pokémon Sputafuoco. In lotta, sputa fiamme roventi da tutto il corpo per intimidire l'avversario. La sua furia provoca ondate di calore che bruciano la vegetazione circostante."
 	}
   },
@@ -2971,7 +2971,7 @@
       "Speed": 85
     },
 	"description": {
-		"en": "Pinsir has a pair of massive horns. Protruding from the surface of these horns are thorns. These thorns are driven deeply into the foe's body when the pincer closes, making it tough for the foe to escape.",
+		"en": "Pinsir, the Stag Beetle Pokémon. Its pincers are strong enough to shatter thick logs. Because Pinsir dislikes cold, it burrows and sleeps under the ground on chilly nights.",
 		"it": "Pinsir, il Pokémon Cervolante. È dotato di due chele enormi sul capo, dalla cui superficie sporgono aculei. Questi vengono conficcati nel corpo del nemico quando le chele si chiudono, per impedirne la fuga."
 	}
   },
@@ -2994,7 +2994,7 @@
       "Speed": 110
     },
 	"description": {
-		"en": "This Pokémon is not satisfied unless it is rampaging at all times. If there is no opponent for Tauros to battle, it will charge at thick trees and knock them down to calm itself.",
+		"en": "Tauros, the Wild Bull Pokémon. It is not satisfied unless it is rampaging at all times. If there is no opponent for Tauros to battle, it will charge at thick trees and knock them down to calm itself.",
 		"it": "Tauros, il Pokémon Torobrado. Questo Pokémon è molto insofferente e sempre alla ricerca della rissa. Se non trova un avversario con cui lottare, Tauros si lancia contro grossi tronchi per abbaterli e calmarsi."
 	}
   },
@@ -3017,7 +3017,7 @@
       "Speed": 80
     },
 	"description": {
-		"en": "Magikarp is virtually useless in battle as it can only splash around. As a result, it is considered to be weak. However, it is actually a very hardy Pokémon that can survive in any body of water no matter how polluted it is.",
+		"en": "Magikarp, the Fish Pokémon. is virtually useless in battle as it can only splash around. As a result, it is considered to be weak. However, it is actually a very hardy Pokémon that can survive in any body of water no matter how polluted it is.",
 		"it": "Magikarp, il Pokémon Pesce. Nella lotta è virtualmente inutile, poiché può solo sguazzare. Per questo motivo è considerato debole. In realtà, si tratta di un Pokémon molto robusto che sopravvive in qualsiasi tipo di bacino d'acqua, anche i più inquinati."
 	}
   },
@@ -3041,7 +3041,7 @@
       "Speed": 81
     },
 	"description": {
-		"en": "Once Gyarados goes on a rampage, its ferociously violent blood doesn't calm until it has burned everything down. There are records of this Pokémon's rampages lasting a whole month.",
+		"en": "Gyarados, the Atrocious Pokémon. It's the evolved form of Magikarp. It is an extremely vicious and violent Pokémon. When humans begin to fight, it will appear and burn everything to the ground with intensely hot flames.",
 		"it": "Gyarados, il Pokémon Atroce. È la fase evolutiva di Magikarp. Quando s'infuria, la sua indole feroce e violenta non si placa finché non ha incendiato ogni cosa. Ci sono testimonianze di sfuriate di questo Pokémon durate anche un mese intero."
 	}
   },
@@ -3065,7 +3065,7 @@
       "Speed": 60
     },
 	"description": {
-		"en": "People have driven Lapras almost to the point of extinction. In the evenings, this Pokémon is said to sing plaintively as it seeks what few others of its kind still remain.",
+		"en": "Lapras, the Transport Pokémon. People have driven Lapras almost to the point of extinction. In the evenings, it is said to sing plaintively as it seeks what few others of its kind still remain.",
 		"it": "Lapras, il Pokémon Trasporto. Portato quasi alla totale estinzione, si dice che la sera lo si senta cantare malinconico per richiamare i suoi pochi simili ancora in vita."
 	}
   },
@@ -3088,7 +3088,7 @@
       "Speed": 48
     },
 	"description": {
-		"en": "Ditto rearranges its cell structure to transform itself into other shapes. However, if it tries to transform itself into something by relying on its memory, this Pokémon manages to get details wrong.",
+		"en": "Ditto, the Transform Pokémon. It rearranges its cell structure to transform itself. However, if it tries to change based on its memory, it will get details wrong.",
 		"it": "Ditto, il Pokémon Mutante. Cambia la sua struttura cellulare per assumere molte altre forme. Tuttavia, quando si affida solo alla sua memoria, talvolta dimentica dettagli importanti."
 	}
   },
@@ -3134,8 +3134,8 @@
       "Speed": 65
     },
 	"description": {
-		"en": "Vaporeon underwent a spontaneous mutation and grew fins and gills that allow it to live underwater. This Pokémon has the ability to freely control water.",
-		"it": "Vaporeon, il Pokémon Bollajet. È la forma evolutiva di Eevee. Frutto di una mutazione naturale, ha sviluppato pinne e branchie per vivere sott'acqua. Ha la capacità di sfruttare l'acqua a suo vantaggio."
+		"en": "Vaporeon, the Bubble Jet Pokémon. It's an evolved form of Eevee. It underwent a spontaneous mutation and grew fins and gills that allow them to live underwater. They have the ability to freely control water.",
+		"it": "Vaporeon, il Pokémon Bollajet. È una forma evolutiva di Eevee. Frutto di una mutazione naturale, ha sviluppato pinne e branchie per vivere sott'acqua. Ha la capacità di sfruttare l'acqua a suo vantaggio."
 	}
   },
   {
@@ -3157,8 +3157,8 @@
       "Speed": 130
     },
 	"description": {
-		"en": "Jolteon's cells generate a low level of electricity. This power is amplified by the static electricity of its fur, enabling the Pokémon to drop thunderbolts. The bristling fur is made of electrically charged needles.",
-		"it": "Jolteon, il Pokémon Luminoso. È la forma evolutiva di Eevee. Le sue cellule generano un basso potenziale elettrico, che viene tuttavia amplificato dall'elettricità statica della sua pelliccia, da cui scatena fulmini."
+		"en": "Jolteon, the Lightning Pokémon. It's an evolved form of Eevee. Its cells generate weak power that is amplified by its fur’s static electricity to drop thunderbolts. The bristling fur is made of electrically charged needles.",
+		"it": "Jolteon, il Pokémon Luminoso. È una forma evolutiva di Eevee. Le sue cellule generano un basso potenziale elettrico, che viene tuttavia amplificato dall'elettricità statica della sua pelliccia, da cui scatena fulmini."
 	}
   },
   {
@@ -3180,8 +3180,8 @@
       "Speed": 65
     },
 	"description": {
-		"en": "Flareon's fluffy fur has a functional purpose—it releases heat into the air so that its body does not get excessively hot. This Pokémon's body temperature can rise to a maximum of 900°C.",
-		"it": "Flareon, il Pokémon Fiamma. È la forma evolutiva di Eevee. La sua morbida pelliccia di ha lo scopo di liberare calore nell'aria abbassando in tal modo la temperatura corporea, che raggiunge al massimo 900°C."
+		"en": "Flareon, the Flame Pokémon. It's an evolved form of Eevee. Its fluffy fur releases heat into the air so that its body does not get excessively hot. Its body temperature can rise to a maximum of 900°C.",
+		"it": "Flareon, il Pokémon Fiamma. È una forma evolutiva di Eevee. La sua morbida pelliccia di ha lo scopo di liberare calore nell'aria abbassando in tal modo la temperatura corporea, che raggiunge al massimo 900°C."
 	}
   },
   {
@@ -3203,7 +3203,7 @@
       "Speed": 40
     },
 	"description": {
-		"en": "Porygon is capable of reverting itself entirely back to program data and entering cyberspace. This Pokémon is copy protected so it cannot be duplicated by copying.",
+		"en": "Porygon, the Virtual Pokémon. It is capable of reverting itself entirely back to program data in order to enter cyberspace. A Porygon is copy-protected so it cannot be duplicated.",
 		"it": "Porygon, il Pokémon Virtuale. Può regredire ai suoi codici di programmazione originari ed entrare nel ciberspazio. È dotato di un sistema antipirateria per evitare la duplicazione."
 	}
   },
@@ -3227,7 +3227,7 @@
       "Speed": 35
     },
 	"description": {
-		"en": "Omanyte is one of the ancient and long-since-extinct Pokémon that have been regenerated from fossils by people. If attacked by an enemy, it withdraws itself inside its hard shell.",
+		"en": "Omanyte, the Spiral Pokémon. It's one of the ancient and long-since-extinct Pokémon that have been regenerated from fossils by humans. If attacked, it withdraws into its hard shell.",
 		"it": "Omanyte, il Pokémon Spirale. È uno degli antichi Pokémon estinti rigenerati di recente dall'uomo. Se viene aggredito da un nemico, si ritira all'interno della sua dura corazza."
 	}
   },
@@ -3251,7 +3251,7 @@
       "Speed": 55
     },
 	"description": {
-		"en": "Omastar uses its tentacles to capture its prey. It is believed to have become extinct because its shell grew too large and heavy, causing its movements to become too slow and ponderous.",
+		"en": "Omastar, the Spiral Pokémon. It's the evolved form of Omanyte. It uses its tentacles to capture its prey. It is believed to have become extinct because its shell grew too large, making its movements slow and ponderous.",
 		"it": "Omastar, il Pokémon Spirale. È la forma evolutiva di Omanyte. Usa i tentacoli per catturare la preda. Si pensa che si sia estinto a causa della conchiglia troppo ingombrante, che rendeva i movimenti lenti e difficoltosi."
 	}
   },
@@ -3275,7 +3275,7 @@
       "Speed": 55
     },
 	"description": {
-		"en": "Kabuto is a Pokémon that has been regenerated from a fossil. However, in extremely rare cases, living examples have been discovered. The Pokémon has not changed at all for 300 million years.",
+		"en": "Kabuto, the Shellfish Pokémon. It is a Pokémon that has been regenerated from a fossil. However, in rare cases, living examples have been discovered. Pokémon have not changed for 300 million years.",
 		"it": "Kabuto, il Pokémon Crostaceo. È stato rigenerato da un fossile, sebbene in rari casi siano stati scoperti esemplari viventi. Non ha subito alcuna mutazione in oltre 300 milioni di anni."
 	}
   },
@@ -3299,7 +3299,7 @@
       "Speed": 80
     },
 	"description": {
-		"en": "Kabutops swam underwater to hunt for its prey in ancient times. The Pokémon was apparently evolving from being a water dweller to living on land as evident from the beginnings of change in its gills and legs.",
+		"en": "Kabutops, the Shellfish Pokémon. It's the evolution form of Kabuto. Kabutops once swam underwater to hunt for prey. It was apparently evolving from being a water dweller to living on land as evident from changes in its gills and legs.",
 		"it": "Kabutops, il Pokémon Crostaceo. È la forma evolutiva di Kabuto. Nell'antichità cacciava le prede sott'acqua. Le mutazioni su branchie e zampe confermano la teoria che si stesse adattando alla vita sulla terraferma."
 	}
   },
@@ -3323,7 +3323,7 @@
       "Speed": 130
     },
 	"description": {
-		"en": "Aerodactyl is a Pokémon from the age of dinosaurs. It was regenerated from genetic material extracted from amber. It is imagined to have been the king of the skies in ancient times.",
+		"en": "Aerodactyl, the Fossil Pokémon. It's a Pokémon from the age of dinosaurs. It was regenerated from DNA extracted from amber. It is imagined to have been the king of the skies.",
 		"it": "Aerodactyl, il Pokémon Fossile.  Risale all'epoca dei dinosauri. È stato rigenerato da materiale genetico estratto dall'ambra. Si suppone che nell'antichità fosse il signore dei cieli."
 	}
   },
@@ -3346,7 +3346,7 @@
       "Speed": 30
     },
 	"description": {
-		"en": "Snorlax's typical day consists of nothing more than eating and sleeping. It is such a docile Pokémon that there are children who use its expansive belly as a place to play.",
+		"en": "Snorlax, the Sleeping Pokémon. Its typical day consists of nothing more than eating and sleeping. It is such a docile Pokémon that there are children who use its big belly as a place to play.",
 		"it": "Snorlax, il Pokémon Sonno. In una giornata tipica, Snorlax non fa altro che mangiare e dormire. È così docile che i bambini usano la sua enorme pancia come parco giochi."
 	}
   },
@@ -3370,7 +3370,7 @@
       "Speed": 85
     },
 	"description": {
-		"en": "Articuno is a legendary bird Pokémon that can control ice. The flapping of its wings chills the air. As a result, it is said that when this Pokémon flies, snow will fall.",
+		"en": "Articuno, the Freeze Pokémon. It's a legendary bird Pokémon that can control ice. The flapping of its wings chills the air. As a result, it is said that when this Pokémon flies, snow will fall.",
 		"it": "Articuno, il Pokémon Gelo. È un uccello leggendario, a suo agio tra i ghiacci. Quando batte le ali, l'aria diventa gelida. Quando nevica, si dice che sia passato di lì."
 	}
   },
@@ -3394,7 +3394,7 @@
       "Speed": 100
     },
 	"description": {
-		"en": "Zapdos is a legendary bird Pokémon that has the ability to control electricity. It usually lives in thunderclouds. The Pokémon gains power if it is stricken by lightning bolts.",
+		"en": "Zapdos, the Electric Pokémon. It's a legendary bird Pokémon that has the ability to control electricity. It usually lives in thunderclouds. It gains power if it is stricken by lightning bolts.",
 		"it": "Zapdos, il Pokémon Elettrico. È un uccello leggendario perfettamente in grado di gestire l'elettricità. Vive nelle nubi temporalesche e acquista forza se colpito da qualche fulmine."
 	}
   },
@@ -3418,7 +3418,7 @@
       "Speed": 90
     },
 	"description": {
-		"en": "Moltres is a legendary bird Pokémon that has the ability to control fire. If this Pokémon is injured, it is said to dip its body in the molten magma of a volcano to burn and heal itself.",
+		"en": "Moltres, the Flame Pokémon. is a legendary bird Pokémon that can control fire. If injured, it is said to dip its body in the molten magma of a volcano to burn and heal itself.",
 		"it": "Moltres, il Pokémon Fiamma. È un uccello leggendario in grado di gestire il fuoco. Se rimane ferito, si dice che si immerga nel magma di un vulcano per ardere e tornare in salute."
 	}
   },
@@ -3441,7 +3441,7 @@
       "Speed": 50
     },
 	"description": {
-		"en": "Dratini continually molts and sloughs off its old skin. It does so because the life energy within its body steadily builds to reach uncontrollable levels.",
+		"en": "Dratini, the Dragon Pokémon. It continually molts and sloughs off its old skin. It does so because the life energy within its body steadily builds to reach uncontrollable levels.",
 		"it": "Dratini, il Pokémon Drago. Fa la muta cambiando continuamente la pelle vecchia, perché l'energia vitale del suo corpo aumenta fino a raggiungere livelli incontrollabili."
 	}
   },
@@ -3464,7 +3464,7 @@
       "Speed": 70
     },
 	"description": {
-		"en": "Dragonair stores an enormous amount of energy inside its body. It is said to alter weather conditions in its vicinity by discharging energy from the crystals on its neck and tail.",
+		"en": "Dragonair, the Dragon Pokémon. It's the evolved form of Dratini. It stores an enormous amount of energy inside its body. It is said to alter the weather around it by loosing energy from the crystals on its neck and tail.",
 		"it": "Dragonair, il Pokémon Drago. È la fase evolutiva di Dratini. Questo Pokémon accumula un'enorme quantità d'energia all'interno del corpo. Si dice che sia in grado di mutare le condizioni meteorologiche circostanti scaricando energia dai cristalli del collo e della coda."
 	}
   },
@@ -3488,7 +3488,7 @@
       "Speed": 80
     },
 	"description": {
-		"en": "Dragonite is capable of circling the globe in just 16 hours. It is a kindhearted Pokémon that leads lost and foundering ships in a storm to the safety of land.",
+		"en": "Dragonite, the Dragon Pokémon. It's the evolution form of Dragonair. It can circle the globe in just 16 hours. It is a kindhearted Pokémon that leads lost and foundering ships in a storm to the safety of land.",
 		"it": "Dragonite, il Pokémon Drago. È la forma evolutiva di Dragonair. È in grado di fare il giro del mondo in sole sedici ore. È un Pokémon buono e mansueto che guida fino alla terra ferma le navi prossime al naufragio."
 	}
   },
@@ -3511,7 +3511,7 @@
       "Speed": 130
     },
 	"description": {
-		"en": "Mewtwo is a Pokémon that was created by genetic manipulation. However, even though the scientific power of humans created this Pokémon's body, they failed to endow Mewtwo with a compassionate heart.",
+		"en": "Mewtwo, the Genetic Pokémon. It's a Pokémon that was created by genetic manipulation. However, even though the scientific power of humans made its body, they failed to give it a warm heart.",
 		"it": "Mewtwo, il Pokémon Genetico. È stato creato grazie ad una manipolazione genetica. Tuttavia, sebbene la scienza sia riuscita a creare un corpo di Pokémon, ha fallito nell'intento di dare a Mewtwo un animo generoso."
 	}
   },
@@ -3534,7 +3534,7 @@
       "Speed": 100
     },
 	"description": {
-		"en": "Mew is said to possess the genetic composition of all Pokémon. It is capable of making itself invisible at will, so it entirely avoids notice even if it approaches people.",
+		"en": "Mew, the New Species Pokémon. It's said to possess the genes of all Pokémon. It is capable of making itself invisible at will, so it entirely avoids notice even if it approaches people.",
 		"it": "Mew, il Pokémon Novaspecie. Si dice che possegga il patrimonio genetico di tutti i Pokémon. È in grado di rendersi invisibile, quando vuole, in modo da non farsi notare nemmeno da vicino."
 	}
   },
@@ -3557,8 +3557,8 @@
       "Speed": 110
     },
 	"description": {
-		"en": "Espeon is extremely loyal to any trainer it considers to be worthy. It is said that this Pokémon developed its precognitive powers to protect its trainer from harm.",
-		"it": "Espeon, il Pokémon Sole. È la forma evolutiva di Eevee. È estremamente leale nei confronti di qualsiasi Allenatore considerato all'altezza. Si dice che questo Pokémon abbia sviluppato capacità precognitive per proteggere il proprio Allenatore."
+		"en": "Espeon, the Sun Pokémon. It's an evolved form of Eevee. It's extremely loyal to any Trainer it considers to be worthy. It is said to have developed precognitive powers to protect its Trainer from harm.",
+		"it": "Espeon, il Pokémon Sole. È una forma evolutiva di Eevee. È estremamente leale nei confronti di qualsiasi Allenatore considerato all'altezza. Si dice che questo Pokémon abbia sviluppato capacità precognitive per proteggere il proprio Allenatore."
 	}
   },
   {
@@ -3580,8 +3580,8 @@
       "Speed": 65
     },
 	"description": {
-		"en": "Umbreon evolved as a result of exposure to the moon’s energy pulses. It hides silently in darkness and waits for its foes to make a move. The rings on its body glow when it leaps to attack.",
-		"it": "Umbreon, il Pokémon Lucelunare. È la forma evolutiva di Eevee. Si è evoluto con l'esposizione alle onde lunari. Rimane nascosto al buio in attesa di un movimento del suo nemico. I cerchi sul corpo brillano quando attacca."
+		"en": "Umbreon, the Moonlight Pokémon. It's an evolved form of Eevee, that got exposed to moon's energy pulses. It lurks in darkness and waits for its foes to move. The rings on its body glow when it leaps to attack.",
+		"it": "Umbreon, il Pokémon Lucelunare. È una forma evolutiva di Eevee. Si è evoluto con l'esposizione alle onde lunari. Rimane nascosto al buio in attesa di un movimento del suo nemico. I cerchi sul corpo brillano quando attacca."
 	}
   },
   {
@@ -3651,8 +3651,8 @@
       "Speed": 95
     },
 	"description": {
-		"en": "Leafeon's cellular composition is closer to that of a plant than an animal. It uses photosynthesis to produce its energy supply without eating food. The younger they are, the more they smell like fresh grass. With age, their fragrance takes on the odor of fallen leaves.",
-		"it": "Leafeon, il Pokémon Rigoglioso. È la forma evolutiva di Eevee. Ha una struttura cellulare simile a quella delle piante, perciò usa la fotosintesi."
+		"en": "Leafeon, the Verdant Pokémon. It's an evolved form of Eevee. It's cellular composition is closer to that of a plant than an animal. It uses photosynthesis to produce its energy supply without eating food.",
+		"it": "Leafeon, il Pokémon Rigoglioso. È una forma evolutiva di Eevee. Ha una struttura cellulare simile a quella delle piante, perciò usa la fotosintesi."
 	}
   },
   {
@@ -3674,8 +3674,8 @@
       "Speed": 65
     },
 	"description": {
-		"en": "Glaceon can control its body temperature at will. This enables it to freeze the moisture in the atmosphere, creating flurries of diamond dust. It freezes its fur into icicles, spiky and sharp, and tackles its prey.",
-		"it": "Glaceon, il Pokémon Nevefresca. È la forma evolutiva di Eevee. Modificando la temperatura del corpo, congela l'aria e crea folate di cristalli di ghiaccio."
+		"en": "Glaceon, the Fresh Snow Pokémon. It's an evolved form of Eevee. can control its body temperature at will. This enables it to freeze the moisture in the atmosphere, creating flurries of diamond dust.",
+		"it": "Glaceon, il Pokémon Nevefresca. È una forma evolutiva di Eevee. Modificando la temperatura del corpo, congela l'aria e crea folate di cristalli di ghiaccio."
 	}
   }
 ]
