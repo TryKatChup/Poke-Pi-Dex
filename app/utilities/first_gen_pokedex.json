@@ -1823,7 +1823,7 @@
       "Speed": 105
     },
 	"description": {
-		"en": "Rapidash, the Fire Horse Pokémon. It's the evolved form of Ponyta. It usually canters casually in the fields and plains. But once a RAPIDASH turns serious, its fiery manes flare and blaze as it gallops its way up to 240 km/h.",
+		"en": "Rapidash, the Fire Horse Pokémon. It's the evolved form of Ponyta. It usually canters casually in the fields and plains. But once a Rapidash turns serious, its fiery manes flare and blaze as it gallops its way up to 240 km/h.",
 		"it": "Rapidash, il Pokémon Cavalfuoco. È la forma evolutiva di Ponyta. Si vede comunemente galoppare in campagne e pianure. Quando si lancia a tutta velocità la sua fiera criniera brilla e arde mentre galoppa fino a 240 km/h."
 	}
   },
@@ -3656,7 +3656,7 @@
 	}
   },
   {
-    "id": 471,
+    "id": 471, 
     "name": "Glaceon",
     "type": [
       "Ice"
