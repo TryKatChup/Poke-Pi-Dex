@@ -16,7 +16,7 @@ Miky
 - [x] aggiungere colori diversi o immagini per i vari tipi
 - [x] scelta della lingua
 - [x] aggiungere descrizioni in lingua differente (IT)
-- [ ] registrare per ciascuna descrizione in Inglese la traccia audio letta da un bot (https://www.youtube.com/watch?v=rjlOJjX-6Ug)
+- [ ] registrare per ciascuna descrizione in Inglese la traccia audio letta da un bot (https://www.youtube.com/watch?v=rjlOJjX-6Ug) Bot: [Text To Speech Online](http://texttospeechrobot.com/)
 - [ ] opzione nelle impostazioni per abilitare la lettura automatica della descrizione del pokémon quando viene riconosciuto
 - [ ] check nella descrizione per riprodurre la voce che legge la descrizione
 - [ ] impostazioni persistenti
