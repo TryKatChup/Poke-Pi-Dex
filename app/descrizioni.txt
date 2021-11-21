@@ -210,7 +210,7 @@
     },
     {
       "nome": "Persian",
-      "descrizione": "Persian, il Pokémon Nobilgatto. È la fase evolutiva di Meowth. Sonda l'ambiente circostante con i suoi sei baffi che captano gli spostamenti dell'aria."
+      "descrizione": "Persian, il Pokémon Nobilgatto. È la forma evolutiva di Meowth. Sonda l'ambiente circostante con i suoi sei baffi che captano gli spostamenti dell'aria."
     },
     {
       "nome": "Psyduck",
@@ -386,7 +386,7 @@
     },
     {
       "nome": "Hypno",
-      "descrizione": "Hypno, il Pokémon Ipnosi. È la fase evolutiva di Drowzee. È solito nutrirsi dei sogni degli altri mentre dormono, estraendoli dalle loro narici. Se durante il sonno si avverte prurito al naso, significa che Drowzee è già all'opera."
+      "descrizione": "Hypno, il Pokémon Ipnosi. È la forma evolutiva di Drowzee. È solito nutrirsi dei sogni degli altri mentre dormono, estraendoli dalle loro narici. Se durante il sonno si avverte prurito al naso, significa che Drowzee è già all'opera."
     },
     {
       "nome": "Krabby",
@@ -410,7 +410,7 @@
     },
     {
       "nome": "Exeggutor",
-      "descrizione": "Exeggutor, il Pokémon Nocecocco. È la fase evolutiva di Exeggcute. è originario dei tropici. Le teste crescono costantemente se esposte a forte luce solare. Pare che quando le teste cadono, si uniscano per formare un Exeggcute."
+      "descrizione": "Exeggutor, il Pokémon Nocecocco. È la forma evolutiva di Exeggcute. è originario dei tropici. Le teste crescono costantemente se esposte a forte luce solare. Pare che quando le teste cadono, si uniscano per formare un Exeggcute."
     },
     {
       "nome": "Cubone",
@@ -446,7 +446,7 @@
     },
     {
       "nome": "Rhydon",
-      "descrizione": "Rhydon, il Pokémon Trapano. È la fase evolutiva di Rhyhorn. Possiede un corno che usa come trivella. Può sfruttarlo per distruggere roccie e massi."
+      "descrizione": "Rhydon, il Pokémon Trapano. È la forma evolutiva di Rhyhorn. Possiede un corno che usa come trivella. Può sfruttarlo per distruggere roccie e massi."
     },
     {
       "nome": "Chansey",
@@ -518,7 +518,7 @@
     },
     {
       "nome": "Gyarados",
-      "descrizione": "Gyarados, il Pokémon Atroce. È la fase evolutiva di Magikarp. Quando s'infuria, la sua indole feroce e violenta non si placa finché non ha incendiato ogni cosa. Ci sono testimonianze di sfuriate di questo Pokémon durate anche un mese intero."
+      "descrizione": "Gyarados, il Pokémon Atroce. È la forma evolutiva di Magikarp. Quando s'infuria, la sua indole feroce e violenta non si placa finché non ha incendiato ogni cosa. Ci sono testimonianze di sfuriate di questo Pokémon durate anche un mese intero."
     },
     {
       "nome": "Lapras",
@@ -590,7 +590,7 @@
     },
     {
       "nome": "Dragonair",
-      "descrizione": "Dragonair, il Pokémon Drago. È la fase evolutiva di Dratini. Questo Pokémon accumula un'enorme quantità d'energia all'interno del corpo. Si dice che sia in grado di mutare le condizioni meteorologiche circostanti scaricando energia dai cristalli del collo e della coda."
+      "descrizione": "Dragonair, il Pokémon Drago. È la forma evolutiva di Dratini. Questo Pokémon accumula un'enorme quantità d'energia all'interno del corpo. Si dice che sia in grado di mutare le condizioni meteorologiche circostanti scaricando energia dai cristalli del collo e della coda."
     },
     {
       "nome": "Dragonite",
