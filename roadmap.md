@@ -16,9 +16,9 @@ Miky
 - [x] aggiungere colori diversi o immagini per i vari tipi
 - [x] scelta della lingua
 - [x] aggiungere descrizioni in lingua differente (IT)
-- [ ] registrare per ciascuna descrizione in Inglese la traccia audio letta da un bot (https://www.youtube.com/watch?v=rjlOJjX-6Ug) Bot: [Text To Speech Online](http://texttospeechrobot.com/) + [PKMN DB](https://pokemondb.net/pokedex/blastoise), [Pronunciation](https://www.dailydot.com/parsec/pokemon-name-pronunciation-guide/)
-- [ ] opzione nelle impostazioni per abilitare la lettura automatica della descrizione del pokémon quando viene riconosciuto
-- [ ] check nella descrizione per riprodurre la voce che legge la descrizione
+- [x] registrare per ciascuna descrizione in Inglese la traccia audio letta da un bot (https://www.youtube.com/watch?v=rjlOJjX-6Ug) Bot: [Text To Speech Online](http://texttospeechrobot.com/) + [PKMN DB](https://pokemondb.net/pokedex/blastoise), [Pronunciation](https://www.dailydot.com/parsec/pokemon-name-pronunciation-guide/)
+- [x] opzione nelle impostazioni per abilitare la lettura automatica della descrizione del pokémon quando viene riconosciuto
+- [ ] bottoncino play/stop nella descrizione per riprodurre la voce che legge la descrizione
 - [ ] impostazioni persistenti
 - [ ] finire doc progetto e aggiungere parti nella relazione
 - [ ] aggiungere sezione con ringraziamenti e crediti
