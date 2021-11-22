@@ -47,6 +47,7 @@ labels = {
     "settings": {"en": "Settings", "it": "Impostazioni"},
     "language": {"en": "Language: ", "it": "Lingua: "},
     "full screen": {"en": "Full screen: ", "it": "Schermo int.: "},
+    "descr voice": {"en": "Descr. voice: ", "it": "Voce descr.: "},
     "flip image": {"en": "Flip image: ", "it": "Specchia imm.: "},
     "volume": {"en": "Volume: ", "it": "Volume: "},
     "save": {"en": "Save", "it": "Salva"},
@@ -71,13 +72,18 @@ class App:
         pygame.mixer.init()
         # Channel init
         self.volume = 0.5
-        self.channel = pygame.mixer.find_channel(True)
-        self.channel.set_volume(self.volume)
+        self.mono_channel = pygame.mixer.find_channel(True)
+        self.mono_channel.set_volume(self.volume)
+        '''self.cry_channel = pygame.mixer.Channel(0)
+        self.cry_channel.set_volume(self.volume)
+        self.descr_channel = pygame.mixer.Channel(1)
+        self.descr_channel.set_volume(self.volume)'''
 
         self.pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
         self.update_video = False
         self.video = None
         self.language = "en"
+        self.descr_voice = 1
 
         # Settings Loading(?)
 
@@ -369,6 +375,18 @@ class App:
         self.label_fullscreen.pack(side=tk.LEFT, padx=(0, 90))
         self.check_fullscreen.select() if self.fullscreen.get() == 1 else self.check_fullscreen.deselect()
         self.check_fullscreen.pack(side=tk.LEFT)
+        # Toggle Description Voice
+        self.var_descr_voice = tk.IntVar()
+        self.var_descr_voice.set(self.descr_voice)
+        self.frame_descr_voice = tk.Frame(master=self.frame_settings, width=res_width / 2, bg=background)
+        self.frame_descr_voice.pack(side=tk.TOP, anchor=tk.W, pady=(5, 0), padx=(10, 0))
+        self.check_descr_voice = tk.Checkbutton(master=self.frame_descr_voice, variable=self.var_descr_voice, onvalue=1, offvalue=0, bg=background, bd=0, highlightthickness=0, fg="black")
+        self.text_descr_voice = tk.StringVar()
+        self.text_descr_voice.set(labels["descr voice"][self.language])
+        self.label_descr_voice = tk.Label(master=self.frame_descr_voice, textvar=self.text_descr_voice, width=12, anchor=tk.W, bg=background)
+        self.label_descr_voice.pack(side=tk.LEFT, padx=(0, 90))
+        self.check_descr_voice.select() if self.var_descr_voice.get() == 1 else self.check_descr_voice.deselect()
+        self.check_descr_voice.pack(side=tk.LEFT)
         # Toggle Flip Image
         self.frame_flip = tk.Frame(master=self.frame_settings, width=res_width/2, bg=background)
         self.frame_flip.pack(side=tk.TOP, anchor=tk.W, pady=(5, 0), padx=(10, 0))
@@ -411,6 +429,7 @@ class App:
         self.window.mainloop()
 
     def show_menu(self):
+        self.mono_channel.stop()
         self.frame_info.pack_forget()
         self.frame_left.pack_forget()
         self.frame_right.pack_forget()
@@ -507,6 +526,8 @@ class App:
             self.load_stats()
             self.load_evolutions()
             self.load_cry()
+            if self.descr_voice:
+                self.play_description()
         except KeyError:
             self.loaded_pokemon = None
             print("Pokémon not found.")
@@ -646,12 +667,22 @@ class App:
 
     def play_cry(self):
         if self.loaded_pokemon:
-            print("PLAY CRY\nPokémon #" + str(self.loaded_pokemon.num) + " Volume: " + str(self.channel.get_volume()))
-            self.channel.play(self.cry)
+            print("PLAY CRY\nPokémon #" + str(self.loaded_pokemon.num) + " Volume: " + str(self.mono_channel.get_volume()))
+            self.mono_channel.play(self.cry)
+        else:
+            print("No pokémon has been loaded")
+
+    def play_description(self):
+        if self.loaded_pokemon:
+            print("READ DESCRIPTION\nPokémon #" + str(self.loaded_pokemon.num) + "Volume: " + str(self.mono_channel.get_volume()))
+            self.mono_channel.play(pygame.mixer.Sound("utilities/descriptions_" + self.language + "/" + str(self.loaded_pokemon.num) + ".mp3"))
         else:
             print("No pokémon has been loaded")
 
     def show_settings(self):
+        self.mono_channel.stop()
+        self.button_search.config(state=tk.DISABLED)
+        # self.button_screenshot.config(state=tk.DISABLED)
         self.combobox_language.selection_clear()
         self.scale_volume.set(self.volume * 100)
         self.frame_right.pack_forget()
@@ -659,6 +690,8 @@ class App:
         self.frame_settings.pack(side=tk.RIGHT)
 
     def close_settings(self):
+        self.button_search.config(state=tk.NORMAL)
+        # self.button_screenshot.config(state=tk.NORMAL)
         for l in languages:
             if self.language == l.lower()[0:2]:
                 self.combobox_language_text.set(l)
@@ -668,7 +701,8 @@ class App:
         else:
             self.check_fullscreen.deselect()
             self.fullscreen.set(False)
-        self.channel.set_volume(self.volume)
+        self.var_descr_voice.set(self.descr_voice)
+        self.mono_channel.set_volume(self.volume)
         self.frame_settings.pack_forget()
         self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
         print("CLOSE SETTINGS\nFullscreen: " + str(bool(self.fullscreen.get())) + "\nVolume: " + str(self.volume))
@@ -690,6 +724,7 @@ class App:
         self.text_settings.set(labels["settings"][self.language])
         self.text_language.set(labels["language"][self.language])
         self.text_fullscreen.set(labels["full screen"][self.language])
+        self.text_descr_voice.set(labels["descr voice"][self.language])
         self.text_flip.set(labels["flip image"][self.language])
         self.text_volume.set(labels["volume"][self.language])
         self.text_save.set(labels["save"][self.language])
@@ -699,11 +734,14 @@ class App:
             self.load_description()
 
     def save_settings(self):
+        self.button_search.config(state=tk.NORMAL)
+        # self.button_screenshot.config(state=tk.NORMAL)
         self.language = self.combobox_language_text.get().lower()[0:2]
         self.update_language()
         self.window.attributes("-fullscreen", self.fullscreen.get())
+        self.descr_voice = self.var_descr_voice.get()
         self.volume = self.scale_volume.get() / 100
-        self.channel.set_volume(self.volume)
+        self.mono_channel.set_volume(self.volume)
         self.frame_settings.pack_forget()
         self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
         print("SAVE SETTINGS\nLanguage: " + self.language + "\nFullscreen: " + str(bool(self.fullscreen.get())) + "\nVolume: " + str(self.volume))
