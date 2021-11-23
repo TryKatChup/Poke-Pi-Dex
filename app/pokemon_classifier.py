@@ -13,8 +13,8 @@ def get_label_encoder():
     encoder.classes_ = np.load('./classes.npy')
     return encoder
 
-
 def predict_top_n_pokemon(image_file, num_top_pokemon):    
+    """Predicts num_top_pokemon from image_file, using a tflite model"""
     TFLITE_MODEL="./qa_model_best100_8bit.tflite"
     interpreter = tf.lite.Interpreter(TFLITE_MODEL)
     interpreter.allocate_tensors()
@@ -23,14 +23,14 @@ def predict_top_n_pokemon(image_file, num_top_pokemon):
     input_details = interpreter.get_input_details()
     output_details = interpreter.get_output_details()
 
-    # Load image
+    # Load image and convert it to tensor
     img = load_img(image_file, target_size=(224, 224)) #"./evee_1.jpg"
     img = img_to_array(img, dtype=np.float32)
     img /= 255
     img = np.expand_dims(img, axis=0)
 
     input_tensor = np.array(img, dtype=np.float32)
-    # Load TFLite model and allocate tensors.
+    # Load TFLite model and allocate tensors
     interpreter.set_tensor(input_details[0]['index'], input_tensor)
     interpreter.invoke()
 
@@ -39,6 +39,7 @@ def predict_top_n_pokemon(image_file, num_top_pokemon):
     # Get label encoder
     label_encoder = self.get_label_encoder()
     
+    # Get best num_top_pokemon
     (top_k_scores, top_k_idx) = tf.math.top_k(output_data, num_top_pokemon)
     top_k_scores = np.squeeze(top_k_scores.numpy(), axis=0)
     top_k_idx = np.squeeze(top_k_idx.numpy(), axis=0)
