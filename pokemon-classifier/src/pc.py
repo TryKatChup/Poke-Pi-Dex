@@ -106,8 +106,8 @@ def create_dataset(
     '''
 
     # Cache
-    train_dataset = train_dataset.cache()
-    val_dataset = val_dataset.cache()
+    # train_dataset = train_dataset.cache('/tmp/cache')
+    # val_dataset = val_dataset.cache('/tmp/cache')
 
     # =====================================================================================
     # Data Augmentation techniques
@@ -187,7 +187,7 @@ def create_model(
     x = input_layer
     
     for i in range(n_conv):
-        n_filters = 2 ** (i + 4)
+        n_filters = 2 ** (i + 6)
  
         # Conv2D + BatchNorm + ReLU
         x = tf.keras.layers.Conv2D(n_filters, 3, padding="same")(x)
@@ -207,7 +207,7 @@ def create_model(
     # Dropout
     # fc1 = tf.keras.layers.Dropout(0.5)(fc1)
     # 2nd Dense(150) + softmax
-    fc3 = tf.keras.layers.Dense(150)(fc1)
+    fc3 = tf.keras.layers.Dense(151)(fc1)
     fc3 = tf.keras.layers.Softmax()(fc3)
 
     model = tf.keras.Model(inputs=input_layer, outputs=fc3, name="Pokemon-classifier")
