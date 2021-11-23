@@ -25,6 +25,7 @@ Miky
 - [ ] impostazioni persistenti
 - [ ] finire doc progetto e aggiungere parti nella relazione
 - [ ] aggiungere sezione con ringraziamenti e crediti
+- [ ] provare a realizzare un OPAMP con Fede
 - [ ] modello case 3D
 - [ ] implementare toggle per flip immagine
 - [ ] refactor stats: usare un unico canvas
