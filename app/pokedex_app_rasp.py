@@ -60,7 +60,7 @@ class App:
         self.window.title(window_title)
         self.window.geometry("480x320")
         self.fullscreen = tk.IntVar()
-        self.fullscreen.set(1)
+        self.fullscreen.set(0)
         self.window.attributes("-fullscreen", self.fullscreen.get())
         image = ImageTk.PhotoImage(file=icons_path + "icon-pokeball.png")
         self.window.tk.call("wm", "iconphoto", self.window._w, image)
