@@ -7,7 +7,7 @@ import video_capture as vc
 import time
 # Sound
 import pygame
-# Classifier
+import pokemon_classifier as pc
 
 # Screenshot
 import pyautogui as pg
@@ -511,7 +511,8 @@ class App:
         self.label_evo_to.configure(image=self.image_evo_to)
         self.image_evo_from = ImageTk.PhotoImage(Image.open(sprites_path + "0.png").resize((40, 40), Image.ANTIALIAS))
         self.label_evo_from.configure(image=self.image_evo_from)
-
+    
+    
     def load_pokemon(self, pkmn_id):
         try:
             pkmn_id = pkmn_id.capitalize()
