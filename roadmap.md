@@ -21,11 +21,12 @@ Miky
 - [ ] usare bottoni
 - [ ] usare analogico
 - [ ] opzione per attivare/disattivare input tramite bottoni+analogico (NB: quando usiamo il touch è meglio nascondere il puntatore del mouse)
-- [ ] bottoncino play/stop nella descrizione per riprodurre la voce che legge la descrizione
+- [ ] aumentare volume di tutti gli mp3 delle descrizioni
 - [ ] impostazioni persistenti
 - [ ] finire doc progetto e aggiungere parti nella relazione
 - [ ] aggiungere sezione con ringraziamenti e crediti
 - [ ] provare a realizzare un OPAMP con Fede
+- [ ] bottoncino play/stop nella descrizione per riprodurre la voce che legge la descrizione
 - [ ] modello case 3D
 - [ ] implementare toggle per flip immagine
 - [ ] refactor stats: usare un unico canvas
