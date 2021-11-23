@@ -25,6 +25,7 @@ Miky
 - [ ] impostazioni persistenti
 - [ ] finire doc progetto e aggiungere parti nella relazione
 - [ ] aggiungere sezione con ringraziamenti e crediti
+- [ ] debug mode (piccolo terminale di output se si fa una sequenza di tasti o se si avvia l'app con il parametro -d)
 - [ ] provare a realizzare un OPAMP con Fede
 - [ ] bottoncino play/stop nella descrizione per riprodurre la voce che legge la descrizione
 - [ ] modello case 3D
