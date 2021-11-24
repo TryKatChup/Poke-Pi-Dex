@@ -7,7 +7,7 @@ import video_capture as vc
 import time
 # Sound
 import pygame
-import pokemon_classifier as pc
+#import pokemon_classifier as pc
 
 # Screenshot
 import pyautogui as pg
