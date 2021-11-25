@@ -386,7 +386,7 @@
     },
     {
       "nome": "Hypno",
-      "descrizione": "Hypno, il Pokémon Ipnosi. È la forma evolutiva di Drowzee. È solito nutrirsi dei sogni degli altri mentre dormono, estraendoli dalle loro narici. Se durante il sonno si avverte prurito al naso, significa che Drowzee è già all'opera."
+      "descrizione": "Hypno, il Pokémon Ipnosi. È la forma evolutiva di Drowzee. Tiene in mano un pendolo i cui riflessi e movimento inducono l'avversario in uno stato d'ipnosi. Mentre cerca la preda si prepara lucidando il pendolo."
     },
     {
       "nome": "Krabby",
