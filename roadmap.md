@@ -22,7 +22,7 @@ Miky
 - [ ] usare analogico
 - [ ] opzione per attivare/disattivare input tramite bottoni+analogico (NB: quando usiamo il touch è meglio nascondere il puntatore del mouse)
 - [ ] aumentare volume di tutti gli mp3 delle descrizioni
-- [ ] impostazioni persistenti
+- [x] impostazioni persistenti
 - [ ] finire doc progetto e aggiungere parti nella relazione
 - [ ] aggiungere sezione con ringraziamenti e crediti
 - [ ] debug mode (piccolo terminale di output se si fa una sequenza di tasti o se si avvia l'app con il parametro -d)
