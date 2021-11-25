@@ -11,17 +11,16 @@ import pyautogui as pg
 from pokemon_repository import PokemonRepository
 import video_capture as vc
 import settings
-
-#import pokemon_classifier as pc
+import pokemon_classifier as pc
 
 # tkinter utility: https://www.tcl.tk/man/tcl/TkCmd/entry.html#M9
 
 app_name = "Poké-Pi-Dex"
 version = "1.0 beta"
 info_text = "App megafiga by Miky & Kary\nDeveloped with ..."
-res_width=480
-res_height=320
-dim_image=(int(res_width/2), int(res_width/2))  # 240x240
+res_width = 480
+res_height = 320
+dim_image = (int(res_width/2), int(res_width/2))  # 240x240
 background = "grey"
 background_dark = "#6a6a6a"
 icons_path = "utilities/icons/"
@@ -84,7 +83,7 @@ class App:
 
         # Repository Loading
         self.pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
-        self.loaded_pokemon = None  # Pokemon(0, "", "", {}, {}, "") # NB: in this case we have to change the if condition in save_settings
+        self.loaded_pokemon = None
         self.evo_to_i = 0  # index of the multiple evolutions list
 
         self.video = None
@@ -134,12 +133,12 @@ class App:
         # Left (video stream)
         self.canvas_video = tk.Canvas(master=self.frame_left, width=res_width/2, height=res_width/2, bg=background, highlightbackground=background, highlightthickness=1)
         self.canvas_video.pack(side=tk.TOP, pady=((res_height-(res_width/2))/2, 0))
+
         self.frame_video_controls = tk.Frame(master=self.frame_left, bg=background)
         self.frame_video_controls.pack(side=tk.TOP, pady=(2, 0))
-
         self.text_search = tk.StringVar()
         self.text_search.set(labels["search"][self.settings.language])
-        self.button_search = tk.Button(master=self.frame_video_controls, textvar=self.text_search, width=10, bg=background, activebackground=background, command=lambda: self.load_pokemon(self.entry_name_text.get()))
+        self.button_search = tk.Button(master=self.frame_video_controls, textvar=self.text_search, width=10, bg=background, activebackground=background, command=lambda: self.search()) # self.load_pokemon(self.entry_name_text.get())
         self.button_search.pack(side=tk.LEFT, anchor=tk.CENTER, padx=(0, 10))
         self.text_screenshot = tk.StringVar()
         self.text_screenshot.set(labels["screenshot"][self.settings.language])
@@ -496,7 +495,14 @@ class App:
         self.label_evo_to.configure(image=self.image_evo_to)
         self.image_evo_from = ImageTk.PhotoImage(Image.open(sprites_path + "0.png").resize((40, 40), Image.ANTIALIAS))
         self.label_evo_from.configure(image=self.image_evo_from)
-    
+
+    def search(self):
+        ret, frame = self.video.get_frame()
+        if ret:
+            # .transpose(Image.FLIP_LEFT_RIGHT) to flip the image
+            self.photo = ImageTk.PhotoImage(image=Image.fromarray(frame).resize(dim_image, Image.ANTIALIAS))
+            (pkmn, confidence) = pc.predict_top_n_pokemon(self.photo, 1)
+            self.load_pokemon(pkmn)
     
     def load_pokemon(self, pkmn_id):
         try:

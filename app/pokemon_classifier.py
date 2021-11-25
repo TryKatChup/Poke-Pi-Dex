@@ -37,7 +37,7 @@ def predict_top_n_pokemon(image_file, num_top_pokemon):
     # Get output
     output_data = interpreter.get_tensor(output_details[0]['index'])
     # Get label encoder
-    label_encoder = self.get_label_encoder()
+    label_encoder = get_label_encoder()
     
     # Get best num_top_pokemon
     (top_k_scores, top_k_idx) = tf.math.top_k(output_data, num_top_pokemon)
