@@ -35,7 +35,7 @@ Miky
 - [ ] easter egg per Umbreon
 
 Entrambi:
-- [ ] ritagliare foto pokémon (Kary dispari, Miky pari) e aggiungerne di nuove
+- [x] ritagliare foto pokémon (Kary dispari, Miky pari) e aggiungerne di nuove
   - [dataset](https://liveunibo-my.sharepoint.com/personal/karina_chichifoi_studio_unibo_it/_layouts/15/onedrive.aspx?isAscending=false&id=%2Fpersonal%2Fkarina%5Fchichifoi%5Fstudio%5Funibo%5Fit%2FDocuments%2FPok%C3%A9dex%2Fdataset&sortField=Modified) (NB: *Old* sono quelle vecchie già presenti nel dataset, ma che sono state controllate e sistemate; *New* sono quelle nuove scaricate, sistemate e aggiunte)
   - per le immagini nuove cercare: <nome_pokémon> fanart, drawings, anime, 3d model, plush, action figure, carte ([sito utile](https://pkmncards.com/card))
 - [ ] rettificazione picamera
