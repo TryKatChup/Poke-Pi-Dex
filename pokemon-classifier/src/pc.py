@@ -130,6 +130,30 @@ def create_dataset(
         image = tf.image.rot90(image, k)
         return image, label
     
+    def random_brightness(image, label):
+        # Generate a random number, between 0 and 3 (number of 90 degrees rotation)
+        k = tf.random.uniform(shape=(), minval=1, maxval=100, dtype=tf.int32)
+        seed = (k, 0)
+        # tf.cond wants always a function :D
+        image = tf.image.stateless_random_brightness(image, max_delta=0.9, seed=seed)
+        return image, label
+    
+    def random_contrast(image, label):
+        # Generate a random number, between 0 and 3 (number of 90 degrees rotation)
+        k = tf.random.uniform(shape=(), minval=1, maxval=100, dtype=tf.int32)
+        seed = (k, 0)
+        # tf.cond wants always a function :D
+        image = tf.image.stateless_random_contrast(image, lower=0.8, upper=1, seed=seed)
+        return image, label
+    
+    def random_saturation(image, label):
+        # Generate a random number, between 0 and 3 (number of 90 degrees rotation)
+        k = tf.random.uniform(shape=(), minval=1, maxval=100, dtype=tf.int32)
+        seed = (k, 0)
+        # tf.cond wants always a function :D
+        image = tf.image.stateless_random_saturation(image, lower=0.9, upper=1, seed=seed)
+        return image, label
+    
     # Apply functions on train dataset
     train_dataset = train_dataset.map(
         lambda image, label: (tf.image.random_flip_left_right(image), label),
@@ -137,7 +161,16 @@ def create_dataset(
     ).map(
         random_rotate,
         num_parallel_calls=tf.data.AUTOTUNE
-    )
+    #).map(
+    #     random_brightness,
+    #     num_parallel_calls=tf.data.AUTOTUNE
+    ).map(
+         random_contrast,
+         num_parallel_calls=tf.data.AUTOTUNE
+    ).map(
+         random_saturation,
+         num_parallel_calls=tf.data.AUTOTUNE
+    )        
     
     train_dataset = train_dataset.shuffle(buffer_size=256, reshuffle_each_iteration=True)
     
