@@ -131,7 +131,6 @@ def create_dataset(
         return image, label
     
     def random_brightness(image, label):
-        # Generate a random number, between 0 and 3 (number of 90 degrees rotation)
         k = tf.random.uniform(shape=(), minval=1, maxval=100, dtype=tf.int32)
         seed = (k, 0)
         # tf.cond wants always a function :D
@@ -139,19 +138,24 @@ def create_dataset(
         return image, label
     
     def random_contrast(image, label):
-        # Generate a random number, between 0 and 3 (number of 90 degrees rotation)
         k = tf.random.uniform(shape=(), minval=1, maxval=100, dtype=tf.int32)
         seed = (k, 0)
         # tf.cond wants always a function :D
-        image = tf.image.stateless_random_contrast(image, lower=0.8, upper=1, seed=seed)
+        image = tf.image.stateless_random_contrast(image, lower=0.6, upper=1, seed=seed)
         return image, label
     
     def random_saturation(image, label):
-        # Generate a random number, between 0 and 3 (number of 90 degrees rotation)
         k = tf.random.uniform(shape=(), minval=1, maxval=100, dtype=tf.int32)
         seed = (k, 0)
         # tf.cond wants always a function :D
-        image = tf.image.stateless_random_saturation(image, lower=0.9, upper=1, seed=seed)
+        image = tf.image.stateless_random_saturation(image, lower=0.8, upper=1, seed=seed)
+        return image, label
+    
+    def random_hue(image, label):
+        k = tf.random.uniform(shape=(), minval=1, maxval=100, dtype=tf.int32)
+        seed = (k, 0)
+        # tf.cond wants always a function :D
+        image = tf.image.stateless_random_hue(image, max_delta=0.1, seed=seed)
         return image, label
     
     # Apply functions on train dataset
@@ -170,7 +174,10 @@ def create_dataset(
     ).map(
          random_saturation,
          num_parallel_calls=tf.data.AUTOTUNE
-    )        
+    ).map(
+         random_hue,
+         num_parallel_calls=tf.data.AUTOTUNE
+    )      
     
     train_dataset = train_dataset.shuffle(buffer_size=256, reshuffle_each_iteration=True)
     
@@ -220,7 +227,7 @@ def create_model(
     x = input_layer
     
     for i in range(n_conv):
-        n_filters = 2 ** (i + 6)
+        n_filters = 2 ** (i + 4)
  
         # Conv2D + BatchNorm + ReLU
         x = tf.keras.layers.Conv2D(n_filters, 3, padding="same")(x)
@@ -232,7 +239,7 @@ def create_model(
     
     flat = tf.keras.layers.Flatten()(x)
     # 1st Dense(1024) + BatchNorm + ReLU
-    fc1 = tf.keras.layers.Dense(2048)(flat)
+    fc1 = tf.keras.layers.Dense(1024)(flat)
     if use_bn:
         fc1 = tf.keras.layers.BatchNormalization()(fc1)
     fc1 = tf.keras.layers.ReLU()(fc1)
