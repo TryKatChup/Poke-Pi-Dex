@@ -131,8 +131,13 @@ class App:
         self.frame_right.pack_propagate(0)
 
         # Left (video stream)
+        self.entry_prediction_text = tk.StringVar()
+        self.entry_prediction = tk.Entry(master=self.frame_left, width=20, textvar=self.entry_prediction_text, bg=background, fg=background_dark, bd=0, highlightthickness=0)
+        self.entry_prediction.config(readonlybackground=background, state="readonly")
+        self.entry_prediction.pack(side=tk.TOP, pady=(10, 2))
+
         self.canvas_video = tk.Canvas(master=self.frame_left, width=res_width/2, height=res_width/2, bg=background, highlightbackground=background, highlightthickness=1)
-        self.canvas_video.pack(side=tk.TOP, pady=((res_height-(res_width/2))/2, 0))
+        self.canvas_video.pack(side=tk.TOP) #, pady=((res_height-(res_width/2))/2, 0))
 
         self.frame_video_controls = tk.Frame(master=self.frame_left, bg=background)
         self.frame_video_controls.pack(side=tk.TOP, pady=(2, 0))
@@ -500,8 +505,12 @@ class App:
         ret, frame = self.video.get_frame()
         if ret:
             # .transpose(Image.FLIP_LEFT_RIGHT) to flip the image
-            self.photo = ImageTk.PhotoImage(image=Image.fromarray(frame).resize(dim_image, Image.ANTIALIAS))
-            (pkmn, confidence) = pc.predict_top_n_pokemon(self.photo, 1)
+            # self.photo = ImageTk.PhotoImage(image=Image.fromarray(frame).resize(dim_image, Image.ANTIALIAS))
+            cv2.imwrite("frame.jpg", cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
+            (pkmn, confidence) = pc.predict_top_n_pokemon("frame.jpg", 1)
+            pkmn = str(pkmn)[2:-2]
+            confidence = str(confidence)[1:-1]
+            self.entry_prediction_text.set(pkmn + ": " + confidence)
             self.load_pokemon(pkmn)
     
     def load_pokemon(self, pkmn_id):
