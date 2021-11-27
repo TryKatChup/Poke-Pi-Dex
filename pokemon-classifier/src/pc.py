@@ -175,10 +175,10 @@ def create_dataset(
     ).map(
          random_saturation,
          num_parallel_calls=tf.data.AUTOTUNE
-    ).map(
-         random_hue,
-         num_parallel_calls=tf.data.AUTOTUNE
-    )      
+    )#.map(
+     #    random_hue,
+     #    num_parallel_calls=tf.data.AUTOTUNE
+    #)      
     
     train_dataset = train_dataset.shuffle(buffer_size=256, reshuffle_each_iteration=True)
     
@@ -339,7 +339,7 @@ def resnet(
     input_shape: Tuple[int, int],
     n_stages: int
 ) -> K.Model:
-    inputs = K.Input(input_shape)
+    inputs = K.Input(shape=input_shape)
 
     # Stem layer
     x = K.layers.Conv2D(
@@ -354,7 +354,7 @@ def resnet(
         padding="same"
     )(x)
     x = K.layers.Conv2D(
-        64,
+        32,
         kernel_size=3,
         padding="same"
     )(x)
@@ -366,9 +366,9 @@ def resnet(
 
     # ResStages
     for i in range(n_stages):
-        n_filters = 2**(i + 7)
+        n_filters = 2**(i + 6)
         x = res_stage(x, n_filters)
-    y = K.GlobalAveragePooling2D()(x)
+    y = K.layers.GlobalAveragePooling2D()(x)
     y = K.layers.Dense(151)(y)
     y = K.layers.Softmax()(y)
     outputs = y
