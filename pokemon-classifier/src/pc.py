@@ -4,7 +4,8 @@ import tensorflow as tf
 from sklearn.preprocessing import LabelEncoder
 import typing
 import numpy as np
-
+import tensorflow.keras as K
+from typing import Tuple
 
 def create_dataset(
     data_folder: str,
@@ -141,7 +142,7 @@ def create_dataset(
         k = tf.random.uniform(shape=(), minval=1, maxval=100, dtype=tf.int32)
         seed = (k, 0)
         # tf.cond wants always a function :D
-        image = tf.image.stateless_random_contrast(image, lower=0.6, upper=1, seed=seed)
+        image = tf.image.stateless_random_contrast(image, lower=0.7, upper=1, seed=seed)
         return image, label
     
     def random_saturation(image, label):
@@ -239,7 +240,7 @@ def create_model(
     
     flat = tf.keras.layers.Flatten()(x)
     # 1st Dense(1024) + BatchNorm + ReLU
-    fc1 = tf.keras.layers.Dense(1024)(flat)
+    fc1 = tf.keras.layers.Dense(2048)(flat)
     if use_bn:
         fc1 = tf.keras.layers.BatchNormalization()(fc1)
     fc1 = tf.keras.layers.ReLU()(fc1)
@@ -269,6 +270,109 @@ def top_k_predictions(model, img, label_encoder, k=5):
 
 def get_label_encoder():
     encoder = LabelEncoder()
-    encoder.classes_ = np.load('./classes.npy')
+    encoder.classes_ = np.load('./best_classes.npy')
     return encoder
+
+
+def res_block(
+    in_layer: K.layers.Layer,
+    filters: int,
+    downscale: bool = False
+) -> K.layers.Layer:
+    # Conv + BN + ReLU
+    x = K.layers.Conv2D(
+        filters,
+        kernel_size=3,
+        padding="same",
+        strides=2 if downscale else 1
+    )(in_layer)
+    x = K.layers.BatchNormalization()(x)
+    x = K.layers.ReLU()(x)
+
+    # Conv + BN
+    x = K.layers.Conv2D(
+        filters,
+        kernel_size=3,
+        padding="same"
+    )(x)
+    x = K.layers.BatchNormalization()(x)
+
+    # Skip connection
+    if downscale:
+        skip = K.layers.Conv2D(
+            filters,
+            kernel_size=1,
+            padding="same",
+            strides=2
+        )(in_layer)
+        skip = K.layers.BatchNormalization()(skip)
+    else:
+        skip = in_layer
+    
+    # Add skip
+    x = K.layers.Add()([x, skip])
+
+    # Last ReLU
+    x = K.layers.ReLU()(x)
+
+    return x
+
+
+#%%
+
+def res_stage(
+    in_layer: K.layers.Layer,
+    filters: int,
+    n_res_blocks: int = 2
+) -> K.layers.Layer:
+    # First block which downscales
+    x = res_block(in_layer, filters, downscale=True)
+    # Subsequent blocks
+    for _ in range(n_res_blocks - 1):
+        x = res_block(x, filters)
+    
+    return x
+
+#%%
+
+def resnet(
+    input_shape: Tuple[int, int],
+    n_stages: int
+) -> K.Model:
+    inputs = K.Input(input_shape)
+
+    # Stem layer
+    x = K.layers.Conv2D(
+        32,
+        kernel_size=3,
+        padding="same",
+        strides=2
+    )(inputs)
+    x = K.layers.Conv2D(
+        32,
+        kernel_size=3,
+        padding="same"
+    )(x)
+    x = K.layers.Conv2D(
+        64,
+        kernel_size=3,
+        padding="same"
+    )(x)
+    x = K.layers.MaxPool2D(
+        pool_size=3,
+        strides=2,
+        padding="same"
+    )(x)
+
+    # ResStages
+    for i in range(n_stages):
+        n_filters = 2**(i + 7)
+        x = res_stage(x, n_filters)
+    y = K.GlobalAveragePooling2D()(x)
+    y = K.layers.Dense(151)(y)
+    y = K.layers.Softmax()(y)
+    outputs = y
+
+    return K.Model(inputs, outputs)
+
 
