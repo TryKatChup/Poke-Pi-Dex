@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:2.6.0-gpu
+FROM tensorflow/tensorflow:2.6.0
 RUN apt-get update -y && apt-get install -y unzip wget graphviz \
     && pip install --upgrade pip && pip install jupyter sklearn pydot matplotlib \
     black jupyter_contrib_nbextensions tqdm h5py \
