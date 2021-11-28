@@ -1,11 +1,19 @@
-Kary
+Kary:
+
+- [] Fare una funzione in più sul repo che faccia andare la rete nuova dell'attività progettuale
+- [] Testare il LearningRateScheduler in Keras (tensorflow), prima di abbandonare definitivamente la via di tensorflow
+- [] Fare una versione più figa del dataset, aggiungendo i pokémon che riconosce peggio
+- [] Fare i grafici della rete nuova per l'attività progettuale, provando più varianti di reti e dataset nuovo vs enchanted dataset nuovo.
+- [] Committare i file che ho usato per il dataset (script bash per cambiare numero di immagini per classe e python per i conversione in .jpg)
+- [] Migliorare la mini rete vecchia (v3: più immagini, rispetto alle 50 per classe)
+
 - [x] ottimizzazione rete (quantizzazione + prova immagine con tf.lite)
-**Data Augmentation (usare API STATELESS):**
+**Data Augmentation (usare API STATELESS tf.keras):**
 - [x] Random flip
 - [x] Random rotation
-- [x] Random brightness
-- [ ] Random contrast   
-- [ ] riallenare rete con foto tagliate + regolazione luminosità
+- [x] ~~Random brightness~~ (in keras it has strange artifacts, so it should not be used)
+- [x] Random contrast   
+- [x] riallenare rete con foto tagliate + regolazione luminosità
 
 
 Miky
@@ -194,3 +202,7 @@ Pokémon tagliati:
 - [x] Dragonite
 - [x] Mewtwo
 - [x] Mew
+
+Da migliorare eventualmente:
+- [] Bulbasaur
+- [] Charmander
