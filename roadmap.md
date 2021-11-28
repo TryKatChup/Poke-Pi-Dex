@@ -1,11 +1,11 @@
 Kary:
 
-- [] Fare una funzione in più sul repo che faccia andare la rete nuova dell'attività progettuale
-- [] Testare il LearningRateScheduler in Keras (tensorflow), prima di abbandonare definitivamente la via di tensorflow
-- [] Fare una versione più figa del dataset, aggiungendo i pokémon che riconosce peggio
-- [] Fare i grafici della rete nuova per l'attività progettuale, provando più varianti di reti e dataset nuovo vs enchanted dataset nuovo.
-- [] Committare i file che ho usato per il dataset (script bash per cambiare numero di immagini per classe e python per i conversione in .jpg)
-- [] Migliorare la mini rete vecchia (v3: più immagini, rispetto alle 50 per classe)
+- [ ] Fare una funzione in più sul repo che faccia andare la rete nuova dell'attività progettuale
+- [ ] Testare il LearningRateScheduler in Keras (tensorflow), prima di abbandonare definitivamente la via di tensorflow
+- [ ] Fare una versione più figa del dataset, aggiungendo i pokémon che riconosce peggio
+- [ ] Fare i grafici della rete nuova per l'attività progettuale, provando più varianti di reti e dataset nuovo vs enchanted dataset nuovo.
+- [ ] Committare i file che ho usato per il dataset (script bash per cambiare numero di immagini per classe e python per i conversione in .jpg)
+- [ ] Migliorare la mini rete vecchia (v3: più immagini, rispetto alle 50 per classe)
 
 - [x] ottimizzazione rete (quantizzazione + prova immagine con tf.lite)
 **Data Augmentation (usare API STATELESS tf.keras):**
