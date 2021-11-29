@@ -2,8 +2,7 @@ version: '2.0'
 services:
   jupyter:
     build: .
-    ports:
-    - "8888:8888"
+    network_mode: host
     volumes:
     - ./src:/app/src
     devices:
@@ -12,6 +11,7 @@ services:
     - /dev/nvidia-modeset:/dev/nvidia-modeset
     - /dev/nvidia-uvm:/dev/nvidia-uvm
     - /dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools
+    shm_size: '20gb'
     deploy:
       resources:
         reservations:

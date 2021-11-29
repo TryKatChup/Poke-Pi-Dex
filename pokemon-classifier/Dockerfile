@@ -1,10 +1,7 @@
-FROM tensorflow/tensorflow:2.6.0
+FROM tensorflow/tensorflow:2.6.0-gpu-jupyter
 RUN apt-get update -y && apt-get install -y unzip wget graphviz \
-    && pip install --upgrade pip && pip install jupyter sklearn pydot matplotlib \
-    black jupyter_contrib_nbextensions tqdm h5py \
-    && jupyter nbextension install https://github.com/drillan/jupyter-black/archive/master.zip --user \
-    && jupyter nbextension enable jupyter-black-master/jupyter-black
-
+    && pip install --upgrade pip && pip install sklearn pydot matplotlib \
+    && pip install --pre torch torchvision torchaudio -f https://download.pytorch.org/whl/nightly/cu113/torch_nightly.html
 
 # Copy data
 COPY ./data /app/data
