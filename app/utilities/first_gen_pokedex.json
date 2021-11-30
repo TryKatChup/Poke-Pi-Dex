@@ -2836,7 +2836,7 @@
   },
   {
     "id": 122,
-    "name": "Mr. Mime",
+    "name": "Mr.Mime",
     "type": [
       "Psychic",
       "Fairy"
@@ -2854,8 +2854,8 @@
       "Speed": 90
     },
 	"description": {
-		"en": "Mr. Mime, the Barrier Pokémon. It's a master of pantomime. It can convince others that something unseeable actually exists. Once believed, the imaginary object does become real.",
-		"it": "Mr. Mime, il Pokémon Barriera. È un esperto di mimica. Con la gestualità convince l'osservatore dell'esistenza di oggetti invisibili che saranno percepiti come reali."
+		"en": "Mr.Mime, the Barrier Pokémon. It's a master of pantomime. It can convince others that something unseeable actually exists. Once believed, the imaginary object does become real.",
+		"it": "Mr.Mime, il Pokémon Barriera. È un esperto di mimica. Con la gestualità convince l'osservatore dell'esistenza di oggetti invisibili che saranno percepiti come reali."
 	}
   },
   {

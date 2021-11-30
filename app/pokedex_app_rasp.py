@@ -10,6 +10,7 @@ import pyautogui as pg
 
 from pokemon_repository import PokemonRepository
 import video_capture as vc
+import labels as l
 import settings
 import pokemon_classifier as pc
 
@@ -29,31 +30,7 @@ sprites_path = "utilities/sprites/"
 types_path = "utilities/types/"
 cries_path = "utilities/cries (ogg)/"
 sprite_size = (40, 40)
-languages = ["English", "Italian"]
-labels = {
-    "start": {"en": "Start", "it": "Avvia"},
-    "quit": {"en": "Quit", "it": "Esci"},
-    "info": {"en": "Application developed by Michele Righi & Karina Chichifoi\nusing ...", "it": "Applicazione sviluppata da Michele Righi e Karina Chichifoi\nutilizzando ..."},
-    "search": {"en": "Search", "it": "Cerca"},
-    "screenshot": {"en": "Screenshot", "it": "Schermata"},
-    "cry": {"en": "Cry: ", "it": "Verso: "},
-    "name": {"en": "Name: ", "it": "Nome: "},
-    "types": {"en": "Type(s): ", "it": "Tipo/i: "},
-    "hp": {"en": "HP:", "it": "PS:"},
-    "attack": {"en": "Attack:", "it": "Attacco:"},
-    "defense": {"en": "Defense:", "it": "Difesa:"},
-    "sp. atk": {"en": "Sp. Atk:", "it": "Att. Sp.:"},
-    "sp. def": {"en": "Sp. Def:", "it": "Dif. Sp.:"},
-    "speed": {"en": "Speed:", "it": "Veloc.:"},
-    "settings": {"en": "Settings", "it": "Impostazioni"},
-    "language": {"en": "Language: ", "it": "Lingua: "},
-    "full screen": {"en": "Full screen: ", "it": "Schermo int.: "},
-    "descr voice": {"en": "Descr. voice: ", "it": "Voce descr.: "},
-    "flip image": {"en": "Flip image: ", "it": "Specchia imm.: "},
-    "volume": {"en": "Volume: ", "it": "Volume: "},
-    "save": {"en": "Save", "it": "Salva"},
-    "cancel": {"en": "Cancel", "it": "Annulla"}
-}
+labels = l.load_labels("labels.json")
 
 class App:
     def __init__(self, window, window_title):
@@ -357,7 +334,7 @@ class App:
         self.label_language = tk.Label(master=self.frame_language, textvar=self.text_language, width=12, anchor=tk.W, bg=background)
         self.label_language.pack(side=tk.LEFT, padx=(0, 10))
         self.combobox_language_text = tk.StringVar()
-        self.combobox_language = ttk.Combobox(master=self.frame_language, state="readonly", textvariable=self.combobox_language_text, values=languages, width=9)
+        self.combobox_language = ttk.Combobox(master=self.frame_language, state="readonly", textvariable=self.combobox_language_text, values=list(labels["languages"].keys()), width=9)
         self.combobox_language.current(0)
         self.combobox_language.pack(side=tk.LEFT)
         self.combobox_language.bind("<<ComboboxSelected>>", lambda e: self.frame_language.focus())  # just for aesthetics
@@ -736,6 +713,7 @@ class App:
 
     def save_settings(self):
         self.button_search.config(state=tk.NORMAL)
+        self.settings.language = labels["languages"][self.combobox_language_text.get()]
         # self.button_screenshot.config(state=tk.NORMAL)
         self.settings.save_settings(self.combobox_language_text.get(), self.settings.fullscreen.get(),
                                     1, self.var_descr_voice.get(), 0, self.scale_volume.get() / 100)
@@ -766,7 +744,7 @@ class App:
 
     def get_type_color(self, type: str):
         if type.lower() == "fire":
-            print("ESATTO")
+            return "#ff0000"
 
     def save_video_snapshot(self):
         # Get a frame from the video source
