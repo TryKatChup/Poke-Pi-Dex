@@ -47,7 +47,7 @@ class App:
         self.window.attributes("-fullscreen", self.settings.fullscreen.get())
 
         # Sound init
-        pygame.mixer.pre_init(44100, 16, 2, 4096)
+        pygame.mixer.pre_init(33075, 16, 2, 4096) # default freq: 44100, but on the raspberry it causes a fastidious high pitched noise
         pygame.init()
         pygame.mixer.init()
         # Channel init
@@ -670,8 +670,8 @@ class App:
     def close_settings(self):
         self.button_search.config(state=tk.NORMAL)
         # self.button_screenshot.config(state=tk.NORMAL)
-        for l in languages:
-            if self.settings.language == l.lower()[0:2]:
+        for l in labels["languages"].keys():
+            if l == self.settings.language:
                 self.combobox_language_text.set(l)
         if self.window.attributes("-fullscreen") == 1:
             self.check_fullscreen.select()
