@@ -2,7 +2,7 @@ Kary:
 
 - [ ] Fare una funzione in più sul repo che faccia andare la rete nuova dell'attività progettuale
 - [ ] Committare i file che ho usato per il dataset (script bash per cambiare numero di immagini per classe e python per i conversione in .jpg)
-- [ ] Migliorare la mini rete vecchia (v3: più immagini, rispetto alle 50 per classe)
+- [x] Migliorare la mini rete vecchia (v3: più immagini, rispetto alle 50 per classe) (fatto con 55 immagini per classe)
 
 - [x] ottimizzazione rete (quantizzazione + prova immagine con tf.lite)
 **Data Augmentation (usare API STATELESS tf.keras):**
@@ -201,3 +201,11 @@ Pokémon tagliati:
 - [x] Mew
 
 NO
+
+Modelli: tabella riassuntiva
+
+| Modello | Train Loss  | Val Loss  | Test Loss  | Train accuracy  | Val accuracy  | Test accuracy  | Tempo di Training | Dimensione |
+|---|---|---|---|---|---|---|---|---|
+| Resnet152   | 0.2914  | 0.1288  | 0.107  | 93.54  | 96.72  | 97.171  | 38' 38"  | 223.9 MB  |
+| MobileNetV2  | 0.5433  | 0.2815  | 0.224  | 87%  | 93.52%  | 94.509 %  | 7' 53"  | non ricordo |
+| MobileNetV3 large  | 0.6595  | 0.3366  | 0.299  | 82.83%  | 91.75%  | 91.015%  | 6' 55"  | ci guardo  |
