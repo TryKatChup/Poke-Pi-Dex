@@ -56,7 +56,7 @@ class App:
             try:
                 if 2 <= int(sys.argv[2]) <= 10:
                     self.settings.debug_mode = int(sys.argv[2])
-            except ValueError:
+            except ValueError and IndexError:
                 self.settings.debug_mode = 5
             print("Debug mode: ON (" + str(self.settings.debug_mode) + ")")
         else:
