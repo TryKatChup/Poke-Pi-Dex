@@ -52,7 +52,7 @@ class App:
         self.window.attributes("-fullscreen", self.settings.fullscreen.get())
 
         # Parameters Check
-        if 2 <= len(sys.argv) >= 3 and sys.argv[1] == "-d":
+        if 2 <= len(sys.argv) <= 3 and sys.argv[1] == "-d":
             try:
                 if 2 <= int(sys.argv[2]) <= 10:
                     self.settings.debug_mode = int(sys.argv[2])
