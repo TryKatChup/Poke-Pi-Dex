@@ -344,7 +344,7 @@ class App:
         self.button_label_settings.config(state=tk.DISABLED)
         self.label_settings = tk.Label(master=self.frame_label_settings, textvar=self.text_settings, bg=background)
         self.label_settings.config(font=("Helvetica", 16, "bold italic"))
-        self.label_settings.pack(side=tk.LEFT, padx=(35, 35))
+        self.label_settings.pack(side=tk.LEFT, padx=(45, 45))
         self.image_button_debug = ImageTk.PhotoImage(Image.open(icons_path + "icon-bug.png").resize((25, 25), Image.ANTIALIAS))
         self.button_debug = tk.Button(master=self.frame_label_settings, image=self.image_button_debug, bg=background, command=lambda: self.debug_counter())
         self.button_debug.pack(side=tk.RIGHT)
