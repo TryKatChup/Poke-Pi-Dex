@@ -22,5 +22,6 @@
     "flip image": {"en": "Flip image: ", "it": "Specchia imm.: "},
     "volume": {"en": "Volume: ", "it": "Volume: "},
     "save": {"en": "Save", "it": "Salva"},
-    "cancel": {"en": "Cancel", "it": "Annulla"}
+    "cancel": {"en": "Cancel", "it": "Annulla"},
+	"time": {"en": "Time: ", "it": "Ora: "}
 }

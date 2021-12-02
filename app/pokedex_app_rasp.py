@@ -1,3 +1,4 @@
+import sys
 import tkinter as tk
 from tkinter import ttk
 from PIL import ImageTk, Image
@@ -10,15 +11,15 @@ import pyautogui as pg
 
 from pokemon_repository import PokemonRepository
 import video_capture as vc
-import labels as l
+from labels import load_labels
 import settings
 import pokemon_classifier as pc
+# from input import register_button
 
 # tkinter utility: https://www.tcl.tk/man/tcl/TkCmd/entry.html#M9
 
 app_name = "Poké-Pi-Dex"
 version = "1.0 beta"
-info_text = "App megafiga by Miky & Kary\nDeveloped with ..."
 res_width = 480
 res_height = 320
 dim_image = (int(res_width/2), int(res_width/2))  # 240x240
@@ -30,7 +31,8 @@ sprites_path = "utilities/sprites/"
 types_path = "utilities/types/"
 cries_path = "utilities/cries (ogg)/"
 sprite_size = (40, 40)
-labels = l.load_labels("labels.json")
+labels = load_labels("labels.json")
+
 
 class App:
     def __init__(self, window, window_title):
@@ -40,14 +42,28 @@ class App:
         image = ImageTk.PhotoImage(file=icons_path + "icon-pokeball.png")
         self.window.tk.call("wm", "iconphoto", self.window._w, image)
         self.window.configure(bg=background)
+        # Video Source
+        self.video = None
+        self.update_video = False
 
-        # Settings Loading(?)
+        # Settings Loading
         self.settings = settings.Settings(window, ".settings.json")
         self.settings.load_from_file()
         self.window.attributes("-fullscreen", self.settings.fullscreen.get())
 
+        # Parameters Check
+        if 2 <= len(sys.argv) >= 3 and sys.argv[1] == "-d":
+            try:
+                if 2 <= int(sys.argv[2]) <= 10:
+                    self.settings.debug_mode = int(sys.argv[2])
+            except ValueError:
+                self.settings.debug_mode = 5
+            print("Debug mode: ON (" + str(self.settings.debug_mode) + ")")
+        else:
+            print("Debug mode: OFF")
+
         # Sound init
-        pygame.mixer.pre_init(33075, 16, 2, 4096) # default freq: 44100, but on the raspberry it causes a fastidious high pitched noise
+        pygame.mixer.pre_init(33075, 16, 2, 4096)  # default freq: 44100, but on the raspberry it causes a fastidious high pitched noise
         pygame.init()
         pygame.mixer.init()
         # Channel init
@@ -62,9 +78,6 @@ class App:
         self.pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
         self.loaded_pokemon = None
         self.evo_to_i = 0  # index of the multiple evolutions list
-
-        self.video = None
-        self.update_video = False
 
         # Menu
         self.frame_menu = tk.Frame(width=res_width, height=res_height, background=background)
@@ -92,13 +105,13 @@ class App:
         # Info
         self.frame_info = tk.Frame(master=self.frame_menu, width=314, height=240, bg=background)
         self.frame_info.pack_propagate(0)
-        self.image_button_close_info = ImageTk.PhotoImage(Image.open(icons_path + "icon-close.png").resize((25, 25), Image.ANTIALIAS))
-        self.button_close = tk.Button(master=self.frame_info, image=self.image_button_close_info, bg=background, command=lambda: self.close_info())
+        self.image_button_close = ImageTk.PhotoImage(Image.open(icons_path + "icon-close.png").resize((25, 25), Image.ANTIALIAS))
+        self.button_close = tk.Button(master=self.frame_info, image=self.image_button_close, bg=background, command=lambda: self.close_info())
         self.button_close.pack(side=tk.TOP, anchor=tk.E, padx=(0, 2), pady=(2, 0))
         self.text_info = tk.Text(master=self.frame_info, height=4, bg=background_dark, bd=0, highlightthickness=0)
         self.text_info.tag_configure('tag-center', justify='center')
         self.text_info.pack(side=tk.TOP, padx=10, pady=10)
-        self.text_info.insert('end', info_text, 'tag-center')
+        self.text_info.insert('end', labels["info"][self.settings.language], 'tag-center')
         self.window_info = None
 
         # Pokédex App
@@ -231,7 +244,7 @@ class App:
         # Description
         self.text_description = tk.Text(master=self.frame_right, height=5, bg=background_dark, bd=0, highlightthickness=0)
         self.text_description.config(font=("Helvetica", 9, "normal"), state="disabled")
-        self.text_description.pack(side=tk.TOP,pady=(0, 2))
+        self.text_description.pack(side=tk.TOP, pady=(0, 2))
 
         # Stats coordinates
         self.x1 = 2
@@ -320,13 +333,22 @@ class App:
         # Settings
         self.frame_settings = tk.Frame(width=res_width/2, height=res_height, bg=background)
         self.frame_settings.pack_propagate(0)
-        self.image_button_close_settings = ImageTk.PhotoImage(Image.open(icons_path + "icon-close.png").resize((25, 25), Image.ANTIALIAS))
-        self.button_close = tk.Button(master=self.frame_settings, image=self.image_button_close_settings, bg=background, command=lambda: self.close_settings())
+        self.button_close = tk.Button(master=self.frame_settings, image=self.image_button_close, bg=background, command=lambda: self.close_settings())
         self.button_close.pack(side=tk.TOP, anchor=tk.E, padx=(0, 2), pady=(2, 0))
         self.text_settings = tk.StringVar(value=labels["settings"][self.settings.language])
-        self.label_settings = tk.Label(master=self.frame_settings, textvar=self.text_settings, bg=background)
+        self.frame_label_settings = tk.Frame(self.frame_settings, width=res_width/2, bg=background)
+        self.frame_label_settings.pack(side=tk.TOP)
+        self.image_button_empty = ImageTk.PhotoImage(Image.open(icons_path + "icon-empty.png").resize((25, 25), Image.ANTIALIAS))
+        self.button_label_settings = tk.Button(master=self.frame_label_settings, image=self.image_button_empty, bg=background, fg=background, bd=0, highlightthickness=0)
+        self.button_label_settings.pack(side=tk.LEFT)
+        self.button_label_settings.config(state=tk.DISABLED)
+        self.label_settings = tk.Label(master=self.frame_label_settings, textvar=self.text_settings, bg=background)
         self.label_settings.config(font=("Helvetica", 16, "bold italic"))
-        self.label_settings.pack(side=tk.TOP)
+        self.label_settings.pack(side=tk.LEFT, padx=(35, 35))
+        self.image_button_debug = ImageTk.PhotoImage(Image.open(icons_path + "icon-bug.png").resize((25, 25), Image.ANTIALIAS))
+        self.button_debug = tk.Button(master=self.frame_label_settings, image=self.image_button_debug, bg=background, command=lambda: self.debug_counter())
+        self.button_debug.pack(side=tk.RIGHT)
+
         # Language Picker
         self.frame_language = tk.Frame(master=self.frame_settings, width=res_width/2, bg=background)
         self.frame_language.pack(side=tk.TOP, anchor=tk.W, pady=(5, 0), padx=(10, 0))
@@ -385,6 +407,20 @@ class App:
         self.button_cancel_settings = tk.Button(master=self.frame_settings_controls, textvar=self.text_cancel, bg=background, command=lambda: self.close_settings())
         self.button_cancel_settings.pack(side=tk.LEFT, anchor=tk.CENTER, padx=10)
 
+        # Debug Mode
+        self.frame_debug = tk.Frame(width=res_width/2, height=res_height, bg=background)
+        self.frame_debug.pack_propagate(0)
+        self.button_close_debug = tk.Button(master=self.frame_debug, image=self.image_button_close, bg=background, command=lambda: self.close_debug_mode())
+        self.button_close_debug.pack(side=tk.TOP, anchor=tk.E)
+        self.text_debug_headers = tk.Text(master=self.frame_debug, height=1, width=24, bg="black", fg="white", bd=0, highlightthickness=0)
+        self.text_debug_headers.insert('1.0', "#  Pokémon\t\t%")
+        self.text_debug_headers.config(font="TkFixedFont", state="disabled")
+        self.text_debug_headers.pack(side=tk.TOP)
+        self.text_debug = tk.Text(master=self.frame_debug, height=14, width=24, bg="black", fg="white", bd=0, highlightthickness=0)
+        self.text_debug.config(font="TkFixedFont", state="disabled")
+        self.text_debug.pack(side=tk.TOP)
+
+
     def start(self):
         # Show the App Menu
         self.show_menu()
@@ -424,13 +460,32 @@ class App:
         self.frame_menu.pack_forget()
         self.frame_info.pack_forget()
         self.frame_settings.pack_forget()
-        print("START POKÉDEX APP")
+        self.frame_debug.pack_forget()
         self.video.open()
         self.update_video = True
         self.frame_left.pack(side=tk.LEFT, fill=None, expand=False, padx=(0, 1))
+        self.reset_pokemon()
+        if self.settings.debug_mode != 0:
+            print("START POKÉDEX APP (DEBUG)")
+            self.frame_debug.pack(side=tk.RIGHT, fill=None, expand=False, padx=(1, 0))
+            return
+        print("START POKÉDEX APP")
         self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False, padx=(1, 0))
 
-        self.reset_pokemon()
+    def show_debug_mode(self):
+        self.frame_right.pack_forget()
+        self.frame_settings.pack_forget()
+        print("SHOW DEBUG")
+        self.frame_debug.pack(side=tk.RIGHT, fill=None, expand=False, padx=(1, 0))
+
+    def close_debug_mode(self):
+        self.settings.debug_mode = 0
+        self.text_debug.config(state=tk.NORMAL)
+        self.text_debug.delete('1.0', tk.END)
+        self.text_debug.config(state=tk.DISABLED)
+        self.frame_debug.pack_forget()
+        print("CLOSE DEBUG")
+        self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False, padx=(1, 0))
 
     def update(self):
         if self.update_video:
@@ -484,6 +539,25 @@ class App:
             # .transpose(Image.FLIP_LEFT_RIGHT) to flip the image
             # self.photo = ImageTk.PhotoImage(image=Image.fromarray(frame).resize(dim_image, Image.ANTIALIAS))
             cv2.imwrite("frame.jpg", cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
+            if self.settings.debug_mode != 0:
+                # get first N predictions
+                # update text debug
+                result = pc.predict_top_n_pokemon("frame.jpg", self.settings.debug_mode)
+                result_str = ""
+                for i in range(0, self.settings.debug_mode):
+                    result_str += str(i+1) + "> " + str(result[0][i]) + "\t"
+                    if len(str(result[0][i])) < 9:
+                        result_str += "\t"
+                    else:
+                        result_str += " \t"
+                    result_str += str(result[1][i])[:6] + "\n"
+                result_str += labels["time"][self.settings.language] + time.strftime("%H:%M:%S") + "\n\n"
+                self.text_debug.config(state="normal")
+                self.text_debug.insert(tk.END, result_str)
+                self.text_debug.see(tk.END)
+                self.text_debug.config(state="disabled")
+                print(result_str)
+                return
             (pkmn, confidence) = pc.predict_top_n_pokemon("frame.jpg", 1)
             pkmn = str(pkmn)[2:-2]
             confidence = str(confidence)[1:-1]
@@ -668,11 +742,12 @@ class App:
         self.frame_settings.pack(side=tk.RIGHT)
 
     def close_settings(self):
+        self.settings.debug_mode = 0
+        self.button_debug.config(state=tk.NORMAL)
         self.button_search.config(state=tk.NORMAL)
-        # self.button_screenshot.config(state=tk.NORMAL)
-        for l in labels["languages"].keys():
-            if l == self.settings.language:
-                self.combobox_language_text.set(l)
+        for lang in labels["languages"].keys():
+            if lang == self.settings.language:
+                self.combobox_language_text.set(lang)
         if self.window.attributes("-fullscreen") == 1:
             self.check_fullscreen.select()
             self.settings.fullscreen.set(True)
@@ -714,15 +789,22 @@ class App:
     def save_settings(self):
         self.button_search.config(state=tk.NORMAL)
         self.settings.language = labels["languages"][self.combobox_language_text.get()]
-        # self.button_screenshot.config(state=tk.NORMAL)
-        self.settings.save_settings(self.combobox_language_text.get(), self.settings.fullscreen.get(),
-                                    1, self.var_descr_voice.get(), 0, self.scale_volume.get() / 100)
+        self.settings.save_settings(self.combobox_language_text.get(), self.settings.fullscreen.get(), 1, self.var_descr_voice.get(), 0, self.scale_volume.get() / 100)
         self.window.attributes("-fullscreen", self.settings.fullscreen.get())
         self.update_language()
         self.mono_channel.set_volume(self.settings.volume)
         self.frame_settings.pack_forget()
-        self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
+        self.button_debug.config(state=tk.NORMAL)
+        if 2 <= self.settings.debug_mode <= 10:
+            self.show_debug_mode()
+        else:
+            self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
         print("SAVE SETTINGS\nLanguage: " + self.settings.language + "\nFullscreen: " + str(bool(self.settings.fullscreen.get())) + "\nVolume: " + str(self.settings.volume))
+
+    def debug_counter(self):
+        if self.settings.debug_mode == 9:
+            self.button_debug.config(state=tk.DISABLED)
+        self.settings.debug_mode += 1
 
     # get RGB color from stat
     def get_stat_color(self, stat):

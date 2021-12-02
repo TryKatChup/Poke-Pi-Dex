@@ -7,6 +7,7 @@ class Settings:
     def __init__(self, window, filename):
         self.filename = filename
 
+        self.debug_mode = 0
         self.language = 'en'
         self.fullscreen = tk.IntVar(value=1)
         self.touch_controls = tk.IntVar(value=1)
