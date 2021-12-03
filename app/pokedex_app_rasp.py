@@ -127,13 +127,13 @@ class App:
         self.entry_prediction.pack(side=tk.TOP, pady=(10, 2))
 
         self.canvas_video = tk.Canvas(master=self.frame_left, width=res_width/2, height=res_width/2, bg=background, highlightbackground=background, highlightthickness=1)
-        self.canvas_video.pack(side=tk.TOP) #, pady=((res_height-(res_width/2))/2, 0))
+        self.canvas_video.pack(side=tk.TOP)  #, pady=((res_height-(res_width/2))/2, 0))
 
         self.frame_video_controls = tk.Frame(master=self.frame_left, bg=background)
         self.frame_video_controls.pack(side=tk.TOP, pady=(2, 0))
         self.text_search = tk.StringVar()
         self.text_search.set(labels["search"][self.settings.language])
-        self.button_search = tk.Button(master=self.frame_video_controls, textvar=self.text_search, width=10, bg=background, activebackground=background, command=lambda: self.search()) # self.load_pokemon(self.entry_name_text.get())
+        self.button_search = tk.Button(master=self.frame_video_controls, textvar=self.text_search, width=10, bg=background, activebackground=background, command=lambda: self.search())  # self.load_pokemon(self.entry_name_text.get())
         self.button_search.pack(side=tk.LEFT, anchor=tk.CENTER, padx=(0, 10))
         self.text_screenshot = tk.StringVar()
         self.text_screenshot.set(labels["screenshot"][self.settings.language])
@@ -532,6 +532,7 @@ class App:
         self.label_evo_to.configure(image=self.image_evo_to)
         self.image_evo_from = ImageTk.PhotoImage(Image.open(sprites_path + "0.png").resize((40, 40), Image.ANTIALIAS))
         self.label_evo_from.configure(image=self.image_evo_from)
+        self.entry_prediction_text.set("")
 
     def search(self):
         ret, frame = self.video.get_frame()
