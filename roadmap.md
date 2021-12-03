@@ -23,14 +23,14 @@ Miky
 - [x] aggiungere descrizioni in lingua differente (IT)
 - [x] registrare per ciascuna descrizione in Inglese la traccia audio letta da un bot (https://www.youtube.com/watch?v=rjlOJjX-6Ug) Bot: [Text To Speech Online](http://texttospeechrobot.com/) + [PKMN DB](https://pokemondb.net/pokedex/blastoise), [Pronunciation](https://www.dailydot.com/parsec/pokemon-name-pronunciation-guide/)
 - [x] opzione nelle impostazioni per abilitare la lettura automatica della descrizione del pokémon quando viene riconosciuto
-- [ ] usare bottoni
+- [x] impostazioni persistenti
+- [x] usare bottoni
 - [ ] usare analogico
+- [x] debug mode (piccolo terminale di output se si fa una sequenza di tasti o se si avvia l'app con il parametro -d)
 - [ ] opzione per attivare/disattivare input tramite bottoni+analogico (NB: quando usiamo il touch è meglio nascondere il puntatore del mouse)
 - [ ] aumentare volume di tutti gli mp3 delle descrizioni
-- [x] impostazioni persistenti
 - [ ] finire doc progetto e aggiungere parti nella relazione
 - [ ] aggiungere sezione con ringraziamenti e crediti
-- [ ] debug mode (piccolo terminale di output se si fa una sequenza di tasti o se si avvia l'app con il parametro -d)
 - [ ] provare a realizzare un OPAMP con Fede
 - [ ] bottoncino play/stop nella descrizione per riprodurre la voce che legge la descrizione
 - [ ] modello case 3D
