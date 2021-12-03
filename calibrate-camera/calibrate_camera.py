@@ -28,8 +28,8 @@ def calibrate_camera(
         os.mkdir(output_folder)
 
     # We have a chessboard with 9 x 6 squares.
-    # Number of inner corner: rows x columns.
-    pattern_size = (9, 6)
+    # Number of inner corner: number of intersections of squares (8 x 5).
+    pattern_size = (8, 5)
     # Get for each point in the grid the i,j indices
     pattern_points = np.zeros((np.prod(pattern_size), 3), np.float32)
     pattern_points[:, :2] = np.indices(pattern_size).T.reshape(-1, 2)
@@ -51,7 +51,7 @@ def calibrate_camera(
 
         assert w == image.shape[1] and h == image.shape[0], ("Size: %d x %d ... " % (image.shape[1], image.shape[0]))
         # Detect corners 2D coordinate in the image.
-        # Found will be true only if 9x6 image will be detected in the image.
+        # Found will be true only if 8x5 image corners will be detected in the image.
         # If the image is too dark or too bright the algorithm may fail detecting corners and found would be false.
         found, chess_corners = cv2.findChessboardCorners(image, pattern_size)
         if found:
@@ -144,8 +144,8 @@ def main():
         "--square_size",
         required=False,
         type=float,
-        default=1.0,
-        help="Output folder in which images will be saved (default 1.0)",
+        default=2.82,
+        help="Output folder in which images will be saved (default 2.82)",
     )
     ap.add_argument(
         "-t",
