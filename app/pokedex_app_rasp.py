@@ -846,7 +846,6 @@ class App:
         self.window.destroy()
         exit(0)
 
+
 app = App(tk.Tk(), "pokédex")
 app.start()
-# avvio con parametri per debug_mode (-d):
-# terminale-like sul lato destro che mostra risultati (5 predizioni)
