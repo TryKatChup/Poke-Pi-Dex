@@ -4,18 +4,20 @@ import tensorflow as tf
 from sklearn.preprocessing import LabelEncoder
 import typing
 import numpy as np
-from tensorflow.keras.utils import load_img, img_to_array
 from matplotlib import pyplot as plt
+
+from PIL import Image
 
 
 def get_label_encoder():
     encoder = LabelEncoder()
-    encoder.classes_ = np.load('./classes.npy')
+    encoder.classes_ = np.load('./best_classes.npy')
     return encoder
 
+
 def predict_top_n_pokemon(image_file, num_top_pokemon):    
-    """Predicts num_top_pokemon from image_file, using a tflite model"""
-    TFLITE_MODEL="./qa_model_best100_8bit.tflite"
+    # Predicts num_top_pokemon from image_file, using a tflite model
+    TFLITE_MODEL="./vecchio_modello_nuovo_dataset_55fotoclasse_hue.tflite"
     interpreter = tf.lite.Interpreter(TFLITE_MODEL)
     interpreter.allocate_tensors()
 
@@ -24,12 +26,19 @@ def predict_top_n_pokemon(image_file, num_top_pokemon):
     output_details = interpreter.get_output_details()
 
     # Load image and convert it to tensor
-    img = load_img(image_file, target_size=(224, 224)) #"./evee_1.jpg"
-    img = img_to_array(img, dtype=np.float32)
+    img = Image.open(image_file).resize((224, 224), Image.ANTIALIAS)
+    img = np.asarray(img, dtype=np.float32)
+
+    if tf.__version__ == "2.6.0":
+        from tensorflow.keras.utils import load_img, img_to_array
+        img = load_img(image_file, target_size=(224, 224))  #"./evee_1.jpg"5
+        img = img_to_array(img, dtype=np.float32)
+
     img /= 255
     img = np.expand_dims(img, axis=0)
 
     input_tensor = np.array(img, dtype=np.float32)
+
     # Load TFLite model and allocate tensors
     interpreter.set_tensor(input_details[0]['index'], input_tensor)
     interpreter.invoke()
@@ -46,3 +55,26 @@ def predict_top_n_pokemon(image_file, num_top_pokemon):
     top_k_labels = label_encoder.inverse_transform(top_k_idx)
     return top_k_labels, top_k_scores
 
+
+# Main Test
+if __name__ == "__main__":
+    print("#N predictions: ")
+    n = input()
+    try:
+        n = int(n)
+        if not (1 <= n <= 10):
+            raise ValueError
+    except ValueError:
+        print("#N must be an integer between 1 and 10!")
+        exit()
+    # Prediction
+    result = predict_top_n_pokemon("frame.jpg", n)
+    result_str = ""
+    for i in range(0, n):
+        result_str += str(i + 1) + "> " + str(result[0][i]) + "\t"
+        if len(str(result[0][i])) < 9:
+            result_str += "\t"
+        else:
+            result_str += " \t"
+        result_str += str(result[1][i])[:6] + "\n"
+    print(result_str)
