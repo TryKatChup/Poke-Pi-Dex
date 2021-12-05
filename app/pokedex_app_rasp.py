@@ -1,5 +1,6 @@
 import sys
 import tkinter as tk
+from tkinter import font
 from tkinter import ttk
 from PIL import ImageTk, Image
 import cv2
@@ -22,7 +23,8 @@ app_name = "Poké-Pi-Dex"
 version = "1.0 beta"
 res_width = 480
 res_height = 320
-dim_image = (int(res_width/2), int(res_width/2))  # 240x240
+image_size = (int(res_width / 2), int(res_width / 2))  # 240x240
+icon_size = (int(res_width/19.2), int(res_width/19.2))  # 25x25
 background = "grey"
 background_dark = "#6a6a6a"
 icons_path = "utilities/icons/"
@@ -69,10 +71,9 @@ class App:
         # Channel init
         self.mono_channel = pygame.mixer.find_channel(True)
         self.mono_channel.set_volume(self.settings.volume)
-        '''self.cry_channel = pygame.mixer.Channel(0)
-        self.cry_channel.set_volume(self.settings.volume)
-        self.descr_channel = pygame.mixer.Channel(1)
-        self.descr_channel.set_volume(self.settings.volume)'''
+
+        default_font = font.nametofont("TkDefaultFont")
+        default_font.configure(family="Helvetica", size=int(res_width/48))
 
         # Repository Loading
         self.pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
@@ -89,23 +90,23 @@ class App:
         self.canvas_background.create_image(0, 0, anchor=tk.NW, image=self.image_background)
         self.label_app_version = tk.Label(master=self.frame_menu, text="v" + version, width=10, bg="black", fg="grey")
         self.label_app_version.config(font=("Helvetica", 10, "italic bold"))
-        self.canvas_background.create_window(197, 91, anchor=tk.N, window=self.label_app_version)
+        self.canvas_background.create_window(int(res_width/2.436), int(res_height/3.516), anchor=tk.N, window=self.label_app_version)  # (197, 91)
         self.text_start = tk.StringVar()
         self.text_start.set(labels["start"][self.settings.language])
         self.button_start = tk.Button(master=self.frame_menu, textvar=self.text_start, width=15, bg=background, activebackground=background, command=lambda: self.show_app())
-        self.canvas_background.create_window(197, 132+50, anchor=tk.N, window=self.button_start)
+        self.canvas_background.create_window(int(res_width/2.436), int(res_height/1.758), anchor=tk.N, window=self.button_start)  # 197, 132+50
         self.text_quit = tk.StringVar()
         self.text_quit.set(labels["quit"][self.settings.language])
         self.button_quit = tk.Button(master=self.frame_menu, textvar=self.text_quit, width=15, bg=background, activebackground=background, command=lambda: self.quit())
-        self.canvas_background.create_window(197, 182+50, anchor=tk.N, window=self.button_quit)
-        self.image_button_info = ImageTk.PhotoImage(Image.open(icons_path + "icon-info.png").resize((25, 25), Image.ANTIALIAS))
+        self.canvas_background.create_window(int(res_width/2.436), int(res_height/1.379), anchor=tk.N, window=self.button_quit)  # 197, 182+50
+        self.image_button_info = ImageTk.PhotoImage(Image.open(icons_path + "icon-info.png").resize((icon_size), Image.ANTIALIAS))  # 25, 25
         self.button_info = tk.Button(master=self.frame_menu, image=self.image_button_info, bg=background, command=lambda: self.show_info())
-        self.canvas_background.create_window(322, 232 + 30, anchor=tk.N, window=self.button_info)
+        self.canvas_background.create_window(int(res_width/1.490), int(res_height/1.221), anchor=tk.N, window=self.button_info)  # 322, 232+30
 
         # Info
-        self.frame_info = tk.Frame(master=self.frame_menu, width=314, height=240, bg=background)
+        self.frame_info = tk.Frame(master=self.frame_menu, width=int(res_width/1.538), height=int(res_height/1.333), bg=background)  # 314, 240
         self.frame_info.pack_propagate(0)
-        self.image_button_close = ImageTk.PhotoImage(Image.open(icons_path + "icon-close.png").resize((25, 25), Image.ANTIALIAS))
+        self.image_button_close = ImageTk.PhotoImage(Image.open(icons_path + "icon-close.png").resize(icon_size, Image.ANTIALIAS))
         self.button_close = tk.Button(master=self.frame_info, image=self.image_button_close, bg=background, command=lambda: self.close_info())
         self.button_close.pack(side=tk.TOP, anchor=tk.E, padx=(0, 2), pady=(2, 0))
         self.text_info = tk.Text(master=self.frame_info, height=4, bg=background_dark, bd=0, highlightthickness=0)
@@ -492,7 +493,7 @@ class App:
             ret, frame = self.video.get_frame()
             if ret:
                 # .transpose(Image.FLIP_LEFT_RIGHT) to flip the image
-                self.photo = ImageTk.PhotoImage(image=Image.fromarray(frame).resize(dim_image, Image.ANTIALIAS))
+                self.photo = ImageTk.PhotoImage(image=Image.fromarray(frame).resize(image_size, Image.ANTIALIAS))
                 self.canvas_video.create_image(res_width/4, res_width/4, image=self.photo, anchor=tk.CENTER)  # this way the image is put at the center of the canvas
         self.window.after(self.delay, self.update)
 
