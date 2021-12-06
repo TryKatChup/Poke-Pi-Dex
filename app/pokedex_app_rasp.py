@@ -218,7 +218,7 @@ class App:
 
         # Name
         self.frame_name = tk.Frame(master=self.frame_right, bg=background)
-        self.frame_name.pack(side=tk.TOP, pady=(0, 2))
+        self.frame_name.pack(side=tk.TOP, pady=(int(res_height/160), int(res_height/160)))
         self.text_name = tk.StringVar()
         self.text_name.set(labels["name"][self.settings.language])
         self.label_name = tk.Label(master=self.frame_name, textvar=self.text_name, bg=background)
@@ -230,7 +230,7 @@ class App:
 
         # ID and Type(s)
         self.frame_id_types = tk.Frame(master=self.frame_right, bg=background)
-        self.frame_id_types.pack(side=tk.TOP, pady=(0, 2))
+        self.frame_id_types.pack(side=tk.TOP, pady=(0, int(res_height/160)))
         self.label_id = tk.Label(master=self.frame_id_types, text="ID: ", bg=background)
         self.label_id.pack(side=tk.LEFT)
         self.entry_id_text = tk.StringVar()
@@ -256,7 +256,7 @@ class App:
         # Description
         self.text_description = tk.Text(master=self.frame_right, height=5, bg=background_dark, bd=0, highlightthickness=0)
         self.text_description.config(font=("Helvetica", int(res_width/53.33), "normal"), state="disabled")
-        self.text_description.pack(side=tk.TOP, pady=(0, 2))
+        self.text_description.pack(side=tk.TOP, pady=(0, int(res_height/160)))
 
         # HP
         self.frame_hp = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
