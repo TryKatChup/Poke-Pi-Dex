@@ -5,6 +5,8 @@ from sklearn.preprocessing import LabelEncoder
 import typing
 import numpy as np
 from matplotlib import pyplot as plt
+import cv2
+from image_rectifier import rectify_image, rectify_image_from_file
 
 from PIL import Image
 
@@ -15,7 +17,7 @@ def get_label_encoder():
     return encoder
 
 
-def predict_top_n_pokemon(image_file, num_top_pokemon):    
+def predict_top_n_pokemon(image_filename, num_top_pokemon):
     # Predicts num_top_pokemon from image_file, using a tflite model
     TFLITE_MODEL="./vecchio_modello_nuovo_dataset_55fotoclasse_hue.tflite"
     interpreter = tf.lite.Interpreter(TFLITE_MODEL)
@@ -26,17 +28,18 @@ def predict_top_n_pokemon(image_file, num_top_pokemon):
     output_details = interpreter.get_output_details()
 
     # Load image and convert it to tensor
-    img = Image.open(image_file).resize((224, 224), Image.ANTIALIAS)
-    img = np.asarray(img, dtype=np.float32)
-
     if tf.__version__ == "2.6.0":
+        # Open image with keras.utils
         from tensorflow.keras.utils import load_img, img_to_array
-        img = load_img(image_file, target_size=(224, 224))  #"./evee_1.jpg"5
+        img = load_img(image_filename, target_size=(224, 224))  #"./evee_1.jpg"5
         img = img_to_array(img, dtype=np.float32)
-
+    else:
+        # Open image with OpenCV
+        img = cv2.imread(image_filename)
+        img = cv2.resize(img, (224, 224), interpolation=cv2.INTER_AREA)
+    img = np.asarray(img, dtype=np.float32)
     img /= 255
     img = np.expand_dims(img, axis=0)
-
     input_tensor = np.array(img, dtype=np.float32)
 
     # Load TFLite model and allocate tensors
@@ -78,3 +81,11 @@ if __name__ == "__main__":
             result_str += " \t"
         result_str += str(result[1][i])[:6] + "\n"
     print(result_str)
+
+    '''
+    # Open image with PIL.Image
+    img = Image.open(image_filename)
+    img.resize((224, 224), Image.ANTIALIAS)
+
+    img = np.asarray(img, dtype=np.float32)
+    '''
