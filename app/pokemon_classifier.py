@@ -13,13 +13,13 @@ from PIL import Image
 
 def get_label_encoder():
     encoder = LabelEncoder()
-    encoder.classes_ = np.load('./best_classes.npy')
+    encoder.classes_ = np.load('./resources/classifier_model/best_classes.npy')
     return encoder
 
 
 def predict_top_n_pokemon(image_filename, num_top_pokemon):
     # Predicts num_top_pokemon from image_file, using a tflite model
-    TFLITE_MODEL="./vecchio_modello_nuovo_dataset_55fotoclasse_hue.tflite"
+    TFLITE_MODEL="./resources/classifier_model/vecchio_modello_nuovo_dataset_55fotoclasse_hue.tflite"
     interpreter = tf.lite.Interpreter(TFLITE_MODEL)
     interpreter.allocate_tensors()
 

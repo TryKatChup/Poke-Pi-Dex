@@ -3,8 +3,8 @@ import numpy as np
 
 
 def rectify_image(img):
-    camera_matrix = np.load("camera_matrix.npy")
-    dist_coefs = np.load("distortion_coefficients.npy")
+    camera_matrix = np.load("./resources/rectification_parameters/camera_matrix.npy")
+    dist_coefs = np.load("./resources/rectification_parameters/distortion_coefficients.npy")
 
     h, w = img.shape[:2]
 

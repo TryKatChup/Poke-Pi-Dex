@@ -28,13 +28,13 @@ image_size = (int(res_width/2), int(res_width/2))  # 240x240
 icon_size = (int(res_width/19.2), int(res_width/19.2))  # 25x25
 background = "grey"
 background_dark = "#6a6a6a"
-icons_path = "utilities/icons/"
-thumbnails_path = "utilities/thumbnails/"
-sprites_path = "utilities/sprites/"
-types_path = "utilities/types/"
-cries_path = "utilities/cries (ogg)/"
+icons_path = "resources/icons/"
+thumbnails_path = "resources/thumbnails/"
+sprites_path = "resources/sprites/"
+types_path = "resources/types/"
+cries_path = "resources/cries (ogg)/"
 sprite_size = (int(res_width/12), int(res_width/12))
-labels = load_labels("labels.json")
+labels = load_labels("resources/labels.json")
 # Stats coordinates
 x1 = int(res_width / 240)   # 2
 y1 = int(res_height / 120)  # 4
@@ -55,7 +55,7 @@ class App:
         self.update_video = False
 
         # Settings Loading
-        self.settings = settings.Settings(window, ".settings.json")
+        self.settings = settings.Settings(window, "resources/.settings.json")
         self.settings.load_from_file()
         self.window.attributes("-fullscreen", self.settings.fullscreen.get())
 
@@ -82,7 +82,7 @@ class App:
         default_font.configure(family="Helvetica", size=int(res_width/40))
 
         # Repository Loading
-        self.pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
+        self.pokemon_repo = PokemonRepository("resources/first_gen_pokedex.json")
         self.loaded_pokemon = None
         self.evo_to_i = 0  # index of the multiple evolutions list
 
@@ -91,7 +91,7 @@ class App:
         self.frame_menu.pack_propagate(0)
         self.canvas_background = tk.Canvas(master=self.frame_menu, width=res_width, height=res_height, highlightbackground=background, highlightthickness=1)
         self.canvas_background.pack()
-        image = Image.open("utilities/images/menu-background.png").resize((res_width, res_height), Image.ANTIALIAS)
+        image = Image.open("resources/images/menu-background.png").resize((res_width, res_height), Image.ANTIALIAS)
         self.image_background = ImageTk.PhotoImage(image)
         self.canvas_background.create_image(0, 0, anchor=tk.NW, image=self.image_background)
         self.label_app_version = tk.Label(master=self.frame_menu, text="v" + version, width=10, bg="black", fg="grey")
@@ -741,7 +741,7 @@ class App:
     def play_description(self):
         if self.loaded_pokemon:
             print("READ DESCRIPTION\nPokémon #" + str(self.loaded_pokemon.num) + " Volume: " + str(self.mono_channel.get_volume()))
-            self.mono_channel.play(pygame.mixer.Sound("utilities/descriptions_" + self.settings.language + "/" + str(self.loaded_pokemon.num) + ".mp3"))
+            self.mono_channel.play(pygame.mixer.Sound("resources/descriptions_" + self.settings.language + "/" + str(self.loaded_pokemon.num) + ".mp3"))
         else:
             print("No pokémon has been loaded")
 
