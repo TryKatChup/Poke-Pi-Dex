@@ -14,6 +14,7 @@ from pokemon_repository import PokemonRepository
 import video_capture as vc
 from labels import load_labels
 import settings
+from image_rectifier import rectify_image
 import pokemon_classifier as pc
 # from input import register_button
 
@@ -538,13 +539,12 @@ class App:
     def search(self):
         ret, frame = self.video.get_frame()
         if ret:
-            # .transpose(Image.FLIP_LEFT_RIGHT) to flip the image
-            # self.photo = ImageTk.PhotoImage(image=Image.fromarray(frame).resize(dim_image, Image.ANTIALIAS))
             cv2.imwrite("frame.jpg", cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
+            frame = rectify_image(frame)
+            cv2.imwrite("frame_undistorted.jpg", cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
+            # if debug mode is enabled write first N (= settings.debug_mode) predictions
             if self.settings.debug_mode != 0:
-                # get first N predictions
-                # update text debug
-                result = pc.predict_top_n_pokemon("frame.jpg", self.settings.debug_mode)
+                result = pc.predict_top_n_pokemon("frame_undistorted.jpg", self.settings.debug_mode)
                 result_str = ""
                 for i in range(0, self.settings.debug_mode):
                     result_str += str(i+1) + "> " + str(result[0][i]) + "\t"
@@ -560,7 +560,8 @@ class App:
                 self.text_debug.config(state="disabled")
                 print(result_str)
                 return
-            (pkmn, confidence) = pc.predict_top_n_pokemon("frame.jpg", 1)
+            # if not in debug mode
+            (pkmn, confidence) = pc.predict_top_n_pokemon("frame_undistorted.jpg", 1)
             pkmn = str(pkmn)[2:-2]
             confidence = str(confidence)[1:-1]
             self.entry_prediction_text.set(pkmn + ": " + confidence)
