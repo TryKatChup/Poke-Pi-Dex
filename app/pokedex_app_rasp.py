@@ -35,6 +35,11 @@ types_path = "utilities/types/"
 cries_path = "utilities/cries (ogg)/"
 sprite_size = (int(res_width/12), int(res_width/12))
 labels = load_labels("labels.json")
+# Stats coordinates
+x1 = int(res_width / 240)
+y1 = int(res_height / 120)
+x2 = int(res_width / 9.6)
+y2 = int(res_height / 20)
 
 
 class App:
@@ -145,7 +150,7 @@ class App:
         # Right (Pokémon details)
         # Top
         self.frame_top = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
-        self.frame_top.pack(side=tk.TOP)
+        self.frame_top.pack(side=tk.TOP, fill=tk.X)
 
         # Top-left:
         self.frame_top_left = tk.Frame(master=self.frame_top, width=int(res_width/5.517), height=int(res_height/4.923), bg=background)  # 87, 65
@@ -154,14 +159,14 @@ class App:
         self.frame_top_left_upper = tk.Frame(master=self.frame_top_left, bg=background)
         self.frame_top_left_upper.pack(side=tk.TOP, anchor=tk.E)
         # Easter Egg: loads Blaziken, even if it's not in the first gen
-        self.button_egg = tk.Button(master=self.frame_top_left_upper, width=1, bg=background, fg=background, bd=0, highlightthickness=0, command=lambda: self.load_pokemon('Blaziken'))
+        self.button_egg = tk.Button(master=self.frame_top_left_upper, width=2, bg=background, fg=background, bd=0, highlightthickness=0, command=lambda: self.load_pokemon('Blaziken'))
         self.button_egg.pack(side=tk.LEFT, anchor=tk.N)
         # Evolution (from)
         img_size = (int(res_width/12), int(res_width/12))
         image = Image.open(sprites_path + "0.png").resize(img_size, Image.ANTIALIAS)
         self.image_evo_from = ImageTk.PhotoImage(image)
         self.label_evo_from = tk.Label(master=self.frame_top_left_upper, image=self.image_evo_from, bg=background)
-        self.label_evo_from.pack(side=tk.RIGHT, anchor=tk.N)
+        self.label_evo_from.pack(side=tk.RIGHT, anchor=tk.N, padx=(int(res_width/20), 0))
 
         # Cry
         self.frame_cry = tk.Frame(master=self.frame_top_left, width=int(res_width/5.517), bg=background)
@@ -184,7 +189,7 @@ class App:
 
         # Top Right:
         self.frame_top_right = tk.Frame(master=self.frame_top, width=int(res_width/5.517), bg=background)
-        self.frame_top_right.pack(side=tk.LEFT, anchor=tk.N)
+        self.frame_top_right.pack(side=tk.LEFT, fill=tk.X, anchor=tk.N)
         # Evolution (to)
         image = Image.open(sprites_path + "0.png").resize(sprite_size, Image.ANTIALIAS)
         self.image_evo_to = ImageTk.PhotoImage(image)
@@ -206,10 +211,10 @@ class App:
         self.frame_settings_back.pack(side=tk.RIGHT, anchor=tk.N, padx=(10, 2), pady=(1, 0))
         self.image_button_settings = ImageTk.PhotoImage(Image.open(icons_path + "icon-settings.png").resize(icon_size, Image.ANTIALIAS))
         self.button_settings = tk.Button(master=self.frame_settings_back, image=self.image_button_settings, bg=background, command=lambda: self.show_settings())
-        self.button_settings.pack(side=tk.TOP, anchor=tk.E)
+        self.button_settings.pack(side=tk.TOP, anchor=tk.E, padx=(0, 2), pady=(2, 0))
         self.image_button_back = ImageTk.PhotoImage(Image.open(icons_path + "icon-back.png").resize(icon_size, Image.ANTIALIAS))
         self.button_back = tk.Button(master=self.frame_settings_back, image=self.image_button_back, bg=background, command=lambda: self.show_menu())
-        self.button_back.pack(side=tk.TOP, anchor=tk.E)
+        self.button_back.pack(side=tk.TOP, anchor=tk.E, padx=(0, 2), pady=(2, 0))
 
         # Name
         self.frame_name = tk.Frame(master=self.frame_right, bg=background)
@@ -220,7 +225,7 @@ class App:
         self.label_name.pack(side=tk.LEFT)
         self.entry_name_text = tk.StringVar()
         self.entry_name = tk.Entry(master=self.frame_name, width=11, textvariable=self.entry_name_text, font=default_font, bg=background_dark, bd=0, highlightthickness=0)
-        self.entry_name.config(readonlybackground=background_dark)
+        self.entry_name.config(readonlybackground=background_dark, state="readonly")
         self.entry_name.pack(side=tk.LEFT)
 
         # ID and Type(s)
@@ -253,21 +258,16 @@ class App:
         self.text_description.config(font=("Helvetica", int(res_width/53.33), "normal"), state="disabled")
         self.text_description.pack(side=tk.TOP, pady=(0, 2))
 
-        # Stats coordinates
-        self.x1 = int(res_width/240)
-        self.y1 = int(res_height/120)
-        self.x2 = int(res_width/9.6)
-        self.y2 = int(res_height/20)
         # HP
         self.frame_hp = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
         self.frame_hp.pack(side=tk.TOP)
         self.text_hp = tk.StringVar(value=labels["hp"][self.settings.language])
         self.label_hp = tk.Label(master=self.frame_hp, width=8, textvar=self.text_hp, anchor=tk.W, bg=background)
         self.entry_hp_text = tk.StringVar()
-        self.entry_hp = tk.Entry(master=self.frame_hp, width=3, textvariable=self.entry_hp_text, bd=0, highlightthickness=0)
+        self.entry_hp = tk.Entry(master=self.frame_hp, width=3, textvariable=self.entry_hp_text, bd=0, highlightthickness=0, font=default_font)
         self.entry_hp.config(readonlybackground=background_dark, state="readonly")
         self.canvas_hp = tk.Canvas(master=self.frame_hp, width=int(res_width/3), height=int(res_height/17.78), bg=background, highlightthickness=0)  # highlightthickness=0 to remove the white borders
-        self.rect_hp = self.canvas_hp.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")  # x1, y1, x2, y2
+        self.rect_hp = self.canvas_hp.create_rectangle(x1, y1, x2, y2, fill="red")  # x1, y1, x2, y2
         self.label_hp.pack(side=tk.LEFT)
         self.entry_hp.pack(side=tk.LEFT)
         self.canvas_hp.pack(side=tk.LEFT)
@@ -277,10 +277,10 @@ class App:
         self.text_atk = tk.StringVar(value=labels["attack"][self.settings.language])
         self.label_attack = tk.Label(master=self.frame_attack, width=8, textvar=self.text_atk, anchor=tk.W, bg=background)  # anchor=tk.W to justify the text
         self.entry_attack_text = tk.StringVar()
-        self.entry_attack = tk.Entry(master=self.frame_attack, width=3, textvariable=self.entry_attack_text, bd=0, highlightthickness=0)
+        self.entry_attack = tk.Entry(master=self.frame_attack, width=3, textvariable=self.entry_attack_text, bd=0, highlightthickness=0, font=default_font)
         self.entry_attack.config(readonlybackground=background_dark, state="readonly")
         self.canvas_attack = tk.Canvas(master=self.frame_attack, width=int(res_width/3), height=int(res_height/17.78), bg=background, highlightthickness=0)
-        self.rect_attack = self.canvas_attack.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
+        self.rect_attack = self.canvas_attack.create_rectangle(x1, y1, x2, y2, fill="red")
         self.label_attack.pack(side=tk.LEFT)
         self.entry_attack.pack(side=tk.LEFT)
         self.canvas_attack.pack(side=tk.LEFT)
@@ -290,10 +290,10 @@ class App:
         self.text_def = tk.StringVar(value=labels["defense"][self.settings.language])
         self.label_defense = tk.Label(master=self.frame_defense, width=8, textvar=self.text_def, anchor=tk.W, bg=background)
         self.entry_defense_text = tk.StringVar()
-        self.entry_defense = tk.Entry(master=self.frame_defense, width=3, textvariable=self.entry_defense_text, bd=0, highlightthickness=0)
+        self.entry_defense = tk.Entry(master=self.frame_defense, width=3, textvariable=self.entry_defense_text, bd=0, highlightthickness=0, font=default_font)
         self.entry_defense.config(readonlybackground=background_dark, state="readonly")
         self.canvas_defense = tk.Canvas(master=self.frame_defense, width=int(res_width/3), height=int(res_height/17.78), bg=background, highlightthickness=0)
-        self.rect_defense = self.canvas_defense.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
+        self.rect_defense = self.canvas_defense.create_rectangle(x1, y1, x2, y2, fill="red")
         self.label_defense.pack(side=tk.LEFT)
         self.entry_defense.pack(side=tk.LEFT)
         self.canvas_defense.pack(side=tk.LEFT)
@@ -303,10 +303,10 @@ class App:
         self.text_spatk = tk.StringVar(value=labels["sp. atk"][self.settings.language])
         self.label_sp_atk = tk.Label(master=self.frame_sp_atk, width=8, textvar=self.text_spatk, anchor=tk.W, bg=background)
         self.entry_sp_atk_text = tk.StringVar()
-        self.entry_sp_atk = tk.Entry(master=self.frame_sp_atk, width=3, textvariable=self.entry_sp_atk_text, bd=0, highlightthickness=0)
+        self.entry_sp_atk = tk.Entry(master=self.frame_sp_atk, width=3, textvariable=self.entry_sp_atk_text, bd=0, highlightthickness=0, font=default_font)
         self.entry_sp_atk.config(readonlybackground=background_dark, state="readonly")
         self.canvas_sp_atk = tk.Canvas(master=self.frame_sp_atk, width=int(res_width/3), height=int(res_height/17.78), bg=background, highlightthickness=0)
-        self.rect_sp_atk = self.canvas_sp_atk.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
+        self.rect_sp_atk = self.canvas_sp_atk.create_rectangle(x1, y1, x2, y2, fill="red")
         self.label_sp_atk.pack(side=tk.LEFT)
         self.entry_sp_atk.pack(side=tk.LEFT)
         self.canvas_sp_atk.pack(side=tk.LEFT)
@@ -316,10 +316,10 @@ class App:
         self.text_spdef = tk.StringVar(value=labels["sp. def"][self.settings.language])
         self.label_sp_def = tk.Label(master=self.frame_sp_def, width=8, textvar=self.text_spdef, anchor=tk.W, bg=background)
         self.entry_sp_def_text = tk.StringVar()
-        self.entry_sp_def = tk.Entry(master=self.frame_sp_def, width=3, textvariable=self.entry_sp_def_text, bd=0, highlightthickness=0)
+        self.entry_sp_def = tk.Entry(master=self.frame_sp_def, width=3, textvariable=self.entry_sp_def_text, bd=0, highlightthickness=0, font=default_font)
         self.entry_sp_def.config(readonlybackground=background_dark, state="readonly")
         self.canvas_sp_def = tk.Canvas(master=self.frame_sp_def, width=int(res_width/3), height=int(res_height/17.78), bg=background, highlightthickness=0)
-        self.rect_sp_def = self.canvas_sp_def.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
+        self.rect_sp_def = self.canvas_sp_def.create_rectangle(x1, y1, x2, y2, fill="red")
         self.label_sp_def.pack(side=tk.LEFT)
         self.entry_sp_def.pack(side=tk.LEFT)
         self.canvas_sp_def.pack(side=tk.LEFT)
@@ -329,10 +329,10 @@ class App:
         self.text_speed = tk.StringVar(value=labels["speed"][self.settings.language])
         self.label_speed = tk.Label(master=self.frame_speed, width=8, textvar=self.text_speed, anchor=tk.W, bg=background)
         self.entry_speed_text = tk.StringVar()
-        self.entry_speed = tk.Entry(master=self.frame_speed, width=3, textvariable=self.entry_speed_text, bd=0, highlightthickness=0)
+        self.entry_speed = tk.Entry(master=self.frame_speed, width=3, textvariable=self.entry_speed_text, bd=0, highlightthickness=0, font=default_font)
         self.entry_speed.config(readonlybackground=background_dark, state="readonly")
         self.canvas_speed = tk.Canvas(master=self.frame_speed, width=int(res_width/3), height=int(res_height/17.78), bg=background, highlightthickness=0)
-        self.rect_speed = self.canvas_speed.create_rectangle(self.x1, self.y1, self.x2, self.y2, fill="red")
+        self.rect_speed = self.canvas_speed.create_rectangle(x1, y1, x2, y2, fill="red")
         self.label_speed.pack(side=tk.LEFT)
         self.entry_speed.pack(side=tk.LEFT)
         self.canvas_speed.pack(side=tk.LEFT)
@@ -344,66 +344,66 @@ class App:
         self.button_close.pack(side=tk.TOP, anchor=tk.E, padx=(0, 2), pady=(2, 0))
         self.text_settings = tk.StringVar(value=labels["settings"][self.settings.language])
         self.frame_label_settings = tk.Frame(self.frame_settings, width=res_width/2, bg=background)
-        self.frame_label_settings.pack(side=tk.TOP)
+        self.frame_label_settings.pack(side=tk.TOP, fill=tk.X)
         self.image_button_empty = ImageTk.PhotoImage(Image.open(icons_path + "icon-empty.png").resize(icon_size, Image.ANTIALIAS))
         self.button_label_settings = tk.Button(master=self.frame_label_settings, image=self.image_button_empty, bg=background, fg=background, bd=0, highlightthickness=0)
         self.button_label_settings.pack(side=tk.LEFT)
         self.button_label_settings.config(state=tk.DISABLED)
         self.label_settings = tk.Label(master=self.frame_label_settings, textvar=self.text_settings, bg=background)
-        self.label_settings.config(font=("Helvetica", 16, "bold italic"))
-        self.label_settings.pack(side=tk.LEFT, padx=(45, 45))
+        self.label_settings.config(font=("Helvetica", int(res_width/30), "bold italic"))
+        self.label_settings.pack(side=tk.LEFT)
         self.image_button_debug = ImageTk.PhotoImage(Image.open(icons_path + "icon-bug.png").resize(icon_size, Image.ANTIALIAS))
         self.button_debug = tk.Button(master=self.frame_label_settings, image=self.image_button_debug, bg=background, command=lambda: self.debug_counter())
-        self.button_debug.pack(side=tk.RIGHT)
+        self.button_debug.pack(side=tk.RIGHT, padx=(0, 2), pady=(2, 0))
 
         # Language Picker
         self.frame_language = tk.Frame(master=self.frame_settings, width=res_width/2, bg=background)
-        self.frame_language.pack(side=tk.TOP, anchor=tk.W, pady=(5, 0), padx=(10, 0))
+        self.frame_language.pack(side=tk.TOP, anchor=tk.W, fill=tk.X, pady=(5, 0), padx=(10, 0))
         self.text_language = tk.StringVar(value=labels["language"][self.settings.language])
         self.label_language = tk.Label(master=self.frame_language, textvar=self.text_language, width=12, anchor=tk.W, bg=background)
-        self.label_language.pack(side=tk.LEFT, padx=(0, 10))
+        self.label_language.pack(side=tk.LEFT)
         self.combobox_language_text = tk.StringVar()
-        self.combobox_language = ttk.Combobox(master=self.frame_language, state="readonly", textvariable=self.combobox_language_text, values=list(labels["languages"].keys()), width=9)
+        self.combobox_language = ttk.Combobox(master=self.frame_language, state="readonly", textvariable=self.combobox_language_text, values=list(labels["languages"].keys()), width=9, font=default_font)
         self.combobox_language.current(0)
-        self.combobox_language.pack(side=tk.LEFT)
+        self.combobox_language.pack(side=tk.RIGHT, padx=(0, 10))
         self.combobox_language.bind("<<ComboboxSelected>>", lambda e: self.frame_language.focus())  # just for aesthetics
         # Toggle Fullscreen
         self.frame_fullscreen = tk.Frame(master=self.frame_settings, width=res_width/2, bg=background)
-        self.frame_fullscreen.pack(side=tk.TOP, anchor=tk.W, pady=(5, 0), padx=(10, 0))
+        self.frame_fullscreen.pack(side=tk.TOP, anchor=tk.W, fill=tk.X, pady=(5, 0), padx=(10, 0))
         self.check_fullscreen = tk.Checkbutton(master=self.frame_fullscreen, variable=self.settings.fullscreen, onvalue=1, offvalue=0, bg=background, bd=0, highlightthickness=0, fg="black")
         self.text_fullscreen = tk.StringVar(value=labels["full screen"][self.settings.language])
         self.label_fullscreen = tk.Label(master=self.frame_fullscreen, textvar=self.text_fullscreen, width=12, anchor=tk.W, bg=background)
-        self.label_fullscreen.pack(side=tk.LEFT, padx=(0, 90))
+        self.label_fullscreen.pack(side=tk.LEFT)
         self.check_fullscreen.select() if self.settings.fullscreen.get() == 1 else self.check_fullscreen.deselect()
-        self.check_fullscreen.pack(side=tk.LEFT)
+        self.check_fullscreen.pack(side=tk.RIGHT, padx=(0, 10))
         # Toggle Description Voice
         self.var_descr_voice = tk.IntVar(value=self.settings.descr_voice)
         self.frame_descr_voice = tk.Frame(master=self.frame_settings, width=res_width / 2, bg=background)
-        self.frame_descr_voice.pack(side=tk.TOP, anchor=tk.W, pady=(5, 0), padx=(10, 0))
+        self.frame_descr_voice.pack(side=tk.TOP, anchor=tk.W, fill=tk.X, pady=(5, 0), padx=(10, 0))
         self.check_descr_voice = tk.Checkbutton(master=self.frame_descr_voice, variable=self.var_descr_voice, onvalue=1, offvalue=0, bg=background, bd=0, highlightthickness=0, fg="black")
         self.text_descr_voice = tk.StringVar(value=labels["descr voice"][self.settings.language])
         self.label_descr_voice = tk.Label(master=self.frame_descr_voice, textvar=self.text_descr_voice, width=12, anchor=tk.W, bg=background)
-        self.label_descr_voice.pack(side=tk.LEFT, padx=(0, 90))
+        self.label_descr_voice.pack(side=tk.LEFT)
         self.check_descr_voice.select() if self.var_descr_voice.get() == 1 else self.check_descr_voice.deselect()
-        self.check_descr_voice.pack(side=tk.LEFT)
+        self.check_descr_voice.pack(side=tk.RIGHT, padx=(0, 10))
         # Toggle Flip Image
         self.frame_flip = tk.Frame(master=self.frame_settings, width=res_width/2, bg=background)
-        self.frame_flip.pack(side=tk.TOP, anchor=tk.W, pady=(5, 0), padx=(10, 0))
+        self.frame_flip.pack(side=tk.TOP, anchor=tk.W, fill=tk.X, pady=(5, 0), padx=(10, 0))
         self.check_flip = tk.Checkbutton(master=self.frame_flip, onvalue=1, offvalue=0, bg=background, bd=0, highlightthickness=0, fg="black")
         self.text_flip = tk.StringVar(value=labels["flip image"][self.settings.language])
         self.label_flip = tk.Label(master=self.frame_flip, textvar=self.text_flip, width=12, anchor=tk.W, bg=background)
-        self.label_flip.pack(side=tk.LEFT, padx=(0, 90))
+        self.label_flip.pack(side=tk.LEFT)
         # self.check_flip.select() if self.settings.fullscreen.get() == 1 else self.check_fullscreen.deselect()
-        self.check_flip.pack(side=tk.LEFT)
+        self.check_flip.pack(side=tk.RIGHT, padx=(0, 10))
         # Volume
         self.frame_volume = tk.Frame(master=self.frame_settings, width=res_width/2, bg=background)
-        self.frame_volume.pack(side=tk.TOP, anchor=tk.W, pady=(5, 0), padx=(10, 0))
+        self.frame_volume.pack(side=tk.TOP, anchor=tk.W, fill=tk.X, pady=(5, 0), padx=(10, 0))
         self.text_volume = tk.StringVar(value=labels["volume"][self.settings.language])
         self.label_volume = tk.Label(master=self.frame_volume, textvar=self.text_volume, width=12, anchor=tk.W, bg=background)
-        self.label_volume.pack(side=tk.LEFT, padx=(0, 10))
+        self.label_volume.pack(side=tk.LEFT)
         self.scale_volume = tk.Scale(master=self.frame_volume, from_=0, to=100, tickinterval=100, orient=tk.HORIZONTAL, bg=background, bd=0, highlightthickness=0)
         self.scale_volume.set(50)
-        self.scale_volume.pack(side=tk.LEFT)
+        self.scale_volume.pack(side=tk.RIGHT, padx=(0, 10))
         # Save/Cancel buttons
         self.frame_settings_controls = tk.Frame(master=self.frame_settings, width=res_width/2, bg=background)
         self.frame_settings_controls.pack(side=tk.BOTTOM, pady=(0, 10))
@@ -506,7 +506,8 @@ class App:
     def reset_pokemon(self):
         print("RESET POKÉMON DETAILS")
         self.loaded_pokemon = None
-        self.thumbnail = ImageTk.PhotoImage(Image.open(thumbnails_path + "0.png").resize((50, 50), Image.ANTIALIAS))
+        img_size = (int(res_width / 7.385), int(res_width / 7.385))
+        self.thumbnail = ImageTk.PhotoImage(Image.open(thumbnails_path + "0.png").resize(img_size, Image.ANTIALIAS))
         self.label_thumb.configure(image=self.thumbnail)
         self.entry_name_text.set("")
         self.entry_id_text.set("")
@@ -518,26 +519,26 @@ class App:
         self.text_description.delete('1.0', tk.END)
         self.text_description.config(state="disabled")
         self.entry_hp_text.set("")
-        self.canvas_hp.coords(self.rect_hp, self.x1, self.y1, 5, self.y2)
+        self.canvas_hp.coords(self.rect_hp, x1, y1, 5, y2)
         self.canvas_hp.itemconfig(self.rect_hp, fill=self.get_stat_color(0))
         self.entry_attack_text.set("")
-        self.canvas_attack.coords(self.rect_hp, self.x1, self.y1, 5, self.y2)
+        self.canvas_attack.coords(self.rect_hp, x1, y1, 5, y2)
         self.canvas_attack.itemconfig(self.rect_attack, fill=self.get_stat_color(0))
         self.entry_defense_text.set("")
-        self.canvas_defense.coords(self.rect_hp, self.x1, self.y1, 5, self.y2)
+        self.canvas_defense.coords(self.rect_hp, x1, y1, 5, y2)
         self.canvas_defense.itemconfig(self.rect_defense, fill=self.get_stat_color(0))
         self.entry_sp_atk_text.set("")
-        self.canvas_sp_atk.coords(self.rect_hp, self.x1, self.y1, 5, self.y2)
+        self.canvas_sp_atk.coords(self.rect_hp, x1, y1, 5, y2)
         self.canvas_sp_atk.itemconfig(self.rect_sp_atk, fill=self.get_stat_color(0))
         self.entry_sp_def_text.set("")
-        self.canvas_sp_def.coords(self.rect_hp, self.x1, self.y1, 5, self.y2)
+        self.canvas_sp_def.coords(self.rect_hp, x1, y1, 5, y2)
         self.canvas_sp_def.itemconfig(self.rect_sp_def, fill=self.get_stat_color(0))
         self.entry_speed_text.set("")
-        self.canvas_speed.coords(self.rect_hp, self.x1, self.y1, 5, self.y2)
+        self.canvas_speed.coords(self.rect_hp, x1, y1, 5, y2)
         self.canvas_speed.itemconfig(self.rect_speed, fill=self.get_stat_color(0))
-        self.image_evo_to = ImageTk.PhotoImage(Image.open(sprites_path + "0.png").resize((40, 40), Image.ANTIALIAS))
+        self.image_evo_to = ImageTk.PhotoImage(Image.open(sprites_path + "0.png").resize(sprite_size, Image.ANTIALIAS))
         self.label_evo_to.configure(image=self.image_evo_to)
-        self.image_evo_from = ImageTk.PhotoImage(Image.open(sprites_path + "0.png").resize((40, 40), Image.ANTIALIAS))
+        self.image_evo_from = ImageTk.PhotoImage(Image.open(sprites_path + "0.png").resize(sprite_size, Image.ANTIALIAS))
         self.label_evo_from.configure(image=self.image_evo_from)
         self.entry_prediction_text.set("")
 
@@ -595,7 +596,8 @@ class App:
     # update image
     def load_image(self):
         path_image = thumbnails_path + str(self.loaded_pokemon.num) + ".png"
-        image = Image.open(path_image).resize((50, 50), Image.ANTIALIAS)
+        img_size = (int(res_width / 7.385), int(res_width / 7.385))
+        image = Image.open(path_image).resize(img_size, Image.ANTIALIAS)
         self.thumbnail = ImageTk.PhotoImage(image)
         self.label_thumb.configure(image=self.thumbnail)
 
@@ -644,27 +646,27 @@ class App:
         print("Stats:")
         s_hp = self.loaded_pokemon.stats["HP"]
         self.entry_hp_text.set(s_hp)
-        self.canvas_hp.coords(self.rect_hp, self.x1, self.y1, s_hp / 2, self.y2)
+        self.canvas_hp.coords(self.rect_hp, x1, y1, s_hp / 2, y2)
         self.canvas_hp.itemconfig(self.rect_hp, fill=self.get_stat_color(s_hp))
         s_atk = self.loaded_pokemon.stats["Attack"]
         self.entry_attack_text.set(s_atk)
-        self.canvas_attack.coords(self.rect_hp, self.x1, self.y1, s_atk / 2, self.y2)
+        self.canvas_attack.coords(self.rect_hp, x1, y1, s_atk / 2, y2)
         self.canvas_attack.itemconfig(self.rect_attack, fill=self.get_stat_color(s_atk))
         s_def = self.loaded_pokemon.stats["Defense"]
         self.entry_defense_text.set(s_def)
-        self.canvas_defense.coords(self.rect_hp, self.x1, self.y1, s_def / 2, self.y2)
+        self.canvas_defense.coords(self.rect_hp, x1, y1, s_def / 2, y2)
         self.canvas_defense.itemconfig(self.rect_defense, fill=self.get_stat_color(s_def))
         s_sp_atk = self.loaded_pokemon.stats["Sp. Attack"]
         self.entry_sp_atk_text.set(s_sp_atk)
-        self.canvas_sp_atk.coords(self.rect_hp, self.x1, self.y1, s_sp_atk / 2, self.y2)
+        self.canvas_sp_atk.coords(self.rect_hp, x1, y1, s_sp_atk / 2, y2)
         self.canvas_sp_atk.itemconfig(self.rect_sp_atk, fill=self.get_stat_color(s_sp_atk))
         s_sp_def = self.loaded_pokemon.stats["Sp. Defense"]
         self.entry_sp_def_text.set(s_sp_def)
-        self.canvas_sp_def.coords(self.rect_hp, self.x1, self.y1, s_sp_def / 2, self.y2)
+        self.canvas_sp_def.coords(self.rect_hp, x1, y1, s_sp_def / 2, y2)
         self.canvas_sp_def.itemconfig(self.rect_sp_def, fill=self.get_stat_color(s_sp_def))
         s_speed = self.loaded_pokemon.stats["Speed"]
         self.entry_speed_text.set(s_speed)
-        self.canvas_speed.coords(self.rect_hp, self.x1, self.y1, s_speed / 2, self.y2)
+        self.canvas_speed.coords(self.rect_hp, x1, y1, s_speed / 2, y2)
         self.canvas_speed.itemconfig(self.rect_speed, fill=self.get_stat_color(s_speed))
         print("HP:\t\t\t" + str(s_hp) + "\nAttack:\t\t" + str(s_atk) + "\nDefense:\t" + str(s_def) + "\nSp. Atk:\t" +
               str(s_sp_atk) + "\nSp. Def:\t" + str(s_sp_def) + "\nSpeed:\t\t" + str(s_speed))
@@ -677,7 +679,7 @@ class App:
             path_image = sprites_path + str(evo_from) + ".png"
         else:
             path_image = sprites_path + "0.png"
-        self.image_evo_from = ImageTk.PhotoImage(Image.open(path_image).resize((40, 40), Image.ANTIALIAS))
+        self.image_evo_from = ImageTk.PhotoImage(Image.open(path_image).resize(sprite_size, Image.ANTIALIAS))
         self.label_evo_from.configure(image=self.image_evo_from)
 
         # to
@@ -692,12 +694,12 @@ class App:
                 self.button_evo_to_next.config(state=tk.NORMAL)
                 self.evo_to_i = 0
                 path_image = sprites_path + str(evo_to[0]) + ".png"
-                self.image_evo_to = ImageTk.PhotoImage(Image.open(path_image).resize((40, 40), Image.ANTIALIAS))
+                self.image_evo_to = ImageTk.PhotoImage(Image.open(path_image).resize(sprite_size, Image.ANTIALIAS))
                 self.label_evo_to.configure(image=self.image_evo_to)
                 return
         else:
             path_image = sprites_path + "0.png"
-        self.image_evo_to = ImageTk.PhotoImage(Image.open(path_image).resize((40, 40), Image.ANTIALIAS))
+        self.image_evo_to = ImageTk.PhotoImage(Image.open(path_image).resize(sprite_size, Image.ANTIALIAS))
         self.label_evo_to.configure(image=self.image_evo_to)
 
     # update cry
@@ -709,7 +711,7 @@ class App:
         self.evo_to_i -= 1
         evo_to = self.pokemon_repo.pokemon[self.loaded_pokemon.name].evolutions["to"]
         print("Show previous evolution: " + str(evo_to[self.evo_to_i]))
-        self.image_evo_to = ImageTk.PhotoImage(Image.open(sprites_path + str(evo_to[self.evo_to_i]) + ".png").resize((40, 40), Image.ANTIALIAS))
+        self.image_evo_to = ImageTk.PhotoImage(Image.open(sprites_path + str(evo_to[self.evo_to_i]) + ".png").resize(sprite_size, Image.ANTIALIAS))
         self.label_evo_to.configure(image=self.image_evo_to)
         self.button_evo_to_next.config(state=tk.NORMAL)
         if self.evo_to_i == 0:
@@ -720,7 +722,7 @@ class App:
         self.evo_to_i += 1
         evo_to = self.pokemon_repo.pokemon[self.loaded_pokemon.name].evolutions["to"]
         print("Show next evolution: " + str(evo_to[self.evo_to_i]))
-        self.image_evo_to = ImageTk.PhotoImage(Image.open(sprites_path + str(evo_to[self.evo_to_i]) + ".png").resize((40, 40), Image.ANTIALIAS))
+        self.image_evo_to = ImageTk.PhotoImage(Image.open(sprites_path + str(evo_to[self.evo_to_i]) + ".png").resize(sprite_size, Image.ANTIALIAS))
         self.label_evo_to.configure(image=self.image_evo_to)
         self.button_evo_to_prev.config(state=tk.NORMAL)
         if self.evo_to_i + 1 == len(evo_to):
