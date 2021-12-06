@@ -3,7 +3,7 @@
 	"it": "Italiano",
 	"start": {"en": "Start", "it": "Avvia"},
     "quit": {"en": "Quit", "it": "Esci"},
-    "info": {"en": "Application developed by Michele Righi & Karina Chichifoi\nusing ...", "it": "Applicazione sviluppata da Michele Righi e Karina Chichifoi\nutilizzando ..."},
+    "info": {"en": "Application developed by\nMichele Righi & Karina Chichifoi\nusing ...", "it": "Applicazione sviluppata da\nMichele Righi e Karina Chichifoi\nutilizzando ..."},
     "search": {"en": "Search", "it": "Cerca"},
     "screenshot": {"en": "Screenshot", "it": "Schermata"},
     "cry": {"en": "Cry: ", "it": "Verso: "},

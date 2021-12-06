@@ -117,7 +117,7 @@ class App:
         self.button_close.pack(side=tk.TOP, anchor=tk.E, padx=(0, 2), pady=(2, 0))
         self.text_info = tk.Text(master=self.frame_info, height=4, bg=background_dark, bd=0, highlightthickness=0)
         self.text_info.tag_configure('tag-center', justify='center')
-        self.text_info.pack(side=tk.TOP, padx=10, pady=10)
+        self.text_info.pack(side=tk.TOP, padx=int(res_width/48), pady=int(res_width/48))
         self.text_info.insert('1.0', labels["info"][self.settings.language], 'tag-center')
         self.text_info.config(state="disabled")
         self.window_info = None
@@ -132,17 +132,17 @@ class App:
         self.entry_prediction_text = tk.StringVar()
         self.entry_prediction = tk.Entry(master=self.frame_left, width=20, textvar=self.entry_prediction_text, bg=background, fg=background_dark, bd=0, highlightthickness=0)
         self.entry_prediction.config(readonlybackground=background, state="readonly")
-        self.entry_prediction.pack(side=tk.TOP, pady=(10, 2))
+        self.entry_prediction.pack(side=tk.TOP, pady=(int(res_height/32), int(res_height/160)))
 
         self.canvas_video = tk.Canvas(master=self.frame_left, width=res_width/2, height=res_width/2, bg=background, highlightbackground=background, highlightthickness=1)
-        self.canvas_video.pack(side=tk.TOP)  #, pady=((res_height-(res_width/2))/2, 0))
+        self.canvas_video.pack(side=tk.TOP)
 
         self.frame_video_controls = tk.Frame(master=self.frame_left, bg=background)
-        self.frame_video_controls.pack(side=tk.TOP, pady=(2, 0))
+        self.frame_video_controls.pack(side=tk.TOP, pady=(int(res_height/160), 0))
         self.text_search = tk.StringVar()
         self.text_search.set(labels["search"][self.settings.language])
         self.button_search = tk.Button(master=self.frame_video_controls, textvar=self.text_search, width=10, bg=background, activebackground=background, command=lambda: self.search())  # self.load_pokemon(self.entry_name_text.get())
-        self.button_search.pack(side=tk.LEFT, anchor=tk.CENTER, padx=(0, 10))
+        self.button_search.pack(side=tk.LEFT, anchor=tk.CENTER, padx=(0, int(res_width/10)))
         self.text_screenshot = tk.StringVar()
         self.text_screenshot.set(labels["screenshot"][self.settings.language])
         self.button_screenshot = tk.Button(master=self.frame_video_controls, textvar=self.text_screenshot, width=10, bg=background, activebackground=background, command=lambda: self.save_screenshot())
@@ -219,7 +219,7 @@ class App:
 
         # Name
         self.frame_name = tk.Frame(master=self.frame_right, bg=background)
-        self.frame_name.pack(side=tk.TOP, pady=(int(res_height/160), int(res_height/160)))
+        self.frame_name.pack(side=tk.TOP, pady=(int(res_height/80), int(res_height/80)))
         self.text_name = tk.StringVar()
         self.text_name.set(labels["name"][self.settings.language])
         self.label_name = tk.Label(master=self.frame_name, textvar=self.text_name, bg=background)
@@ -231,7 +231,7 @@ class App:
 
         # ID and Type(s)
         self.frame_id_types = tk.Frame(master=self.frame_right, bg=background)
-        self.frame_id_types.pack(side=tk.TOP, pady=(0, int(res_height/160)))
+        self.frame_id_types.pack(side=tk.TOP, pady=(0, int(res_height/80)))
         self.label_id = tk.Label(master=self.frame_id_types, text="ID: ", bg=background)
         self.label_id.pack(side=tk.LEFT)
         self.entry_id_text = tk.StringVar()
@@ -257,7 +257,7 @@ class App:
         # Description
         self.text_description = tk.Text(master=self.frame_right, height=5, bg=background_dark, bd=0, highlightthickness=0)
         self.text_description.config(font=("Helvetica", int(res_width/48), "normal"), state="disabled")
-        self.text_description.pack(side=tk.TOP, pady=(0, int(res_height/160)), padx=(0, 5))
+        self.text_description.pack(side=tk.TOP, pady=(0, int(res_height/80)), padx=(0, 5))
 
         # HP
         self.frame_hp = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
@@ -740,7 +740,7 @@ class App:
 
     def play_description(self):
         if self.loaded_pokemon:
-            print("READ DESCRIPTION\nPokémon #" + str(self.loaded_pokemon.num) + "Volume: " + str(self.mono_channel.get_volume()))
+            print("READ DESCRIPTION\nPokémon #" + str(self.loaded_pokemon.num) + " Volume: " + str(self.mono_channel.get_volume()))
             self.mono_channel.play(pygame.mixer.Sound("utilities/descriptions_" + self.settings.language + "/" + str(self.loaded_pokemon.num) + ".mp3"))
         else:
             print("No pokémon has been loaded")
