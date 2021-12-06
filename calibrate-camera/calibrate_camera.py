@@ -4,7 +4,15 @@ import argparse
 from glob import glob
 import numpy as np
 import cv2
-from common import splitfn
+# from common import splitfn
+
+
+def splitfn(file_path):
+    file_path_parts = file_path.split(sep=os.sep)
+    _path = os.path.join(*file_path_parts[:-1])
+    file_name = file_path_parts[-1]
+    file_name_parts = file_name.split(sep='.')
+    return _path, file_name_parts[0], file_name_parts[1]
 
 
 def calibrate_camera(
@@ -103,6 +111,12 @@ def calibrate_camera(
     #   N: same as before;
     #   3: are coordinates of 3D translation vectors.
 
+    # Save parameters to file
+    np.save("camera_matrix.npy", camera_matrix)
+    # print(np.load("parameters.npy"))  # test
+    np.save("distortion_coefficients.npy", dist_coefs)
+    # print(np.load("distortion_coefficients.npy"))  # test
+
     print("\nRMS:", rms)
     print("camera matrix:\n", camera_matrix)
     print("distortion coefficients: ", dist_coefs.ravel())
@@ -122,7 +136,7 @@ def calibrate_camera(
             continue
 
         h, w = img.shape[:2]
-        # Undistort an image
+        # Undistort the image
         newcameramtx, roi = cv2.getOptimalNewCameraMatrix(camera_matrix, dist_coefs, (w, h), 1, (w, h))
         dst = cv2.undistort(img, camera_matrix, dist_coefs, None, newcameramtx)
 
