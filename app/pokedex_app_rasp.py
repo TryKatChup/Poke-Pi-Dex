@@ -79,7 +79,7 @@ class App:
         self.mono_channel.set_volume(self.settings.volume)
 
         default_font = font.nametofont("TkDefaultFont")
-        default_font.configure(family="Helvetica", size=int(res_width/48))
+        default_font.configure(family="Helvetica", size=int(res_width/40))
 
         # Repository Loading
         self.pokemon_repo = PokemonRepository("utilities/first_gen_pokedex.json")
@@ -255,7 +255,7 @@ class App:
 
         # Description
         self.text_description = tk.Text(master=self.frame_right, height=5, bg=background_dark, bd=0, highlightthickness=0)
-        self.text_description.config(font=("Helvetica", int(res_width/53.33), "normal"), state="disabled")
+        self.text_description.config(font=("Helvetica", int(res_width/48), "normal"), state="disabled")
         self.text_description.pack(side=tk.TOP, pady=(0, int(res_height/160)))
 
         # HP
