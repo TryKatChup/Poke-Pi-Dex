@@ -36,10 +36,10 @@ cries_path = "utilities/cries (ogg)/"
 sprite_size = (int(res_width/12), int(res_width/12))
 labels = load_labels("labels.json")
 # Stats coordinates
-x1 = int(res_width / 240)
-y1 = int(res_height / 120)
-x2 = int(res_width / 9.6)
-y2 = int(res_height / 20)
+x1 = int(res_width / 240)   # 2
+y1 = int(res_height / 120)  # 4
+x2 = int(res_width / 9.6)   # 50
+y2 = int(res_height / 20)   # 16
 
 
 class App:
@@ -118,7 +118,8 @@ class App:
         self.text_info = tk.Text(master=self.frame_info, height=4, bg=background_dark, bd=0, highlightthickness=0)
         self.text_info.tag_configure('tag-center', justify='center')
         self.text_info.pack(side=tk.TOP, padx=10, pady=10)
-        self.text_info.insert('end', labels["info"][self.settings.language], 'tag-center')
+        self.text_info.insert('1.0', labels["info"][self.settings.language], 'tag-center')
+        self.text_info.config(state="disabled")
         self.window_info = None
 
         # Pokédex App
@@ -256,7 +257,7 @@ class App:
         # Description
         self.text_description = tk.Text(master=self.frame_right, height=5, bg=background_dark, bd=0, highlightthickness=0)
         self.text_description.config(font=("Helvetica", int(res_width/48), "normal"), state="disabled")
-        self.text_description.pack(side=tk.TOP, pady=(0, int(res_height/160)))
+        self.text_description.pack(side=tk.TOP, pady=(0, int(res_height/160)), padx=(0, 5))
 
         # HP
         self.frame_hp = tk.Frame(master=self.frame_right, width=res_width/2, bg=background)
@@ -421,10 +422,11 @@ class App:
         self.button_close_debug.pack(side=tk.TOP, anchor=tk.E)
         self.text_debug_headers = tk.Text(master=self.frame_debug, height=1, width=24, bg="black", fg="white", bd=0, highlightthickness=0)
         self.text_debug_headers.insert('1.0', "#  Pokémon\t\t%")
-        self.text_debug_headers.config(font="TkFixedFont", state="disabled")
+        fixed_font = ("TkFixedFont", 14, "normal")
+        self.text_debug_headers.config(font=fixed_font, state="disabled")
         self.text_debug_headers.pack(side=tk.TOP)
         self.text_debug = tk.Text(master=self.frame_debug, height=14, width=24, bg="black", fg="white", bd=0, highlightthickness=0)
-        self.text_debug.config(font="TkFixedFont", state="disabled")
+        self.text_debug.config(font=fixed_font, state="disabled")
         self.text_debug.pack(side=tk.TOP)
 
 
@@ -511,30 +513,31 @@ class App:
         self.label_thumb.configure(image=self.thumbnail)
         self.entry_name_text.set("")
         self.entry_id_text.set("")
-        self.image_type1 = ImageTk.PhotoImage(Image.open(types_path + "Empty_en.png").resize((50, 18), Image.ANTIALIAS))
+        img_size = (int(res_width / 9.38), int(res_height / 14.28))
+        self.image_type1 = ImageTk.PhotoImage(Image.open(types_path + "Empty_en.png").resize(img_size, Image.ANTIALIAS))
         self.canvas_types.itemconfig(self.canvas_image_type1, image=self.image_type1)
-        self.image_type2 = ImageTk.PhotoImage(Image.open(types_path + "Empty_en.png").resize((50, 18), Image.ANTIALIAS))
+        self.image_type2 = ImageTk.PhotoImage(Image.open(types_path + "Empty_en.png").resize(img_size, Image.ANTIALIAS))
         self.canvas_types.itemconfig(self.canvas_image_type2, image=self.image_type2)
         self.text_description.config(state="normal")
         self.text_description.delete('1.0', tk.END)
         self.text_description.config(state="disabled")
         self.entry_hp_text.set("")
-        self.canvas_hp.coords(self.rect_hp, x1, y1, 5, y2)
+        self.canvas_hp.coords(self.rect_hp, x1, y1, int(res_width/96), y2)
         self.canvas_hp.itemconfig(self.rect_hp, fill=self.get_stat_color(0))
         self.entry_attack_text.set("")
-        self.canvas_attack.coords(self.rect_hp, x1, y1, 5, y2)
+        self.canvas_attack.coords(self.rect_hp, x1, y1, int(res_width/96), y2)
         self.canvas_attack.itemconfig(self.rect_attack, fill=self.get_stat_color(0))
         self.entry_defense_text.set("")
-        self.canvas_defense.coords(self.rect_hp, x1, y1, 5, y2)
+        self.canvas_defense.coords(self.rect_hp, x1, y1, int(res_width/96), y2)
         self.canvas_defense.itemconfig(self.rect_defense, fill=self.get_stat_color(0))
         self.entry_sp_atk_text.set("")
-        self.canvas_sp_atk.coords(self.rect_hp, x1, y1, 5, y2)
+        self.canvas_sp_atk.coords(self.rect_hp, x1, y1, int(res_width/96), y2)
         self.canvas_sp_atk.itemconfig(self.rect_sp_atk, fill=self.get_stat_color(0))
         self.entry_sp_def_text.set("")
-        self.canvas_sp_def.coords(self.rect_hp, x1, y1, 5, y2)
+        self.canvas_sp_def.coords(self.rect_hp, x1, y1, int(res_width/96), y2)
         self.canvas_sp_def.itemconfig(self.rect_sp_def, fill=self.get_stat_color(0))
         self.entry_speed_text.set("")
-        self.canvas_speed.coords(self.rect_hp, x1, y1, 5, y2)
+        self.canvas_speed.coords(self.rect_hp, x1, y1, int(res_width/96), y2)
         self.canvas_speed.itemconfig(self.rect_speed, fill=self.get_stat_color(0))
         self.image_evo_to = ImageTk.PhotoImage(Image.open(sprites_path + "0.png").resize(sprite_size, Image.ANTIALIAS))
         self.label_evo_to.configure(image=self.image_evo_to)
@@ -774,6 +777,10 @@ class App:
     def update_language(self):
         self.text_start.set(labels["start"][self.settings.language])
         self.text_quit.set(labels["quit"][self.settings.language])
+        self.text_info.config(state="normal")
+        self.text_info.delete('1.0', tk.END)
+        self.text_info.insert('1.0', labels["info"][self.settings.language], 'tag-center')
+        self.text_info.config(state="disabled")
         self.text_search.set(labels["search"][self.settings.language])
         self.text_screenshot.set(labels["screenshot"][self.settings.language])
         self.text_cry.set(labels["cry"][self.settings.language])
@@ -819,19 +826,19 @@ class App:
 
     # get RGB color from stat
     def get_stat_color(self, stat):
-        if 0 <= stat < 25:
+        if 0 <= stat < int(res_width/19.2):     # 25
             return "#ff0000"
-        elif 25 <= stat < 50:
+        elif 25 <= stat < int(res_width/9.6):   # 50
             return "#ff5500"
-        elif 50 <= stat < 75:
+        elif 50 <= stat < int(res_width/6.4):   # 75
             return "#ffaa00"
-        elif 75 <= stat < 100:
+        elif 75 <= stat < int(res_width/4.8):   # 100
             return "#ffff00"
-        elif 100 <= stat < 125:
+        elif 100 <= stat < int(res_width/3.84): # 125
             return "#7fff00"
-        elif 125 <= stat < 150:
+        elif 125 <= stat < int(res_width/3.2):  # 150
             return "#00ff00"
-        elif 150 <= stat < 200:
+        elif 150 <= stat < int(res_width/2.4):  # 200
             return "#00ff80"
         return "#00ffff"
 
