@@ -864,5 +864,7 @@ class App:
         exit(0)
 
 
-app = App(tk.Tk(), "pokédex")
-app.start()
+# Poké-Pi-Dex App
+if __name__ == "__main__":
+    app = App(tk.Tk(), "pokédex")
+    app.start()
