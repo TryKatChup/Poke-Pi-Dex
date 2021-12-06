@@ -142,7 +142,7 @@ class App:
         self.text_search = tk.StringVar()
         self.text_search.set(labels["search"][self.settings.language])
         self.button_search = tk.Button(master=self.frame_video_controls, textvar=self.text_search, width=10, bg=background, activebackground=background, command=lambda: self.search())  # self.load_pokemon(self.entry_name_text.get())
-        self.button_search.pack(side=tk.LEFT, anchor=tk.CENTER, padx=(0, int(res_width/10)))
+        self.button_search.pack(side=tk.LEFT, anchor=tk.CENTER, padx=(0, int(res_width/48)))
         self.text_screenshot = tk.StringVar()
         self.text_screenshot.set(labels["screenshot"][self.settings.language])
         self.button_screenshot = tk.Button(master=self.frame_video_controls, textvar=self.text_screenshot, width=10, bg=background, activebackground=background, command=lambda: self.save_screenshot())
