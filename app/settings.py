@@ -3,6 +3,7 @@ import tkinter as tk
 
 languages = {'en', 'it'}
 
+
 class Settings:
     def __init__(self, window, filename):
         self.filename = filename

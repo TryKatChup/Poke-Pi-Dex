@@ -429,7 +429,6 @@ class App:
         self.text_debug.config(font=fixed_font, state="disabled")
         self.text_debug.pack(side=tk.TOP)
 
-
     def start(self):
         # Show the App Menu
         self.show_menu()
@@ -502,7 +501,7 @@ class App:
             if ret:
                 # .transpose(Image.FLIP_LEFT_RIGHT) to flip the image
                 self.photo = ImageTk.PhotoImage(image=Image.fromarray(frame).resize(image_size, Image.ANTIALIAS))
-                self.canvas_video.create_image(res_width/4, res_width/4, image=self.photo, anchor=tk.CENTER)  # this way the image is put at the center of the canvas
+                self.canvas_video.create_image(res_width/4, res_width/4, image=self.photo, anchor=tk.CENTER)
         self.window.after(self.delay, self.update)
 
     def reset_pokemon(self):
