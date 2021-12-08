@@ -704,10 +704,6 @@ class App:
         self.image_evo_to = ImageTk.PhotoImage(Image.open(path_image).resize(sprite_size, Image.ANTIALIAS))
         self.label_evo_to.configure(image=self.image_evo_to)
 
-    # update cry
-    def load_cry(self):
-        self.cry = pygame.mixer.Sound(cries_path + str(self.loaded_pokemon.num) + ".ogg")
-
     # show previous "to" evolution (e.g. Eevee multiple evolutions)
     def show_prev_evo_to(self):
         self.evo_to_i -= 1
@@ -729,6 +725,10 @@ class App:
         self.button_evo_to_prev.config(state=tk.NORMAL)
         if self.evo_to_i + 1 == len(evo_to):
             self.button_evo_to_next.config(state=tk.DISABLED)
+
+    # update cry
+    def load_cry(self):
+        self.cry = pygame.mixer.Sound(cries_path + str(self.loaded_pokemon.num) + ".ogg")
 
     def play_cry(self):
         if self.loaded_pokemon:
