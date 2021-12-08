@@ -71,7 +71,7 @@ class App:
             print("Debug mode: OFF")
 
         # Sound init
-        pygame.mixer.pre_init(33075, 16, 2, 4096)  # default freq: 44100, but on the raspberry it causes a fastidious high pitched noise
+        pygame.mixer.pre_init(44100, -16, 2, 4096)  # default freq: 44100, but on the raspberry it causes a fastidious high pitched noise
         pygame.init()
         pygame.mixer.init()
         # Channel init
