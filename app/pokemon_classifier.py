@@ -34,9 +34,9 @@ def predict_top_n_pokemon(image_filename, num_top_pokemon):
         img = load_img(image_filename, target_size=(224, 224))  #"./evee_1.jpg"5
         img = img_to_array(img, dtype=np.float32)
     else:
-        # Open image with OpenCV
-        img = cv2.imread(image_filename)
-        img = cv2.resize(img, (224, 224), interpolation=cv2.INTER_AREA)
+        # Open image with PIL.Image
+        img = Image.open(image_filename)
+        img.resize((224, 224), Image.ANTIALIAS)
     img = np.asarray(img, dtype=np.float32)
     img /= 255
     img = np.expand_dims(img, axis=0)
@@ -83,9 +83,7 @@ if __name__ == "__main__":
     print(result_str)
 
     '''
-    # Open image with PIL.Image
-    img = Image.open(image_filename)
-    img.resize((224, 224), Image.ANTIALIAS)
-
-    img = np.asarray(img, dtype=np.float32)
+    # Open image with OpenCV (NOT WORKING, maybe interpolation is broken)
+    img = cv2.imread(image_filename)
+    img = cv2.resize(img, (224, 224), interpolation=cv2.INTER_AREA)
     '''
