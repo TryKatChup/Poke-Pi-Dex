@@ -8,11 +8,11 @@ def rectify_image(img):
 
     h, w = img.shape[:2]
 
-    # Undistort an image
+    # Undistort the image
     new_camera_matrix, roi = cv2.getOptimalNewCameraMatrix(camera_matrix, dist_coefs, (w, h), 1, (w, h))
     dst = cv2.undistort(img, camera_matrix, dist_coefs, None, new_camera_matrix)
 
-    # Crop and Save the image
+    # Crop and Return the image
     x, y, w, h = roi
     dst = dst[y:y + h, x:x + w]
 
