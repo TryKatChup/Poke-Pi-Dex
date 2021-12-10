@@ -15,8 +15,12 @@ class VideoCapture:
             raise ValueError("Unable to open video source", self.video_source)
 
         # Get video source width and height
-        self.width = self.vid.get(cv2.CAP_PROP_FRAME_WIDTH)
-        self.height = self.vid.get(cv2.CAP_PROP_FRAME_HEIGHT)
+        # self.width = self.vid.get(cv2.CAP_PROP_FRAME_WIDTH)
+        # self.height = self.vid.get(cv2.CAP_PROP_FRAME_HEIGHT)
+
+        # Set video source dimensions
+        self.vid.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+        self.vid.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
 
     def get_frame(self):
         if self.vid.isOpened():
@@ -39,10 +43,16 @@ class VideoCapture:
             if self.vid.isOpened():
                 self.vid.release()
 
-'''
-# Class which uses picamera API (?)
-class MyPicameraCapture:
-    def __init__(self):
-        self.camera = PiCamera()
-        self.camera.resolution
-'''
+
+# Test
+if __name__ == "__main__":
+    vc = VideoCapture(0)
+    vc.open()
+    while True:
+        ret, frame = vc.get_frame()
+        if ret:
+            cv2.imshow("Camera Test", frame)
+            # Stop when Esc is pressed
+            if cv2.waitKey(1) == 27:
+                break
+    cv2.destroyAllWindows()

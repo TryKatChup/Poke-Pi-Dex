@@ -137,8 +137,8 @@ Vocabolario (significato di nomi e verbi inclusi nei requisiti)
 - [x] 1x [Display LCD 3.5 pollici, HDMI touch screen](https://www.amazon.it/dp/B08HVDLHRW/ref=cm_sw_r_apan_glt_i_P4JYG7RGEMVPB287BHZ1?_encoding=UTF8&psc=1)
 - [x] 2x [Mini Speaker](https://www.amazon.it/dp/B07FT9CFY4/ref=cm_sw_r_apan_glt_i_Y86XG3MWY2A2D21EF8ZH?_encoding=UTF8&psc=1)
 - [x] 1x [Powerbank](https://www.amazon.it/Auskang-compatibile-batteria-Caricabatterie-Portatile/dp/B096FX9226/ref=sr_1_1?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=auskang&qid=1634322262&qsid=258-6802503-2920908&sr=8-1&sres=B096FX9226%2CB08RDTRWHY%2CB096B29B6G%2CB08RDTR7F7%2CB08R8J1D19%2CB08R8CKQJT%2CB08SHFYHSR%2CB08SJ5K3LR%2CB096JXNZ17%2CB08R8HCWRT%2CB09715272M%2CB091CGG33P%2CB08NTHCNB8%2CB08DTP9LZ8%2CB096B9TV8C%2CB0972SQQS7%2CB0932PZ857%2CB094J428L5%2CB082PPPWXY%2CB019GJLER8)
-- [ ] 1x [Case Pokèdex](https://github.com/TryKatChup/pokemon-cv-revival/tree/main/3D%20models/pok%C3%A8dex%20case)
-- [ ] 1x [ADS1115 Convertitore A/D](https://www.amazon.it/dp/B07RGHK4PT/ref=cm_sw_r_apan_glt_i_FAYJNF9N4QYT623VEMRE)
+- [x] 1x [Case Pokèdex](https://github.com/TryKatChup/pokemon-cv-revival/tree/main/3D%20models/pok%C3%A8dex%20case)
+- [x] 1x [ADS1115 Convertitore A/D](https://www.amazon.it/dp/B07RGHK4PT/ref=cm_sw_r_apan_glt_i_FAYJNF9N4QYT623VEMRE)
 - [x] 2x [Bottoni](https://www.amazon.it/dp/B07XRKN3F3/ref=cm_sw_r_apan_glt_i_BY216EXJ1756Y5SFS4DW)
 - [ ] 1x Interruttore Switch per Alimentazione
 
