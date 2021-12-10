@@ -47,7 +47,7 @@ def predict_top_n_pokemon(image_filename, num_top_pokemon):
     # Get best num_top_pokemon
     # tflite_runtime.interpreter as tflite method
     results = np.squeeze(output_data, axis=0)
-    top_k_idx = np.argsort(results)[-5:][::-1]
+    top_k_idx = np.argsort(results)[-num_top_pokemon:][::-1]
     top_k_values = results[top_k_idx]
     top_k_labels = label_encoder.inverse_transform(top_k_idx) 
     return top_k_labels, top_k_values
