@@ -22,8 +22,8 @@ import pokemon_classifier_tflite as pc
 
 app_name = "Poké-Pi-Dex"
 version = "1.0 beta"
-res_width = 600
-res_height = 400
+res_width = 640
+res_height = 480
 image_size = (int(res_width/2), int(res_width/2))  # 240x240
 icon_size = (int(res_width/19.2), int(res_width/19.2))  # 25x25
 background = "grey"
