@@ -25,7 +25,7 @@ def predict_top_n_pokemon(image_filename, num_top_pokemon):
     output_details = interpreter.get_output_details()
 
     # Load image
-    img = Image.open("./images/pikachu_peluche.jpg")
+    img = Image.open(image_filename)
     img = img.resize((224, 224), Image.ANTIALIAS)
     img = np.asarray(img, dtype=np.float32)
     img /= 255
