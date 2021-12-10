@@ -36,7 +36,7 @@ def predict_top_n_pokemon(image_filename, num_top_pokemon):
     else:
         # Open image with PIL.Image
         img = Image.open(image_filename)
-        img.resize((224, 224), Image.ANTIALIAS)
+        img = img.resize((224, 224), Image.ANTIALIAS)
     img = np.asarray(img, dtype=np.float32)
     img /= 255
     img = np.expand_dims(img, axis=0)
