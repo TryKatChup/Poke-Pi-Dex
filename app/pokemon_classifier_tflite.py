@@ -16,7 +16,7 @@ def get_label_encoder():
 
 def predict_top_n_pokemon(image_filename, num_top_pokemon):
     # Predicts num_top_pokemon from image_file, using a tflite model
-    TFLITE_MODEL="./vecchio_modello_nuovo_dataset_55fotoclasse_hue.tflite"
+    TFLITE_MODEL="./resources/classifier_model/vecchio_modello_nuovo_dataset_55fotoclasse_hue.tflite"
     interpreter = tflite.Interpreter(TFLITE_MODEL)
     interpreter.allocate_tensors()
 
