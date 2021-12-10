@@ -15,7 +15,7 @@ import video_capture as vc
 from labels import load_labels
 import settings
 from image_rectifier import rectify_image
-import pokemon_classifier as pc
+import pokemon_classifier_tflite as pc
 # from input import register_button
 
 # tkinter utility: https://www.tcl.tk/man/tcl/TkCmd/entry.html#M9
