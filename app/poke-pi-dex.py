@@ -130,7 +130,7 @@ class App:
 
         # Left (video stream)
         self.entry_prediction_text = tk.StringVar()
-        self.entry_prediction = tk.Entry(master=self.frame_left, width=20, textvar=self.entry_prediction_text, bg=background, fg=background_dark, bd=0, highlightthickness=0)
+        self.entry_prediction = tk.Entry(master=self.frame_left, width=20, textvar=self.entry_prediction_text, bg=background, fg=background_dark, bd=0, highlightthickness=0, font=default_font)
         self.entry_prediction.config(readonlybackground=background, state="readonly")
         self.entry_prediction.pack(side=tk.TOP, pady=(int(res_height/32), int(res_height/160)))
 
