@@ -31,7 +31,7 @@ def predict_top_n_pokemon(image_filename, num_top_pokemon):
     img /= 255
     img = np.expand_dims(img, axis=0)
     # remove comment only if experimening  with some strange models (pytorch to tflite case)
-    #img = tf.transpose(img, [0, 3, 1, 2])
+    #img = np.transpose(img, [0, 3, 1, 2])
     print(img.shape)
 
     input_tensor = np.array(img, dtype=np.float32)
