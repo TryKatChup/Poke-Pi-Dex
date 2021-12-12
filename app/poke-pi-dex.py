@@ -15,8 +15,8 @@ import video_capture as vc
 from labels import load_labels
 import settings
 from image_rectifier import rectify_image
-'''import pokemon_classifier_tflite as pc
-try:
+import pokemon_classifier_tflite as pc
+'''try:
     from input import register_button
 except ModuleNotFoundError:
     print("Buttons disabled")'''
