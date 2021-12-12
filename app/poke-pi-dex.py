@@ -15,15 +15,18 @@ import video_capture as vc
 from labels import load_labels
 import settings
 from image_rectifier import rectify_image
-import pokemon_classifier_tflite as pc
-# from input import register_button
+'''import pokemon_classifier_tflite as pc
+try:
+    from input import register_button
+except ModuleNotFoundError:
+    print("Buttons disabled")'''
 
 # tkinter utility: https://www.tcl.tk/man/tcl/TkCmd/entry.html#M9
 
 app_name = "Poké-Pi-Dex"
 version = "1.0 beta"
-res_width = 640
-res_height = 480
+res_width = 800
+res_height = 600
 image_size = (int(res_width/2), int(res_width/2))  # 240x240
 icon_size = (int(res_width/19.2), int(res_width/19.2))  # 25x25
 background = "grey"
@@ -425,7 +428,7 @@ class App:
         fixed_font = ("TkFixedFont", 14, "normal")
         self.text_debug_headers.config(font=fixed_font, state="disabled")
         self.text_debug_headers.pack(side=tk.TOP)
-        self.text_debug = tk.Text(master=self.frame_debug, height=14, width=24, bg="black", fg="white", bd=0, highlightthickness=0)
+        self.text_debug = tk.Text(master=self.frame_debug, height=int(res_height/22.86), width=24, bg="black", fg="white", bd=0, highlightthickness=0)
         self.text_debug.config(font=fixed_font, state="disabled")
         self.text_debug.pack(side=tk.TOP)
 
@@ -813,6 +816,7 @@ class App:
         self.frame_settings.pack_forget()
         self.button_debug.config(state=tk.NORMAL)
         if 2 <= self.settings.debug_mode <= 10:
+            self.reset_pokemon()
             self.show_debug_mode()
         else:
             self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
