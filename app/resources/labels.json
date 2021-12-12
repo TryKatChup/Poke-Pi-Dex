@@ -3,7 +3,10 @@
 	"it": "Italiano",
 	"start": {"en": "Start", "it": "Avvia"},
     "quit": {"en": "Quit", "it": "Esci"},
-    "info": {"en": "Application developed by\nKarina Chichifoi & Michele Righi\nusing ...", "it": "Applicazione sviluppata da\nKarina Chichifoi e Michele Righi\nutilizzando ... Scherzavo, viva le gonne"},
+    "info": {
+		"en": "Developed by Karina Chichifoi & Michele Righi\nusing: python 3.9, tk 8.6, pillow 8.3, opencv 4.5,\nnumpy 1.20, tensorflow 2.6, tf-lite 2.4, pygame 2.0",
+		"it": "Sviluppato da Karina Chichifoi e Michele Righi\nusando: python 3.9, tk 8.6, pillow 8.3, opencv 4.5,\nnumpy 1.20, tensorflow 2.6, tf-lite 2.4, pygame 2.0"
+	},
     "search": {"en": "Search", "it": "Cerca"},
     "screenshot": {"en": "Screenshot", "it": "Schermata"},
     "cry": {"en": "Cry: ", "it": "Verso: "},
