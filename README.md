@@ -22,7 +22,7 @@
   <h1> Pokémon CV Revival</h1>
 </div>
 
-Our computer vision related project for nostalgic poke weebs (Sistemi digitali, Unibo).
+Our Deep Learning for Computer Vision related project for nostalgic poké weebs (Sistemi Digitali, University of Bologna).
 
 <details open="closed">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
@@ -55,17 +55,16 @@ See our demo on YouTube! https://www.youtube.com/watch?v=6A07DGlRxg4 <!-- TO-DO 
 
 ## Features
 The application has the following features:
-- it has a main menu showing controls and about panel;
-- the Pokédex view shows a video stream from the camera;
-- the user can take a picture of a Pokémon from the video stream;
-- the app can make a prediction of the said picture, recognizing the Pokémon inside it with an excellent accuracy, by using a CNN;
-- the classifier can recognize different objects such as cards, plushies, figures;
-- the app shows the Pokémon info (name, id, types, description and stats) and the previous and following evolution stages of the Pokémon recognized;
-- the app reads the description of the Pokémon as soon as the prediction happen;
-- the app allows the user to play the Pokémon cry;
-- the app has a settings view where the user can edit parameters such as language (English and Italian), fullscreen, volume;
-- the has a debug mode to check the values of the prediction;
-- the has an easter egg, try and find it!
+- main menu with functionalities and `about` panel;
+- Pokémon-image acquisition from app;
+- pokémon prediction of captured pic, with an excellent accuracy, by using a CNN;
+- different objects recognition, such as cards, plushies, figures;
+- Pokémon info (name, id, types, description and stats) and the previous and following evolution stages of Pokémon recognized;
+- Pokémon description of the predicted;
+- play Pokémon cry;
+- `Settings` view where users can edit parameters such as language (English and Italian), fullscreen, volume;
+- debug mode to check the values of the prediction;
+- easter egg, try and find it!
 
 ## Full Overview
 Check link a roba scritta da Kary
@@ -142,7 +141,7 @@ TO-DO
   - [x] prepare environment (install python3 and required packages)
   - [x] clone the repo
   - [x] test the app
-- [x] Case Prototype ~50h
+- [x] Case Prototype
   - [x] project
   - [x] cardboard cutout
   - [x] painting
