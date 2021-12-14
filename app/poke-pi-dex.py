@@ -222,7 +222,7 @@ class App:
         # Evolution (to)
         image = Image.open(sprites_path + "0.png").resize(sprite_size, Image.ANTIALIAS)
         self.image_evo_to = ImageTk.PhotoImage(image)
-        self.label_evo_to = tk.Label(master=self.frame_top_right, image=self.image_evo_to, width=40, height=40, bg=background)
+        self.label_evo_to = tk.Label(master=self.frame_top_right, image=self.image_evo_to, width=int(res_width/12), height=int(res_width/12), bg=background)
         self.label_evo_to.pack(side=tk.TOP, anchor=tk.W)
         # Buttons (for multiple "to" evolutions)
         img_size = (int(res_width/48), int(res_width/48))
