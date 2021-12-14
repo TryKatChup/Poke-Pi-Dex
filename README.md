@@ -22,13 +22,13 @@
   <h1> Poké-Pi-Dex</h1>
   
   Our Deep Learning for Computer Vision related project for nostalgic poké weebs (Sistemi Digitali, University of Bologna).<br/>
-The project consists of a real Pokédex, which is capable of recognizing pictures of Pokémon from the first generation. It's made on-top of a Raspberry Pi4 with an LCD display, a PiCamera  and some other components attached. The case is currently a prototype, made of cardboard.
+We recreated a Pokédex clone, which recognizes pictures of Pokémon from the first generation, using a Convolutional Neural Network. It's built on Raspberry Pi4 with LCD display, PiCamera, speaker and some other components attached. The case is made of cardboard. 🌱
 </div>
 
 <details open="closed">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
-    <li><a href="#demo">Demo</a></li>
+    <!--<li><a href="#demo">Demo</a></li>-->
     <li><a href="#features">Features</a></li>
     <li><a href="#full-overview">Full Overview</a></li>
     <li><a href="#usage">Usage</a>
@@ -47,32 +47,31 @@ The project consists of a real Pokédex, which is capable of recognizing picture
   </ol>
 </details>
 
-## Demo
+<!--## Demo
 See our demo on YouTube! https://www.youtube.com/watch?v=6A07DGlRxg4 <!-- TO-DO -->
 
-<div align="center">
+<!--<div align="center">
   <img src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/demo.png" width=50%/>
-</div>
+</div>-->
 
 ## Features
-The application has the following features:
-- main menu with functionalities and `about` panel;
-- Pokémon-image acquisition from app;
-- Pokémon prediction of captured pic, with an excellent accuracy, by using a CNN;
-- different objects recognition, such as cards, plushies, figures;
-- Pokémon info (name, id, types, description and stats) and the previous and following evolution stages of Pokémon recognized;
-- audio description of the predicted Pokémon;
-- play Pokémon cry;
-- `Settings` view where users can edit parameters such as language (English and Italian), fullscreen, volume;
-- debug mode to check the values of the prediction;
-- easter egg, try and find it!
+- Main menu with functionalities and `About` panel.
+- Pokémon-image acquisition from app.
+- Pokémon prediction of captured pic, with an excellent accuracy, using a Convolutional Neural Network.
+- Different objects recognition, such as cards, plushies, figures.
+- Pokémon info (name, id, types, description and stats) and the previous and following evolution stages of Pokémon recognized.
+- Audio description of the predicted Pokémon.
+- Play Pokémon cry.
+- `Settings` view where users can edit parameters, such as language (English and Italian), fullscreen, volume.
+- Debug mode to check the values of the prediction.
+- Easter egg, try and find it!
 
 ## Full Overview
 TO-DO
 
 ## Usage
 To use the application follow these steps:
-
+TO-DO
 ### Prerequisites
 TO-DO
 <!-- - OS:
@@ -94,10 +93,11 @@ TO-DO
 
 ## Resources
 - Pokémon data:
-  - [dataset](https://www.kaggle.com/thedagger/pokemon-generation-one)
-  - [details](https://github.com/fanzeyi/pokemon.json)
-  - [cry audio files]()
-  - [description audio files](http://texttospeechrobot.com/)
+  - [Old Dataset](https://www.kaggle.com/thedagger/pokemon-generation-one)
+  - [Our New Dataset](https://www.kaggle.com/unexpectedscepticism/11945-pokmon-from-first-gen)
+  - [Details](https://github.com/fanzeyi/pokemon.json)
+  - [Cry audio files]()
+  - [Description audio files](http://texttospeechrobot.com/)
 - [Camera calibration with OpenCV](https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html)
 - [Tensorflow-lite inference](https://www.tensorflow.org/lite/guide/inference)
 - [Tensorflow-lite conversion](https://www.tensorflow.org/lite/convert)
