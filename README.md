@@ -21,9 +21,19 @@
   
   <h1> Poké-Pi-Dex</h1>
   
-  Our Deep Learning for Computer Vision related project for nostalgic poké weebs (Sistemi Digitali, University of Bologna).<br/>
-We recreated a Pokédex clone, which recognizes pictures of Pokémon from the first generation, using a Convolutional Neural Network. It's built on Raspberry Pi4 with LCD display, PiCamera, speaker and some other components attached. The case is made of cardboard. 🌱
-<br><br>
+  Deep Learning for Computer Vision related project for nostalgic poké weebs (Sistemi Digitali M, University of Bologna), made by <a href="https://github.com/TryKatChup">Karina Chichifoi</a> and <a href="https://github.com/mikyll">Michele Righi</a>.<br/>
+We recreated a Pokédex clone, which recognizes pictures of Pokémon from the first generation, using a Convolutional Neural Network. It's built on Raspberry Pi4 with LCD display, PiCamera, speaker and some other components attached. The case is made of recycled cardboard. 🌱
+<br/><br/>
+  <a href="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/README.it.md#-poké-pi-dex">Italiano</a>
+  ·
+  <a href="">Docs</a>
+  ·
+  <a href="">View Report</a>
+  ·
+  <a href="">Presentation</a>
+  ·
+  <a href="">Request Feature|Report Bug</a>
+<br/><br/>
 <img src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/aaaaaaaaa.png"/>
 
 </div>
