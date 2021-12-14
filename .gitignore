@@ -51,7 +51,7 @@ _minted*
 *.pyg
 
 # Jupyter
-.ipynb_checkpoints
+.ipynb_checkpoints/*
 
 # Python app
 *.idea
