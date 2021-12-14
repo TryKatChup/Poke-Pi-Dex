@@ -19,7 +19,7 @@
   
   <img src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/logo.png"/>
   
-  <h1> Pokémon CV Revival</h1>
+  <h1> Poké-Pi-Dex</h1>
 </div>
 
 Il progetto consiste in un Pokédex fisico capace di riconoscere e classificare delle immagini di Pokémon della prima generazione. È stato realizzato tramite un dispositivo embedded (Raspberry Pi4), a cui sono stati collegati un display LCD, una PiCamera e altri componenti. Il case è attualmente costituito da un prototipo in cartoncino.
