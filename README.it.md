@@ -1,150 +1,202 @@
 <div align="center">
-
-[![made-with-python][made-with-phyton-shield]][made-with-phyton-url]
-[![made-with-Markdown][made-with-markdown-shield]][made-with-markdown-url]
-[![Open Source Love png1][open-source-shield]][open-source-url]
-[![GPLv3 license][license-shield]][license-url]
-[![Raspberry Pi][raspberry-shield]][raspberry-url]
-[![Keras][keras-shield]][keras-url]
-[![TensorFlow][tensorflow-shield]][tensorflow-url]
-[![Open CV][opencv-shield]][opencv-url]
-[![nVIDIA][nvidia-shield]][nvidia-url]
-<br/>
-[![Open In Collab][open-collab-shield]][open-collab-url]
-[![Downloads][downloads-shield]][downloads-url]
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
+  
+  [![made-with-python][made-with-phyton-shield]][made-with-phyton-url]
+  [![made-with-Markdown][made-with-markdown-shield]][made-with-markdown-url]
+  [![Open Source Love png1][open-source-shield]][open-source-url]
+  [![GPLv3 license][license-shield]][license-url]
+  [![Raspberry Pi][raspberry-shield]][raspberry-url]
+  [![Keras][keras-shield]][keras-url]
+  [![TensorFlow][tensorflow-shield]][tensorflow-url]
+  [![Open CV][opencv-shield]][opencv-url]
+  [![nVIDIA][nvidia-shield]][nvidia-url]
+  <br/>
+  [![Open In Collab][open-collab-shield]][open-collab-url]
+  [![Downloads][downloads-shield]][downloads-url]
+  [![Contributors][contributors-shield]][contributors-url]
+  [![Forks][forks-shield]][forks-url]
+  [![Stargazers][stars-shield]][stars-url]
+  [![Issues][issues-shield]][issues-url]
+  
+  <img src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/logo.png"/>
+  
+  <h1> Pokémon CV Revival</h1>
 </div>
 
-<div align="center">
+Il progetto consiste in un Pokédex fisico capace di riconoscere e classificare delle immagini di Pokémon della prima generazione. È stato realizzato tramite un dispositivo embedded (Raspberry Pi4), a cui sono stati collegati un display LCD, una PiCamera ed altri componenti. Il case è attualmente costituito da un prototipo in cartoncino.
 
-# Poké-Pi-Dex
-<img src="https://github.com/TryKatChup/pokemon-cv-revival/blob/main/app/extra/logo-figata-readme.png"/>
-Il progetto consiste in un Pokédex fisico, realizzato tramite un dispositivo embedded, che permette di riconoscere e classificare i Pokémon di prima generazione, e restituirne le informazioni principali.
-</div>
-
-Progetto per l'esame di [Sistemi Digitali M](https://www.unibo.it/it/didattica/insegnamenti/insegnamento/2020/385380), a cura di [Karina Chichifoi](https://github.com/TryKatChup) e [Michele Righi](https://github.com/mikyll).
+<details> <!-- open="open" -->
+  <summary><h2 style="display: inline-block">Indice</h2></summary>
+  <ol>
+    <li><a href="#demo">Demo</a></li>
+    <li><a href="#funzionalita">Funzionalità</a></li>
+    <li><a href="#panoramica-completa">Panoramica Completa</a></li>
+    <li><a href="#utilizzo">Utilizzo</a>
+      <ul>
+        <li><a href="#prerequisiti">Prerequisiti</a></li>
+        <li><a href="#installazione">Installazione</a></li>
+      </ul>
+    </li>
+    <li><a href="#strumenti">Strumenti</a></li>
+    <li><a href="#risorse">Risorse</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#licenza">Licenza</a></li>
+    <li><a href="#contatti">Contatti</a></li>
+    <!-- <li><a href="#ringraziamenti">Ringraziamenti</a></li>
+    <li><a href="#meme">Memotty</a></li> -->
+  </ol>
+</details>
 
 ## Demo
-Guarda il [video di presentazione](https://www.youtube.com/watch?v=6A07DGlRxg4) su YouTube!
+See our demo on YouTube! https://www.youtube.com/watch?v=6A07DGlRxg4 <!-- TO-DO -->
 
-Qualche immagine di presentazione (menù, app e case)
+<div align="center">
+  <img src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/demo.png" width=50%/>
+</div>
 
 ## Funzionalità
+The application has the following features:
+- it has a main menu showing controls and about panel;
+- the Pokédex view shows a video stream from the camera;
+- the user can take a picture of a Pokémon from the video stream;
+- the app can make a prediction of the said picture, recognizing the Pokémon inside it with an excellent accuracy, by using a CNN;
+- the classifier can recognize different objects such as cards, plushies, figures;
+- the app shows the Pokémon info (name, id, types, description and stats) and the previous and following evolution stages of the Pokémon recognized;
+- the app reads the description of the Pokémon as soon as the prediction happen;
+- the app allows the user to play the Pokémon cry;
+- the app has a settings view where the user can edit parameters such as language (English and Italian), fullscreen, volume;
+- the has a debug mode to check the values of the prediction;
+- the has an easter egg, try and find it!
+
+## Panoramica Completa
+Check link a roba scritta da Kary
+
+## Utilizzo
+To use the application follow these steps:
+
+### Prerequisiti
+TO-DO
+<!-- - OS:
+- Python version
+- Python packages
+  - for Raspberry usage: -->
+
+### Installazione
+TO-DO
+<!-- - clone the repo or download the latest release -->
 
 ## Roadmap
-- App:
-  - GUI: Add description scroll buttons
-  - 3D Model: Fix 3d model (size to fit each component: powerbank, speakers)
-  - Implement nerual network and tensorflow object detection
-  - Add option to stream video to a client address (e.g. computer client)
-- Fix the docs
-- Separate different gui parts in different files/classes(?)
-- Make a video with clips of the building, test and different implementation parts
-- Latex with:
-  - Awesome cover with our Pokédex
-  - Images list
-  - CNN chapter
-  - Software chapter (GUI, openCV, CNN app integration, Pokémon JSON, frame processing, UML) 
-  - Hardware chapter (Paper prototype, 3D model, every component, link on amazon and price, design decisions)
-  - Use case
-  - Conclusion
+- [x] Dataset
+  - [x] trovare un dataset adatto per la rete neurale
+  - [x] sistemarlo (ritagliare le immagini) ed estenderlo
+- [x] Classificatore
+  - [x] CNN con 3 layer convoluzionali e 2 layer FC
+  - [x] data augmentation (specchiamento, rotazione, contrasto e ~~luminosità~~ randomici)
+  - [x] provare dropout
+  - [x] provare batch norm
+  - [x] grafici loss e accuracy
+  - [x] test con immagini reali
+  - [x] miglirare la vecchia CNN
+- [x] Applicazione
+  - [x] Repository Pokémon
+    - [x] trovare un file .json e caricarlo in un dizionario
+    - [x] controllarlo e sistemarlo
+    - [x] creare una classe Pokémon
+  - [x] input video
+    - [x] creare una classe separata
+    - [x] creare una funzione che permette di ottenere un frame dalla PiCamera (e fare i test)
+    - [x] visualizzare l'immagine all'interno di un canvas
+  - [x] struttura GUI
+    - [x] creare un menu principale
+    - [x] creare un pannello delle informazioni sull'app
+    - [x] creare una schermata per il Pokédex, divisa in 2 parti (sinistra per il video input, destra per i dettagli del Pokémon)
+    - [x] creare una vista per le impostazioni
+  - [x] bottone per ottenere il frame corrente
+  - [x] etichette ed entry per i dettagli del Pokémon (statistiche con barre dinamiche e di colori differenti)
+  - [x] aggiungere bottoni per scorrere fra le evoluzioni successive (ad esempio: Eevee ha diverse evoluzioni possibili)
+  - [x] cambiare la entry del "tipo/i" (da testo a immagine)
+  - [x] aggiungere bottone per riprodurre il verso
+    - [x] raccogliere i file audio dei versi
+  - [x] aggiungere la lettura della descrizione
+    - [x] ottenere i file audio delle descrizioni utilizzando un bot di lettura
+  - [x] realizzare l'aggiornamento per lingue differenti
+  - [x] rendere le impostazioni persistenti <!-- aggiungerlo a quello in inglese)
+  - [x] modalità debug
+- [ ] Setup Raspberry
+  - [x] comprare i componenti
+     - [x] display LCD
+     - [x] PiCamera
+     - [x] batteria (powerbank)
+     - [x] speaker
+     - [x] bottoni
+     - [x] adattatore type-C a gomito
+     - [x] convertitore A/D (ADS1115)
+   - [ ] integrare i componenti
+     - [x] display LCD
+     - [x] PiCamera
+     - [x] batteria
+     - [x] speaker
+     - [x] bottoni
+     - [ ] joystick analogico
+   - [x] preparare il SO (disabilitare password, abilitare le interfacce, risolvere le dipendenze, ...)
+- [x] Deployment dell'app
+  - [x] preparare l'ambiente (installare python3 e i package necessari)
+  - [x] clonare la repo
+  - [x] test dell'applicazione
+- [x] Prorotipo del case ~50h
+  - [x] progetto tecnico
+  - [x] ritagliare il cartoncino ed incollare le parti
+  - [x] verniciatura ad acrilico
+- [x] Relazione
+  - [x] impostare il documento in LaTeX
+  - [x] abbozzare una possibile suddivisione in capitoli
+  - [x] scrivere il report
+- [ ] Presentazione
+- [ ] Demo Video <!--building, test and different implementation parts-->
+- [ ] Extra & Sviluppi Futuri
+  - [ ] usare una rete neurale più complessa con il nuovo dataset
+  - [ ] usare nuove forme di data augmentation
+  - [ ] aggiungere un amplificatore allo speaker
+  - [ ] inserire uno o più Led vicino all'obiettivo della PiCamera
+  - [ ] aggiungere un'opzione alle impostazioni per abilitare/disabilitare il congelamento del video dopo aver scattato la foto
+  - [ ] finire il modello 3D del case e stamparlo
+  - [ ] estendere il Pokédex alle generazioni seguenti
+  - [ ] fare il porting su mobile (Android. iOS)
 
-## GUI Prototype
-![GUI prototype Squirtle example](https://github.com/TryKatChup/pokemon-cv-revival/blob/main/gui/prototype/gui_example_squirtle.png)
-
-## Tools
+## Strumenti
 - [PyCharm](https://www.jetbrains.com/pycharm/)
 - [Anaconda](https://www.anaconda.com/)
+- [Jupyter Notebook](https://jupyter.org/)
 - [Sketchup browser](https://app.sketchup.com/)
-<!-- - ssh(?) -->
 
-## Resources
-- Dataset pokèmon:
-  - https://www.kaggle.com/thedagger/pokemon-generation-one
-  - 
-- pokèmon cards images archive: https://drive.google.com/file/d/1CIx33WVaqEXLqLt95nRtRskgmTTTMPpn/view
-- Magic cards recognition: https://github.com/YenTheFirst/card_scan
-- Pokèmon card text reading: https://stackoverflow.com/questions/62116719/read-text-on-card
-- Poker playing cards recognition (on Raspberry pi3 + picamera): https://github.com/EdjeElectronics/OpenCV-Playing-Card-Detector
-- Augmented reality: https://bitesofcode.wordpress.com/2017/09/12/augmented-reality-with-python-and-opencv-part-1/ & https://github.com/juangallostra/augmented-reality
-- Detection Models: https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md (ssd_mobilenet are the best for devices with low computational power, e.g. raspberry)
+## Risorse
+- dati Pokémon:
+  - [dataset](https://www.kaggle.com/thedagger/pokemon-generation-one)
+  - [dettagli](https://github.com/fanzeyi/pokemon.json)
+  - [file audio dei versi]()
+  - [file audio delle descrizioni](http://texttospeechrobot.com/)
+- [Calibrazione camera con OpenCV](https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html)
+- [Inferenza con Tensorflow-lite](https://www.tensorflow.org/lite/guide/inference)
+- [Conversione con Tensorflow-lite](https://www.tensorflow.org/lite/convert)
+- [Quantizzazione post-allenamento con Tensorflow-lite](https://www.tensorflow.org/lite/performance/post_training_quantization)
 
-## Step 1: Testing picamera + openCV
+## Licenza
+Distribuito sotto Licenza GPLv3. Vedi [`LICENSE`](https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/LICENSE) per ulteriori informazioni.
 
-### Raspberry
-
-On raspberry install the following packages:
-
-```
-sudo apt python3-pip
-pip3 install opencv-python zmq imagezmq numpy imutils
-```
-
-Execute `./stream/SistemiDigitali/video_capture.py`
-## Step 2: Receiving the images
-The following packages must be installed:
-
-**Compiled from scratch**
-- python-opencv
-
-**pacman/apt**
-- cuda
-- gcc-10
-
-**with pip inside a conda environment**
-```
-conda activate cv
-export READTHEDOCS=True
-pip3 install zmq imagezmq imutils picamera
-```
-
-**with conda**
-`conda install -c conda-forge libgcc-ng=11.1.0 libstdcxx-ng=11.1.0`
-
-#### Arch-based distro
-Install OpenCV and all the dependencies as described here https://gist.github.com/nihil21/f2ea6b6f092469ecd0bfb910301c62a2.
-After that, install what is missing:
-```
-conda activate cv
-export READTHEDOCS=True
-pip3 install zmq imagezmq imutils picamera
-```
-
-Execute the following script (on pc):
-`python3 ./stream/SistemiDigitali/stream_receiver.py -ip <ip_raspberry>`
-
-## Step 3: Training
-Some notes:
-- `tf.data.Dataset` API.
-- Loading folders of images in Tensorflow: https://stackoverflow.com/a/52417770.
-- From a list of images paths, with the special function `map`, convert a image path into an image.
-
-![](./images/example.jpg)
-
-- The function`map_fn(path, label)` return the image uploaded and its label from a image path and its label.
-- `dataset.map(map_fn)` loads an image path in a lazy way (in this way the RAM won't be saturated).
-
-![](./images/example2.jpg)
-- A dataset is created from a string list, which represents every image path.
-- The list is converted to a string tensor.
-- A dataset object is created from this tensor:
-`dataset = tf.data.Dataset.from_tensor_slices((image_paths, labels))`
-
-## Contacts
+## Contatti
 * [TryKatChup](https://www.linkedin.com/in/karina-chichifoi/?locale=en_US)
 * [Mikyll](https://www.linkedin.com/in/michele-righi/?locale=en_US)
 
-## Crediti e Ringraziamenti
+<!-- ## Ringraziamenti -->
+
+<!-- ## Meme -->
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [ask-me-anything-shield]: https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg
-[ask-me-anything-url]: https://github.com/TryKatChup/pokemon-cv-revival/issues
+[ask-me-anything-url]: https://github.com/TryKatChup/Poke-Pi-Dex/issues
 [open-collab-shield]: https://colab.research.google.com/assets/colab-badge.svg
-[open-collab-url]: https://github.com/TryKatChup/pokemon-cv-revival/issues
+[open-collab-url]: https://github.com/TryKatChup/Poke-Pi-Dex/issues
 [made-with-phyton-shield]: https://img.shields.io/badge/Made%20with-Python-14354C.svg
 [made-with-phyton-url]: https://www.python.org/
 [made-with-markdown-shield]: https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg
@@ -164,15 +216,15 @@ Some notes:
 [nvidia-shield]: https://img.shields.io/badge/nVIDIA-%2376B900.svg?logo=nVIDIA&logoColor=white
 [nvidia-url]: https://www.nvidia.com/
 
-[downloads-shield]: https://img.shields.io/github/downloads/TryKatChup/pokemon-cv-revival/total
-[downloads-url]: https://github.com/TryKatChup/pokemon-cv-revival/releases/latest
-[contributors-shield]: https://img.shields.io/github/contributors/TryKatChup/pokemon-cv-revival
-[contributors-url]: https://github.com/TryKatChup/pokemon-cv-revival/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/TryKatChup/pokemon-cv-revival
-[forks-url]: https://github.com/TryKatChup/pokemon-cv-revival/network/members
-[stars-shield]: https://img.shields.io/github/stars/TryKatChup/pokemon-cv-revival
-[stars-url]: https://github.com/TryKatChup/pokemon-cv-revival/stargazers
-[issues-shield]: https://img.shields.io/github/issues/TryKatChup/pokemon-cv-revival
-[issues-url]: https://github.com/mikyll/TryKatChup/pokemon-cv-revival/issues
+[downloads-shield]: https://img.shields.io/github/downloads/TryKatChup/Poke-Pi-Dex/total
+[downloads-url]: https://github.com/TryKatChup/Poke-Pi-Dex/releases/latest
+[contributors-shield]: https://img.shields.io/github/contributors/TryKatChup/Poke-Pi-Dex
+[contributors-url]: https://github.com/TryKatChup/Poke-Pi-Dex/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/TryKatChup/Poke-Pi-Dex
+[forks-url]: https://github.com/TryKatChup/Poke-Pi-Dex/network/members
+[stars-shield]: https://img.shields.io/github/stars/TryKatChup/Poke-Pi-Dex
+[stars-url]: https://github.com/TryKatChup/Poke-Pi-Dex/stargazers
+[issues-shield]: https://img.shields.io/github/issues/TryKatChup/Poke-Pi-Dex
+[issues-url]: https://github.com/mikyll/TryKatChup/Poke-Pi-Dex/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?logo=linkedin&colorB=0077B5
 [linkedin-url]: https://www.linkedin.com/in/michele-righi/?locale=en_US
