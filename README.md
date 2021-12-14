@@ -24,8 +24,7 @@
 
 Our computer vision related project for nostalgic poke weebs (Sistemi digitali, Unibo).
 
-<!-- TABLE OF CONTENTS -->
-<details open="close">
+<details open="closed">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
     <li><a href="#demo">Demo</a></li>
@@ -42,12 +41,13 @@ Our computer vision related project for nostalgic poke weebs (Sistemi digitali, 
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contacts">Contacts</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <!-- <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#meme">Memotty</a></li> -->
   </ol>
 </details>
 
 ## Demo
-See our demo on YouTube! https://www.youtube.com/watch?v=6A07DGlRxg4
+See our demo on YouTube! https://www.youtube.com/watch?v=6A07DGlRxg4 <!-- TO-DO -->
 
 <div align="center">
   <img src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/demo.png" width=50%/>
@@ -63,8 +63,8 @@ The application has the following features:
 - the app shows the Pokémon info (name, id, types, description and stats) and the previous and following evolution stages of the Pokémon recognized;
 - the app reads the description of the Pokémon as soon as the prediction happen;
 - the app allows the user to play the Pokémon cry;
-- the app has a settings view where the user can edit parameters such as language (English and Italian), fullscreen, volume
-- the has a debug mode to check the values of the prediction
+- the app has a settings view where the user can edit parameters such as language (English and Italian), fullscreen, volume;
+- the has a debug mode to check the values of the prediction;
 - the has an easter egg, try and find it!
 
 ## Full Overview
@@ -74,20 +74,29 @@ Check link a roba scritta da Kary
 To use the application follow these steps:
 
 ### Prerequisites
-- OS:
+TO-DO
+<!-- - OS:
 - Python version
 - Python packages
-  - for Raspberry usage:
+  - for Raspberry usage: -->
 
 ### Installation
-- clone the repo or download the latest release
+TO-DO
+<!-- - clone the repo or download the latest release -->
 
 
 ## Roadmap
 - [x] Dataset
   - [x] find a decent dataset for the neural network
-- [ ] Classifier
-  - To-DO kary
+  - [x] fix (cut pictures) and extend it
+- [x] Classifier
+  - [x] CNN with 3 conv layers and 2 FC layers
+  - [x] data augmentation (random flip, rotation, contrast, ~~brightness~~)
+  - [x] try dropout
+  - [x] try batch norm
+  - [x] loss and accuracy graphs
+  - [x] test real life pics
+  - [x] improve old CNN
 - [x] Application
   - [x] Pokémon repository
     - [x] find .json file and load it into a dictionary
@@ -144,11 +153,17 @@ To use the application follow these steps:
 - [ ] Presentation
 - [ ] Demo Video <!--building, test and different implementation parts-->
 - [ ] Extra & Future Developments
-  - 3D Model: Fix 3d model (size to fit each component: powerbank, speakers)
-  - Add option to stream video to a client address (e.g. computer client)
-  - ...
+  - [ ] use a more comples neural network with the new dataset
+  - [ ] use new form of data augmentation
+  - [ ] add an amplifier to speaker
+  - [ ] insert one or more white LEDs near the camera lens
+  - [ ] add settings option to enable/disable the video freezing after taking a picture
+  - [ ] finish the 3D model and print it
+  - [ ] extend the Pokédex to the following Pokémon generations
+  - [ ] porting of the application to mobile systems (Android, iOS)
 
-<h2><a href="">Tools</a></h2> <!-- mettere il link ad una canzone dei Tools eheh -->
+<h2><a href="https://www.youtube.com/watch?v=Y7JG63IuaWs">Tool</a>s</h2>
+
 - [PyCharm](https://www.jetbrains.com/pycharm/)
 - [Anaconda](https://www.anaconda.com/)
 - [Jupyter Notebook](https://jupyter.org/)
@@ -160,13 +175,10 @@ To use the application follow these steps:
   - [details](https://github.com/fanzeyi/pokemon.json)
   - [cry audio files]()
   - [description audio files](http://texttospeechrobot.com/)
-- DA RIVEDERE
-- Pokémon cards images archive: https://drive.google.com/file/d/1CIx33WVaqEXLqLt95nRtRskgmTTTMPpn/view
-- Magic cards recognition: https://github.com/YenTheFirst/card_scan
-- Pokèmon card text reading: https://stackoverflow.com/questions/62116719/read-text-on-card
-- Poker playing cards recognition (on Raspberry pi3 + picamera): https://github.com/EdjeElectronics/OpenCV-Playing-Card-Detector
-- Augmented reality: https://bitesofcode.wordpress.com/2017/09/12/augmented-reality-with-python-and-opencv-part-1/ & https://github.com/juangallostra/augmented-reality
-- Detection Models: https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md (ssd_mobilenet are the best for devices with low computational power, e.g. raspberry)
+- [Camera calibration with OpenCV](https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html)
+- [Tensorflow-lite inference](https://www.tensorflow.org/lite/guide/inference)
+- [Tensorflow-lite conversion](https://www.tensorflow.org/lite/convert)
+- [Tensorflow-lite post-training quantization](https://www.tensorflow.org/lite/performance/post_training_quantization)
 
 ## License
 Distributed under the GPLv3 License. See [`LICENSE`](https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/LICENSE) for more information.
@@ -175,7 +187,7 @@ Distributed under the GPLv3 License. See [`LICENSE`](https://github.com/TryKatCh
 * [TryKatChup](https://www.linkedin.com/in/karina-chichifoi/?locale=en_US)
 * [Mikyll](https://www.linkedin.com/in/michele-righi/?locale=en_US)
 
-## Acknowledgements
+<!-- ## Acknowledgements -->
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
