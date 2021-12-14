@@ -20,9 +20,10 @@
   <img src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/logo.png"/>
   
   <h1> Poké-Pi-Dex</h1>
+  
+  Our Deep Learning for Computer Vision related project for nostalgic poké weebs (Sistemi Digitali, University of Bologna).<br/>
+The project consists of a real Pokédex, which is capable of recognizing pictures of Pokémon from the first generation. It's made on-top of a Raspberry Pi4 with an LCD display, a PiCamera  and some other components attached. The case is currently a prototype, made of cardboard.
 </div>
-
-Our Deep Learning for Computer Vision related project for nostalgic poké weebs (Sistemi Digitali, University of Bologna).
 
 <details open="closed">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
@@ -57,17 +58,17 @@ See our demo on YouTube! https://www.youtube.com/watch?v=6A07DGlRxg4 <!-- TO-DO 
 The application has the following features:
 - main menu with functionalities and `about` panel;
 - Pokémon-image acquisition from app;
-- pokémon prediction of captured pic, with an excellent accuracy, by using a CNN;
+- Pokémon prediction of captured pic, with an excellent accuracy, by using a CNN;
 - different objects recognition, such as cards, plushies, figures;
 - Pokémon info (name, id, types, description and stats) and the previous and following evolution stages of Pokémon recognized;
-- Pokémon description of the predicted;
+- audio description of the predicted Pokémon;
 - play Pokémon cry;
 - `Settings` view where users can edit parameters such as language (English and Italian), fullscreen, volume;
 - debug mode to check the values of the prediction;
 - easter egg, try and find it!
 
 ## Full Overview
-Check link a roba scritta da Kary
+TO-DO
 
 ## Usage
 To use the application follow these steps:
@@ -83,6 +84,24 @@ TO-DO
 TO-DO
 <!-- - clone the repo or download the latest release -->
 
+<h2><a href="https://www.youtube.com/watch?v=Y7JG63IuaWs">Tool</a>s</h2>
+
+- [PyCharm](https://www.jetbrains.com/pycharm/)
+- [Anaconda](https://www.anaconda.com/)
+- [Docker](https://www.docker.com/)
+- [Jupyter Notebook](https://jupyter.org/)
+- [Sketchup browser](https://app.sketchup.com/)
+
+## Resources
+- Pokémon data:
+  - [dataset](https://www.kaggle.com/thedagger/pokemon-generation-one)
+  - [details](https://github.com/fanzeyi/pokemon.json)
+  - [cry audio files]()
+  - [description audio files](http://texttospeechrobot.com/)
+- [Camera calibration with OpenCV](https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html)
+- [Tensorflow-lite inference](https://www.tensorflow.org/lite/guide/inference)
+- [Tensorflow-lite conversion](https://www.tensorflow.org/lite/convert)
+- [Tensorflow-lite post-training quantization](https://www.tensorflow.org/lite/performance/post_training_quantization)
 
 ## Roadmap
 - [x] Dataset
@@ -160,24 +179,6 @@ TO-DO
   - [ ] finish the 3D model and print it
   - [ ] extend the Pokédex to the following Pokémon generations
   - [ ] porting of the application to mobile systems (Android, iOS)
-
-<h2><a href="https://www.youtube.com/watch?v=Y7JG63IuaWs">Tool</a>s</h2>
-
-- [PyCharm](https://www.jetbrains.com/pycharm/)
-- [Anaconda](https://www.anaconda.com/)
-- [Jupyter Notebook](https://jupyter.org/)
-- [Sketchup browser](https://app.sketchup.com/)
-
-## Resources
-- Pokémon data:
-  - [dataset](https://www.kaggle.com/thedagger/pokemon-generation-one)
-  - [details](https://github.com/fanzeyi/pokemon.json)
-  - [cry audio files]()
-  - [description audio files](http://texttospeechrobot.com/)
-- [Camera calibration with OpenCV](https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html)
-- [Tensorflow-lite inference](https://www.tensorflow.org/lite/guide/inference)
-- [Tensorflow-lite conversion](https://www.tensorflow.org/lite/convert)
-- [Tensorflow-lite post-training quantization](https://www.tensorflow.org/lite/performance/post_training_quantization)
 
 ## License
 Distributed under the GPLv3 License. See [`LICENSE`](https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/LICENSE) for more information.
