@@ -19,7 +19,7 @@
   
   <img src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/logo.png"/>
   
-  <h1> Poké-Pi-Dexl</h1>
+  <h1> Poké-Pi-Dex</h1>
 </div>
 
 Our Deep Learning for Computer Vision related project for nostalgic poké weebs (Sistemi Digitali, University of Bologna).
