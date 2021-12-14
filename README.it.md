@@ -22,7 +22,7 @@
   <h1> Pokémon CV Revival</h1>
 </div>
 
-Il progetto consiste in un Pokédex fisico capace di riconoscere e classificare delle immagini di Pokémon della prima generazione. È stato realizzato tramite un dispositivo embedded (Raspberry Pi4), a cui sono stati collegati un display LCD, una PiCamera ed altri componenti. Il case è attualmente costituito da un prototipo in cartoncino.
+Il progetto consiste in un Pokédex fisico capace di riconoscere e classificare delle immagini di Pokémon della prima generazione. È stato realizzato tramite un dispositivo embedded (Raspberry Pi4), a cui sono stati collegati un display LCD, una PiCamera e altri componenti. Il case è attualmente costituito da un prototipo in cartoncino.
 
 <details> <!-- open="open" -->
   <summary><h2 style="display: inline-block">Indice</h2></summary>
@@ -54,18 +54,7 @@ See our demo on YouTube! https://www.youtube.com/watch?v=6A07DGlRxg4 <!-- TO-DO 
 </div>
 
 ## Funzionalità
-The application has the following features:
-- it has a main menu showing controls and about panel;
-- the Pokédex view shows a video stream from the camera;
-- the user can take a picture of a Pokémon from the video stream;
-- the app can make a prediction of the said picture, recognizing the Pokémon inside it with an excellent accuracy, by using a CNN;
-- the classifier can recognize different objects such as cards, plushies, figures;
-- the app shows the Pokémon info (name, id, types, description and stats) and the previous and following evolution stages of the Pokémon recognized;
-- the app reads the description of the Pokémon as soon as the prediction happen;
-- the app allows the user to play the Pokémon cry;
-- the app has a settings view where the user can edit parameters such as language (English and Italian), fullscreen, volume;
-- the has a debug mode to check the values of the prediction;
-- the has an easter egg, try and find it!
+TODO
 
 ## Panoramica Completa
 Check link a roba scritta da Kary
