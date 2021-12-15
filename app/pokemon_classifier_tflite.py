@@ -1,7 +1,7 @@
 import tflite_runtime.interpreter as tflite
-from matplotlib import pyplot as plt
+# from matplotlib import pyplot as plt
 from sklearn.preprocessing import LabelEncoder
-from PIL import Image
+# from PIL import Image
 import numpy as np
 from PIL import Image
 # convert scientific notation to decimal

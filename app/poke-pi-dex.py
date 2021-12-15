@@ -600,7 +600,7 @@ class App:
             (pkmn, confidence) = pc.predict_top_n_pokemon("frame_undistorted.jpg", 1)
             pkmn = str(pkmn)[2:-2]
             confidence = str(confidence)[1:-1]
-            self.entry_prediction_text.set(pkmn + ": " + confidence)
+            # self.entry_prediction_text.set(pkmn + ": " + confidence)
             self.load_pokemon(pkmn)
     
     def load_pokemon(self, pkmn_id):
