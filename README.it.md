@@ -91,7 +91,7 @@ TO-DO
   ```bash
   conda env create -f environment.yml
   ```
-4. Esegui l'applicazione
+4. Esegui l'applicazione:
   ```bash
   python poke-pi-dex.py
   ```
