@@ -20,9 +20,22 @@
   <img src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/logo.png"/>
   
   <h1> Poké-Pi-Dex</h1>
+  
+  Progetto basato su Deep Learning per Computer Vision per poké weeb nostalgici (Sistemi Digitali M, Università di Bologna), creato da <a href="https://github.com/TryKatChup">Karina Chichifoi</a> e <a href="https://github.com/mikyll">Michele Righi</a>.<br/>
+  Abbiamo ricreato il clone di un Pokédex, che riconosce immagini di Pokémon della prima generazione, sfruttando una Rete Neurale Convoluzionale. È stato sviluppato per eseguire su un Raspberry Pi4 con display LCD, PiCamera ed altri componenti collegati. Il case è fatto di cartoncino riciclato. 🌱
+<br/><br/>
+  <a href="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/README.md#-poké-pi-dex">English</a>
+  ·
+  <a href="">Documentazione</a>
+  ·
+  <a href="">Relazione</a>
+  ·
+  <a href="">Presentazione</a>
+  ·
+  <a href="">Richiedi una Feature|Segnala un Bug</a>
+<br/><br/>
+<img src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/aaaaaaaaa.png"/>
 </div>
-
-Il progetto consiste in un Pokédex fisico capace di riconoscere e classificare delle immagini di Pokémon della prima generazione. È stato realizzato tramite un dispositivo embedded (Raspberry Pi4), a cui sono stati collegati un display LCD, una PiCamera e altri componenti. Il case è attualmente costituito da un prototipo in cartoncino.
 
 <details> <!-- open="open" -->
   <summary><h2 style="display: inline-block">Indice</h2></summary>
