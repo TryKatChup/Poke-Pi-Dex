@@ -28,11 +28,11 @@
   ·
   <a href="">Documentazione</a>
   ·
-  <a href="">Relazione</a>
+  <a href="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/Relazione.pdf">Relazione</a>
   ·
   <a href="">Presentazione</a>
   ·
-  <a href="">Richiedi una Feature|Segnala un Bug</a>
+  <a href="https://github.com/mikyll/UnityDOTS-Thesis/issues">Richiedi una Feature|Segnala un Bug</a>
 <br/><br/>
 <img src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/aaaaaaaaa.png"/>
 </div>
