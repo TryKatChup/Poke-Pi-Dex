@@ -28,11 +28,11 @@ We recreated a Pokédex clone, which recognizes pictures of Pokémon from the fi
   ·
   <a href="">Docs</a>
   ·
-  <a href="">View Report</a>
+  <a href="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/Relazione.pdf">View Report</a>
   ·
   <a href="">Presentation</a>
   ·
-  <a href="">Request Feature|Report Bug</a>
+  <a href="https://github.com/TryKatChup/Poke-Pi-Dex/issues">Request Feature|Report Bug</a>
 <br/><br/>
 <img src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/aaaaaaaaa.png"/>
 
