@@ -76,6 +76,7 @@ Check link a roba scritta da Kary
 To use the application follow these steps:
 
 ### Prerequisiti
+- conda
 TO-DO
 <!-- - OS:
 - Python version
@@ -83,7 +84,18 @@ TO-DO
   - for Raspberry usage: -->
 
 ### Installazione
-TO-DO
+#### Windows
+1. Scarica l'[ultima versione](https://github.com/TryKatChup/Poke-Pi-Dex/releases/latest)
+2. Estrai lo zip
+3. Crea il virtual environment:
+  ```bash
+  conda env create -f environment.yml
+  ```
+4. Esegui l'applicazione
+  ```bash
+  python poke-pi-dex.py
+  ```
+
 <!-- - clone the repo or download the latest release -->
 
 ## Roadmap
