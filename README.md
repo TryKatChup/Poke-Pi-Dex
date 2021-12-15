@@ -96,8 +96,7 @@ TO-DO
 TO-DO
 <!-- - clone the repo or download the latest release -->
 
-<h2><a href="https://www.youtube.com/watch?v=Y7JG63IuaWs">Tool</a>s</h2>
-
+## [Tool](https://www.youtube.com/watch?v=Y7JG63IuaWs "Nop, this is not the easter egg. Hint: app GUI")s
 - [PyCharm](https://www.jetbrains.com/pycharm/)
 - [Anaconda](https://www.anaconda.com/)
 - [Docker](https://www.docker.com/)
@@ -200,7 +199,9 @@ Distributed under the GPLv3 License. See [`LICENSE`](https://github.com/TryKatCh
 * [TryKatChup](https://www.linkedin.com/in/karina-chichifoi/?locale=en_US)
 * [Mikyll](https://www.linkedin.com/in/michele-righi/?locale=en_US)
 
-<!-- ## Acknowledgements -->
+<!-- ## Acknowledgements
+* Lorenzo Castriota "Brian" for the video making and editing
+* [Lorenzo Righi](https://github.com/TankyThunderpaw) for painting materials -->
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
