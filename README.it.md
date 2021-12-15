@@ -37,11 +37,11 @@
 <img src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/aaaaaaaaa.png"/>
 </div>
 
-<details> <!-- open="open" -->
+<details open="open">
   <summary><h2 style="display: inline-block">Indice</h2></summary>
   <ol>
     <li><a href="#demo">Demo</a></li>
-    <li><a href="#funzionalita">Funzionalità</a></li>
+    <li><a href="#funzionalità">Funzionalità</a></li>
     <li><a href="#panoramica-completa">Panoramica Completa</a></li>
     <li><a href="#utilizzo">Utilizzo</a>
       <ul>
