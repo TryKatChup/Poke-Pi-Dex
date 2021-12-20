@@ -191,6 +191,7 @@ TO-DO
   - [ ] finish the 3D model and print it
   - [ ] extend the Pokédex to the following Pokémon generations
   - [ ] porting of the application to mobile systems (Android, iOS)
+  - [ ] use picamera instead of opencv is module is installed
 
 ## License
 Distributed under the GPLv3 License. See [`LICENSE`](https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/LICENSE) for more information.
