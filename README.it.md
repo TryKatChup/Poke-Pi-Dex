@@ -30,7 +30,7 @@
   ·
   <a href="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/Relazione.pdf">Relazione</a>
   ·
-  <a href="">Presentazione</a>
+  <a href="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/docs/Presentation/Pok%C3%A9-Pi-Dex_IT.pdf">Presentazione</a>
   ·
   <a href="https://github.com/mikyll/UnityDOTS-Thesis/issues">Richiedi una Feature|Segnala un Bug</a>
 <br/><br/>
