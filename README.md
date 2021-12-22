@@ -41,7 +41,7 @@ We recreated a Pokédex clone, which recognizes pictures of Pokémon from the fi
 <details open="closed">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
-    <!--<li><a href="#demo">Demo</a></li>-->
+    <li><a href="#demo">Demo</a></li>
     <li><a href="#features">Features</a></li>
     <li><a href="#full-overview">Full Overview</a></li>
     <li><a href="#usage">Usage</a>
@@ -60,12 +60,14 @@ We recreated a Pokédex clone, which recognizes pictures of Pokémon from the fi
   </ol>
 </details>
 
-<!--## Demo
-See our demo on YouTube! https://www.youtube.com/watch?v=6A07DGlRxg4 <!-- TO-DO -->
+## Demo
+See our [demo](https://youtu.be/IkbLYq1PmRs) on YouTube!
 
-<!--<div align="center">
-  <img src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/demo.png" width=50%/>
-</div>-->
+<div align="center">
+  <a href="https://youtu.be/IkbLYq1PmRs" target="_blank"><img src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/Play_YouTube.png" alt="Demo Video" width=40%" border="10" /></a>
+	<br/>
+	Demo video
+</div>
 
 ## Features
 - Main menu with functionalities and `About` panel.
