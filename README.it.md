@@ -60,10 +60,13 @@
 </details>
 
 ## Demo
-See our demo on YouTube! https://www.youtube.com/watch?v=6A07DGlRxg4 <!-- TO-DO -->
+See our [demo](https://youtu.be/IkbLYq1PmRs) on YouTube!
+
 
 <div align="center">
-  <img src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/demo.png" width=50%/>
+  <a href="https://youtu.be/IkbLYq1PmRs" target="_blank"><img src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/Play_YouTube.png" alt="Demo Video" width=40%" border="10" /></a>
+	<br/>
+	Demo video
 </div>
 
 ## Funzionalità
@@ -164,8 +167,8 @@ TO-DO
   - [x] impostare il documento in LaTeX
   - [x] abbozzare una possibile suddivisione in capitoli
   - [x] scrivere il report
-- [ ] Presentazione
-- [ ] Demo Video <!--building, test and different implementation parts-->
+- [x] Presentazione
+- [x] Video Dimostrativo
 - [ ] Extra & Sviluppi Futuri
   - [ ] usare una rete neurale più complessa con il nuovo dataset
   - [ ] usare nuove forme di data augmentation
@@ -200,7 +203,12 @@ Distribuito sotto Licenza GPLv3. Vedi [`LICENSE`](https://github.com/TryKatChup/
 * [TryKatChup](https://www.linkedin.com/in/karina-chichifoi/?locale=en_US)
 * [Mikyll](https://www.linkedin.com/in/michele-righi/?locale=en_US)
 
-<!-- ## Ringraziamenti -->
+## Ringraziamenti
+Espansione dataset - Mihaela Chichifoi
+Espansione dataset - [Dario De Nardi](https://github.com/dariodenardi)
+Tempere e Materiale Cancelleria - [Lorenzo Righi](https://github.com/TankyThunderpaw)
+Saldature Componenti - Pier Marino Righi
+Riprese e Montaggio Video - Lorenzo Castriota "Brian"
 
 <!-- ## Meme -->
 
