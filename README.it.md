@@ -62,7 +62,6 @@
 ## Demo
 See our [demo](https://youtu.be/IkbLYq1PmRs) on YouTube!
 
-
 <div align="center">
   <a href="https://youtu.be/IkbLYq1PmRs" target="_blank"><img src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/Play_YouTube.png" alt="Demo Video" width=40%" border="10" /></a>
 	<br/>
