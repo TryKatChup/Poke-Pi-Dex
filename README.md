@@ -180,8 +180,8 @@ TO-DO
   - [x] setup a LaTeX document
   - [x] draft a possible subdivision into chapters
   - [x] write the report
-- [ ] Presentation
-- [ ] Demo Video <!--building, test and different implementation parts-->
+- [x] Presentation
+- [x] Demo Video <!--building, test and different implementation parts-->
 - [ ] Extra & Future Developments
   - [ ] use a more comples neural network with the new dataset
   - [ ] use new form of data augmentation
