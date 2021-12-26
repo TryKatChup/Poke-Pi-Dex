@@ -60,6 +60,7 @@ __pycache__
 
 # cursed files for git lfs
 
-./pokemon-classifier/src/nuovomobilenetv2
-./pokemon-classifier/src/nuovoresnet152
-./pokemon-classifier/src/nuovoresnet152.tflite
+pokemon-classifier/src/nuovomobilenetv2
+pokemon-classifier/src/nuovoresnet152.tflite
+pokemon-classifier/src/nuovoresnet152
+app/qa_model_best100_8bit.tflite
