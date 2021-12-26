@@ -57,3 +57,9 @@ _minted*
 *.idea
 /docs/template
 __pycache__
+
+# cursed files for git lfs
+
+./pokemon-classifier/src/nuovomobilenetv2
+./pokemon-classifier/src/nuovoresnet152
+./pokemon-classifier/src/nuovoresnet152.tflite
