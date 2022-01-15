@@ -17,7 +17,7 @@
   [![Stargazers][stars-shield]][stars-url]
   [![Issues][issues-shield]][issues-url]
   
-  <img src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/logo.png"/>
+  <img src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/logo.png" width="600"/>
   <h3> Deep Learning for Computer Vision related project for nostalgic Poké weebs </h3>
 <hr class="rounded">	
 We recreated a Pokédex clone, which recognizes pictures of Pokémon from the first generation, using a Convolutional Neural Network. It's built on Raspberry Pi4 with LCD display, PiCamera, speaker and some other components attached.<br> 
