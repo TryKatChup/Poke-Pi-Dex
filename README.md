@@ -42,7 +42,6 @@ The case is made of recycled cardboard. 🌱
   <ol>
     <li><a href="#demo">Demo</a></li>
     <li><a href="#features">Features</a></li>
-    <li><a href="#full-overview">Full Overview</a></li>
     <li><a href="#usage">Usage</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
@@ -79,9 +78,6 @@ See our [demo](https://youtu.be/IkbLYq1PmRs) on YouTube!
 - `Settings` view where users can edit parameters, such as language (English and Italian), fullscreen, volume.
 - Debug mode to check the values of the prediction.
 - Easter egg, try and find it!
-
-## Full Overview
-TO-DO
 
 ## Usage
 To use the application follow these steps:
