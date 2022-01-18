@@ -42,7 +42,6 @@
   <ol>
     <li><a href="#demo">Demo</a></li>
     <li><a href="#funzionalità">Funzionalità</a></li>
-    <li><a href="#panoramica-completa">Panoramica Completa</a></li>
     <li><a href="#utilizzo">Utilizzo</a>
       <ul>
         <li><a href="#prerequisiti">Prerequisiti</a></li>
@@ -70,9 +69,6 @@ See our [demo](https://youtu.be/IkbLYq1PmRs) on YouTube!
 
 ## Funzionalità
 TODO
-
-## Panoramica Completa
-Check link a roba scritta da Kary
 
 ## Utilizzo
 To use the application follow these steps:
