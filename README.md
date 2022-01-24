@@ -103,7 +103,7 @@ TO-DO
 ## Resources
 - Pokémon data:
   - [Old Dataset](https://www.kaggle.com/thedagger/pokemon-generation-one)
-  - [Our New Dataset](https://www.kaggle.com/unexpectedscepticism/11945-pokmon-from-first-gen)
+  - [Our New Dataset](https://www.kaggle.com/unexpectedscepticism/11945-pokemon-from-first-gen)
   - [Details](https://github.com/fanzeyi/pokemon.json)
   - [Cry audio files]()
   - [Description audio files](http://texttospeechrobot.com/)
