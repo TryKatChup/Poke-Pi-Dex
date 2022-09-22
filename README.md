@@ -187,7 +187,7 @@ TO-DO
   - [ ] add settings option to enable/disable the video freezing after taking a picture
   - [ ] finish the 3D model and print it
   - [ ] extend the Pokédex to the following Pokémon generations
-  - [ ] porting of the application to mobile systems (Android, iOS)
+  - [ ] porting of the application to mobile systems (Android, iOS) - [Flutter + Firebase](https://firebase.google.com/docs/ml/flutter/use-custom-models)
   <!-- - [ ] use picamera instead of opencv is module is installed -->
 
 ## License
