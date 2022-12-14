@@ -22,15 +22,17 @@
   
 **Poké-Pi-Dex** è il nostro progetto per poké-weeb nostalgici, basato su deep learning / computer vision. Realizzato da [Karina Chichifoi](https://github.com/TryKatChup) e [Michele Righi](https://github.com/mikyll).
 	
-  Abbiamo ricreato il clone di un **Pokédex**, che riconosce immagini di Pokémon della prima generazione, sfruttando una Rete Neurale Convoluzionale. È stato sviluppato per eseguire su un **Raspberry Pi4** con display LCD, PiCamera ed altri componenti collegati. Il case è fatto di cartoncino riciclato. 🌱
+  Abbiamo ricreato il clone di un **Pokédex** che riconosce immagini di Pokémon della prima generazione, sfruttando una Rete Neurale Convoluzionale. È stato sviluppato per eseguire su un **Raspberry Pi4** con display LCD, PiCamera ed altri componenti collegati.
+<br/>
+Il case è fatto di cartoncino riciclato. 🌱
 <br/><br/>
-  <a href="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/README.md#-poké-pi-dex">English</a>
+  <a href="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/README.md">English</a>
   ·
-  <a href="">Documentazione</a>
-  ·
-  <a href="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/Relazione.pdf">Relazione</a>
+  <a href="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/docs/Report/Relazione.pdf">Relazione</a>
   ·
   <a href="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/docs/Presentation/Poké-Pi-Dex_IT.pdf">Presentazione</a>
+  ·
+  <a href="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/docs/Report/AttivitaProgettuale.pdf">Att. Progettuale</a>
   ·
   <a href="https://github.com/mikyll/UnityDOTS-Thesis/issues">Richiedi una Feature|Segnala un Bug</a>
 <br/><br/>
