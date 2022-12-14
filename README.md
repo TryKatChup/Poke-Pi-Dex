@@ -1,26 +1,28 @@
-<div align="center">  
-  <img src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/logo.png" width="600"/>
-	  
-  [![made-with-python][made-with-phyton-shield]][made-with-phyton-url]
-  [![made-with-Markdown][made-with-markdown-shield]][made-with-markdown-url]
-  [![Open Source Love png1][open-source-shield]][open-source-url]
-  [![GPLv3 license][license-shield]][license-url]
+<div align="center">
+
+  [![Contributors][contributors-shield]][contributors-url]
+  [![Forks][forks-shield]][forks-url]
+  [![License][license-shield]][license-url]
+  [![Stargazers][stars-shield]][stars-url]
+  [![Downloads][downloads-shield]][downloads-url]
+  [![Issues][issues-shield]][issues-url]
+  [![Poke-Pi-Dex][poke-pi-dex-shield]][poke-pi-dex-url]
+  <br/>
   [![Raspberry Pi][raspberry-shield]][raspberry-url]
+  [![Python][python-shield]][python-url]
+  [![nVIDIA][nvidia-shield]][nvidia-url]
   [![Keras][keras-shield]][keras-url]
   [![TensorFlow][tensorflow-shield]][tensorflow-url]
   [![Open CV][opencv-shield]][opencv-url]
-  [![nVIDIA][nvidia-shield]][nvidia-url]
+  
   <br/>
-  [![Open In Collab][open-collab-shield]][open-collab-url]
-  [![Downloads][downloads-shield]][downloads-url]
-  [![Contributors][contributors-shield]][contributors-url]
-  [![Forks][forks-shield]][forks-url]
-  [![Stargazers][stars-shield]][stars-url]
-  [![Issues][issues-shield]][issues-url]
+  <img width="100px" src="gfx/Logo_Poke-Pi-Dex.svg"/>
 
-  <h3> Deep Learning for Computer Vision related project for nostalgic Poké weebs </h3>
-<hr class="rounded">	
-We recreated a Pokédex clone, which recognizes pictures of Pokémon from the first generation, using a Convolutional Neural Network. It's built on Raspberry Pi4 with LCD display, PiCamera, speaker and some other components attached.<br> 
+  <h1>Poké-Pi-Dex</h1>
+  
+**Poké-Pi-Dex** is our deep learning / computer vision related project for nostalgic *poké-weebs*.
+
+We recreated a Pokédex clone, which recognizes pictures of Pokémon from the first generation, using a Convolutional Neural Network. It's built on **Raspberry Pi4** with LCD display, PiCamera, speaker and some other components attached.<br> 
 The case is made of recycled cardboard. 🌱
 <br><br>
   <a href="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/README.it.md#-poké-pi-dex">Italiano</a>
@@ -33,7 +35,7 @@ The case is made of recycled cardboard. 🌱
   ·
   <a href="https://github.com/TryKatChup/Poke-Pi-Dex/issues">Request Feature|Report Bug</a>
 <br><br>
-<img src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/aaaaaaaaa.png"/>
+<img width="70%" src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/aaaaaaaaa.png"/>
 
 </div>
 
@@ -59,7 +61,7 @@ The case is made of recycled cardboard. 🌱
 </details>
 
 ## Demo
-See our [demo](https://youtu.be/IkbLYq1PmRs) on YouTube!
+Watch our [demo](https://youtu.be/IkbLYq1PmRs) on YouTube!
 
 <div align="center">
   <a href="https://youtu.be/IkbLYq1PmRs" target="_blank"><img src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/Play_YouTube.png" alt="Demo Video" width=40%" border="10" /></a>
@@ -201,31 +203,12 @@ Distributed under the GPLv3 License. See [`LICENSE`](https://github.com/TryKatCh
 * Lorenzo Castriota "Brian" for the video making and editing
 * [Lorenzo Righi](https://github.com/TankyThunderpaw) for painting materials -->
 
+<div align="center">
+  <img width="600px" src="gfx/logo.png"/>
+</div>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[ask-me-anything-shield]: https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg
-[ask-me-anything-url]: https://github.com/TryKatChup/Poke-Pi-Dex/issues
-[open-collab-shield]: https://colab.research.google.com/assets/colab-badge.svg
-[open-collab-url]: https://github.com/TryKatChup/Poke-Pi-Dex/issues
-[made-with-phyton-shield]: https://img.shields.io/badge/Made%20with-Python-14354C.svg
-[made-with-phyton-url]: https://www.python.org/
-[made-with-markdown-shield]: https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg
-[made-with-markdown-url]: http://commonmark.org
-[open-source-shield]: https://badges.frapsoft.com/os/v1/open-source.png?v=103
-[open-source-url]: https://github.com/ellerbrock/open-source-badges/
-[license-shield]: https://img.shields.io/badge/License-GPLv3-blue.svg
-[license-url]: http://perso.crans.org/besson/LICENSE.html
-[raspberry-shield]: https://img.shields.io/badge/-RaspberryPi-C51A4A?&logo=Raspberry-Pi
-[raspberry-url]: https://www.raspberrypi.org/
-[keras-shield]: https://img.shields.io/badge/Keras-%23D00000.svg?logo=Keras&logoColor=white
-[keras-url]: https://keras.io/
-[tensorflow-shield]: https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?logo=TensorFlow&logoColor=white
-[tensorflow-url]: https://www.tensorflow.org/
-[opencv-shield]: https://img.shields.io/badge/opencv-%23white.svg?logo=opencv&logoColor=white
-[opencv-url]: https://opencv.org/
-[nvidia-shield]: https://img.shields.io/badge/nVIDIA-%2376B900.svg?logo=nVIDIA&logoColor=white
-[nvidia-url]: https://www.nvidia.com/
 
 [downloads-shield]: https://img.shields.io/github/downloads/TryKatChup/Poke-Pi-Dex/total
 [downloads-url]: https://github.com/TryKatChup/Poke-Pi-Dex/releases/latest
@@ -237,5 +220,30 @@ Distributed under the GPLv3 License. See [`LICENSE`](https://github.com/TryKatCh
 [stars-url]: https://github.com/TryKatChup/Poke-Pi-Dex/stargazers
 [issues-shield]: https://img.shields.io/github/issues/TryKatChup/Poke-Pi-Dex
 [issues-url]: https://github.com/mikyll/TryKatChup/Poke-Pi-Dex/issues
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?logo=linkedin&colorB=0077B5
-[linkedin-url]: https://www.linkedin.com/in/michele-righi/?locale=en_US
+[license-shield]: https://img.shields.io/badge/License-GPLv3-blue.svg
+[license-url]: http://perso.crans.org/besson/LICENSE.html
+[ask-me-anything-shield]: https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg
+[ask-me-anything-url]: https://github.com/TryKatChup/Poke-Pi-Dex/issues
+[open-collab-shield]: https://colab.research.google.com/assets/colab-badge.svg
+[open-collab-url]: https://github.com/TryKatChup/Poke-Pi-Dex/issues
+[made-with-phyton-shield]: https://img.shields.io/badge/Made%20with-Python-14354C.svg
+[made-with-phyton-url]: https://www.python.org/
+[made-with-markdown-shield]: https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg
+[made-with-markdown-url]: http://commonmark.org
+[open-source-shield]: https://badges.frapsoft.com/os/v1/open-source.png?v=103
+[open-source-url]: https://github.com/ellerbrock/open-source-badges/
+[poke-pi-dex-shield]: https://custom-icon-badges.herokuapp.com/badge/pok%C3%A9pidex-wow-orangered?logo=poke-pi-dex
+[poke-pi-dex-url]: https://github.com/TryKatChup/Poke-Pi-Dex
+
+[raspberry-shield]: https://img.shields.io/badge/-RaspberryPi-C51A4A?&logo=Raspberry-Pi
+[raspberry-url]: https://www.raspberrypi.org/
+[keras-shield]: https://img.shields.io/badge/Keras-%23D00000.svg?logo=Keras&logoColor=white
+[keras-url]: https://keras.io/
+[tensorflow-shield]: https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?logo=TensorFlow&logoColor=white
+[tensorflow-url]: https://www.tensorflow.org/
+[opencv-shield]: https://img.shields.io/badge/opencv-%23white.svg?logo=opencv&logoColor=white
+[opencv-url]: https://opencv.org/
+[nvidia-shield]: https://img.shields.io/badge/nVIDIA-%2376B900.svg?logo=nVIDIA&logoColor=white
+[nvidia-url]: https://www.nvidia.com/
+[python-shield]: https://img.shields.io/badge/python-3670A0?logo=python&logoColor=ffffff
+[python-url]: https://www.python.org/
