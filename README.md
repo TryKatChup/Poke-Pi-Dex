@@ -22,7 +22,7 @@
   
 **Poké-Pi-Dex** is our deep learning / computer vision related project for nostalgic *poké-weebs*.
 
-We recreated a Pokédex clone, which recognizes pictures of Pokémon from the first generation, using a Convolutional Neural Network. It's built on **Raspberry Pi4** with LCD display, PiCamera, speaker and some other components attached.<br> 
+We recreated a **Pokédex** clone, which recognizes pictures of Pokémon from the first generation, using a Convolutional Neural Network. It's built on **Raspberry Pi4** with LCD display, PiCamera, speaker and some other components attached.<br> 
 The case is made of recycled cardboard. 🌱
 <br><br>
   <a href="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/README.it.md#-poké-pi-dex">Italiano</a>
@@ -115,6 +115,9 @@ TO-DO
 - [Tensorflow-lite post-training quantization](https://www.tensorflow.org/lite/performance/post_training_quantization)
 
 ## Roadmap
+
+<details>
+
 - [x] Dataset
   - [x] find a decent dataset for the neural network
   - [x] fix (cut pictures) and extend it
@@ -191,6 +194,8 @@ TO-DO
   - [ ] extend the Pokédex to the following Pokémon generations
   - [ ] porting of the application to mobile systems (Android, iOS) - [Flutter + Firebase](https://firebase.google.com/docs/ml/flutter/use-custom-models)
   <!-- - [ ] use picamera instead of opencv is module is installed -->
+
+</details>
 
 ## License
 Distributed under the GPLv3 License. See [`LICENSE`](https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/LICENSE) for more information.
