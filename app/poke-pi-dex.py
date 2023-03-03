@@ -156,7 +156,7 @@ class App:
         self.frame_info.pack_propagate(0)
         self.button_close_error = tk.Button(master=self.frame_error, image=self.image_button_close, bg=background, command=lambda: self.close_error())
         self.button_close_error.pack(side=tk.TOP, anchor=tk.E, padx=(0, 2), pady=(2, 0))
-        self.label_error = tk.Label(master=self.frame_error, text=labels["error"][self.settings.language], bg=background_dark, font=("Helvetica", int(res_width / 48), "bold"))
+        self.label_error = tk.Label(master=self.frame_error, bg=background_dark, font=("Helvetica", int(res_width / 48), "bold"))
         self.label_error.pack(side=tk.TOP, anchor=tk.CENTER, pady=(0, int(res_width / 48)))
         self.text_error_description = tk.Text(master=self.frame_error, width=40, height=10, bg=background_dark, bd=0, highlightthickness=0, font=("Helvetica", int(res_width / 60), "normal"))
         self.text_error_description.tag_configure('tag-center', justify='center')
@@ -473,7 +473,7 @@ class App:
     def start(self):
         # Show the App Menu
         self.show_menu()
-        self.video = vc.VideoCapture()
+        self.video = vc.VideoCapture(0)
         # After it is called once, the update method will be automatically called every delay milliseconds
         self.delay = 1
         self.update()
@@ -542,9 +542,9 @@ class App:
                 return
             print("START POKÉDEX APP")
             self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False, padx=(1, 0))
-        except:
-            print("ERROR: an error occurred while trying to open video source")
-            self.show_error("Video Error", labels["video source error"][self.settings.language])
+        except Exception as e:
+            print("ERROR: an error occurred while trying to open the video source. {}".format(e.args))
+            self.show_error(e.__class__.__name__, str(e.args))
 
     def show_debug_mode(self):
         self.frame_right.pack_forget()
@@ -565,14 +565,13 @@ class App:
         if self.update_video:
             try:
                 ret, frame = self.video.get_frame()
-
-                # .transpose(Image.FLIP_LEFT_RIGHT) to flip the image
-                self.photo = ImageTk.PhotoImage(image=Image.fromarray(frame).resize(image_size, Image.ANTIALIAS))
+                frame_image = Image.fromarray(frame).resize(image_size, Image.ANTIALIAS)
+                self.photo = ImageTk.PhotoImage(image=frame_image)
                 self.canvas_video.create_image(res_width/4, res_width/4, image=self.photo, anchor=tk.CENTER)
-            except:
-                print("ERROR: an error occurred while trying to update the frame")
+            except Exception as e:
+                print("ERROR: an error occurred while trying to update the frame. {}".format(e.args))
                 self.show_menu()
-                self.show_error("Video Error", labels["video source error"][self.settings.language])
+                self.show_error(e.__class__.__name__, str(e.args))
         self.window.after(self.delay, self.update)
 
     def reset_pokemon(self):
@@ -646,10 +645,10 @@ class App:
             confidence = str(confidence)[1:-1]
             # self.entry_prediction_text.set(pkmn + ": " + confidence)
             self.load_pokemon(pkmn)
-        except:
-            print("ERROR: an error occurred while trying to run the search")
+        except Exception as e:
+            print("ERROR: an error occurred while trying to run the search. {}".format(e.args))
             self.show_menu()
-            self.show_error("Video Error", labels["video source error"][self.settings.language])
+            self.show_error(e.__class__.__name__, str(e.args))
     
     def load_pokemon(self, pkmn_id):
         try:
@@ -928,10 +927,10 @@ class App:
             ret, frame = self.video.get_frame()
 
             cv2.imwrite("frame-" + time.strftime("%d-%m-%Y-%H-%M-%S") + ".jpg", cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
-        except:
-            print("ERROR: an error occurred while trying to save a snapshot")
+        except Exception as e:
+            print("ERROR: an error occurred while trying to save a snapshot. {}.".format(e.args))
             self.show_menu()
-            self.show_error("Video Error", labels["video source error"][self.settings.language])
+            self.show_error(e.__class__.__name__, str(e.args))
 
     def save_window_snapshot(self):
         print("Window snapshot")
