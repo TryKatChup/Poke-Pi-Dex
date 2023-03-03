@@ -26,5 +26,7 @@
     "volume": {"en": "Volume: ", "it": "Volume: "},
     "save": {"en": "Save", "it": "Salva"},
     "cancel": {"en": "Cancel", "it": "Annulla"},
-	"time": {"en": "Time: ", "it": "Ora: "}
+	"time": {"en": "Time: ", "it": "Ora: "},
+	"error": {"en": "Error", "it": "Errore"},
+	"video source error": {"en": "An error occurred while trying\nto open the video source.", "it": "Si è verificato un errore durante\nl'apertura della sorgente video."}
 }

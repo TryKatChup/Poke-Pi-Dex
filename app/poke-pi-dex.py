@@ -16,6 +16,7 @@ from labels import load_labels
 import settings
 from image_rectifier import rectify_image
 import pokemon_classifier_tflite as pc
+from video_source_exception import VideoSourceException
 '''try:
     from input import register_button
 except ModuleNotFoundError:
@@ -149,6 +150,18 @@ class App:
         self.label_info_miky = tk.Label(master=self.frame_image_miky, text="Unibo MSc Student", bg=background_dark, font=("Helvetica", int(res_width/60), "normal"))
         self.label_info_miky.pack(side=tk.TOP, anchor=tk.CENTER)
         self.window_info = None
+
+        # Error
+        self.frame_error = tk.Frame(master=self.frame_menu, width=300, height=int(res_height / 1.333), bg=background)  # 314, 240
+        self.frame_info.pack_propagate(0)
+        self.button_close_error = tk.Button(master=self.frame_error, image=self.image_button_close, bg=background, command=lambda: self.close_error())
+        self.button_close_error.pack(side=tk.TOP, anchor=tk.E, padx=(0, 2), pady=(2, 0))
+        self.label_error = tk.Label(master=self.frame_error, text=labels["error"][self.settings.language], bg=background_dark, font=("Helvetica", int(res_width / 48), "bold"))
+        self.label_error.pack(side=tk.TOP, anchor=tk.CENTER, pady=(0, int(res_width / 48)))
+        self.text_error_description = tk.Text(master=self.frame_error, width=40, height=10, bg=background_dark, bd=0, highlightthickness=0, font=("Helvetica", int(res_width / 60), "normal"))
+        self.text_error_description.tag_configure('tag-center', justify='center')
+        self.text_error_description.pack(side=tk.TOP, anchor=tk.CENTER, padx=(int(res_width / 48), int(res_width / 48)), pady=(0, int(res_width / 48)))
+        self.window_error = None
 
         # Pokédex App
         self.frame_left = tk.Frame(width=(res_width/2)-1, height=res_height, bg=background)
@@ -492,21 +505,46 @@ class App:
         self.button_quit.config(state=tk.NORMAL)
         self.button_info.config(state=tk.NORMAL)
 
+    def show_error(self, title="Error", description="Generic error"):
+        print("SHOW ERROR")
+        self.label_error.config(text=title)
+        self.text_error_description.config(state="normal")
+        self.text_error_description.delete('1.0', tk.END)
+        self.text_error_description.insert('1.0', description, 'tag-center')
+        self.text_error_description.config(state="disabled")
+        self.window_error = self.canvas_background.create_window(int(res_width/2.437), int(res_height/8), anchor=tk.N, window=self.frame_error)  # 157+40, 40
+        self.button_start.config(state=tk.DISABLED)
+        self.button_quit.config(state=tk.DISABLED)
+        self.button_info.config(state=tk.DISABLED)
+
+    def close_error(self):
+        print("CLOSE ERROR")
+        self.canvas_background.delete(self.window_error)
+        self.button_start.config(state=tk.NORMAL)
+        self.button_quit.config(state=tk.NORMAL)
+        self.button_info.config(state=tk.NORMAL)
+
     def show_app(self):
-        self.frame_menu.pack_forget()
-        self.frame_info.pack_forget()
-        self.frame_settings.pack_forget()
-        self.frame_debug.pack_forget()
-        self.video.open()
-        self.update_video = True
-        self.frame_left.pack(side=tk.LEFT, fill=None, expand=False, padx=(0, 1))
-        self.reset_pokemon()
-        if self.settings.debug_mode != 0:
-            print("START POKÉDEX APP (DEBUG)")
-            self.frame_debug.pack(side=tk.RIGHT, fill=None, expand=False, padx=(1, 0))
-            return
-        print("START POKÉDEX APP")
-        self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False, padx=(1, 0))
+        try:
+            self.video.open()
+            self.video.get_frame()
+
+            self.frame_menu.pack_forget()
+            self.frame_info.pack_forget()
+            self.frame_settings.pack_forget()
+            self.frame_debug.pack_forget()
+            self.update_video = True
+            self.frame_left.pack(side=tk.LEFT, fill=None, expand=False, padx=(0, 1))
+            self.reset_pokemon()
+            if self.settings.debug_mode != 0:
+                print("START POKÉDEX APP (DEBUG)")
+                self.frame_debug.pack(side=tk.RIGHT, fill=None, expand=False, padx=(1, 0))
+                return
+            print("START POKÉDEX APP")
+            self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False, padx=(1, 0))
+        except:
+            print("ERROR: an error occurred while trying to open video source")
+            self.show_error("Video Error", labels["video source error"][self.settings.language])
 
     def show_debug_mode(self):
         self.frame_right.pack_forget()
@@ -525,11 +563,16 @@ class App:
 
     def update(self):
         if self.update_video:
-            ret, frame = self.video.get_frame()
-            if ret:
+            try:
+                ret, frame = self.video.get_frame()
+
                 # .transpose(Image.FLIP_LEFT_RIGHT) to flip the image
                 self.photo = ImageTk.PhotoImage(image=Image.fromarray(frame).resize(image_size, Image.ANTIALIAS))
                 self.canvas_video.create_image(res_width/4, res_width/4, image=self.photo, anchor=tk.CENTER)
+            except:
+                print("ERROR: an error occurred while trying to update the frame")
+                self.show_menu()
+                self.show_error("Video Error", labels["video source error"][self.settings.language])
         self.window.after(self.delay, self.update)
 
     def reset_pokemon(self):
@@ -573,8 +616,9 @@ class App:
         self.entry_prediction_text.set("")
 
     def search(self):
-        ret, frame = self.video.get_frame()
-        if ret:
+        try:
+            ret, frame = self.video.get_frame()
+
             cv2.imwrite("frame.jpg", cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
             frame = rectify_image(frame)
             cv2.imwrite("frame_undistorted.jpg", cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
@@ -602,6 +646,10 @@ class App:
             confidence = str(confidence)[1:-1]
             # self.entry_prediction_text.set(pkmn + ": " + confidence)
             self.load_pokemon(pkmn)
+        except:
+            print("ERROR: an error occurred while trying to run the search")
+            self.show_menu()
+            self.show_error("Video Error", labels["video source error"][self.settings.language])
     
     def load_pokemon(self, pkmn_id):
         try:
@@ -876,9 +924,14 @@ class App:
 
     def save_video_snapshot(self):
         # Get a frame from the video source
-        ret, frame = self.video.get_frame()
-        if ret:
+        try:
+            ret, frame = self.video.get_frame()
+
             cv2.imwrite("frame-" + time.strftime("%d-%m-%Y-%H-%M-%S") + ".jpg", cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
+        except:
+            print("ERROR: an error occurred while trying to save a snapshot")
+            self.show_menu()
+            self.show_error("Video Error", labels["video source error"][self.settings.language])
 
     def save_window_snapshot(self):
         print("Window snapshot")

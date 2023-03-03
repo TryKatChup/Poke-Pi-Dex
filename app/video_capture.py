@@ -1,5 +1,5 @@
 import cv2
-
+from video_source_exception import VideoSourceException
 
 class VideoCapture:
     def __init__(self, video_source=0):
@@ -11,8 +11,8 @@ class VideoCapture:
     def open(self):
         # Open the video source
         self.vid = cv2.VideoCapture(self.video_source)
-        if not self.vid.isOpened():
-            raise ValueError("Unable to open video source", self.video_source)
+        if self.vid is None or not self.vid.isOpened():
+            raise VideoSourceException("Unable to open video source", self.video_source)
 
         # Get video source width and height
         # self.width = self.vid.get(cv2.CAP_PROP_FRAME_WIDTH)
@@ -23,7 +23,7 @@ class VideoCapture:
         self.vid.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
 
     def get_frame(self):
-        if self.vid.isOpened():
+        if self.vid is None or not self.vid.isOpened():
             ret, frame = self.vid.read()
             if ret:
                 # Return a boolean success flag and the current frame converted to BGR
@@ -31,7 +31,7 @@ class VideoCapture:
             else:
                 return (ret, None)
         else:
-            return (None, None)
+            raise VideoSourceException("Video source is not available", self.video_source)
 
     def close(self):
         if self.vid.isOpened():
