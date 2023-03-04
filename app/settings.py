@@ -13,7 +13,7 @@ class Settings:
         self.fullscreen = tk.IntVar(value=1)
         self.touch_controls = tk.IntVar(value=1)
         self.descr_voice = 1
-        self.flip_image = tk.IntVar(value=0)
+        self.flip_image = 1
         self.volume = 0.5
         # load from file
         self.load_from_file()
@@ -24,7 +24,7 @@ class Settings:
             "fullscreen": self.fullscreen.get(),
             "touch_controls": self.touch_controls.get(),
             "descr_voice": self.descr_voice,
-            "flip_image": self.flip_image.get(),
+            "flip_image": self.flip_image,
             "volume": self.volume
         }
         return result
@@ -43,7 +43,7 @@ class Settings:
             if in_settings["descr_voice"] == 0 or in_settings["descr_voice"] == 1:
                 self.descr_voice = in_settings["descr_voice"]
             if in_settings["flip_image"] == 0 or in_settings["flip_image"] == 1:
-                self.flip_image.set(in_settings["flip_image"])
+                self.flip_image = in_settings["flip_image"]
             if 0.0 <= in_settings["volume"] <= 1.0:
                 self.volume = in_settings["volume"]
             in_file.close()
@@ -71,7 +71,7 @@ class Settings:
             if descr_voice == 0 or descr_voice == 1:
                 self.descr_voice = descr_voice
             if flip_image == 0 or flip_image == 1:
-                self.flip_image.set(flip_image)
+                self.flip_image = flip_image
             if 0.0 <= volume <= 100.0:
                 self.volume = volume
         except TypeError:
@@ -82,7 +82,7 @@ class Settings:
             "fullscreen": self.fullscreen.get(),
             "touch_controls": self.touch_controls.get(),
             "descr_voice": self.descr_voice,
-            "flip_image": self.flip_image.get(),
+            "flip_image": self.flip_image,
             "volume": self.volume
         }
 

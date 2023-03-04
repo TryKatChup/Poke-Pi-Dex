@@ -4,6 +4,7 @@ from tkinter import font
 from tkinter import ttk
 from PIL import ImageTk, Image
 import cv2
+import numpy as np
 import time
 # Sound
 import pygame
@@ -429,9 +430,10 @@ class App:
         self.check_descr_voice.select() if self.var_descr_voice.get() == 1 else self.check_descr_voice.deselect()
         self.check_descr_voice.pack(side=tk.RIGHT, padx=(0, 10))
         # Toggle Flip Image
+        self.var_flip_image = tk.IntVar(value=self.settings.flip_image)
         self.frame_flip = tk.Frame(master=self.frame_settings, width=res_width/2, bg=background)
         self.frame_flip.pack(side=tk.TOP, anchor=tk.W, fill=tk.X, pady=(5, 0), padx=(10, 0))
-        self.check_flip = tk.Checkbutton(master=self.frame_flip, onvalue=1, offvalue=0, bg=background, bd=0, highlightthickness=0, fg="black")
+        self.check_flip = tk.Checkbutton(master=self.frame_flip, variable=self.var_flip_image, onvalue=1, offvalue=0, bg=background, bd=0, highlightthickness=0, fg="black")
         self.text_flip = tk.StringVar(value=labels["flip image"][self.settings.language])
         self.label_flip = tk.Label(master=self.frame_flip, textvar=self.text_flip, width=12, anchor=tk.W, bg=background)
         self.label_flip.pack(side=tk.LEFT)
@@ -565,6 +567,8 @@ class App:
         if self.update_video:
             try:
                 ret, frame = self.video.get_frame()
+                if self.var_flip_image.get():
+                    frame = np.flip(frame, axis=1)
                 frame_image = Image.fromarray(frame).resize(image_size, Image.ANTIALIAS)
                 self.photo = ImageTk.PhotoImage(image=frame_image)
                 self.canvas_video.create_image(res_width/4, res_width/4, image=self.photo, anchor=tk.CENTER)
@@ -617,7 +621,8 @@ class App:
     def search(self):
         try:
             ret, frame = self.video.get_frame()
-
+            if self.var_flip_image.get():
+                frame = np.flip(frame, axis=1)
             cv2.imwrite("frame.jpg", cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
             frame = rectify_image(frame)
             cv2.imwrite("frame_undistorted.jpg", cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
@@ -843,6 +848,7 @@ class App:
             self.check_fullscreen.deselect()
             self.settings.fullscreen.set(False)
         self.var_descr_voice.set(self.settings.descr_voice)
+        self.var_flip_image.set(self.settings.flip_image)
         self.mono_channel.set_volume(self.settings.volume)
         self.frame_settings.pack_forget()
         self.frame_right.pack(side=tk.RIGHT, fill=None, expand=False)
@@ -881,7 +887,7 @@ class App:
     def save_settings(self):
         self.button_search.config(state=tk.NORMAL)
         self.settings.language = labels["languages"][self.combobox_language_text.get()]
-        self.settings.save_settings(self.combobox_language_text.get(), self.settings.fullscreen.get(), 1, self.var_descr_voice.get(), 0, self.scale_volume.get() / 100)
+        self.settings.save_settings(self.combobox_language_text.get(), self.settings.fullscreen.get(), 1, self.var_descr_voice.get(), self.var_flip_image.get(), self.scale_volume.get() / 100)
         self.window.attributes("-fullscreen", self.settings.fullscreen.get())
         self.update_language()
         self.mono_channel.set_volume(self.settings.volume)
@@ -925,7 +931,8 @@ class App:
         # Get a frame from the video source
         try:
             ret, frame = self.video.get_frame()
-
+            if self.var_flip_image.get():
+                frame = np.flip(frame, axis=1)
             cv2.imwrite("frame-" + time.strftime("%d-%m-%Y-%H-%M-%S") + ".jpg", cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
         except Exception as e:
             print("ERROR: an error occurred while trying to save a snapshot. {}.".format(e.args))
