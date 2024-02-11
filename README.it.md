@@ -26,8 +26,6 @@
 <br/>
 Il case è fatto di cartoncino riciclato. 🌱
 <br/><br/>
-  <a href="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/README.md">English</a>
-  ·
   <a href="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/docs/Report/Relazione.pdf">Relazione</a>
   ·
   <a href="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/docs/Presentation/Poké-Pi-Dex_IT.pdf">Presentazione</a>
@@ -35,11 +33,14 @@ Il case è fatto di cartoncino riciclato. 🌱
   <a href="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/docs/Report/AttivitaProgettuale.pdf">Att. Progettuale</a>
   ·
   <a href="https://github.com/mikyll/UnityDOTS-Thesis/issues">Richiedi una Feature|Segnala un Bug</a>
+  ·
+  <a href="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/README.md">English <kbd><img width="20px" src="https://flagicons.lipis.dev/flags/4x3/gb.svg"></kbd></a>
+  
 <br/><br/>
 <img width="70%" src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/aaaaaaaaa.png"/>
 	
 </div>
-
+  
 <details open="open">
   <summary><h2 style="display: inline-block">Indice</h2></summary>
   <ol>
@@ -227,9 +228,9 @@ Riprese e Montaggio Video - Lorenzo Castriota "Brian"
 [downloads-url]: https://github.com/TryKatChup/Poke-Pi-Dex/releases/latest
 [contributors-shield]: https://img.shields.io/github/contributors/TryKatChup/Poke-Pi-Dex
 [contributors-url]: https://github.com/TryKatChup/Poke-Pi-Dex/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/TryKatChup/Poke-Pi-Dex
+[forks-shield]: https://img.shields.io/github/forks/TryKatChup/Poke-Pi-Dex?style=flat
 [forks-url]: https://github.com/TryKatChup/Poke-Pi-Dex/network/members
-[stars-shield]: https://img.shields.io/github/stars/TryKatChup/Poke-Pi-Dex
+[stars-shield]: https://img.shields.io/github/stars/TryKatChup/Poke-Pi-Dex?style=flat
 [stars-url]: https://github.com/TryKatChup/Poke-Pi-Dex/stargazers
 [issues-shield]: https://img.shields.io/github/issues/TryKatChup/Poke-Pi-Dex
 [issues-url]: https://github.com/mikyll/TryKatChup/Poke-Pi-Dex/issues
