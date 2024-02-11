@@ -19,15 +19,13 @@
   <img width="100px" src="gfx/Logo_Poke-Pi-Dex.svg"/>
 
   <h1>Poké-Pi-Dex</h1>
-  
+
 **Poké-Pi-Dex** is our deep learning / computer vision related project for nostalgic *poké-weebs*.
 
 We recreated a **Pokédex** clone, which recognizes pictures of Pokémon from the first generation, using a Convolutional Neural Network. It's built on **Raspberry Pi4** with LCD display, PiCamera, speaker and some other components attached.
 <br/>
 The case is made of recycled cardboard. 🌱
 <br><br>
-  <a href="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/README.it.md#-poké-pi-dex">Italiano</a>
-  ·
   <a href="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/docs/Report/Relazione.pdf">View Report</a>
   ·
   <a href="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/docs/Presentation/Poké-Pi-Dex_IT.pdf">Presentation</a>
@@ -35,6 +33,9 @@ The case is made of recycled cardboard. 🌱
   <a href="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/docs/Report/AttivitaProgettuale.pdf">Project Work</a>
   ·
   <a href="https://github.com/TryKatChup/Poke-Pi-Dex/issues">Request Feature|Report Bug</a>
+  ·
+  <a href="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/README.it.md#-poké-pi-dex">Italiano <kbd><img width="20px" src="https://flagicons.lipis.dev/flags/4x3/it.svg"></kbd></a>
+  
 <br><br>
 <img width="70%" src="https://github.com/TryKatChup/Poke-Pi-Dex/blob/main/gfx/aaaaaaaaa.png"/>
 
@@ -220,9 +221,9 @@ Distributed under the GPLv3 License. See [`LICENSE`](https://github.com/TryKatCh
 [downloads-url]: https://github.com/TryKatChup/Poke-Pi-Dex/releases/latest
 [contributors-shield]: https://img.shields.io/github/contributors/TryKatChup/Poke-Pi-Dex
 [contributors-url]: https://github.com/TryKatChup/Poke-Pi-Dex/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/TryKatChup/Poke-Pi-Dex
+[forks-shield]: https://img.shields.io/github/forks/TryKatChup/Poke-Pi-Dex?style=flat
 [forks-url]: https://github.com/TryKatChup/Poke-Pi-Dex/network/members
-[stars-shield]: https://img.shields.io/github/stars/TryKatChup/Poke-Pi-Dex
+[stars-shield]: https://img.shields.io/github/stars/TryKatChup/Poke-Pi-Dex?style=flat
 [stars-url]: https://github.com/TryKatChup/Poke-Pi-Dex/stargazers
 [issues-shield]: https://img.shields.io/github/issues/TryKatChup/Poke-Pi-Dex
 [issues-url]: https://github.com/mikyll/TryKatChup/Poke-Pi-Dex/issues
